@@ -3,15 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 // components
 import * as fromComponents from './components';
 
-const resumeRoutes: Routes = [
+const homeRoutes: Routes = [
   {
     path: '',
-    component: fromComponents.ResumeComponent,
+    component: fromComponents.HomeComponent,
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(resumeRoutes)],
+  imports: [RouterModule.forChild(homeRoutes)],
   exports: [RouterModule],
 })
-export class ResumeRoutingModule {}
+export class HomeRoutingModule {}

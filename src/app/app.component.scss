@@ -19,6 +19,11 @@
   background: map-get(color.$bark-palette, 500);
 }
 
+.mat-sidenav-container {
+  background: url(../assets/images/wave-background-min.png) no-repeat 0 0;
+  background-size: cover;
+}
+
 .mat-sidenav {
   background-color: map-get(color.$bark-palette, 900);
 }
