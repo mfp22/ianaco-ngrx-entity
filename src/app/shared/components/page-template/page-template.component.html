@@ -1,0 +1,10 @@
+<div class="page-template" fxLayout="column" @slideUp>
+  <div class="page-template__header">
+    <div class="mat-display-1">
+      <ng-content select="[title]"></ng-content>
+    </div>
+  </div>
+  <div class="page-template__content">
+    <ng-content select="[content]"></ng-content>
+  </div>
+</div>

@@ -7,10 +7,16 @@
     color: map-get(color.$cloud-palette, 500);
     text-decoration: none;
   }
+
+  &__container {
+    padding: 1rem 2rem;
+    height: calc(100% - 64px);
+    box-sizing: border-box;
+  }
 }
 
 .mat-divider {
-  background: map-get(color.$bark-palette, 300);
+  background: map-get(color.$bark-palette, 500);
 }
 
 .mat-sidenav {
