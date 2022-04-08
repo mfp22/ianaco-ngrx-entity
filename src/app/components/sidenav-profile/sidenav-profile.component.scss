@@ -1,0 +1,28 @@
+@use "colorography" as color;
+
+.sidenav-profile {
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+
+  &__image {
+    margin: auto;
+    display: block;
+    border-radius: 50%;
+    border: 8px solid map-get(color.$bark-palette, 500);
+    height: 7.5rem;
+    width: 7.5rem;
+    box-sizing: border-box;
+  }
+
+  &__details {
+    text-align: center;
+  }
+
+  &__title {
+    color: map-get(color.$cloud-palette, 500);
+  }
+
+  &__subtitle {
+    color: map-get(color.$bark-palette, 300);
+  }
+}

@@ -1,1 +1,32 @@
-<div>Hello App!</div>
+<div class="app">
+  <mat-sidenav-container>
+    <mat-sidenav
+      #sidenav
+      [mode]="mobileQuery?.matches ? 'over' : 'side'"
+      [opened]="!mobileQuery?.matches"
+    >
+      <app-sidenav-profile [profile]="profile"></app-sidenav-profile>
+      <mat-divider></mat-divider>
+      <mat-list role="list">
+        <mat-list-item *ngFor="let nav of profile.navs">
+          <a class="app__link" [routerLink]="nav.link">{{ nav.label }}</a>
+        </mat-list-item>
+      </mat-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar>
+        <mat-toolbar-row fxLayout="row" fxLayoutAlign="end center">
+          <button
+            mat-icon-button
+            (click)="sidenav.toggle()"
+            tabindex="0"
+            *ngIf="mobileQuery?.matches && !sidenav.opened"
+          >
+            ☰
+          </button>
+        </mat-toolbar-row>
+      </mat-toolbar>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

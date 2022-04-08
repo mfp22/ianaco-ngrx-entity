@@ -1,0 +1,32 @@
+@use "colorography" as color;
+
+.app {
+  height: 100%;
+
+  &__link {
+    color: map-get(color.$cloud-palette, 500);
+    text-decoration: none;
+  }
+}
+
+.mat-divider {
+  background: map-get(color.$bark-palette, 300);
+}
+
+.mat-sidenav {
+  background-color: map-get(color.$bark-palette, 900);
+}
+
+.mat-list {
+  margin: 1rem 0;
+}
+
+.mat-toolbar {
+  background: none;
+}
+
+.mat-icon-button {
+  font-size: 1.5rem;
+  color: map-get(color.$cloud-palette, 500);
+  background-color: map-get(color.$bark-palette, 900);
+}
