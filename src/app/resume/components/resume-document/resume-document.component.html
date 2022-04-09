@@ -1,0 +1,129 @@
+<div class="resume-document">
+  <!-- header begin -->
+  <div class="resume-document__header">
+    <h1 class="resume-document__full-name">{{ resume.fullName }}</h1>
+    <h4 class="resume-document__role">{{ resume.role }}</h4>
+  </div>
+  <!-- header end -->
+  <!-- body begin -->
+  <div class="resume-document__body" fxLayout="row">
+    <!-- <panel left begin> -->
+    <div class="resume-document__panel resume-document__panel--left">
+      <!--[#summary]-->
+      <section class="resume-document__summary">
+        <p>{{ resume.summary }}</p>
+      </section>
+      <!--[#experience]-->
+      <section
+        class="resume-document__section resume-document__experience"
+        *ngIf="resume.experience as experience"
+      >
+        <h1 class="resume-document__title">{{ experience.title }}</h1>
+        <mat-divider class="resume-document__divider"></mat-divider>
+        <div *ngFor="let item of experience.items" fxLayout="row">
+          <div class="resume-document__timeline"></div>
+          <div
+            class="resume-document__experience-details resume-document__spacer"
+          >
+            <h1 class="resume-document__experience-role">{{ item.role }}</h1>
+            <div>
+              <span>{{ item.company }}</span>
+              <span class="resume-document__date-tag"
+                >{{ item.beginDate }} - {{ item.endDate }}</span
+              >
+            </div>
+            <ul class="resume-document__list">
+              <li *ngFor="let qualification of item.qualifications">
+                {{ qualification }}
+              </li>
+            </ul>
+            <div *ngIf="item.achievements as achievements">
+              <h4 class="resume-document__label">Key Achievements</h4>
+              <ul class="resume-document__list">
+                <li *ngFor="let achievement of achievements">
+                  {{ achievement }}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- [#projects] -->
+      <section
+        class="resume-document__section"
+        *ngIf="resume.projects as projects"
+      >
+        <h1 class="resume-document__title">{{ projects.title }}</h1>
+        <mat-divider class="resume-document__divider"></mat-divider>
+        <div *ngFor="let item of projects.items">
+          <div fxLayout="row" fxLayoutAlign="start start">
+            <h3 class="resume-document__label">{{ item.name }}</h3>
+            <span class="resume-document__date-tag">{{ item.date }}</span>
+          </div>
+          <p>{{ item.description }}</p>
+        </div>
+      </section>
+      <!-- [#education] -->
+      <section
+        class="resume-document__section"
+        *ngIf="resume.education as education"
+      >
+        <h1 class="resume-document__title">{{ education.title }}</h1>
+        <mat-divider class="resume-document__divider"></mat-divider>
+        <div *ngFor="let item of education.items">
+          <div fxLayout="row" fxLayoutAlign="start start">
+            <h3 class="resume-document__label">{{ item.degree }}</h3>
+            <span class="resume-document__date-tag">{{ item.date }}</span>
+          </div>
+          <div>{{ item.minor }}</div>
+          <div>
+            <em>{{ item.institution }}</em>
+          </div>
+        </div>
+      </section>
+      <!-- [#certifications] -->
+      <section
+        class="resume-document__section"
+        *ngIf="resume.certifications as certifications"
+      >
+        <h1 class="resume-document__title">{{ certifications.title }}</h1>
+        <mat-divider class="resume-document__divider"></mat-divider>
+        <div *ngFor="let item of certifications.items">
+          <div fxLayout="row" fxLayoutAlign="start start">
+            <h3 class="resume-document__label">{{ item.name }}</h3>
+            <span class="resume-document__date-tag">{{ item.date }}</span>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- <panel left end> -->
+    <!-- <panel right begin> -->
+    <div class="resume-document__panel resume-document__panel--right">
+      <!-- [#contact] -->
+      <section
+        class="resume-document__section resume-document__contact"
+        *ngIf="resume.contact as contact"
+      >
+        <h1 class="resume-document__title">{{ contact.title }}</h1>
+        <mat-divider class="resume-document__spacer"></mat-divider>
+        <div class="resume-document__spacer" *ngFor="let item of contact.items">
+          <div class="resume-document__label">{{ item.label }}</div>
+          <div>{{ item.value }}</div>
+        </div>
+      </section>
+      <!-- [#skills] -->
+      <section
+        class="resume-document__section resume-document__skills"
+        *ngIf="resume.skills as skills"
+      >
+        <h1 class="resume-document__title">{{ skills.title }}</h1>
+        <mat-divider class="resume-document__spacer"></mat-divider>
+        <div class="resume-document__spacer" *ngFor="let item of skills.items">
+          <div>{{ item.label }}</div>
+        </div>
+      </section>
+    </div>
+    <!-- <panel right end> -->
+  </div>
+  <!-- body end -->
+</div>

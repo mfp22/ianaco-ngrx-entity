@@ -1,0 +1,115 @@
+@use "colorography" as color;
+
+.resume-document {
+  padding: 1.5rem;
+  box-shadow: 0 0 0.5rem map-get(color.$bark-palette, 200);
+  background-color: map-get(color.$cloud-palette, 500);
+  max-width: 50rem;
+  margin: auto;
+
+  // general
+  &__label {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+
+  &__list {
+    margin: 0.25rem 0;
+    padding: 0 1rem;
+  }
+
+  &__spacer {
+    padding-bottom: 1rem;
+  }
+
+  &__title {
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+  }
+
+  &__divider {
+    margin-bottom: 1rem;
+  }
+
+  &__section {
+    margin-bottom: 1rem;
+  }
+
+  &__date-tag {
+    margin: 0 0.5rem;
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.25rem;
+    background-color: map-get(color.$breeze-palette, 500);
+  }
+
+  // header begin
+  &__header {
+    background-color: map-get(color.$bark-palette, 900);
+    color: map-get(color.$cloud-palette, 500);
+    padding: 1rem;
+  }
+
+  &__full-name {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  &__role {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  // header end
+
+  // body begin
+
+  &__panel {
+    padding: 1rem;
+
+    &--right {
+      background-color: map-get(color.$breeze-palette, 500);
+    }
+  }
+
+  // <panel left begin>
+  &__timeline {
+    border-right: 1px solid map-get(color.$bark-palette, 900);
+    margin-right: 1.5rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      border: 2px solid map-get(color.$bark-palette, 900);
+      border-radius: 50%;
+      width: 1rem;
+      height: 1rem;
+      position: absolute;
+      top: 0;
+      left: -0.6rem;
+      background-color: map-get(color.$cloud-palette, 500);
+    }
+  }
+
+  // #summary
+  &__summary {
+    font-size: 1rem;
+    margin: 1rem 0;
+    font-weight: 400;
+    line-height: 1.25rem;
+  }
+
+  // #experience section
+  &__experience {
+    &-details {
+      margin-top: -7px;
+    }
+
+    &-role {
+      margin-bottom: 0.25rem;
+    }
+  }
+  // <panel left end>
+
+  // <panel right begin>
+
+  // <panel right end>
+}
