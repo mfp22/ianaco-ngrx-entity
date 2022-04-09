@@ -1,0 +1,15 @@
+@use "colorography" as color;
+
+.portfolio {
+  &__section {
+    margin-bottom: 2rem;
+
+    &-title {
+      font-weight: 500;
+    }
+  }
+}
+
+.mat-divider {
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,50 @@
+<mat-card class="portfolio-featured-card" *ngIf="card">
+  <mat-card-header>
+    <div mat-card-avatar class="portfolio-featured-card__avatar"></div>
+    <mat-card-title class="portfolio-featured-card__title">{{
+      card.title
+    }}</mat-card-title>
+    <mat-card-subtitle class="portfolio-featured-card__subtitle">{{
+      card.subtitle
+    }}</mat-card-subtitle>
+  </mat-card-header>
+  <img
+    class="portfolio-featured-card__image"
+    mat-card-image
+    [src]="card.image"
+    alt=""
+    *ngIf="card.image as image"
+  />
+  <mat-card-content>
+    <p>{{ card.description }}</p>
+  </mat-card-content>
+  <mat-card-actions
+    class="portfolio-featured-card__actions"
+    *ngIf="card.links as links"
+  >
+    <a
+      [href]="designLink"
+      *ngIf="links.design as designLink"
+      mat-button
+      target="_blank"
+      rel="noopener noreferrer"
+      >Design</a
+    >
+    <a
+      [href]="demoLink"
+      mat-button
+      *ngIf="links.demo as demoLink"
+      target="_blank"
+      rel="noopener noreferrer"
+      >Live Demo</a
+    >
+    <a
+      [href]="codeLink"
+      *ngIf="links.code as codeLink"
+      mat-button
+      target="_blank"
+      rel="noopener noreferrer"
+      >GitHub</a
+    >
+  </mat-card-actions>
+</mat-card>
