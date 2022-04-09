@@ -2,6 +2,7 @@
   "name": "about-me",
   "version": "0.0.0",
   "scripts": {
+    "build:git": "ng build --base-href=/sample-demo-app/ --output-path=docs",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
