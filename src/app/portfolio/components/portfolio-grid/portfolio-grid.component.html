@@ -1,0 +1,11 @@
+<div class="portfolio-grid">
+  <ng-container *ngFor="let card of cards">
+    <app-portfolio-featured-card
+      [card]="card"
+      *ngIf="featured; else generalCard"
+    ></app-portfolio-featured-card>
+    <ng-template #generalCard>
+      <app-portfolio-card [card]="card"></app-portfolio-card>
+    </ng-template>
+  </ng-container>
+</div>

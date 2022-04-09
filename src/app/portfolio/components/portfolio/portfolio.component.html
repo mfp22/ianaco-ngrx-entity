@@ -1,0 +1,18 @@
+<app-page-template class="portfolio">
+  <div class="portfolio__title" title>Projects</div>
+  <div content>
+    <section class="portfolio__section">
+      <h1 class="portfolio__section-title">Recent Items</h1>
+      <mat-divider></mat-divider>
+      <app-portfolio-grid
+        [cards]="sortedCards.featured"
+        [featured]="true"
+      ></app-portfolio-grid>
+    </section>
+    <section class="portfolio__section">
+      <h1 class="portfolio__section-title">Past Items</h1>
+      <mat-divider></mat-divider>
+      <app-portfolio-grid [cards]="sortedCards.general"></app-portfolio-grid>
+    </section>
+  </div>
+</app-page-template>

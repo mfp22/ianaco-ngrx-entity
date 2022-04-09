@@ -14,6 +14,6 @@
   &__callout {
     text-transform: uppercase;
     color: map-get(color.$cloud-palette, 500);
-    text-shadow: 0 0 0.25rem map-get(color.$bark-palette, 900);
+    color: #a4c639;
   }
 }

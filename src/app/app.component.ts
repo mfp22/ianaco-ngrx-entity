@@ -26,12 +26,12 @@ export class AppComponent implements OnDestroy {
         link: 'home',
       },
       {
-        label: 'resume',
-        link: 'resume',
-      },
-      {
         label: 'projects',
         link: 'projects',
+      },
+      {
+        label: 'resume',
+        link: 'resume',
       },
     ],
   };
