@@ -1,6 +1,6 @@
 # AboutMe
 
-> ### Simple personal website built using angular.
+> ### My personal website built using angular.
 
 <br>
 
@@ -8,9 +8,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Overview
 
-### **Live Demo**:
+### **Vist Website**:
 
-<a href="https://ianacodev.github.io/about-me" target="_blank">VIEW LIVE DEMO</a>
+<a href="https://ianacodev.github.io/about-me" target="_blank">About Me</a>
 
 <img src="./src/assets/images/website-promo-min.png">
 
