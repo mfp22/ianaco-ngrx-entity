@@ -6,6 +6,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
+# Overview
+
+### **Live Demo**:
+
+<a href="https://ianacodev.github.io/about-me" target="_blank">VIEW LIVE DEMO</a>
+
+<img src="./src/assets/images/website-promo-min.png">
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
