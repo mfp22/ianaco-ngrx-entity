@@ -27,7 +27,7 @@ export class PortfolioComponent {
         title: 'Sample Demo App',
         subtitle:
           'Sample application to demo different concepts and functionality for angular and ngrx',
-        image: 'assets/images/website-promo-min.png',
+        image: 'assets/images/sample-demo-app-promo-min.png',
         name: 'sample-demo-app',
         links: {
           design:
