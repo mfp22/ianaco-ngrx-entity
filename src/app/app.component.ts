@@ -1,8 +1,14 @@
-import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  OnDestroy,
+  ViewChild,
+} from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { DEFAULT_BREAKPOINTS } from '@angular/flex-layout';
 // models
 import { Profile } from './models';
+import { MatSidenavContent } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +19,9 @@ export class AppComponent implements OnDestroy {
   readonly SIDENAV_NG_FLEX_BREAKPOINT = 'lt-sm';
   private _mobileQueryListener: () => void;
   mobileQuery: MediaQueryList | undefined;
+  @ViewChild(MatSidenavContent)
+  sidenavContent: MatSidenavContent | undefined;
+
   profile: Profile = {
     image: 'assets/images/profile-image-min.png',
     personal: {
@@ -48,5 +57,12 @@ export class AppComponent implements OnDestroy {
 
   ngOnDestroy(): void {
     this.mobileQuery?.removeEventListener('change', this._mobileQueryListener);
+  }
+
+  /**
+   * on activate route
+   */
+  onActivateRoute() {
+    this.sidenavContent?.scrollTo({ top: 0 });
   }
 }

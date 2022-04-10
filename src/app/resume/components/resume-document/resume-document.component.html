@@ -108,7 +108,7 @@
         <mat-divider class="resume-document__spacer"></mat-divider>
         <div class="resume-document__spacer" *ngFor="let item of contact.items">
           <div class="resume-document__label">{{ item.label }}</div>
-          <div>{{ item.value }}</div>
+          <div [innerHtml]="item.value"></div>
         </div>
       </section>
       <!-- [#skills] -->

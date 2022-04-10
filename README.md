@@ -10,7 +10,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### **Vist Website**:
 
-<a href="https://ianacodev.github.io/about-me" target="_blank">About Me</a>
+<a href="https://ianacodev.github.io/about-me" target="_blank" rel="noopener noreferrer">About Me</a>
 
 <img src="./src/assets/images/website-promo-min.png">
 

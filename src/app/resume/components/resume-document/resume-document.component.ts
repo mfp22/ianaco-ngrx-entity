@@ -31,7 +31,7 @@ export class ResumeDocumentComponent {
         },
         {
           label: 'GitHub',
-          value: 'github.com/ianacodev',
+          value: `<a href="https://github.com/ianacodev" target="_blank" rel="noopener noreferrer">github.com/ianacodev</a>`,
         },
       ],
     },
