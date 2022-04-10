@@ -44,7 +44,7 @@ export class PortfolioComponent {
       {
         title: 'About Me',
         name: 'ngx-data-lib',
-        description: 'Simple personal website built using angular.',
+        description: 'My personal website built using angular.',
         links: {
           repo: 'https://github.com/ianacodev/about-me',
         },
