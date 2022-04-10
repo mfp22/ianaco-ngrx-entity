@@ -33,7 +33,7 @@ export class PortfolioComponent {
           design:
             'https://xd.adobe.com/view/13fab039-c1c2-4297-bd21-5488a9ebd219-46a9/grid/',
           demo: 'https://ianacodev.github.io/sample-demo-app',
-          code: 'https://github.com/ianacodev/sample-demo-app',
+          repo: 'https://github.com/ianacodev/sample-demo-app',
         },
         description: `
         This app is a generic product website, the user can view the featured product collection, 
@@ -42,22 +42,54 @@ export class PortfolioComponent {
         featured: true,
       },
       {
-        title: 'Data Library',
-        image: '',
+        title: 'About Me',
         name: 'ngx-data-lib',
-        description: 'hello world',
+        description: 'Simple personal website built using angular.',
+        links: {
+          repo: 'https://github.com/ianacodev/about-me',
+        },
       },
       {
         title: 'Data Table Library',
-        image: '',
         name: 'ngx-data-table-lib',
-        description: 'hello world',
+        description: 'Custom library for configurable table to display data.',
+        links: {
+          repo: 'https://github.com/ianacodev/ngx-data-table-lib',
+        },
       },
       {
         title: 'Sample Redux Store',
-        image: '',
         name: 'sample-redux-store',
-        description: 'hello world',
+        description:
+          'Sample redux store for understanding concepts based on an online tutorial.',
+        links: {
+          repo: 'https://github.com/ianacodev/sample-redux-store',
+        },
+      },
+      {
+        title: 'Typescript Basics',
+        name: 'typescript_basics',
+        description:
+          'Sample scripts based on concepts from an online tutorial.',
+        links: {
+          repo: 'https://github.com/ianacodev/typescript_basics',
+        },
+      },
+      {
+        title: 'Example Scripts',
+        name: 'example_scripts',
+        description: 'Example scripts for demoing es6+ basics.',
+        links: {
+          repo: 'https://github.com/ianacodev/example_scripts',
+        },
+      },
+      {
+        title: 'XHR Examples',
+        name: 'XHRExamples',
+        description: 'Some xhr examples for demoing.',
+        links: {
+          repo: 'https://github.com/ianacodev/XHRExamples',
+        },
       },
     ],
   };

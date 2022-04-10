@@ -10,10 +10,10 @@ export class ResumeDocumentComponent {
     fullName: 'Joshua Ianacone',
     role: 'Front End Software Engineer',
     summary: `
-  Motivated Front End Engineer with experience building and maintaining
-      responsive websites. Extensive collaboration with teams to produce sites
-      that deliver business results. Strong interest in UI/UX design.
-  `,
+      Motivated Front EndEngineer with experience building and maintaining 
+      responsive websites. Extensive collaboration with teams to produce 
+      sites that deliver business results. Strong interest in UI/UX.
+    `,
     contact: {
       title: 'Contact',
       items: [
@@ -28,6 +28,10 @@ export class ResumeDocumentComponent {
         {
           label: 'E-mail',
           value: 'joshua.ianacone@gmail.com',
+        },
+        {
+          label: 'GitHub',
+          value: 'github.com/ianacodev',
         },
       ],
     },
@@ -95,8 +99,7 @@ export class ResumeDocumentComponent {
             `Worked with back end engineers for establishing API contracts and integrations.`,
           ],
           achievements: [
-            `Launch of new credit card product apply website.`,
-            `Launch of customer servicing website.`,
+            `Contributions to customer loan servicing website and credit card apply website.`,
             `Design and implementation of customer fico score page.`,
           ],
         },
@@ -130,7 +133,7 @@ export class ResumeDocumentComponent {
           beginDate: '2011-05',
           endDate: '2012-01',
           qualifications: [
-            `Funded by New Jersey Board of Public Utilities, Developed an energy assurance plan and energy reporting system for the state.`,
+            `Funded by New Jersey Board of Public Utilities, developed anenergy assurance plan and energy reporting system for the state.`,
             `Researched and compiled detailed information on state's electrical, petroleum, and natural gas infrastructure.`,
             `Developed software to monitor, analyze, and store electrical outage information from major power utilities.`,
           ],

@@ -9,7 +9,12 @@
       <mat-divider></mat-divider>
       <mat-list role="list">
         <mat-list-item *ngFor="let nav of profile.navs">
-          <a class="app__link" [routerLink]="nav.link">{{ nav.label }}</a>
+          <a
+            class="app__link"
+            [routerLink]="nav.link"
+            (click)="mobileQuery?.matches && sidenav.toggle()"
+            >{{ nav.label }}</a
+          >
         </mat-list-item>
       </mat-list>
     </mat-sidenav>

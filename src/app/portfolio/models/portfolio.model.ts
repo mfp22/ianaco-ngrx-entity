@@ -1,15 +1,15 @@
 export interface Links {
   design: string;
   demo: string;
-  code: string;
+  repo: string;
 }
 
 export interface PortfolioCard {
   title: string;
   subtitle?: string;
-  image: string;
   name: string;
   description: string;
+  image?: string;
   links?: Partial<Links>;
   featured?: boolean;
 }
