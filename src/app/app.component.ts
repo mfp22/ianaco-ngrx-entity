@@ -16,7 +16,7 @@ import { MatSidenavContent } from '@angular/material/sidenav';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnDestroy {
-  readonly SIDENAV_NG_FLEX_BREAKPOINT = 'lt-sm';
+  readonly SIDENAV_NG_FLEX_BREAKPOINT = 'lt-md';
   private _mobileQueryListener: () => void;
   mobileQuery: MediaQueryList | undefined;
   @ViewChild(MatSidenavContent)
