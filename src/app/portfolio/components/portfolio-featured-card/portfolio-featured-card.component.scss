@@ -4,6 +4,7 @@
   max-width: 30rem;
   background-color: map-get(color.$bark-palette, 900);
   color: map-get(color.$cloud-palette, 500);
+  padding: 2rem;
 
   &__avatar {
     background: url(../../../../assets/icons/cogs-icon.svg) no-repeat;
@@ -17,7 +18,11 @@
     color: map-get(color.$cloud-palette, 500);
   }
 
-  &__actions {
-    margin-bottom: -1rem;
+  &__link {
+    border: 1px solid map-get(color.$cloud-palette, 500);
+  }
+
+  &__image {
+    border-radius: 0.25rem;
   }
 }

@@ -5,7 +5,7 @@
   text-align: center;
   background-color: map-get(color.$bark-palette, 900);
   color: map-get(color.$cloud-palette, 500);
-  padding: 3rem 2rem;
+  padding: 2rem;
 
   &__avatar {
     background: url(../../../../assets/icons/cogs-icon.svg) no-repeat;
@@ -21,5 +21,9 @@
 
   &__subtitle {
     color: map-get(color.$cloud-palette, 500);
+  }
+
+  &__link {
+    border: 1px solid map-get(color.$cloud-palette, 500);
   }
 }

@@ -16,4 +16,15 @@
       {{ card.description }}
     </p>
   </mat-card-content>
+  <mat-card-actions class="portfolio-card__actions" *ngIf="card.links as links">
+    <a
+      class="portfolio-card__link"
+      [href]="repoLink"
+      *ngIf="links.repo as repoLink"
+      mat-stroked-button
+      target="_blank"
+      rel="noopener noreferrer"
+      >GitHub</a
+    >
+  </mat-card-actions>
 </mat-card>
