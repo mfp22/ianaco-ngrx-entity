@@ -18,8 +18,16 @@
     color: map-get(color.$cloud-palette, 500);
   }
 
+  .mat-card-actions:not(.mat-card-actions-align-end)
+    .mat-stroked-button:first-child {
+    margin: 0.5rem;
+  }
+
   &__link {
     border: 1px solid map-get(color.$cloud-palette, 500);
+    &.mat-stroked-button {
+      margin: 0.5rem;
+    }
   }
 
   &__image {
