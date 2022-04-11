@@ -22,10 +22,6 @@ export class ResumeDocumentComponent {
           value: 'Myrtle Beach, SC, 29588',
         },
         {
-          label: 'Phone',
-          value: '(609) 280-7041',
-        },
-        {
           label: 'E-mail',
           value: 'joshua.ianacone@gmail.com',
         },

@@ -5,4 +5,9 @@
     padding: 1rem;
     width: 18.75rem;
   }
+
+  .mat-drawer-inner-container {
+    display: flex;
+    flex-direction: column;
+  }
 }

@@ -25,8 +25,7 @@
     border-radius: 1rem;
     position: relative;
     max-width: 15rem;
-    box-shadow: 0.063rem 0.063rem 0.5rem gray;
-    font-style: italic;
+    box-shadow: 0.063rem 0.063rem 0.5rem map-get(color.$bark-palette, 400);
     letter-spacing: 0.063rem;
 
     &::after {
