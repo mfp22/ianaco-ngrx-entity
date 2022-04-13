@@ -1,0 +1,14 @@
+.about {
+  &__content {
+    max-width: 50rem;
+    margin: auto;
+  }
+
+  &__card {
+    background-color: black;
+  }
+
+  &__avatar {
+    height: 7.5rem;
+  }
+}

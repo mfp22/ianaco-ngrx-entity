@@ -1,0 +1,11 @@
+@use "colorography" as color;
+
+.about-card {
+  &__avatar {
+    max-height: 7.5rem;
+    background: map-get(color.$bark-palette, 900);
+    padding: 1rem;
+    border-radius: 1rem 0 1rem;
+    margin-bottom: -0.375rem;
+  }
+}
