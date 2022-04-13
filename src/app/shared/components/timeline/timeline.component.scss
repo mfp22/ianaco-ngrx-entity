@@ -22,7 +22,6 @@
   }
 
   &__label {
-    text-shadow: 0 0 0.25rem map-get(color.$bark-palette, 100);
     padding: 0.5rem 1rem;
     color: map-get(color.$bark-palette, 900);
     width: 100%;
