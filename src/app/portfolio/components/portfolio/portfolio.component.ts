@@ -25,8 +25,6 @@ export class PortfolioComponent {
     cards: [
       {
         title: 'Sample Demo App',
-        subtitle:
-          'Sample application to demo different concepts and functionality for angular and ngrx',
         image: 'assets/images/sample-demo-app-promo-min.png',
         name: 'sample-demo-app',
         links: {
@@ -36,8 +34,7 @@ export class PortfolioComponent {
           repo: 'https://github.com/ianacodev/sample-demo-app',
         },
         description: `
-        This app is a generic product website, the user can view the featured product collection, 
-        select a product item for detailed view, and add a new product to the collection.
+        Sample application to demo different concepts and functionality for angular and ngrx
         `,
         featured: true,
       },

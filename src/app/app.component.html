@@ -47,12 +47,16 @@
       <mat-toolbar>
         <mat-toolbar-row fxLayout="row" fxLayoutAlign="end center">
           <button
-            mat-icon-button
+            class="hamburger hamburger--collapse"
+            [ngClass]="{ 'is-active': sidenav.opened }"
+            type="button"
             (click)="sidenav.toggle()"
+            *ngIf="mobileQuery?.matches"
             tabindex="0"
-            *ngIf="mobileQuery?.matches && !sidenav.opened"
           >
-            ☰
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
           </button>
         </mat-toolbar-row>
       </mat-toolbar>

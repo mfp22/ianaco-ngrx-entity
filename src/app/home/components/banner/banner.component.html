@@ -1,11 +1,16 @@
 <div class="banner" fxLayout="row" fxLayoutGap="15px">
-  <mat-divider class="banner__divider" [vertical]="true"></mat-divider>
   <div>
     <div class="banner__header">
       <h1 class="banner__title">Josh Ianacone</h1>
       <mat-divider class="banner__divider"></mat-divider>
-      <h2 class="banner__subtitle">
-        <span class="banner__callout">Front End</span>Software Engineer
+      <h2
+        class="banner__subtitle"
+        fxLayout="row"
+        fxLayout.lt-sm="column"
+        fxLayoutGap="5px"
+      >
+        <div class="banner__callout">Front End</div>
+        <div>Software Engineer</div>
       </h2>
     </div>
     <p class="banner__message">

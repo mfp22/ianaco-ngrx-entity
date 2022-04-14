@@ -3,16 +3,16 @@
 .about {
   &__section {
     &-title {
-      font-size: 1.75rem;
+      font-size: 1.625rem;
       font-weight: 600;
       text-transform: uppercase;
-      color: map-get(color.$bark-palette, 400);
+      color: map-get(color.$bark-palette, 300);
       margin-bottom: 3rem;
       text-align: center;
     }
 
     &-divider {
-      margin: 3rem 8rem;
+      margin: 3rem 10%;
     }
   }
 }

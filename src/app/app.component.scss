@@ -1,4 +1,5 @@
 @use "colorography" as color;
+@import "~hamburgers/_sass/hamburgers/hamburgers.scss";
 
 .app {
   height: 100%;
@@ -12,7 +13,6 @@
 
   &__sidenav {
     background-color: map-get(color.$bark-palette, 900);
-    border-left: 1rem solid map-get(color.$cloud-palette, 500);
 
     &-item {
       font-size: 1rem;
@@ -66,12 +66,6 @@
   background: none;
 }
 
-.mat-icon-button {
-  font-size: 1.5rem;
-  color: map-get(color.$cloud-palette, 500);
-  background-color: map-get(color.$bark-palette, 900);
-  position: fixed;
-  box-shadow: 0 0 0.25rem map-get(color.$cloud-palette, 500);
-  z-index: 1000;
-  margin-top: 0.5rem;
+.hamburger {
+  margin-top: 1rem;
 }

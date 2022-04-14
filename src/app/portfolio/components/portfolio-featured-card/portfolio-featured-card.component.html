@@ -1,50 +1,50 @@
-<mat-card class="portfolio-featured-card" *ngIf="card">
-  <mat-card-header>
-    <div mat-card-avatar class="portfolio-featured-card__avatar"></div>
-    <mat-card-title class="portfolio-featured-card__title">{{
-      card.title
-    }}</mat-card-title>
-    <mat-card-subtitle class="portfolio-featured-card__subtitle">{{
-      card.subtitle
-    }}</mat-card-subtitle>
-  </mat-card-header>
-  <img
-    class="portfolio-featured-card__image"
-    mat-card-image
-    [src]="card.image"
-    alt=""
-    *ngIf="card.image as image"
-  />
-  <mat-card-content>
-    <p>{{ card.description }}</p>
-  </mat-card-content>
-  <mat-card-actions *ngIf="card.links as links">
-    <a
-      class="portfolio-featured-card__link"
-      [href]="designLink"
-      *ngIf="links.design as designLink"
-      mat-stroked-button
-      target="_blank"
-      rel="noopener noreferrer"
-      >Design</a
+<mat-card class="portfolio-featured-card" *ngIf="card" fxLayout="row">
+  <aside
+    class="portfolio-featured-card__aside"
+    fxLayout="column"
+    fxFlex="0 0 45%"
+    fxFlex.lt-sm="0 0 100%"
+  >
+    <mat-card-content>
+      <mat-card-title class="portfolio-featured-card__title">{{
+        card.title
+      }}</mat-card-title>
+      <mat-card-subtitle class="portfolio-featured-card__subtitle">{{
+        card.subtitle
+      }}</mat-card-subtitle>
+      <p>{{ card.description }}</p>
+    </mat-card-content>
+    <mat-card-actions
+      class="portfolio-featured-card__actions"
+      *ngIf="card.links as links"
     >
-    <a
-      class="portfolio-featured-card__link"
-      [href]="demoLink"
-      mat-stroked-button
-      *ngIf="links.demo as demoLink"
-      target="_blank"
-      rel="noopener noreferrer"
-      >Live Demo</a
-    >
-    <a
-      class="portfolio-featured-card__link"
-      [href]="repoLink"
-      *ngIf="links.repo as repoLink"
-      mat-stroked-button
-      target="_blank"
-      rel="noopener noreferrer"
-      >GitHub</a
-    >
-  </mat-card-actions>
+      <a
+        class="portfolio-featured-card__link"
+        [href]="designLink"
+        *ngIf="links.design as designLink"
+        mat-stroked-button
+        target="_blank"
+        rel="noopener noreferrer"
+        >Design</a
+      >
+      <a
+        class="portfolio-featured-card__link"
+        [href]="demoLink"
+        mat-stroked-button
+        *ngIf="links.demo as demoLink"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Live Demo</a
+      >
+      <a
+        class="portfolio-featured-card__link"
+        [href]="repoLink"
+        *ngIf="links.repo as repoLink"
+        mat-stroked-button
+        target="_blank"
+        rel="noopener noreferrer"
+        >GitHub</a
+      >
+    </mat-card-actions>
+  </aside>
 </mat-card>

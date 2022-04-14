@@ -13,6 +13,7 @@
     font-weight: 500;
     color: map-get(color.$bark-palette, 500);
     margin-bottom: 0.5rem;
+    line-height: 3rem;
   }
 
   &__subtitle {
@@ -24,20 +25,18 @@
   }
 
   &__callout {
-    color: rgba(0, 0, 0, 0.2);
-    margin-right: 0.25rem;
+    color: map-get(color.$bark-palette, 200);
   }
 
   &__divider {
-    margin: 0.25rem 1rem;
+    margin: 0.25rem 0;
   }
 
   &__message {
-    margin: 1rem 0;
-    font-size: 0.875rem;
-    color: color.$color-contrast;
-    background-color: map-get(color.$bark-palette, 900);
-    border-radius: 0.25rem;
-    padding: 1rem;
+    margin: 1.5rem 0;
+    font-size: 1rem;
+    color: map-get(color.$bark-palette, 400);
+    font-weight: 500;
+    line-height: 1.5rem;
   }
 }

@@ -7,7 +7,13 @@
       <ng-content select="[subtitle]"></ng-content>
     </div>
   </div>
-  <div class="page-template__content">
-    <ng-content select="[content]"></ng-content>
+  <div
+    class="pag-template__conatent-container"
+    fxLayout="column"
+    fxLayoutAlign="center center"
+  >
+    <div class="page-template__content">
+      <ng-content select="[content]"></ng-content>
+    </div>
   </div>
 </div>
