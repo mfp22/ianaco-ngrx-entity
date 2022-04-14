@@ -1,8 +1,29 @@
-<div class="about-card">
-  <img
-    class="about-card__avatar"
-    src="assets/icons/avatar-icon.svg"
-    alt="avatar"
-  />
-  <app-timeline [segments]="segments"></app-timeline>
+<div
+  class="about-card"
+  fxLayout="row"
+  fxLayout.lt-sm="column"
+  fxLayoutGap="15px"
+>
+  <div class="about-card__header">
+    <div class="about-card__image-container">
+      <img class="about-card__image" src="" alt="avatar" />
+    </div>
+  </div>
+  <div class="about-card__body">
+    <ul class="about-card__list">
+      <li class="about-card__list-item" *ngFor="let item of personalInfo">
+        <span class="about-card__list-label"> {{ item.label }}: </span>
+        <span class="about-card__list-value">
+          {{ item.value }}
+        </span>
+      </li>
+    </ul>
+    <p class="about-card__summary">
+      {{ summary }}
+    </p>
+    <div class="about-card__action-container" fxLayout="row" fxLayoutGap="8px">
+      <button mat-stroked-button routerLink="/projects">Projects</button>
+      <button mat-stroked-button routerLink="/resume">Resume</button>
+    </div>
+  </div>
 </div>

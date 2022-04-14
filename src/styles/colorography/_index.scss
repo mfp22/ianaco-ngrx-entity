@@ -1,1 +1,4 @@
 @forward "palettes";
+
+@use "palettes" as palettes;
+$color-contrast: map-get(palettes.$windy-palette, 500);

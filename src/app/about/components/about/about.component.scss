@@ -1,14 +1,18 @@
+@use "colorography" as color;
+
 .about {
-  &__content {
-    max-width: 50rem;
-    margin: auto;
-  }
+  &__section {
+    &-title {
+      font-size: 1.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: map-get(color.$bark-palette, 400);
+      margin-bottom: 3rem;
+      text-align: center;
+    }
 
-  &__card {
-    background-color: black;
-  }
-
-  &__avatar {
-    height: 7.5rem;
+    &-divider {
+      margin: 3rem 8rem;
+    }
   }
 }

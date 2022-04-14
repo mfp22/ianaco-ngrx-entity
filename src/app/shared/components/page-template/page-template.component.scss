@@ -4,13 +4,18 @@
   padding-bottom: 3rem;
 
   &__header {
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
   }
 
   &__title {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     color: map-get(color.$bark-palette, 900);
-    text-shadow: 1px 1px 0.25rem map-get(color.$bark-palette, 300);
-    margin-bottom: 1rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+  }
+
+  &__content {
+    max-width: 60rem;
+    margin: auto;
   }
 }

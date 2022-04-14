@@ -1,4 +1,4 @@
-<div class="resume-document">
+<div class="resume-document" *ngIf="resume">
   <!-- header begin -->
   <div class="resume-document__header">
     <h1 class="resume-document__full-name">{{ resume.fullName }}</h1>
@@ -98,6 +98,7 @@
     </div>
     <!-- <panel left end> -->
     <!-- <panel right begin> -->
+    <mat-divider [vertical]="true"></mat-divider>
     <div class="resume-document__panel resume-document__panel--right">
       <!-- [#contact] -->
       <section

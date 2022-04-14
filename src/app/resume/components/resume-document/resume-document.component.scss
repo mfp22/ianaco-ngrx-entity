@@ -1,10 +1,8 @@
 @use "colorography" as color;
 
 .resume-document {
-  padding: 1.5rem;
-  box-shadow: 0 0 0.5rem map-get(color.$bark-palette, 200);
-  background-color: map-get(color.$cloud-palette, 500);
-  max-width: 50rem;
+  padding: 1rem;
+  max-width: 55rem;
   margin: auto;
 
   // general
@@ -40,24 +38,20 @@
     padding: 0.125rem 0.25rem;
     border-radius: 0.25rem;
     background-color: map-get(color.$breeze-palette, 500);
+    font-weight: 500;
   }
 
   // header begin
-  &__header {
-    background-color: map-get(color.$bark-palette, 900);
-    color: map-get(color.$cloud-palette, 500);
-    padding: 1rem;
-  }
-
   &__full-name {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-bottom: 0rem;
     line-height: 3rem;
   }
 
   &__role {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 300;
+    margin-bottom: 0rem;
   }
   // header end
 
@@ -65,10 +59,6 @@
 
   &__panel {
     padding: 1rem;
-
-    &--right {
-      background-color: map-get(color.$breeze-palette, 500);
-    }
   }
 
   // <panel left begin>
@@ -104,12 +94,9 @@
     }
 
     &-role {
+      font-weight: 500;
       margin-bottom: 0.25rem;
     }
   }
   // <panel left end>
-
-  // <panel right begin>
-
-  // <panel right end>
 }

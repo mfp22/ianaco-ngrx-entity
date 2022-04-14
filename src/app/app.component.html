@@ -7,13 +7,13 @@
       [opened]="!mobileQuery?.matches"
       fxLayout="column"
     >
-      <div class="app__sidenav-header">
-        <app-sidenav-profile [profile]="profile"></app-sidenav-profile>
-      </div>
-      <mat-divider></mat-divider>
+      <div class="app__sidenav-header"></div>
       <div class="app__sidenav-body">
-        <mat-list role="list">
-          <mat-list-item *ngFor="let nav of profile.navs">
+        <mat-list class="app__sidenav-list" role="list">
+          <mat-list-item
+            class="app__sidenav-list-item"
+            *ngFor="let nav of profile.navs"
+          >
             <a
               class="app__link"
               [routerLink]="nav.link"
@@ -22,7 +22,8 @@
             >
           </mat-list-item>
         </mat-list>
-        <mat-divider></mat-divider>
+      </div>
+      <div class="app__sidenav-footer">
         <div>
           <div class="app__sidenav-item">
             <div class="app__sidenav-label">Contact</div>
@@ -39,8 +40,6 @@
             >
           </div>
         </div>
-      </div>
-      <div class="app__sidenav-footer">
         <p>© 2022 Ianacodev</p>
       </div>
     </mat-sidenav>

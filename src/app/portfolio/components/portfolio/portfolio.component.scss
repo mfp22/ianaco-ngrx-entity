@@ -5,11 +5,16 @@
     margin-bottom: 2rem;
 
     &-title {
-      font-weight: 500;
+      font-size: 1.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: map-get(color.$bark-palette, 400);
+      margin-bottom: 0;
+      text-align: center;
     }
   }
-}
 
-.mat-divider {
-  margin-bottom: 2rem;
+  &__divider {
+    margin: 2rem 0;
+  }
 }

@@ -15,11 +15,11 @@ export class BubbleGraphComponent implements OnInit {
   ngOnInit(): void {
     const width = this.size;
     const height = this.size;
-    const nodeColor = '#000';
-    const linkColor = 'gray';
-    const textColor = 'white';
+    const nodeColor = '#1b1c1c';
+    const linkColor = '#3f4040';
+    const textColor = '#FFFFFF';
     const { nodes, links } = graphData;
-    const svg = d3.select('svg').attr('viewBox', `0 0 ${height} ${width}`); //.attr('width', width).attr('height', height);
+    const svg = d3.select('svg').attr('viewBox', `0 0 ${height} ${width}`);
 
     const simulation = d3
       .forceSimulation()
@@ -48,9 +48,7 @@ export class BubbleGraphComponent implements OnInit {
       .enter()
       .append('circle')
       .attr('r', (d) => d.size)
-      .attr('fill', (node) => node.color || nodeColor)
-      .attr('cursor', 'pointer')
-      .attr('filter', 'drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7))');
+      .attr('fill', (node) => node.color || nodeColor);
 
     // text
     const textElements = svg
@@ -64,7 +62,6 @@ export class BubbleGraphComponent implements OnInit {
       .attr('fill', (node) => textColor)
       .attr('font-weight', 500)
       .style('user-select', 'none')
-      .attr('cursor', 'pointer')
       .attr('text-anchor', 'middle');
 
     simulation.nodes(graphData.nodes).on('tick', () => {
