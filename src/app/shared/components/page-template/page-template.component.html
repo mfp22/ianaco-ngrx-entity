@@ -1,8 +1,14 @@
 <div class="page-template" fxLayout="column" @slideUp>
   <div class="page-template__header">
-    <div class="page-template__title">
+    <span class="page-template__title page-template__title--callout">
+      <ng-content select="[title-callout-before]"></ng-content>
+    </span>
+    <span class="page-template__title">
       <ng-content select="[title]"></ng-content>
-    </div>
+    </span>
+    <span class="page-template__title page-template__title--callout">
+      <ng-content select="[title-callout-after]"></ng-content>
+    </span>
     <div class="mat-title">
       <ng-content select="[subtitle]"></ng-content>
     </div>
