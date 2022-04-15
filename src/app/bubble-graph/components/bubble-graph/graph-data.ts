@@ -11,18 +11,19 @@ enum Distances {
 }
 
 const nodes = [
-  { label: 'SKILLS', color: '#a4c639', size: 60, group: 0, x: 0, y: 0 },
+  // { label: 'SKILLS', color: '#a4c639', size: 60, group: 0, x: 0, y: 0 },
   {
-    label: 'Angular',
+    label: 'TypeScript',
     size: Sizes.LG,
     group: 0,
     x: 0,
     y: 0,
   },
   {
-    label: 'TypeScript',
+    label: 'Angular',
     size: Sizes.LG,
     group: 0,
+    color: '',
     x: 0,
     y: 0,
   },
@@ -102,7 +103,7 @@ const links = [
   { source: 8, target: 0, strength: 0.2, distance: Distances.MD },
   { source: 9, target: 0, strength: 0.2, distance: Distances.MD },
   { source: 10, target: 0, strength: 0.2, distance: Distances.MD },
-  { source: 11, target: 0, strength: 0.2, distance: Distances.MD },
+  // { source: 11, target: 0, strength: 0.2, distance: Distances.MD },
 ];
 
 export const graphData = {

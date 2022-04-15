@@ -15,7 +15,15 @@
     text-transform: uppercase;
   }
 
+  &__content-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
   &__content {
+    width: 100%;
     max-width: 60rem;
   }
 }

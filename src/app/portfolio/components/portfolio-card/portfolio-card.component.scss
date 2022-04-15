@@ -3,9 +3,10 @@
 .portfolio-card {
   height: 100%;
   text-align: center;
-  background-color: map-get(color.$bark-palette, 900);
+  background-color: rgba(0, 0, 0, 0.8);
   color: map-get(color.$cloud-palette, 500);
   padding: 2rem;
+  min-width: 300px;
 
   &__avatar {
     background: url(../../../../assets/icons/cogs-icon.svg) no-repeat;

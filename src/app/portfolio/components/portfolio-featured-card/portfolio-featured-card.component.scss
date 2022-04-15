@@ -1,12 +1,18 @@
 @use "colorography" as color;
 
+:host {
+  display: flex;
+  justify-content: center;
+}
+
 .portfolio-featured-card {
   min-height: 25rem;
-  max-width: 50rem;
+  max-width: 36rem;
   background: url(../../../../assets/images/sample-demo-app-promo-min.png)
     no-repeat 0 0;
   background-size: cover;
   position: relative;
+  width: 100%;
 
   &__aside {
     position: absolute;

@@ -9,36 +9,39 @@ import { graphData } from './graph-data';
   styleUrls: ['./bubble-graph.component.scss'],
 })
 export class BubbleGraphComponent implements OnInit {
-  @Input() size: number = 600;
+  @Input() size: number = 500;
   constructor() {}
 
   ngOnInit(): void {
     const width = this.size;
     const height = this.size;
-    const nodeColor = '#1b1c1c';
+    const nodeColor = '#a4c639';
     const linkColor = '#3f4040';
-    const textColor = '#FFFFFF';
+    const textColor = '#1b1c1c';
     const { nodes, links } = graphData;
     const svg = d3.select('svg').attr('viewBox', `0 0 ${height} ${width}`);
 
     const simulation = d3
       .forceSimulation()
-      .force('charge', d3.forceManyBody().strength(-800))
-      .force('center', d3.forceCenter(width / 2, height / 2))
+      .force('charge', d3.forceManyBody().strength(-20))
       .force(
-        'link',
-        d3.forceLink().strength((link: any) => link.strength)
+        'x',
+        d3
+          .forceX()
+          .strength(0.03)
+          .x(width / 2)
+      )
+      .force(
+        'y',
+        d3
+          .forceY()
+          .strength(0.03)
+          .y(height / 2)
+      )
+      .force(
+        'collision',
+        d3.forceCollide().radius((d: any) => d.size + 5)
       );
-
-    // links
-    const linkElements = svg
-      .append('g')
-      .selectAll('line')
-      .data(links)
-      .enter()
-      .append('line')
-      .attr('stroke-width', 2)
-      .attr('stroke', linkColor);
 
     // nodes
     const nodeElements = svg
@@ -58,7 +61,7 @@ export class BubbleGraphComponent implements OnInit {
       .enter()
       .append('text')
       .text((node) => node.label)
-      .attr('font-size', 16)
+      .attr('font-size', 14)
       .attr('fill', (node) => textColor)
       .attr('font-weight', 500)
       .style('user-select', 'none')
@@ -67,38 +70,6 @@ export class BubbleGraphComponent implements OnInit {
     simulation.nodes(graphData.nodes).on('tick', () => {
       nodeElements.attr('cx', (node) => node.x).attr('cy', (node) => node.y);
       textElements.attr('x', (node) => node.x).attr('y', (node) => node.y);
-      linkElements
-        .attr('x1', (link: any) => link.source.x)
-        .attr('y1', (link: any) => link.source.y)
-        .attr('x2', (link: any) => link.target.x)
-        .attr('y2', (link: any) => link.target.y);
     });
-
-    simulation.force(
-      'link',
-      d3
-        .forceLink()
-        .links(graphData.links)
-        .distance((link: any) => link.distance || 180)
-    );
-
-    const dragDrop: any = d3
-      .drag()
-      .on('start', (event) => {
-        if (!event.active) simulation.alphaTarget(0.3).restart();
-        event.subject.fx = event.subject.x;
-        event.subject.fy = event.subject.y;
-      })
-      .on('drag', (event) => {
-        event.subject.fx = event.x;
-        event.subject.fy = event.y;
-      })
-      .on('end', (event) => {
-        if (!event.active) simulation.alphaTarget(0);
-        event.subject.fx = null;
-        event.subject.fy = null;
-      });
-
-    // nodeElements.call(dragDrop);
   }
 }

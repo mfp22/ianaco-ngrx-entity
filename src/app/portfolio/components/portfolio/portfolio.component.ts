@@ -57,8 +57,7 @@ export class PortfolioComponent {
       {
         title: 'Sample Redux Store',
         name: 'sample-redux-store',
-        description:
-          'Sample redux store for understanding concepts based on an online tutorial.',
+        description: 'Sample redux store for understanding concepts.',
         links: {
           repo: 'https://github.com/ianacodev/sample-redux-store',
         },
