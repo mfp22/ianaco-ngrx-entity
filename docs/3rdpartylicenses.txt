@@ -69,6 +69,15 @@ MIT
 @angular/router
 MIT
 
+@ngrx/entity
+MIT
+
+@ngrx/store
+MIT
+
+@ngrx/store-devtools
+MIT
+
 d3
 ISC
 Copyright 2010-2022 Mike Bostock

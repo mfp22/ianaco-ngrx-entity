@@ -14,6 +14,11 @@ export interface PortfolioCard {
   featured?: boolean;
 }
 
+export interface PortfolioCardSets {
+  featured: PortfolioCard[];
+  general: PortfolioCard[];
+}
+
 export interface Portfolio {
   cards: PortfolioCard[];
 }

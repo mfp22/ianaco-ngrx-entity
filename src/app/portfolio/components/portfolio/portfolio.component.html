@@ -1,17 +1,17 @@
 <app-page-template class="portfolio">
   <span class="portfolio__title" title>My Projects</span>
-  <div content>
+  <div content *ngIf="portfolioCardSets$ | async as cardSets">
     <section class="portfolio__section">
       <h1 class="portfolio__section-title">Latest Items</h1>
       <app-portfolio-grid
-        [cards]="sortedCards.featured"
+        [cards]="cardSets.featured"
         [featured]="true"
       ></app-portfolio-grid>
     </section>
     <mat-divider class="portfolio__section-divider"></mat-divider>
     <section class="portfolio__section">
       <h1 class="portfolio__section-title">Previous Items</h1>
-      <app-portfolio-grid [cards]="sortedCards.general"></app-portfolio-grid>
+      <app-portfolio-grid [cards]="cardSets.general"></app-portfolio-grid>
     </section>
   </div>
 </app-page-template>

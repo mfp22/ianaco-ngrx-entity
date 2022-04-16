@@ -7,5 +7,5 @@ import { Resume } from '../../models';
   styleUrls: ['./resume-document.component.scss'],
 })
 export class ResumeDocumentComponent {
-  @Input() resume: Resume | undefined;
+  @Input() resume: Resume | null = null;
 }

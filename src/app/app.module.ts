@@ -7,8 +7,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
+// ngrx
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 // my modules
 import { AppRoutingModule } from './app-routing.module';
+import { ProfileModule } from './profile/profile.module';
 // components
 import { AppComponent } from './app.component';
 import * as fromComponents from './components';
@@ -25,6 +30,13 @@ import * as fromComponents from './components';
     MatListModule,
     MatDividerModule,
     MatButtonModule,
+    StoreModule.forRoot({}),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25,
+      logOnly: environment.production,
+      autoPause: true,
+    }),
+    ProfileModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
