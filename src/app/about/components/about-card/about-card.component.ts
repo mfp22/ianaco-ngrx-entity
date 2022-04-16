@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutCardComponent {
   summary = `
-  Motivated Front EndEngineer with experience building and maintaining 
+  Motivated Front End Engineer with experience building and maintaining 
   responsive websites. Extensive collaboration with teams to produce 
   sites that deliver business results. Strong interest in UI/UX.
 `;

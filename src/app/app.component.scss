@@ -1,6 +1,10 @@
 @use "colorography" as color;
-@import "~hamburgers/_sass/hamburgers/hamburgers.scss";
+//$hamburger-types: (collapse) !default;
 
+// @import "~hamburgers/_sass/hamburgers/hamburgers.scss";
+@import "burger-menu";
+
+$hamburger-types: (collapse) !default;
 .app {
   height: 100%;
 
@@ -60,6 +64,7 @@
 
 .mat-sidenav-container {
   background-color: map-get(color.$cloud-palette, 500);
+  height: 100%;
 }
 
 .mat-toolbar {
@@ -67,5 +72,31 @@
 }
 
 .hamburger {
+  background-color: map-get(color.$bark-palette, 900);
   margin-top: 1rem;
+  line-height: 0.625rem;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 1000;
+
+  &-box {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  &-inner:before,
+  &-inner,
+  &-inner:after {
+    height: 0.188rem;
+    width: 1.5rem;
+    background-color: color.$color-contrast;
+  }
+
+  &.is-active {
+    .hamburger-inner:before,
+    .hamburger-inner,
+    .hamburger-inner:after {
+      background-color: color.$color-contrast;
+    }
+  }
 }

@@ -3,17 +3,18 @@
 .about-card {
   // padding: 0 4rem;
 
-  &__image-container {
-    // max-height: 9.375rem;
+  &__image {
+    max-width: 10rem;
     border-radius: 50%;
-    height: 10rem;
-    width: 10rem;
-    background-color: black;
+    border: 0.5rem solid rgba(0, 0, 0, 0.2);
   }
 
   &__summary {
-    margin: 1rem 0;
+    margin: 1.5rem 0;
     font-size: 1rem;
+    color: map-get(color.$bark-palette, 400);
+    font-weight: 500;
+    line-height: 1.5rem;
   }
 
   &__list {

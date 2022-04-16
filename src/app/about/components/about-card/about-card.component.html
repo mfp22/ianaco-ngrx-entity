@@ -6,7 +6,11 @@
 >
   <div class="about-card__header" fxFlex="1 0 0" fxLayoutAlign="center">
     <div class="about-card__image-container">
-      <img class="about-card__image" src="" alt="avatar" />
+      <img
+        class="about-card__image"
+        src="assets/images/profile-transparent-bk-min.png"
+        alt="avatar"
+      />
     </div>
   </div>
   <div class="about-card__body" fxFlex="2 0 0">
@@ -22,8 +26,8 @@
       {{ summary }}
     </p>
     <div class="about-card__action-container" fxLayout="row" fxLayoutGap="8px">
-      <button mat-stroked-button routerLink="/projects">Projects</button>
-      <button mat-stroked-button routerLink="/resume">Resume</button>
+      <button mat-button routerLink="/projects">Projects</button>
+      <button mat-button routerLink="/resume">Resume</button>
     </div>
   </div>
 </div>

@@ -14,11 +14,15 @@ export const resume: Resume = {
     items: [
       {
         label: 'Address',
-        value: 'Myrtle Beach, SC, 29588',
+        value: 'Myrtle Beach, SC 29588',
       },
       {
         label: 'E-mail',
         value: 'joshua.ianacone@gmail.com',
+      },
+      {
+        label: 'Personal Website',
+        value: `<a href="https://ianacodev.github.io" target="_blank" rel="noopener noreferrer">ianacodev.github.io</a>`,
       },
       {
         label: 'GitHub',
@@ -65,7 +69,7 @@ export const resume: Resume = {
     ],
   },
   experience: {
-    title: 'Work History',
+    title: 'Experience',
     items: [
       {
         role: 'Front End Software Engineer',

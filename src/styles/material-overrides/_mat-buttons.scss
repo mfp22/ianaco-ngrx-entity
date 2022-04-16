@@ -1,5 +1,9 @@
+@use "colorography" as color;
+
 button {
-  &.mat-stroked-button {
-    padding: 0.5rem 1rem;
+  &.mat-button {
+    background-color: map-get(color.$bark-palette, 900);
+    color: map-get(color.$cloud-palette, 500);
+    padding: 0.25rem 1rem;
   }
 }
