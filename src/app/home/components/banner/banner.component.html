@@ -1,7 +1,9 @@
 <div class="banner" fxLayout="row" fxLayoutGap="15px">
   <div>
     <div class="banner__header">
-      <h1 class="banner__title">Josh Ianacone</h1>
+      <h1 class="banner__title" *ngIf="personal">
+        {{ personal.firstName + " " + personal.lastName }}
+      </h1>
       <mat-divider class="banner__divider"></mat-divider>
       <h2
         class="banner__subtitle"

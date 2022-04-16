@@ -9,7 +9,11 @@
     >
       <div class="app__sidenav-header"></div>
       <div class="app__sidenav-body">
-        <mat-list class="app__sidenav-list" role="list">
+        <mat-list
+          class="app__sidenav-list"
+          role="list"
+          *ngIf="profile$ | async as profile"
+        >
           <mat-list-item
             class="app__sidenav-list-item"
             *ngFor="let nav of profile.navs"

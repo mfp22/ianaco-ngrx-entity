@@ -6,11 +6,13 @@ import { MatButtonModule } from '@angular/material/button';
 // features
 import { HomeRoutingModule } from './home-routing.module';
 import { SharedModule } from '../shared/shared.module';
+// containers
+import * as fromContainers from './containers';
 // components
 import * as fromComponents from './components';
 
 @NgModule({
-  declarations: [...fromComponents.components],
+  declarations: [...fromContainers.containers, ...fromComponents.components],
   imports: [
     CommonModule,
     FlexLayoutModule,

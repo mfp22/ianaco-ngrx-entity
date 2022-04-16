@@ -3,9 +3,14 @@ import {
   Component,
   OnDestroy,
   ViewChild,
+  OnInit,
 } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { DEFAULT_BREAKPOINTS } from '@angular/flex-layout';
+import { Observable } from 'rxjs';
+// ngrx
+import { Store, select } from '@ngrx/store';
+import * as fromProfileStore from './profile/store';
 // models
 import { Profile } from './models';
 import { MatSidenavContent } from '@angular/material/sidenav';
@@ -15,41 +20,19 @@ import { MatSidenavContent } from '@angular/material/sidenav';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnDestroy {
+export class AppComponent implements OnInit, OnDestroy {
   readonly SIDENAV_NG_FLEX_BREAKPOINT = 'lt-md';
   private _mobileQueryListener: () => void;
   mobileQuery: MediaQueryList | undefined;
+  profile$: Observable<Profile> | null = null;
   @ViewChild(MatSidenavContent)
   sidenavContent: MatSidenavContent | undefined;
 
-  profile: Profile = {
-    image: 'assets/images/profile-image-min.png',
-    personal: {
-      firstName: 'Josh',
-      lastName: 'Ianacone',
-      occupation: 'Front End Software Engineer',
-    },
-    navs: [
-      {
-        label: 'Home',
-        link: 'home',
-      },
-      {
-        label: 'About',
-        link: 'about',
-      },
-      {
-        label: 'projects',
-        link: 'projects',
-      },
-      {
-        label: 'resume',
-        link: 'resume',
-      },
-    ],
-  };
-
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
+  constructor(
+    changeDetectorRef: ChangeDetectorRef,
+    media: MediaMatcher,
+    private store: Store<fromProfileStore.ProfileState>
+  ) {
     const mediaQuery =
       DEFAULT_BREAKPOINTS.find(
         (br) => br.alias === this.SIDENAV_NG_FLEX_BREAKPOINT
@@ -59,6 +42,11 @@ export class AppComponent implements OnDestroy {
     this.mobileQuery.addEventListener('change', this._mobileQueryListener);
   }
 
+  ngOnInit(): void {
+    this.profile$ = this.store.pipe(
+      select(fromProfileStore.selectProfile)
+    ) as Observable<Profile>;
+  }
   ngOnDestroy(): void {
     this.mobileQuery?.removeEventListener('change', this._mobileQueryListener);
   }
