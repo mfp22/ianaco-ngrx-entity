@@ -14,7 +14,7 @@ export const portfolio: Portfolio = {
         repo: 'https://github.com/ianacodev/sample-demo-app',
       },
       description: `
-      Sample application to demo different concepts and functionality for angular and ngrx
+      Sample application to demo different concepts and functionality for angular and ngrx.
       `,
       featured: true,
     },
