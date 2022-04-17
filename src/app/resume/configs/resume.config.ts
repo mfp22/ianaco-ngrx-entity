@@ -5,7 +5,7 @@ export const resume: Resume = {
   fullName: 'Joshua Ianacone',
   role: 'Front End Software Engineer',
   summary: `
-    Motivated Front EndEngineer with experience building and maintaining 
+    Motivated Front End Engineer with experience building and maintaining 
     responsive websites. Extensive collaboration with teams to produce 
     sites that deliver business results. Strong interest in UI/UX.
   `,
@@ -117,7 +117,7 @@ export const resume: Resume = {
         beginDate: '2011-05',
         endDate: '2012-01',
         qualifications: [
-          `Funded by New Jersey Board of Public Utilities, developed anenergy assurance plan and energy reporting system for the state.`,
+          `Funded by New Jersey Board of Public Utilities, developed an energy assurance plan and energy reporting system for the state.`,
           `Researched and compiled detailed information on state's electrical, petroleum, and natural gas infrastructure.`,
           `Developed software to monitor, analyze, and store electrical outage information from major power utilities.`,
         ],
