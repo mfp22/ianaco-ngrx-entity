@@ -47,7 +47,9 @@
         <p>© 2022 Ianacodev</p>
       </div>
     </mat-sidenav>
-    <mat-sidenav-content>
+    <mat-sidenav-content
+      [style.marginLeft]="sidenav.mode === 'side' ? '300px' : 0"
+    >
       <mat-toolbar>
         <mat-toolbar-row fxLayout="row" fxLayoutAlign="end center">
           <button
