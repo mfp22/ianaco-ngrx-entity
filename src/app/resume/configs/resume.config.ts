@@ -125,11 +125,21 @@ export const resume: Resume = {
     ],
   },
   projects: {
-    title: 'Projects',
+    title: 'Freelance Work',
     items: [
       {
+        date: '2022',
+        name: 'Tutoring Company',
+        description: `
+        Consulted on improvements to current site design and
+        future product pages with potential A/B test use cases.
+        Also improved tech tools and participated in planning
+        for future branding updates and marketing.
+        `,
+      },
+      {
         date: '2020',
-        name: 'Vehicle Routing',
+        name: 'Delivery Company',
         description: `
         Developed responsive web application for managing and assigning drivers along with displaying vehicle stops for company delivery campaigns.
         `,
