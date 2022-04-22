@@ -15,9 +15,9 @@ export class BubbleGraphComponent implements OnInit {
   ngOnInit(): void {
     const width = this.size;
     const height = this.size;
-    const nodeColor = '#a4c639';
+    const nodeColor = '#1b1c1c';
     const linkColor = '#3f4040';
-    const textColor = '#1b1c1c';
+    const textColor = '#FFFFFF';
     const { nodes, links } = graphData;
     const svg = d3.select('svg').attr('viewBox', `0 0 ${height} ${width}`);
 

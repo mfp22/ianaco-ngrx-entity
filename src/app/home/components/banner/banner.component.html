@@ -15,10 +15,19 @@
         <div>Software Engineer</div>
       </h2>
     </div>
-    <p class="banner__message">
-      Welcome to my website, feel free to take a look around to find out more
-      about me and some of the things I'm working.
-    </p>
-    <button mat-button routerLink="/about">More About Me</button>
+    <div class="banner__message-container">
+      <img
+        class="banner__icon"
+        src="assets/icons/arrow-angled-right-icon.svg"
+        alt="->"
+      />
+      <p class="banner__message">
+        Welcome to my website, take a look around to find out about me and
+        things I'm working on...
+      </p>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="end">
+      <button mat-fab routerLink="/about">About Me</button>
+    </div>
   </div>
 </div>

@@ -33,15 +33,32 @@
     color: map-get(color.$bark-palette, 200);
   }
 
+  &__icon {
+    width: 1.5rem;
+    display: block;
+  }
+
   &__divider {
     margin: 0.25rem 0;
   }
 
+  &__message-container {
+    margin-bottom: 2rem;
+  }
+
   &__message {
-    margin: 1.5rem 0;
-    font-size: 1rem;
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
     color: map-get(color.$bark-palette, 400);
     font-weight: 500;
-    line-height: 1.5rem;
+    line-height: 2rem;
   }
+}
+
+.mat-fab {
+  color: map-get(color.$cloud-palette, 500);
+  background-color: map-get(color.$bark-palette, 900);
+  height: 7.813rem;
+  width: 7.813rem;
+  font-size: 1rem;
 }

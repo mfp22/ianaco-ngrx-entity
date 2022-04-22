@@ -8,11 +8,13 @@ import {
 import { MediaMatcher } from '@angular/cdk/layout';
 import { DEFAULT_BREAKPOINTS } from '@angular/flex-layout';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 // ngrx
 import { Store, select } from '@ngrx/store';
+import * as fromRootStore from './store';
 import * as fromProfileStore from './profile/store';
 // models
-import { Profile } from './models';
+import { Profile } from './profile/models';
 import { MatSidenavContent } from '@angular/material/sidenav';
 
 @Component({
@@ -25,13 +27,16 @@ export class AppComponent implements OnInit, OnDestroy {
   private _mobileQueryListener: () => void;
   mobileQuery: MediaQueryList | undefined;
   profile$: Observable<Profile> | null = null;
+  active$: Observable<any> | null = null;
   @ViewChild(MatSidenavContent)
   sidenavContent: MatSidenavContent | undefined;
 
   constructor(
     changeDetectorRef: ChangeDetectorRef,
     media: MediaMatcher,
-    private store: Store<fromProfileStore.ProfileState>
+    private store: Store<
+      fromProfileStore.ProfileState | fromRootStore.RouterReducerState
+    >
   ) {
     const mediaQuery =
       DEFAULT_BREAKPOINTS.find(
@@ -46,6 +51,8 @@ export class AppComponent implements OnInit, OnDestroy {
     this.profile$ = this.store.pipe(
       select(fromProfileStore.selectProfile)
     ) as Observable<Profile>;
+
+    this.active$ = this.store.pipe(select(fromRootStore.selectUrl));
   }
   ngOnDestroy(): void {
     this.mobileQuery?.removeEventListener('change', this._mobileQueryListener);

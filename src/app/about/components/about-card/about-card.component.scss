@@ -2,17 +2,27 @@
 
 .about-card {
   &__image {
-    max-width: 10rem;
+    max-width: 11rem;
     border-radius: 50%;
-    border: 0.5rem solid rgba(0, 0, 0, 0.2);
+    // border: 0.5rem solid map-get(color.$cloud-palette, 500);
+    background-color: map-get(color.$cloud-palette, 500);
+  }
+
+  &__icon {
+    width: 1.5rem;
+    display: block;
+  }
+
+  &__summary-container {
+    margin-bottom: 2rem;
   }
 
   &__summary {
-    margin: 1.5rem 0;
-    font-size: 1rem;
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
     color: map-get(color.$bark-palette, 400);
     font-weight: 500;
-    line-height: 1.5rem;
+    line-height: 2rem;
   }
 
   &__list {
@@ -21,11 +31,20 @@
     font-size: 1rem;
 
     &-item {
-      margin-bottom: 0.5rem;
+      border-top: 0.063rem solid map-get(color.$bark-palette, 100);
+      padding: 1rem 0;
     }
+
     &-label {
-      font-weight: 600;
-      margin-right: 0.25rem;
+      color: map-get(color.$bark-palette, 900);
+      font-weight: 800;
+      margin-bottom: 0.875rem;
+    }
+
+    &-value {
+      font-size: 1.5rem;
+      color: map-get(color.$bark-palette, 200);
+      word-break: break-word;
     }
   }
 }

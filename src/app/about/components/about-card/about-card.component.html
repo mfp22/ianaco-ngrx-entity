@@ -1,10 +1,6 @@
-<div
-  class="about-card"
-  fxLayout="row"
-  fxLayout.lt-sm="column"
-  fxLayoutGap="15px"
->
-  <div class="about-card__header" fxFlex="1 0 0" fxLayoutAlign="center">
+<div class="about-card">
+  <div class="about-card__header">
+    <!--
     <div class="about-card__image-container">
       <img
         class="about-card__image"
@@ -12,22 +8,30 @@
         alt="avatar"
       />
     </div>
-  </div>
-  <div class="about-card__body" fxFlex="2 0 0">
+  -->
     <ul class="about-card__list">
       <li class="about-card__list-item" *ngFor="let item of personalInfo">
-        <span class="about-card__list-label"> {{ item.label }}: </span>
-        <span class="about-card__list-value">
+        <div class="about-card__list-label">{{ item.label }}</div>
+        <div class="about-card__list-value">
           {{ item.value }}
-        </span>
+        </div>
       </li>
     </ul>
-    <p class="about-card__summary">
-      {{ summary }}
-    </p>
+  </div>
+  <div class="about-card__body">
+    <div class="about-card__summary-container">
+      <img
+        class="about-card__icon"
+        src="assets/icons/arrow-angled-right-icon.svg"
+        alt="->"
+      />
+      <p class="about-card__summary">
+        {{ summary }}
+      </p>
+    </div>
     <div class="about-card__action-container" fxLayout="row" fxLayoutGap="8px">
-      <button mat-button routerLink="/projects">Projects</button>
-      <button mat-button routerLink="/resume">Resume</button>
+      <button mat-stroked-button routerLink="/projects">Projects</button>
+      <button mat-stroked-button routerLink="/resume">Resume</button>
     </div>
   </div>
 </div>

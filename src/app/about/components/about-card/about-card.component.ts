@@ -13,11 +13,11 @@ export class AboutCardComponent {
 `;
   personalInfo = [
     {
-      label: 'Name',
+      label: 'Whats your name?',
       value: 'Josh Ianacone',
     },
     {
-      label: 'Contact',
+      label: 'Whats your contact?',
       value: 'joshua.ianacone@gmail.com',
     },
   ];

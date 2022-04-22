@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 // models
-import { Profile } from '../../models';
+import { Profile } from '../../profile/models';
 
 @Component({
   selector: 'app-sidenav-profile',

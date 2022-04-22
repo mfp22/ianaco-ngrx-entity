@@ -16,12 +16,15 @@
         >
           <mat-list-item
             class="app__sidenav-list-item"
-            *ngFor="let nav of profile.navs"
+            *ngFor="let nav of profile.navs; index as i"
           >
             <a
               class="app__link"
               [routerLink]="nav.link"
-              (click)="mobileQuery?.matches && sidenav.toggle()"
+              [ngClass]="{
+                'app__link--active': (active$ | async)?.includes(nav.link)
+              }"
+              (click)="mobileQuery?.matches ? sidenav.close() : null"
               >{{ nav.label }}</a
             >
           </mat-list-item>
@@ -29,12 +32,11 @@
       </div>
       <div class="app__sidenav-footer">
         <div>
+          <div class="app__sidenav-label">Info</div>
           <div class="app__sidenav-item">
-            <div class="app__sidenav-label">Contact</div>
             <div class="app__sidenav-value">joshua.ianacone@gmail.com</div>
           </div>
           <div class="app__sidenav-item">
-            <div class="app__sidenav-label">GitHub</div>
             <a
               href="https://github.com/ianacodev"
               target="_blank"
