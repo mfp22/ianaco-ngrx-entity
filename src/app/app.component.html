@@ -7,8 +7,17 @@
       [opened]="!mobileQuery?.matches"
       fxLayout="column"
     >
-      <div class="app__sidenav-header"></div>
-      <div class="app__sidenav-body">
+      <div class="app__sidenav-header">
+        <div class="app__sidenav-label" *ngIf="profile$ | async as profile">
+          {{ profile.personal.email }}
+        </div>
+      </div>
+      <div
+        class="app__sidenav-body"
+        fxLayout="column"
+        fxLayoutAlign="center start"
+      >
+        <mat-divider></mat-divider>
         <mat-list
           class="app__sidenav-list"
           role="list"
@@ -20,38 +29,33 @@
           >
             <a
               class="app__link"
-              [routerLink]="nav.link"
+              (click)="onNavigate(nav)"
               [ngClass]="{
                 'app__link--active': (active$ | async)?.includes(nav.link)
               }"
               (click)="mobileQuery?.matches ? sidenav.close() : null"
-              >{{ nav.label }}</a
             >
+              {{ nav.label }}
+            </a>
           </mat-list-item>
         </mat-list>
+        <mat-divider></mat-divider>
       </div>
       <div class="app__sidenav-footer">
-        <div>
-          <div class="app__sidenav-label">Info</div>
-          <div class="app__sidenav-item">
-            <div class="app__sidenav-value">joshua.ianacone@gmail.com</div>
-          </div>
-          <div class="app__sidenav-item">
-            <a
-              href="https://github.com/ianacodev"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="app__sidenav-value"
-              >github.com/ianacodev</a
-            >
-          </div>
-        </div>
-        <p>© 2022 Ianacodev</p>
+        <div class="app__sidenav-label">© 2022 Ianacodev</div>
       </div>
     </mat-sidenav>
     <mat-sidenav-content
+      class="app__sidenav-content"
       [style.marginLeft]="sidenav.mode === 'side' ? '300px' : 0"
     >
+      <div
+        class="app__sidenav-content-overlay"
+        @pageTransition
+        (@pageTransition.done)="onTransitionDone($event)"
+        *ngIf="transition"
+        #overlay
+      ></div>
       <mat-toolbar>
         <mat-toolbar-row fxLayout="row" fxLayoutAlign="end center">
           <button

@@ -6,17 +6,19 @@ $hamburger-types: (collapse) !default;
   height: 100%;
 
   &__link {
-    color: map-get(color.$windy-palette, 500);
+    color: map-get(color.$bark-palette, 900);
     text-transform: uppercase;
     text-decoration: none;
     font-size: 2rem;
     position: relative;
     width: 100%;
+    font-weight: 500;
+    cursor: pointer;
 
     &--active {
       &::after {
         content: "";
-        border: 0.25rem solid map-get(color.$windy-palette, 500);
+        border: 0.25rem solid map-get(color.$bark-palette, 900);
         border-radius: 50%;
         position: absolute;
         top: 50%;
@@ -29,7 +31,7 @@ $hamburger-types: (collapse) !default;
   }
 
   &__sidenav {
-    background-color: map-get(color.$bark-palette, 900);
+    background-color: map-get(color.$cloud-palette, 500);
 
     &-item {
       font-size: 0.875rem;
@@ -44,9 +46,9 @@ $hamburger-types: (collapse) !default;
     }
 
     &-value {
-      font-weight: 300;
+      font-weight: 500;
       text-decoration: none;
-      color: map-get(color.$cloud-palette, 500);
+      color: map-get(color.$bark-palette, 900);
     }
 
     &-body {
@@ -56,34 +58,71 @@ $hamburger-types: (collapse) !default;
     }
 
     &-footer {
-      color: color.$color-contrast;
+      font-weight: 500;
+      color: map-get(color.$bark-palette, 900);
     }
 
     &-list {
       padding: 0;
       margin: 1.5rem 0;
+      width: 100%;
     }
 
     &-list-item {
       padding: 0;
       margin: 0 0 1rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
   &__container {
-    padding: 1rem 2rem;
-    height: calc(100% - 64px);
     box-sizing: border-box;
+    height: 100%;
+  }
+
+  &__sidenav-content {
+    position: relative;
+    &-overlay {
+      background-color: map-get(color.$bark-palette, 900);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      transition: all 500ms;
+      display: block;
+      z-index: 2000;
+    }
+
+    &-overlay-name {
+      color: map-get(color.$cloud-palette, 500);
+      font-size: 3rem;
+      text-transform: capitalize;
+      position: relative;
+      top: 18.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      text-align: center;
+    }
   }
 }
 
 .mat-sidenav-container {
   background-color: map-get(color.$cloud-palette, 500);
   height: 100vh;
+  position: relative;
 }
 
 .mat-toolbar {
   background: none;
+  position: absolute;
+}
+
+.mat-divider {
+  width: 100%;
 }
 
 .hamburger {

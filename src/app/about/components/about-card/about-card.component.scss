@@ -11,6 +11,8 @@
   &__icon {
     width: 1.5rem;
     display: block;
+    transform: rotate(-45deg);
+    display: inline-block;
   }
 
   &__summary-container {
@@ -20,7 +22,7 @@
   &__summary {
     margin: 0.5rem 0;
     font-size: 1.5rem;
-    color: map-get(color.$bark-palette, 400);
+    color: map-get(color.$bark-palette, 900);
     font-weight: 500;
     line-height: 2rem;
   }
@@ -36,14 +38,14 @@
     }
 
     &-label {
-      color: map-get(color.$bark-palette, 900);
-      font-weight: 800;
+      color: map-get(color.$bark-palette, 300);
+      font-weight: 500;
       margin-bottom: 0.875rem;
     }
 
     &-value {
       font-size: 1.5rem;
-      color: map-get(color.$bark-palette, 200);
+      color: map-get(color.$bark-palette, 900);
       word-break: break-word;
     }
   }

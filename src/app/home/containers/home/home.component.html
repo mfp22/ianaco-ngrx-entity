@@ -1,5 +1,49 @@
-<app-page-template class="home">
-  <div content>
-    <app-banner [personal]="personal$ | async"></app-banner>
+<app-page-template class="home" [pageName]="'Home'">
+  <div *ngIf="personal$ | async as personal">
+    <app-page-section-template [style.backgroundColor]="'#e8e8e8'">
+      <section class="home__section">
+        <h1 class="home__title">
+          <span class="home__title-text">{{ personal.occupationType }}</span>
+          <span class="home__title-text">{{ personal.occupation }} </span>
+        </h1>
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="-30px">
+          <div
+            class="home__image-container"
+            fxLayout="column"
+            fxLayoutAlign="start start"
+          >
+            <img
+              class="home__image"
+              src="assets/images/profile-image-min.png"
+              alt="profile-pic"
+            />
+          </div>
+          <button mat-fab routerLink="/about">About Me</button>
+        </div>
+      </section>
+      <section
+        class="home__section home__section--right"
+        fxLayout="column"
+        fxLayoutAlign="end end"
+      >
+        <div
+          class="home__text-container"
+          fxLayout="column"
+          fxLayoutAlign="end end"
+        >
+          <img
+            class="home__icon"
+            src="assets/icons/arrow-down-icon.svg"
+            alt=">"
+          />
+          <p class="home__text">
+            Welcome to my website, take a look around to find out more about me.
+          </p>
+          <div class="home__lg-text">
+            - {{ personal.firstName + " " + personal.lastName }}
+          </div>
+        </div>
+      </section>
+    </app-page-section-template>
   </div>
 </app-page-template>

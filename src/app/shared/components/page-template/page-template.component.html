@@ -1,19 +1,7 @@
-<div class="page-template" fxLayout="column" @slideUp>
-  <div class="page-template__header">
-    <span class="page-template__title">
-      <ng-content select="[title]"></ng-content>
-    </span>
-    <div class="mat-title">
-      <ng-content select="[subtitle]"></ng-content>
-    </div>
-  </div>
-  <div
-    class="page-template__content-container"
-    fxLayout="column"
-    fxLayoutAlign="center center"
-  >
-    <div class="page-template__content">
-      <ng-content select="[content]"></ng-content>
-    </div>
-  </div>
+<div
+  class="page-template"
+  fxLayout="column"
+  [style.backgroundColor]="backgroundColorHex"
+>
+  <ng-content></ng-content>
 </div>

@@ -1,0 +1,15 @@
+<section
+  class="page-section-template"
+  fxLayout="column"
+  fxLayoutAlign="start center"
+  fxFlexFill
+>
+  <div class="page-section-template__content-container">
+    <h1 class="page-section-template__title">
+      <ng-content select="[title]"></ng-content>
+    </h1>
+    <div class="page-section-template__content">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</section>

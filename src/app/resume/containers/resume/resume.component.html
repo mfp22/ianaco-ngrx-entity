@@ -1,6 +1,6 @@
 <app-page-template>
-  <span title>Resume</span>
-  <div class="resume__content" content>
+  <app-page-section-template [style.backgroundColor]="'#e8e8e8'">
+    <span title>My Details...</span>
     <app-resume-document [resume]="resume$ | async"></app-resume-document>
-  </div>
+  </app-page-section-template>
 </app-page-template>

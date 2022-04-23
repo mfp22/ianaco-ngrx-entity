@@ -6,7 +6,9 @@ export const profile: Profile = {
   personal: {
     firstName: 'Josh',
     lastName: 'Ianacone',
-    occupation: 'Front End Software Engineer',
+    occupation: 'Software Engineer',
+    occupationType: 'Front End',
+    email: 'joshua.ianacone@gmail.com',
   },
   navs: [
     {

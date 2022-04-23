@@ -1,18 +1,11 @@
 @use "colorography" as color;
 
 .portfolio {
-  &__section {
-    &-title {
-      font-size: 2rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      color: map-get(color.$bark-palette, 300);
-      margin-bottom: 3rem;
-      text-align: center;
-    }
-
-    &-divider {
-      margin: 4rem 10%;
-    }
+  &__caption {
+    margin: 0.5rem 0 1rem 0;
+    font-size: 1.5rem;
+    color: map-get(color.$bark-palette, 400);
+    font-weight: 500;
+    line-height: 2rem;
   }
 }

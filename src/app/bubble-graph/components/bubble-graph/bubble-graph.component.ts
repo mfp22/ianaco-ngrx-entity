@@ -15,7 +15,7 @@ export class BubbleGraphComponent implements OnInit {
   ngOnInit(): void {
     const width = this.size;
     const height = this.size;
-    const nodeColor = '#1b1c1c';
+    const nodeColor = '#000000b3';
     const linkColor = '#3f4040';
     const textColor = '#FFFFFF';
     const { nodes, links } = graphData;
@@ -40,7 +40,7 @@ export class BubbleGraphComponent implements OnInit {
       )
       .force(
         'collision',
-        d3.forceCollide().radius((d: any) => d.size + 5)
+        d3.forceCollide().radius((d: any) => d.size + 2)
       );
 
     // nodes

@@ -1,17 +1,12 @@
-<app-page-template class="about">
-  <app-bubble-graph></app-bubble-graph>
-  <span title>About Me</span>
+<app-page-template class="about" [pageName]="'About'">
   <div content class="content">
-    <div class="about__content">
-      <div class="about__section">
-        <h1 class="about__section-title">Personal Info...</h1>
-        <app-about-card></app-about-card>
-      </div>
-      <mat-divider class="about__section-divider"></mat-divider>
-      <div class="about__section">
-        <h1 class="about__section-title">...My Skills</h1>
-        <app-bubble-graph></app-bubble-graph>
-      </div>
-    </div>
+    <app-page-section-template [style.backgroundColor]="'#e8e8e8'">
+      <span title>Personal Info...</span>
+      <app-about-card></app-about-card>
+    </app-page-section-template>
+    <app-page-section-template [style.backgroundColor]="'#ffffff'">
+      <span title>...My Skills</span>
+      <app-bubble-graph></app-bubble-graph>
+    </app-page-section-template>
   </div>
 </app-page-template>

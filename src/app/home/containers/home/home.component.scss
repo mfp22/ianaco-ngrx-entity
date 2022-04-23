@@ -1,0 +1,57 @@
+@use "colorography" as color;
+
+.home {
+  &__title {
+    font-size: 3.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: normal;
+
+    &-text {
+      display: block;
+      line-height: 3.5rem;
+    }
+  }
+
+  &__lg-text {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 500;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  &__image {
+    max-width: 9rem;
+    position: relative;
+    border-radius: 50%;
+    border: 8px solid map-get(color.$bark-palette, 500);
+  }
+
+  &__icon {
+    width: 1.5rem;
+    display: block;
+    transform: rotate(45deg);
+  }
+
+  &__text-container {
+    max-width: 31.25rem;
+  }
+
+  &__text {
+    margin: 0.5rem 0 1rem 0;
+    font-size: 1.5rem;
+    color: map-get(color.$bark-palette, 400);
+    font-weight: 500;
+    line-height: 2rem;
+  }
+}
+
+.mat-fab {
+  color: map-get(color.$cloud-palette, 500);
+  background-color: map-get(color.$bark-palette, 900);
+  height: 6.25rem;
+  width: 6.25rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
