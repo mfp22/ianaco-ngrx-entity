@@ -8,8 +8,8 @@
       fxLayout="column"
     >
       <div class="app__sidenav-header">
-        <div class="app__sidenav-label" *ngIf="profile$ | async as profile">
-          {{ profile.personal.email }}
+        <div class="app__sidenav-label" *ngIf="personal$ | async as personal">
+          {{ personal.email }}
         </div>
       </div>
       <div
@@ -21,17 +21,17 @@
         <mat-list
           class="app__sidenav-list"
           role="list"
-          *ngIf="profile$ | async as profile"
+          *ngIf="navs$ | async as navs"
         >
           <mat-list-item
             class="app__sidenav-list-item"
-            *ngFor="let nav of profile.navs; index as i"
+            *ngFor="let nav of navs; index as i"
           >
             <a
               class="app__link"
-              (click)="onNavigate(nav)"
+              [routerLink]="nav.link"
               [ngClass]="{
-                'app__link--active': (active$ | async)?.includes(nav.link)
+                'app__link--active': (activeNavIndex$ | async) === i
               }"
               (click)="mobileQuery?.matches ? sidenav.close() : null"
             >
@@ -53,9 +53,22 @@
         class="app__sidenav-content-overlay"
         @pageTransition
         (@pageTransition.done)="onTransitionDone($event)"
-        *ngIf="transition"
+        *ngIf="transitionStatus$ | async"
         #overlay
-      ></div>
+        [style.marginLeft]="sidenav.mode === 'side' ? '300px' : 0"
+      >
+        <div
+          class="app__sidenav-content-overlay-label"
+          *ngIf="{ value: activeNavIndex$ | async } as index"
+        >
+          <ng-container *ngIf="index.value !== null">
+            <span class="app__text--sm">0{{ index.value + 1 }}/</span>
+            <span *ngIf="navs$ | async as navs" class="app__text--lg">{{
+              navs[index.value].link
+            }}</span>
+          </ng-container>
+        </div>
+      </div>
       <mat-toolbar>
         <mat-toolbar-row fxLayout="row" fxLayoutAlign="end center">
           <button
@@ -73,7 +86,7 @@
         </mat-toolbar-row>
       </mat-toolbar>
       <div class="app__container">
-        <router-outlet (activate)="onActivateRoute()"></router-outlet>
+        <router-outlet (activate)="onActivateRoute($event)"></router-outlet>
       </div>
     </mat-sidenav-content>
   </mat-sidenav-container>

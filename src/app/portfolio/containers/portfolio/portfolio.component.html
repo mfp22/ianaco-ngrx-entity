@@ -3,9 +3,36 @@
     <app-page-section-template [style.backgroundColor]="'#e8e8e8'">
       <span title>Latest Items...</span>
       <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="30px">
-        <p class="portfolio__caption" fxFlex="1 0 0">
-          Check out some of my latest personal projects.
-        </p>
+        <div fxFlex="1 0 0">
+          <img
+            class="portfolio__icon"
+            src="assets/icons/arrow-down-icon.svg"
+            alt=">"
+          />
+          <p class="portfolio__caption">
+            Check out some of my latest personal projects.
+          </p>
+          <div *ngIf="cardSets.featured[0] as project">
+            <table class="portfolio__table">
+              <caption>
+                Details
+              </caption>
+              <tbody>
+                <tr>
+                  <td>Project Name</td>
+                  <td>{{ project.title }}</td>
+                </tr>
+                <tr>
+                  <td>Type</td>
+                  <td>Angular/NgRx</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="portfolio__project-description">
+              {{ project.description }}
+            </p>
+          </div>
+        </div>
         <app-portfolio-grid
           fxFlex="2 0 0"
           [cards]="cardSets.featured"

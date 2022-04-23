@@ -9,10 +9,13 @@ import { graphData } from './graph-data';
   styleUrls: ['./bubble-graph.component.scss'],
 })
 export class BubbleGraphComponent implements OnInit {
+  nodes = graphData.nodes;
   @Input() size: number = 500;
   constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  createChart() {
     const width = this.size;
     const height = this.size;
     const nodeColor = '#000000b3';

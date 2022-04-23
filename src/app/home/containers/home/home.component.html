@@ -6,6 +6,9 @@
           <span class="home__title-text">{{ personal.occupationType }}</span>
           <span class="home__title-text">{{ personal.occupation }} </span>
         </h1>
+        <h2 class="home__subtitle">
+          {{ personal.firstName + " " + personal.lastName }}
+        </h2>
         <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="-30px">
           <div
             class="home__image-container"
@@ -18,7 +21,6 @@
               alt="profile-pic"
             />
           </div>
-          <button mat-fab routerLink="/about">About Me</button>
         </div>
       </section>
       <section
@@ -39,9 +41,7 @@
           <p class="home__text">
             Welcome to my website, take a look around to find out more about me.
           </p>
-          <div class="home__lg-text">
-            - {{ personal.firstName + " " + personal.lastName }}
-          </div>
+          <button mat-fab routerLink="/about">About Me</button>
         </div>
       </section>
     </app-page-section-template>

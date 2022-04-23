@@ -1,12 +1,8 @@
 // ngrx
-import { createFeatureSelector } from '@ngrx/store';
-import { getSelectors, RouterReducerState } from '@ngrx/router-store';
-export { RouterReducerState };
+import { getSelectors } from '@ngrx/router-store';
+import * as fromReducers from '../reducers';
 
-export const featureKey = 'router';
-
-export const selectRouter =
-  createFeatureSelector<RouterReducerState>(featureKey);
+export const selectRouter = fromReducers.selectRouterFeatureState;
 
 export const {
   selectCurrentRoute,

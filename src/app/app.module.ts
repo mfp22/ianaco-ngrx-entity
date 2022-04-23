@@ -9,15 +9,17 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 // ngrx
 import { StoreModule } from '@ngrx/store';
-import { StoreRouterConnectingModule, routerReducer } from '@ngrx/router-store';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { environment } from '../environments/environment';
+import { reducers } from './store';
 // my modules
 import { AppRoutingModule } from './app-routing.module';
 import { ProfileModule } from './profile/profile.module';
 // components
 import { AppComponent } from './app.component';
 import * as fromComponents from './components';
+// environment
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [AppComponent, ...fromComponents.components],
@@ -31,9 +33,7 @@ import * as fromComponents from './components';
     MatListModule,
     MatDividerModule,
     MatButtonModule,
-    StoreModule.forRoot({
-      router: routerReducer,
-    }),
+    StoreModule.forRoot(reducers),
     StoreRouterConnectingModule.forRoot(),
     StoreDevtoolsModule.instrument({
       maxAge: 25,

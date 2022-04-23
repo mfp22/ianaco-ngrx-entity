@@ -16,8 +16,7 @@
 
   &__aside {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.6);
-    left: 0;
+    right: 0;
     top: 0;
     bottom: 0;
     color: map-get(color.$cloud-palette, 500);
@@ -33,15 +32,24 @@
     color: map-get(color.$cloud-palette, 500);
   }
 
-  &__link.mat-stroked-button {
-    display: block;
-    border: 1px solid map-get(color.$cloud-palette, 500);
-    margin: 0.5rem 0;
-    width: 100%;
+  &__link.mat-fab {
+    color: map-get(color.$cloud-palette, 500);
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 6.25rem;
+    width: 6.25rem;
+    font-size: 1rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__image-container {
     transform: translateX(50%);
     max-width: 400px;
   }
+}
+
+.mat-card-actions {
+  margin: 0;
 }

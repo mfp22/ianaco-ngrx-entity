@@ -7,12 +7,14 @@ import {
   useAnimation,
   state,
 } from '@angular/animations';
+// consts
+export const TRANSITION_DURATION = 700;
 
 export const pageTransitionAnimation = trigger('pageTransition', [
   transition('void => *', [
     style({
       transform: 'translateY(100%)',
     }),
-    animate('700ms'),
+    animate(TRANSITION_DURATION),
   ]),
 ]);
