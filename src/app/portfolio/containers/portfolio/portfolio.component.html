@@ -1,4 +1,4 @@
-<app-page-template class="portfolio" [pageName]="'Projects'">
+<app-page-template class="portfolio">
   <div *ngIf="portfolioCardSets$ | async as cardSets">
     <app-page-section-template [style.backgroundColor]="'#e8e8e8'">
       <span title>Latest Items...</span>
@@ -13,7 +13,7 @@
         ></app-portfolio-grid>
       </div>
     </app-page-section-template>
-    <app-page-section-template>
+    <app-page-section-template [style.backgroundColor]="'#ffffff'">
       <span title>...Previous Items</span>
       <app-portfolio-grid [cards]="cardSets.general"></app-portfolio-grid>
     </app-page-section-template>

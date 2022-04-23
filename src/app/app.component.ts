@@ -29,7 +29,7 @@ import { pageTransitionAnimation } from './shared/animations';
 })
 export class AppComponent implements OnInit, OnDestroy {
   readonly SIDENAV_NG_FLEX_BREAKPOINT = 'lt-md';
-  readonly ANIMATION_DELAY = 500;
+  readonly ANIMATION_DELAY = 300;
   private _mobileQueryListener: () => void;
   transition = false;
   activeNav: Nav | null = null;
@@ -77,9 +77,11 @@ export class AppComponent implements OnInit, OnDestroy {
 
   onTransitionDone(event: any) {
     if (event.fromState) {
+      console.log('transition');
       timer(this.ANIMATION_DELAY)
         .pipe(
           tap(() => this.router.navigate([this.activeNav?.link])),
+          delay(this.ANIMATION_DELAY),
           map(() => this.overlayEl?.nativeElement),
           tap((el: HTMLDivElement) => (el.style.opacity = '0')),
           delay(this.ANIMATION_DELAY)

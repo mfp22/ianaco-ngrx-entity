@@ -1,2 +1,6 @@
+@use "colorography" as color;
+
 .page-template {
+  height: 100%;
+  background-color: map-get(color.$breeze-palette, 900);
 }

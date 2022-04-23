@@ -85,9 +85,10 @@ $hamburger-types: (collapse) !default;
 
   &__sidenav-content {
     position: relative;
+
     &-overlay {
       background-color: map-get(color.$bark-palette, 900);
-      position: absolute;
+      position: fixed;
       top: 0;
       bottom: 0;
       right: 0;
