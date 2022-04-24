@@ -1,5 +1,19 @@
 @use "colorography" as color;
 
+.mat-fab {
+  color: map-get(color.$cloud-palette, 500);
+  background-color: map-get(color.$bark-palette, 900);
+  height: 5.313rem;
+  width: 5.313rem;
+  font-size: 1rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+}
+
+// button
 button {
   &.mat-stroked-button {
     color: map-get(color.$cloud-palette, 500);
@@ -12,5 +26,22 @@ button {
       color: map-get(color.$cloud-palette, 500);
       background-color: map-get(color.$bark-palette, 900);
     }
+  }
+
+  &.mat-fab {
+    @extend .mat-fab;
+
+    &.mat-accent {
+      background-color: map-get(color.$bark-palette, 900);
+    }
+  }
+}
+
+// link button
+a.mat-fab {
+  @extend .mat-fab;
+
+  &.mat-accent {
+    background-color: map-get(color.$bark-palette, 900);
   }
 }

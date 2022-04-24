@@ -24,13 +24,13 @@ $hamburger-types: (collapse) !default;
     &--active {
       &::after {
         content: "";
+        background-color: map-get(color.$bark-palette, 900);
         border: 0.25rem solid map-get(color.$bark-palette, 900);
         border-radius: 50%;
         position: absolute;
         top: 50%;
         right: 0;
         opacity: 1;
-        transition: all 3s;
         margin-top: -0.25rem;
       }
     }

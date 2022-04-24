@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import * as d3 from 'd3';
 // data
 import { graphData } from './graph-data';
 
@@ -15,6 +14,8 @@ export class BubbleGraphComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  // Optional D3 network display
+  /*
   createChart() {
     const width = this.size;
     const height = this.size;
@@ -75,4 +76,5 @@ export class BubbleGraphComponent implements OnInit {
       textElements.attr('x', (node) => node.x).attr('y', (node) => node.y);
     });
   }
+  */
 }

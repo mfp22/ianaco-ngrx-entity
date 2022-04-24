@@ -4,7 +4,6 @@
   &__image {
     max-width: 11rem;
     border-radius: 50%;
-    // border: 0.5rem solid map-get(color.$cloud-palette, 500);
     background-color: map-get(color.$cloud-palette, 500);
   }
 

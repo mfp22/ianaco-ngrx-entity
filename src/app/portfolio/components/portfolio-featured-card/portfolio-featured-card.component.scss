@@ -1,19 +1,21 @@
 @use "colorography" as color;
 
-:host {
-}
-
 .portfolio-featured-card {
   height: 100%;
   width: 100%;
 
   &__image-container {
-    min-height: 20rem;
+    min-height: 15rem;
     max-height: 34rem;
     height: 100%;
     background-image: url(../../../../assets/images/sample-demo-app-promo-min.png);
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media only screen and (max-width: 959px) {
+      background-size: contain;
+      background-position: center;
+    }
   }
 
   &__title {
