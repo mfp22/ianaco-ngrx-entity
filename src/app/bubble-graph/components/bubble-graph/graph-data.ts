@@ -11,14 +11,6 @@ enum Distances {
 }
 
 const nodes = [
-  // { label: 'SKILLS', color: '#a4c639', size: 60, group: 0, x: 0, y: 0 },
-  {
-    label: 'TypeScript',
-    size: Sizes.LG,
-    group: 0,
-    x: 0,
-    y: 0,
-  },
   {
     label: 'Angular',
     size: Sizes.LG,
@@ -28,14 +20,21 @@ const nodes = [
     y: 0,
   },
   {
-    label: 'HTML',
-    size: Sizes.MD,
+    label: 'NgRx',
+    size: Sizes.LG,
     group: 0,
     x: 0,
     y: 0,
   },
   {
-    label: 'Angular Material',
+    label: 'RxJS',
+    size: Sizes.LG,
+    group: 0,
+    x: 0,
+    y: 0,
+  },
+  {
+    label: 'TypeScript',
     size: Sizes.LG,
     group: 0,
     x: 0,
@@ -49,8 +48,8 @@ const nodes = [
     y: 0,
   },
   {
-    label: 'RxJS',
-    size: Sizes.LG,
+    label: 'HTML',
+    size: Sizes.MD,
     group: 0,
     x: 0,
     y: 0,
@@ -63,7 +62,14 @@ const nodes = [
     y: 0,
   },
   {
-    label: 'NgRx',
+    label: 'CSS',
+    size: Sizes.MD,
+    group: 0,
+    x: 0,
+    y: 0,
+  },
+  {
+    label: 'Angular Material',
     size: Sizes.LG,
     group: 0,
     x: 0,
@@ -71,13 +77,6 @@ const nodes = [
   },
   {
     label: 'Jasmine',
-    size: Sizes.MD,
-    group: 0,
-    x: 0,
-    y: 0,
-  },
-  {
-    label: 'CSS',
     size: Sizes.MD,
     group: 0,
     x: 0,
