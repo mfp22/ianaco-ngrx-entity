@@ -1,6 +1,12 @@
 @use "colorography" as color;
 
 .portfolio {
+  &__align {
+    &--right {
+      text-align: right;
+    }
+  }
+
   &__caption {
     margin: 0.5rem 0 2rem 0;
     font-size: 2rem;
@@ -12,31 +18,45 @@
   &__table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 500;
-    line-height: 2rem;
+    line-height: 1.75rem;
+    color: map-get(color.$bark-palette, 500);
 
     caption {
       text-align: left;
     }
 
     td {
-      border: solid map-get(color.$bark-palette, 900);
+      border: solid map-get(color.$bark-palette, 200);
       border-width: 1px 0 1px 0;
-      padding: 0.5rem 0;
+      padding: 1.5rem 0;
     }
   }
 
   &__project-description {
-    font-size: 1.25rem;
-    color: map-get(color.$bark-palette, 900);
-    margin: 1rem 0;
-    line-height: 1.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: map-get(color.$bark-palette, 500);
+    margin: 1.5rem 0;
+    line-height: 1.5rem;
   }
 
   &__icon {
     width: 1.5rem;
     display: inline-block;
     transform: rotate(-45deg);
+  }
+
+  &__link.mat-fab {
+    color: map-get(color.$cloud-palette, 500);
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 6.25rem;
+    width: 6.25rem;
+    font-size: 1rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

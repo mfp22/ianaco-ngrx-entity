@@ -1,27 +1,19 @@
 @use "colorography" as color;
 
 :host {
-  display: flex;
-  justify-content: center;
 }
 
 .portfolio-featured-card {
-  min-height: 25rem;
-  max-width: 36rem;
-  background: url(../../../../assets/images/sample-demo-app-promo-min.png)
-    no-repeat 0 0;
-  background-size: cover;
-  position: relative;
+  height: 100%;
   width: 100%;
 
-  &__aside {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    color: map-get(color.$cloud-palette, 500);
-    padding: 1.5rem;
-    border-radius: 0.25rem 0 0 0.25rem;
+  &__image-container {
+    min-height: 20rem;
+    max-height: 34rem;
+    height: 100%;
+    background-image: url(../../../../assets/images/sample-demo-app-promo-min.png);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   &__title {
@@ -31,25 +23,4 @@
   &__subtitle {
     color: map-get(color.$cloud-palette, 500);
   }
-
-  &__link.mat-fab {
-    color: map-get(color.$cloud-palette, 500);
-    background-color: rgba(0, 0, 0, 0.7);
-    height: 6.25rem;
-    width: 6.25rem;
-    font-size: 1rem;
-    font-weight: 400;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__image-container {
-    transform: translateX(50%);
-    max-width: 400px;
-  }
-}
-
-.mat-card-actions {
-  margin: 0;
 }
