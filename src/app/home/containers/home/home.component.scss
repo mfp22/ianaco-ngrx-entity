@@ -43,7 +43,10 @@
   &__icon {
     width: 1.5rem;
     display: inline-block;
-    transform: rotate(45deg);
+    transform: rotate(-45deg);
+    position: relative;
+    top: -1.25rem;
+    align-self: start;
   }
 
   &__text-container {
@@ -51,9 +54,9 @@
   }
 
   &__text {
-    margin: 0.5rem 0 1rem 0;
-    font-size: 1.5rem;
-    color: map-get(color.$bark-palette, 400);
+    margin: 0.5rem 0 2rem 0;
+    font-size: 2rem;
+    color: map-get(color.$bark-palette, 900);
     font-weight: 500;
     line-height: 2rem;
   }
@@ -62,4 +65,5 @@
 .mat-fab {
   height: 6.25rem;
   width: 6.25rem;
+  align-self: start;
 }

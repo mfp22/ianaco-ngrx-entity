@@ -30,17 +30,16 @@
       >
         <div
           class="home__text-container"
-          fxLayout="column"
+          fxLayout="row"
           fxLayoutAlign="end end"
+          fxLayout.lt-sm="column"
         >
+          <p class="home__text">Welcome to my website</p>
           <img
             class="home__icon"
             src="assets/icons/arrow-down-icon.svg"
             alt=">"
           />
-          <p class="home__text">
-            Welcome to my website, take a look around to find out more about me.
-          </p>
           <button mat-fab routerLink="/about">About Me</button>
         </div>
       </section>
