@@ -1,7 +1,6 @@
 export interface Nav {
   label: string;
   link: string;
-  active?: boolean;
 }
 
 export interface Personal {

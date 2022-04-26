@@ -1,16 +1,16 @@
-export interface Links {
-  design: string;
-  demo: string;
-  repo: string;
+export interface Link {
+  label: string;
+  url: string;
 }
 
 export interface PortfolioCard {
   title: string;
-  subtitle?: string;
   name: string;
+  type: string;
   description: string;
+  subtitle?: string;
   image?: string;
-  links?: Partial<Links>;
+  links?: Link[];
   featured?: boolean;
 }
 

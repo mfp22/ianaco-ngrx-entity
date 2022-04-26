@@ -31,7 +31,7 @@
               class="app__link"
               [routerLink]="nav.link"
               [ngClass]="{
-                'app__link--active': (activeNavIndex$ | async) === i
+                'app__link--active': (activeNav$ | async) === nav
               }"
               (click)="mobileQuery?.matches ? sidenav.close() : null"
             >
@@ -47,26 +47,21 @@
     </mat-sidenav>
     <mat-sidenav-content
       class="app__sidenav-content"
-      [style.marginLeft]="sidenav.mode === 'side' ? '300px' : 0"
+      [style.marginLeft]="sidenav.mode === 'side' ? sideNavLeftMarginPx : 0"
     >
       <div
+        #overlay
         class="app__sidenav-content-overlay"
+        *ngIf="transitionStatus$ | async"
+        [style.marginLeft]="sidenav.mode === 'side' ? sideNavLeftMarginPx : 0"
         @pageTransition
         (@pageTransition.done)="onTransitionDone($event)"
-        *ngIf="transitionStatus$ | async"
-        #overlay
-        [style.marginLeft]="sidenav.mode === 'side' ? '300px' : 0"
       >
         <div
           class="app__sidenav-content-overlay-label"
-          *ngIf="{ value: activeNavIndex$ | async } as index"
+          *ngIf="activeNav$ | async as activeNav"
         >
-          <ng-container *ngIf="index.value !== null">
-            <span class="app__text--sm">0{{ index.value + 1 }}/</span>
-            <span *ngIf="navs$ | async as navs" class="app__text--lg">{{
-              navs[index.value].link
-            }}</span>
-          </ng-container>
+          <span class="app__text--lg">{{ activeNav.link }}</span>
         </div>
       </div>
       <mat-toolbar>
@@ -86,7 +81,7 @@
         </mat-toolbar-row>
       </mat-toolbar>
       <div class="app__container">
-        <router-outlet (activate)="onActivateRoute($event)"></router-outlet>
+        <router-outlet></router-outlet>
       </div>
     </mat-sidenav-content>
   </mat-sidenav-container>

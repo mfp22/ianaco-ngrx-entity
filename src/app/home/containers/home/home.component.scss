@@ -1,11 +1,16 @@
 @use "colorography" as color;
 
 .home {
+  &__section {
+    margin-bottom: 1rem;
+  }
+
   &__title {
     font-size: 3.5rem;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: normal;
+    color: map-get(color.$bark-palette, 900);
 
     &-text {
       display: block;
@@ -14,13 +19,12 @@
   }
 
   &__subtitle {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
     font-weight: 500;
-    text-align: left;
     text-transform: uppercase;
     position: relative;
-    color: map-get(color.$bark-palette, 500);
+    color: map-get(color.$bark-palette, 900);
   }
 
   &__image-container {
@@ -43,22 +47,8 @@
   &__icon {
     width: 1.5rem;
     display: inline-block;
-    transform: rotate(-45deg);
+    transform: rotate(-90deg);
     position: relative;
-    top: -1.25rem;
-    align-self: start;
-  }
-
-  &__text-container {
-    max-width: 30rem;
-  }
-
-  &__text {
-    margin: 0.5rem 0 2rem 0;
-    font-size: 2rem;
-    color: map-get(color.$bark-palette, 900);
-    font-weight: 500;
-    line-height: 2rem;
   }
 }
 

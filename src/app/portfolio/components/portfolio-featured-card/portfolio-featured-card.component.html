@@ -1,3 +1,50 @@
-<div class="portfolio-featured-card">
-  <div class="portfolio-featured-card__image-container"></div>
+<div class="portfolio-featured-card" *ngIf="card">
+  <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="45px">
+    <!--details begin -->
+    <div fxFlex="1 0 0">
+      <table class="portfolio-featured-card__table">
+        <caption class="text-align--left">
+          Details
+        </caption>
+        <tbody>
+          <tr>
+            <td>Name</td>
+            <td class="text-align--right">{{ card.title }}</td>
+          </tr>
+          <tr>
+            <td>Type</td>
+            <td class="text-align--right">{{ card.type }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="portfolio-featured-card__description">
+        {{ card.description }}
+      </p>
+      <div
+        class="portfolio-featured-card__actions"
+        fxLayout="row wrap"
+        fxLayoutAlign="center center"
+        fxLayoutGap="15px"
+        *ngIf="card.links as links"
+      >
+        <a
+          class="portfolio-featured-card__link"
+          [href]="link.url"
+          mat-fab
+          target="_blank"
+          rel="noopener noreferrer"
+          *ngFor="let link of card.links"
+          >{{ link.label }}</a
+        >
+      </div>
+    </div>
+    <!--image begin -->
+    <div fxFlex="1 0 0" class="portfolio-featured-card__image-container">
+      <img
+        class="portfolio-featured-card__image"
+        [src]="card.image"
+        alt="project-img"
+      />
+    </div>
+  </div>
 </div>

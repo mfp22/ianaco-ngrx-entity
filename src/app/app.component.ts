@@ -6,7 +6,7 @@ import {
   OnInit,
   ElementRef,
 } from '@angular/core';
-import { Router, RouterEvent } from '@angular/router';
+import { RouterEvent } from '@angular/router';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { AnimationEvent } from '@angular/animations';
 import { DEFAULT_BREAKPOINTS } from '@angular/flex-layout';
@@ -17,7 +17,7 @@ import { Store, select } from '@ngrx/store';
 import * as fromRootStore from './store';
 import * as fromProfileStore from './profile/store';
 // models
-import { Profile, Nav, Personal } from './profile/models';
+import { Nav, Personal } from './profile/models';
 import { MatSidenavContent } from '@angular/material/sidenav';
 // transitions
 import { pageTransitionAnimation } from './shared/animations';
@@ -31,18 +31,17 @@ import { pageTransitionAnimation } from './shared/animations';
 export class AppComponent implements OnInit, OnDestroy {
   readonly SIDENAV_NG_FLEX_BREAKPOINT = 'lt-md';
   private _mobileQueryListener: () => void;
-  transitionStatus$: Observable<boolean> | null = null;
+  sideNavLeftMarginPx: string = '300px';
   mobileQuery: MediaQueryList | undefined;
   personal$: Observable<Personal> | null = null;
   navs$: Observable<Nav[]> | null = null;
-  activeNavIndex$: Observable<number> | null = null;
-  // active$: Observable<any> | null = null;
+  activeNav$: Observable<Nav> | null = null;
+  transitionStatus$: Observable<boolean> | null = null;
+  @ViewChild('overlay') overlayEl: ElementRef | null = null;
   @ViewChild(MatSidenavContent)
   sidenavContent: MatSidenavContent | undefined;
-  @ViewChild('overlay') overlayEl: ElementRef | null = null;
 
   constructor(
-    private router: Router,
     changeDetectorRef: ChangeDetectorRef,
     media: MediaMatcher,
     private store: Store<
@@ -63,30 +62,29 @@ export class AppComponent implements OnInit, OnDestroy {
       select(fromProfileStore.selectProfilePersonal)
     );
     this.navs$ = this.store.pipe(select(fromProfileStore.selectProfileNavs));
-    this.activeNavIndex$ = this.store.pipe(
-      select(fromProfileStore.selectActiveNavIndex)
-    );
+    this.activeNav$ = this.store.pipe(select(fromProfileStore.selectActiveNav));
     this.transitionStatus$ = this.store.pipe(
       select(fromRootStore.selectTransition),
       map(({ status }) => status)
     );
   }
+
   ngOnDestroy(): void {
     this.mobileQuery?.removeEventListener('change', this._mobileQueryListener);
   }
 
   /**
-   * on activate route
+   * on transition done
+   * @param event
    */
-  onActivateRoute(event: RouterEvent) {
-    this.sidenavContent?.scrollTo({ top: 0 });
-  }
-
   onTransitionDone(event: AnimationEvent) {
+    console.log('transition');
     const { fromState, totalTime } = event;
     if (fromState) {
+      // timer completes, since no second argument is supplied
       timer(totalTime)
         .pipe(
+          tap(() => this.sidenavContent?.scrollTo({ top: 0 })),
           map(() => this.overlayEl?.nativeElement),
           tap((el: HTMLDivElement) => (el.style.opacity = '0')),
           delay(totalTime)

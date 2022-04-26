@@ -1,10 +1,23 @@
 <div class="bubble-graph" fxLayout="row wrap" fxLayoutAlign="center start">
   <div
     class="bubble-graph__bubble"
-    *ngFor="let node of nodes"
+    *ngFor="let node of nodes; index as i"
     fxLayout="column"
     fxLayoutAlign="center center"
+    (mouseenter)="hoverIndex = i"
+    (mouseleave)="hoverIndex = -1"
+    [ngClass]="{ 'bubble-graph__bubble--active': hoverIndex === i }"
   >
-    <div class="bubble-graph__bubble-label">{{ node.label }}</div>
+    <img
+      *ngIf="hoverIndex === i; else label"
+      class="bubble-graph__bubble-logo"
+      [src]="node.logo"
+      [alt]="node.label"
+    />
+    <ng-template #label>
+      <div class="bubble-graph__bubble-label">
+        {{ node.label }}
+      </div>
+    </ng-template>
   </div>
 </div>

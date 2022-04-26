@@ -1,4 +1,5 @@
 @use "colorography" as color;
+$mat-fab-color-accent: map-get(color.$bark-palette, 900);
 
 .mat-fab {
   color: map-get(color.$cloud-palette, 500);
@@ -32,7 +33,7 @@ button {
     @extend .mat-fab;
 
     &.mat-accent {
-      background-color: map-get(color.$bark-palette, 900);
+      background-color: $mat-fab-color-accent;
     }
   }
 }
@@ -40,8 +41,7 @@ button {
 // link button
 a.mat-fab {
   @extend .mat-fab;
-
   &.mat-accent {
-    background-color: map-get(color.$bark-palette, 900);
+    background-color: $mat-fab-color-accent;
   }
 }

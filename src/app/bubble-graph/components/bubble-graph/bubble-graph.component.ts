@@ -9,6 +9,7 @@ import { graphData } from './graph-data';
 })
 export class BubbleGraphComponent implements OnInit {
   nodes = graphData.nodes;
+  hoverIndex: number = -1;
   @Input() size: number = 500;
   constructor() {}
 

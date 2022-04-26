@@ -2,78 +2,10 @@
   <div *ngIf="portfolioCardSets$ | async as cardSets">
     <app-page-section-template [style.backgroundColor]="'#e8e8e8'">
       <span title>Latest Items...</span>
-      <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="45px">
-        <div fxFlex="1 0 0">
-          <img
-            class="portfolio__icon"
-            src="assets/icons/arrow-down-icon.svg"
-            alt=">"
-          />
-          <p class="portfolio__caption">
-            Check out some of my latest personal projects.
-          </p>
-          <div *ngIf="cardSets.featured[0] as project">
-            <table class="portfolio__table">
-              <caption>
-                Details
-              </caption>
-              <tbody>
-                <tr>
-                  <td>Name</td>
-                  <td class="portfolio__align--right">{{ project.title }}</td>
-                </tr>
-                <tr>
-                  <td>Type</td>
-                  <td class="portfolio__align--right">Angular/NgRx</td>
-                </tr>
-              </tbody>
-            </table>
-            <p class="portfolio__project-description">
-              {{ project.description }}
-            </p>
-            <div
-              class="portfolio__actions"
-              fxLayout="row wrap"
-              fxLayoutAlign="center center"
-              fxLayoutGap="15px"
-              *ngIf="project.links as links"
-            >
-              <a
-                class="portfolio__link"
-                [href]="designLink"
-                *ngIf="links.design as designLink"
-                mat-fab
-                target="_blank"
-                rel="noopener noreferrer"
-                >Design</a
-              >
-              <a
-                class="portfolio__link"
-                [href]="repoLink"
-                *ngIf="links.repo as repoLink"
-                mat-fab
-                target="_blank"
-                rel="noopener noreferrer"
-                >Code</a
-              >
-              <a
-                class="portfolio__link"
-                [href]="demoLink"
-                mat-fab
-                *ngIf="links.demo as demoLink"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Demo</a
-              >
-            </div>
-          </div>
-        </div>
-        <app-portfolio-grid
-          fxFlex="1 0 0"
-          [cards]="cardSets.featured"
-          [featured]="true"
-        ></app-portfolio-grid>
-      </div>
+      <span subtitle>Check out some of my latest personal projects.</span>
+      <app-portfolio-featured-card
+        [card]="cardSets.featured[0]"
+      ></app-portfolio-featured-card>
     </app-page-section-template>
     <app-page-section-template [style.backgroundColor]="'#ffffff'">
       <span title>...Previous Items</span>

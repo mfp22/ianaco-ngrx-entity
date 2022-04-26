@@ -5,9 +5,14 @@
   fxFlexFill
 >
   <div class="page-section-template__content-container">
-    <h1 class="page-section-template__title">
-      <ng-content select="[title]"></ng-content>
-    </h1>
+    <div class="page-section-template__header">
+      <h1 class="page-section-template__title">
+        <ng-content select="[title]"></ng-content>
+      </h1>
+      <h2 class="page-section-template__subtitle">
+        <ng-content select="[subtitle]"></ng-content>
+      </h2>
+    </div>
     <div class="page-section-template__content">
       <ng-content></ng-content>
     </div>

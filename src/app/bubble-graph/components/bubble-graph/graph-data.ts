@@ -18,6 +18,7 @@ const nodes = [
     color: '',
     x: 0,
     y: 0,
+    logo: 'assets/logos/angular.svg',
   },
   {
     label: 'NgRx',
@@ -25,6 +26,7 @@ const nodes = [
     group: 0,
     x: 0,
     y: 0,
+    logo: 'assets/logos/ngrx.svg',
   },
   {
     label: 'RxJS',
@@ -32,6 +34,7 @@ const nodes = [
     group: 0,
     x: 0,
     y: 0,
+    logo: 'assets/logos/rxjs.svg',
   },
   {
     label: 'TypeScript',
@@ -39,6 +42,7 @@ const nodes = [
     group: 0,
     x: 0,
     y: 0,
+    logo: 'assets/logos/typescript.svg',
   },
   {
     label: 'JavaScript',
@@ -46,6 +50,7 @@ const nodes = [
     group: 0,
     x: 0,
     y: 0,
+    logo: 'assets/logos/javascript.svg',
   },
   {
     label: 'HTML',
@@ -53,6 +58,7 @@ const nodes = [
     group: 0,
     x: 0,
     y: 0,
+    logo: 'assets/logos/html.svg',
   },
   {
     label: 'SCSS',
@@ -60,6 +66,7 @@ const nodes = [
     group: 0,
     x: 0,
     y: 0,
+    logo: 'assets/logos/sass.svg',
   },
   {
     label: 'CSS',
@@ -67,6 +74,7 @@ const nodes = [
     group: 0,
     x: 0,
     y: 0,
+    logo: 'assets/logos/css.svg',
   },
   {
     label: 'Angular Material',
@@ -74,6 +82,7 @@ const nodes = [
     group: 0,
     x: 0,
     y: 0,
+    logo: 'assets/logos/material.svg',
   },
   {
     label: 'Jasmine',
@@ -81,6 +90,7 @@ const nodes = [
     group: 0,
     x: 0,
     y: 0,
+    logo: 'assets/logos/jasmine.svg',
   },
   {
     label: 'Adobe XD',
@@ -88,6 +98,7 @@ const nodes = [
     group: 0,
     x: 0,
     y: 0,
+    logo: 'assets/logos/adobe-xd.svg',
   },
 ];
 

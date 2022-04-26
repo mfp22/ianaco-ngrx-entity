@@ -1,40 +1,27 @@
 <app-page-template class="home">
   <div *ngIf="personal$ | async as personal">
     <app-page-section-template [style.backgroundColor]="'#e8e8e8'">
-      <section class="home__section">
+      <!-- sub section begin -->
+      <section class="home__section home__section--left">
         <h1 class="home__title">
           <span class="home__title-text">{{ personal.occupationType }}</span>
           <span class="home__title-text">{{ personal.occupation }} </span>
         </h1>
+        <div
+          class="home__image-container"
+          fxLayout="column"
+          fxLayoutAlign="start start"
+        >
+          <img
+            class="home__image"
+            src="assets/images/profile-image-min.png"
+            alt="profile-pic"
+          />
+        </div>
         <h2 class="home__subtitle">
           {{ personal.firstName + " " + personal.lastName }}
         </h2>
-        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="-30px">
-          <div
-            class="home__image-container"
-            fxLayout="column"
-            fxLayoutAlign="start start"
-          >
-            <img
-              class="home__image"
-              src="assets/images/profile-image-min.png"
-              alt="profile-pic"
-            />
-          </div>
-        </div>
-      </section>
-      <section
-        class="home__section home__section--right"
-        fxLayout="column"
-        fxLayoutAlign="end end"
-      >
-        <div
-          class="home__text-container"
-          fxLayout="row"
-          fxLayoutAlign="end end"
-          fxLayout.lt-sm="column"
-        >
-          <p class="home__text">Welcome to my website</p>
+        <div fxLayout="row" fxLayoutAlign="end" fxLayoutGap="15px">
           <img
             class="home__icon"
             src="assets/icons/arrow-down-icon.svg"
