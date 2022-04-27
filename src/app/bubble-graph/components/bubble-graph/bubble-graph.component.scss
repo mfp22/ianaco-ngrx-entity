@@ -2,7 +2,7 @@
 
 .bubble-graph {
   &__bubble {
-    background-color: map-get(color.$bark-palette, 500);
+    background-color: map-get(color.$breeze-palette, 900);
     display: inline-block;
     width: 9.375rem;
     height: 9.375rem;
@@ -11,19 +11,13 @@
     padding: 0.25rem;
     text-align: center;
 
-    @media only screen and (max-width: 500px) {
-      width: 7.813rem;
-      height: 7.813rem;
-    }
-
-    &--active {
-      transform: scale(1.1);
-    }
+    width: 7.813rem;
+    height: 7.813rem;
 
     &-label {
       font-size: 1rem;
       font-weight: 500;
-      color: map-get(color.$cloud-palette, 500);
+      color: map-get(color.$bark-palette, 900);
       transition: all 300ms ease-in-out;
     }
 

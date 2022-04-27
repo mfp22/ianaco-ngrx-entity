@@ -6,9 +6,13 @@ export interface Nav {
 export interface Personal {
   firstName: string;
   lastName: string;
+  fullName: string;
   occupation: string;
   occupationType: string;
+  emailUsername: string;
+  emailDomain: string;
   email: string;
+  description: string;
 }
 
 export interface Profile {

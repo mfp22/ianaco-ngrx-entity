@@ -1,10 +1,9 @@
 <mat-card
   class="portfolio-card"
   fxLayout="column"
-  fxLayoutAlign="center center"
+  fxLayoutAlign="start center"
   *ngIf="card"
 >
-  <div mat-card-avatar class="portfolio-card__avatar"></div>
   <mat-card-content>
     <mat-card-title class="portfolio-card__title">{{
       card.title
@@ -12,7 +11,7 @@
     <mat-card-subtitle class="portfolio-card__subtitle">{{
       card.subtitle
     }}</mat-card-subtitle>
-    <p>
+    <p class="portfolio-card__description">
       {{ card.description }}
     </p>
   </mat-card-content>

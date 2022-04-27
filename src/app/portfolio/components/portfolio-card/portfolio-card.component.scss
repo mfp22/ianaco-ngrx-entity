@@ -5,16 +5,8 @@
   text-align: center;
   background-color: map-get(color.$bark-palette, 500);
   color: map-get(color.$cloud-palette, 500);
-  padding: 2rem;
+  padding: 3rem 2rem;
   min-width: 300px;
-
-  &__avatar {
-    background: url(../../../../assets/icons/cogs-icon.svg) no-repeat;
-    background-size: contain;
-    height: 3.75rem;
-    width: 3.75rem;
-    border-radius: 0;
-  }
 
   &__title {
     margin-bottom: 2rem;
@@ -22,6 +14,10 @@
 
   &__subtitle {
     color: map-get(color.$cloud-palette, 500);
+  }
+
+  &__description {
+    height: 2.813rem;
   }
 
   &__link {

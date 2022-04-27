@@ -7,11 +7,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { AboutRoutingModule } from './about-routing.module';
 import { BubbleGraphModule } from '../bubble-graph/bubble-graph.module';
 import { SharedModule } from '../shared/shared.module';
+// containers
+import * as fromContainers from './containers';
 // components
 import * as fromComponents from './components';
 
 @NgModule({
-  declarations: [...fromComponents.components],
+  declarations: [...fromContainers.containers, ...fromComponents.components],
   imports: [
     CommonModule,
     FlexLayoutModule,

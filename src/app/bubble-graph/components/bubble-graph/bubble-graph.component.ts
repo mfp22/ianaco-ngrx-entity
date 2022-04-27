@@ -1,4 +1,12 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  OnDestroy,
+  AfterViewInit,
+} from '@angular/core';
+import { timer, Subject } from 'rxjs';
+import { takeUntil } from 'rxjs';
 // data
 import { graphData } from './graph-data';
 
@@ -7,75 +15,29 @@ import { graphData } from './graph-data';
   templateUrl: './bubble-graph.component.html',
   styleUrls: ['./bubble-graph.component.scss'],
 })
-export class BubbleGraphComponent implements OnInit {
+export class BubbleGraphComponent implements AfterViewInit, OnDestroy {
   nodes = graphData.nodes;
-  hoverIndex: number = -1;
+  activeIndex: number = -1;
+  ngUnsubscribe$ = new Subject<void>();
   @Input() size: number = 500;
   constructor() {}
 
-  ngOnInit(): void {}
-
-  // Optional D3 network display
-  /*
-  createChart() {
-    const width = this.size;
-    const height = this.size;
-    const nodeColor = '#000000b3';
-    const linkColor = '#3f4040';
-    const textColor = '#FFFFFF';
-    const { nodes, links } = graphData;
-    const svg = d3.select('svg').attr('viewBox', `0 0 ${height} ${width}`);
-
-    const simulation = d3
-      .forceSimulation()
-      .force('charge', d3.forceManyBody().strength(-20))
-      .force(
-        'x',
-        d3
-          .forceX()
-          .strength(0.03)
-          .x(width / 2)
-      )
-      .force(
-        'y',
-        d3
-          .forceY()
-          .strength(0.03)
-          .y(height / 2)
-      )
-      .force(
-        'collision',
-        d3.forceCollide().radius((d: any) => d.size + 2)
-      );
-
-    // nodes
-    const nodeElements = svg
-      .append('g')
-      .selectAll('circle')
-      .data(nodes)
-      .enter()
-      .append('circle')
-      .attr('r', (d) => d.size)
-      .attr('fill', (node) => node.color || nodeColor);
-
-    // text
-    const textElements = svg
-      .append('g')
-      .selectAll('text')
-      .data(nodes)
-      .enter()
-      .append('text')
-      .text((node) => node.label)
-      .attr('font-size', 14)
-      .attr('fill', (node) => textColor)
-      .attr('font-weight', 500)
-      .style('user-select', 'none')
-      .attr('text-anchor', 'middle');
-
-    simulation.nodes(graphData.nodes).on('tick', () => {
-      nodeElements.attr('cx', (node) => node.x).attr('cy', (node) => node.y);
-      textElements.attr('x', (node) => node.x).attr('y', (node) => node.y);
-    });
+  ngAfterViewInit(): void {
+    const indexLimit = this.nodes.length;
+    let count = 0;
+    timer(1000, 1000)
+      .pipe(takeUntil(this.ngUnsubscribe$))
+      .subscribe(() => {
+        if (count === indexLimit) {
+          count = 0;
+        }
+        this.activeIndex = count;
+        count++;
+      });
   }
-  */
+
+  ngOnDestroy(): void {
+    this.ngUnsubscribe$.next();
+    this.ngUnsubscribe$.complete();
+  }
 }

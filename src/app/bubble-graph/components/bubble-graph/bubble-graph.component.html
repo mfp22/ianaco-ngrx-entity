@@ -4,12 +4,10 @@
     *ngFor="let node of nodes; index as i"
     fxLayout="column"
     fxLayoutAlign="center center"
-    (mouseenter)="hoverIndex = i"
-    (mouseleave)="hoverIndex = -1"
-    [ngClass]="{ 'bubble-graph__bubble--active': hoverIndex === i }"
+    [ngClass]="{ 'bubble-graph__bubble--active': activeIndex === i }"
   >
     <img
-      *ngIf="hoverIndex === i; else label"
+      *ngIf="activeIndex === i; else label"
       class="bubble-graph__bubble-logo"
       [src]="node.logo"
       [alt]="node.label"

@@ -1,25 +1,21 @@
-<div class="about-card">
-  <div class="about-card__header">
-    <ul class="about-card__list">
-      <li class="about-card__list-item" *ngFor="let item of personalInfo">
-        <div class="about-card__list-label">{{ item.label }}</div>
-        <div class="about-card__list-value">
-          {{ item.value }}
-        </div>
-      </li>
-    </ul>
-  </div>
-  <div class="about-card__body">
-    <div class="about-card__summary-container">
-      <img
-        class="about-card__icon"
-        src="assets/icons/arrow-down-icon.svg"
-        alt=">"
-      />
-      <p class="about-card__summary">
-        {{ summary }}
-      </p>
+<div class="about-card" *ngIf="personal">
+  <div class="about-card__header spacer-bottom--large">
+    <div class="font-size--large" fxLayout="row" fxLayout.lt-sm="column">
+      <span>{{ personal.emailUsername }}</span>
+      <span>{{ personal.emailDomain }}</span>
     </div>
+  </div>
+  <div class="about-card__body spacer-bottom--large">
+    <img
+      class="icon--small"
+      src="assets/icons/arrow-angled-down-right-icon.svg"
+      alt=">"
+    />
+    <p class="paragraph--medium">
+      {{ personal.description }}
+    </p>
+  </div>
+  <div class="about-card__footer">
     <div class="about-card__action-container" fxLayout="row" fxLayoutGap="8px">
       <button mat-fab routerLink="/projects">Projects</button>
       <button mat-fab routerLink="/resume">Resume</button>

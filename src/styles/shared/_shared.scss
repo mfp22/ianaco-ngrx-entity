@@ -1,3 +1,6 @@
+@use "colorography" as color;
+
+// [text]
 .text-align {
   &--right {
     text-align: right;
@@ -6,4 +9,59 @@
   &--left {
     text-align: left;
   }
+}
+
+// [font]
+.font-size--large {
+  font-size: 2rem;
+  line-height: 2.25rem;
+  font-weight: 500;
+}
+
+.font-size--semi-large {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.font-size--medium {
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+}
+
+.font-size--normal {
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+.font-size--small {
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+}
+
+// [spacers]
+.spacer-bottom--large {
+  margin-bottom: 2rem;
+}
+
+// [paragraph]
+.paragraph--semi-large {
+  margin: 0.5rem 0;
+  @extend .font-size--semi-large;
+  color: map-get(color.$bark-palette, 900);
+  font-weight: 500;
+  line-height: 2rem;
+}
+
+.paragraph--medium {
+  margin: 0.5rem 0;
+  @extend .font-size--medium;
+  color: map-get(color.$bark-palette, 900);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+// [icons]
+.icon--small {
+  width: 2rem;
+  display: inline-block;
 }

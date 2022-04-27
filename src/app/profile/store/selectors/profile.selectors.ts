@@ -3,7 +3,7 @@ import { createSelector } from '@ngrx/store';
 import * as fromReducers from '../reducers';
 import * as fromRootStore from '../../../store';
 // models
-import { Profile, Nav } from '../../models';
+import { Profile, Nav, Personal } from '../../models';
 
 // profile
 export const selectProfile = createSelector(
@@ -14,7 +14,7 @@ export const selectProfile = createSelector(
 // personal
 export const selectProfilePersonal = createSelector(
   selectProfile,
-  (profile) => (profile as Profile).personal
+  (profile) => (profile as Profile).personal as Personal
 );
 
 // navs

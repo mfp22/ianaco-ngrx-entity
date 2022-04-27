@@ -1,5 +1,5 @@
 <div class="portfolio-featured-card" *ngIf="card">
-  <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="45px">
+  <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="65px">
     <!--details begin -->
     <div fxFlex="1 0 0">
       <table class="portfolio-featured-card__table">
@@ -8,12 +8,10 @@
         </caption>
         <tbody>
           <tr>
-            <td>Name</td>
-            <td class="text-align--right">{{ card.title }}</td>
+            <td>{{ card.title }}</td>
           </tr>
           <tr>
-            <td>Type</td>
-            <td class="text-align--right">{{ card.type }}</td>
+            <td>{{ card.type }}</td>
           </tr>
         </tbody>
       </table>

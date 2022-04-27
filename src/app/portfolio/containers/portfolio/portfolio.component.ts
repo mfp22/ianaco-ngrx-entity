@@ -5,6 +5,7 @@ import { Store, select } from '@ngrx/store';
 import * as fromStore from '../../store';
 // models
 import { PortfolioCardSets } from '../../models';
+import { Colorography } from '../../../shared/models';
 
 @Component({
   selector: 'app-portfolio',
@@ -12,6 +13,7 @@ import { PortfolioCardSets } from '../../models';
   styleUrls: ['./portfolio.component.scss'],
 })
 export class PortfolioComponent implements OnInit {
+  color = Colorography;
   portfolioCardSets$: Observable<PortfolioCardSets> | null = null;
 
   constructor(private store: Store<fromStore.PortfolioState>) {}
