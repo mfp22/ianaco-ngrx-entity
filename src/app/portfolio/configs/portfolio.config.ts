@@ -17,7 +17,7 @@ export const portfolio: Portfolio = {
         { label: 'demo', url: 'https://github.com/ianacodev/sample-demo-app' },
       ],
       description: `
-      Sample application to demo different concepts and functionality for angular and ngrx.
+      Sample application to demo different concepts and functionality for Angular and NgRx.
       `,
       featured: true,
     },

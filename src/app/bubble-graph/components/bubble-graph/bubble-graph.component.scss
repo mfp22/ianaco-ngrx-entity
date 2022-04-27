@@ -2,22 +2,21 @@
 
 .bubble-graph {
   &__bubble {
-    background-color: map-get(color.$breeze-palette, 900);
+    background-color: map-get(color.$bark-palette, 400);
     display: inline-block;
     width: 9.375rem;
     height: 9.375rem;
     border-radius: 50%;
     margin: 0.5rem;
-    padding: 0.25rem;
+    padding: 1.75rem;
     text-align: center;
-
     width: 7.813rem;
     height: 7.813rem;
 
     &-label {
       font-size: 1rem;
       font-weight: 500;
-      color: map-get(color.$bark-palette, 900);
+      color: map-get(color.$cloud-palette, 500);
       transition: all 300ms ease-in-out;
     }
 

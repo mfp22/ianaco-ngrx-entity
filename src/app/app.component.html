@@ -61,7 +61,7 @@
           class="app__sidenav-content-overlay-label"
           *ngIf="activeNav$ | async as activeNav"
         >
-          <span class="app__text--lg">/{{ activeNav.link }}</span>
+          <span class="app__text--lg">{{ activeNav.link }}</span>
         </div>
       </div>
       <mat-toolbar>

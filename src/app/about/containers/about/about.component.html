@@ -9,14 +9,17 @@
           <div class="about__image-container">
             <img
               class="about__image"
-              src="assets/images/profile/profile-2-image1.png"
+              src="assets/images/profile/profile-2-image.png"
               alt="about-img"
             />
           </div>
         </section>
       </div>
     </app-page-section-template>
-    <app-page-section-template [style.backgroundColor]="color.Cloud500">
+    <app-page-section-template
+      class="about__section-details"
+      [style.backgroundColor]="color.Cloud500"
+    >
       <div fxLayout="row" fxLayout.lt-sm="column">
         <app-callout-detail
           *ngFor="let detail of details; index as i"
@@ -25,8 +28,8 @@
         ></app-callout-detail>
       </div>
     </app-page-section-template>
-    <app-page-section-template [style.backgroundColor]="color.Bark500">
-      <span title [style.color]="color.Cloud500">...My Skills</span>
+    <app-page-section-template [style.backgroundColor]="color.Breeze900">
+      <span title [style.fontSize]="'2.5rem'">Skill Set</span>
       <app-bubble-graph></app-bubble-graph>
     </app-page-section-template>
   </div>
