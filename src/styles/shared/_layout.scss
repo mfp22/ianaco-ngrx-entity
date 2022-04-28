@@ -1,0 +1,38 @@
+@use "~node_modules/@angular/flex-layout/core/sass/_layout-bp.scss" as bp;
+
+.layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2.813rem;
+
+  &-container {
+    @extend .layout;
+    @include bp.layout-bp(lt-md) {
+      flex-direction: column !important;
+    }
+  }
+
+  &-container-reverse {
+    @extend .layout;
+    @include bp.layout-bp(lt-md) {
+      flex-direction: column-reverse !important;
+    }
+  }
+
+  &-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &--1x {
+      flex: 1 0 0;
+    }
+
+    &--2x {
+      flex: 2 0 0;
+    }
+  }
+}

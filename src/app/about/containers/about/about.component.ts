@@ -19,7 +19,7 @@ export class AboutComponent implements OnInit {
   constructor(private store: Store<fromProfileStore.ProfileState>) {
     this.details = [
       {
-        title: 'Create',
+        title: 'Creative',
         content: `
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
@@ -27,7 +27,7 @@ export class AboutComponent implements OnInit {
         `,
       },
       {
-        title: 'Develop',
+        title: 'Detailed',
         content: `
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
@@ -35,7 +35,7 @@ export class AboutComponent implements OnInit {
         `,
       },
       {
-        title: 'Launch',
+        title: 'Thinker',
         content: `
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 

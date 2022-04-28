@@ -1,22 +1,26 @@
 <div class="about-card" *ngIf="personal">
   <div class="about-card__header spacer-bottom--large">
-    <div class="font-size--large" fxLayout="row" fxLayout.lt-sm="column">
-      <span>{{ personal.emailUsername }}</span>
-      <span>{{ personal.emailDomain }}</span>
+    <div
+      class="font-size--large"
+      fxLayout="column"
+      fxLayoutAlign="center center"
+    >
+      <div>{{ personal.emailUsername }}</div>
+      <div>{{ personal.emailDomain }}</div>
     </div>
   </div>
   <div class="about-card__body spacer-bottom--large">
-    <img
-      class="icon--small"
-      src="assets/icons/arrow-angled-down-right-icon.svg"
-      alt=">"
-    />
     <p class="paragraph--medium">
       {{ personal.description }}
     </p>
   </div>
   <div class="about-card__footer">
-    <div class="about-card__action-container" fxLayout="row" fxLayoutGap="8px">
+    <div
+      class="about-card__action-container"
+      fxLayout="row"
+      fxLayoutAlign="center center"
+      fxLayoutGap="15px"
+    >
       <button mat-fab routerLink="/projects">Projects</button>
       <button mat-fab routerLink="/resume">Resume</button>
     </div>

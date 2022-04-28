@@ -2,11 +2,11 @@
 
 .about {
   &__image {
-    background: url(../../../../assets/images/backgrounds/background-blur-2.png)
+    background: url(../../../../assets/images/backgrounds/background-blur.png)
       no-repeat center center;
     background-size: cover;
     max-width: 100%;
     max-height: 100%;
-    box-shadow: 0.063rem 0.063rem 0.5rem map-get(color.$bark-palette, 200);
+    max-width: 20.813rem;
   }
 }

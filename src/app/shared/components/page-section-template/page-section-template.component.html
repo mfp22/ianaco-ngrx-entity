@@ -3,14 +3,19 @@
   fxLayout="column"
   fxLayoutAlign="start center"
   fxFlexFill
+  [style.backgroundColor]="backgroundColorHex"
 >
   <div class="page-section-template__content-container">
-    <div class="page-section-template__header">
-      <h1 class="page-section-template__title">
-        <ng-content select="[title]"></ng-content>
+    <div
+      class="page-section-template__header"
+      *ngIf="title || subtitle"
+      [style.textAlign]="headerTextAlign"
+    >
+      <h1 class="page-section-template__title" *ngIf="title">
+        {{ title }}
       </h1>
-      <h2 class="page-section-template__subtitle">
-        <ng-content select="[subtitle]"></ng-content>
+      <h2 class="page-section-template__subtitle" *ngIf="subtitle">
+        {{ subtitle }}
       </h2>
     </div>
     <div class="page-section-template__content">

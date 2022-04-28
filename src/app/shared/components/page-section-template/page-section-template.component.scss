@@ -14,7 +14,7 @@
   }
 
   &__header {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
 
   &__title {
@@ -23,7 +23,6 @@
     font-weight: 400;
     text-transform: uppercase;
     color: map-get(color.$bark-palette, 900);
-    text-align: left;
     width: 100%;
     margin-bottom: 1rem;
   }
@@ -33,6 +32,7 @@
     color: map-get(color.$bark-palette, 400);
     font-weight: 500;
     line-height: 2rem;
+    margin-bottom: 1rem;
   }
 
   &__content {

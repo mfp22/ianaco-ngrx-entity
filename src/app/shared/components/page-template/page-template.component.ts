@@ -9,5 +9,6 @@ import { map, tap, delay } from 'rxjs/operators';
   encapsulation: ViewEncapsulation.None,
 })
 export class PageTemplateComponent {
+  @Input() title: string | undefined;
   @Input() backgroundColorHex: string = '#e8e8e8';
 }

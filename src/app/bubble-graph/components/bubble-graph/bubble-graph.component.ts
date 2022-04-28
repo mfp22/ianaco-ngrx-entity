@@ -23,6 +23,8 @@ export class BubbleGraphComponent implements AfterViewInit, OnDestroy {
   constructor() {}
 
   ngAfterViewInit(): void {
+    // [TODO] disable animation
+    /*
     const indexLimit = this.nodes.length;
     let count = 0;
     timer(1000, 1000)
@@ -34,6 +36,7 @@ export class BubbleGraphComponent implements AfterViewInit, OnDestroy {
         this.activeIndex = count;
         count++;
       });
+      */
   }
 
   ngOnDestroy(): void {

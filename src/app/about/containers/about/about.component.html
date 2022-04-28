@@ -1,11 +1,11 @@
 <app-page-template class="about">
   <div content class="content">
-    <app-page-section-template [style.backgroundColor]="color.Breeze900">
-      <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="60px">
-        <section fxFlex="1 0 0">
+    <app-page-section-template [backgroundColorHex]="color.Breeze900">
+      <div class="layout-container">
+        <section class="layout-section layout-section--1x">
           <app-about-card [personal]="personal$ | async"></app-about-card>
         </section>
-        <section fxFlex="2 0 0" class="about__section">
+        <section class="layout-section layout-section--1x">
           <div class="about__image-container">
             <img
               class="about__image"
@@ -18,7 +18,7 @@
     </app-page-section-template>
     <app-page-section-template
       class="about__section-details"
-      [style.backgroundColor]="color.Cloud500"
+      [backgroundColorHex]="color.Cloud500"
     >
       <div fxLayout="row" fxLayout.lt-sm="column">
         <app-callout-detail
@@ -28,8 +28,11 @@
         ></app-callout-detail>
       </div>
     </app-page-section-template>
-    <app-page-section-template [style.backgroundColor]="color.Breeze900">
-      <span title [style.fontSize]="'2.5rem'">Skill Set</span>
+    <app-page-section-template
+      [title]="'Skill Set'"
+      [headerTextAlign]="'center'"
+      [backgroundColorHex]="color.Breeze900"
+    >
       <app-bubble-graph></app-bubble-graph>
     </app-page-section-template>
   </div>

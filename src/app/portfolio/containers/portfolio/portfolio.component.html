@@ -1,15 +1,15 @@
 <app-page-template class="portfolio">
   <div *ngIf="portfolioCardSets$ | async as cardSets">
-    <app-page-section-template [style.backgroundColor]="color.Breeze900">
-      <span title>Latest...</span>
+    <app-page-section-template
+      [title]="'Personal Projects'"
+      [headerTextAlign]="'center'"
+      [backgroundColorHex]="color.Breeze900"
+    >
       <app-portfolio-featured-card
         [card]="cardSets.featured[0]"
       ></app-portfolio-featured-card>
     </app-page-section-template>
-    <app-page-section-template [style.backgroundColor]="color.Cloud500">
-      <span title [style.display]="'block'" [style.textAlign]="'right'"
-        >...Previous</span
-      >
+    <app-page-section-template [backgroundColorHex]="color.Cloud500">
       <app-portfolio-grid [cards]="cardSets.general"></app-portfolio-grid>
     </app-page-section-template>
   </div>
