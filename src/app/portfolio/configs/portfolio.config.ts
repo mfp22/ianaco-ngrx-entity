@@ -13,8 +13,8 @@ export const portfolio: Portfolio = {
           label: 'design',
           url: 'https://xd.adobe.com/view/13fab039-c1c2-4297-bd21-5488a9ebd219-46a9/grid/',
         },
-        { label: 'code', url: 'https://ianacodev.github.io/sample-demo-app' },
-        { label: 'demo', url: 'https://github.com/ianacodev/sample-demo-app' },
+        { label: 'code', url: 'https://github.com/ianacodev/sample-demo-app' },
+        { label: 'demo', url: 'https://ianacodev.github.io/sample-demo-app' },
       ],
       description: `
       Sample application to demo different concepts and functionality for Angular and NgRx.
