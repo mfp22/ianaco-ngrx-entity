@@ -2,7 +2,7 @@
 
 .bubble-graph {
   &__bubble {
-    background-color: map-get(color.$bark-palette, 400);
+    background-color: map-get(color.$bark-palette, 500);
     display: inline-block;
     width: 9.375rem;
     height: 9.375rem;
