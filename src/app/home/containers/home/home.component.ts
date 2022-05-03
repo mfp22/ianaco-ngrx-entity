@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
       select(fromProfileStore.selectProfilePersonal),
       map(
         (personal) =>
-          `Motivated ${personal.occupationType} ${personal.occupation} with experience 
+          `${personal.occupationType} ${personal.occupation} with experience 
           building and maintaining responsive websites.`
       )
     );
