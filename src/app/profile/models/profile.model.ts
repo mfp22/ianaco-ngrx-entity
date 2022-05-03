@@ -1,8 +1,5 @@
-export interface Nav {
-  label: string;
-  link: string;
-}
-
+// models
+import { Item } from '../../shared/models';
 export interface Personal {
   firstName: string;
   lastName: string;
@@ -18,5 +15,5 @@ export interface Personal {
 export interface Profile {
   image: string;
   personal: Personal;
-  navs: Nav[];
+  navs: Item<string>[];
 }

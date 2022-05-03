@@ -8,6 +8,6 @@ import { CalloutDetail } from '../../models';
   styleUrls: ['./callout-detail.component.scss'],
 })
 export class CalloutDetailComponent {
-  @Input() detail: CalloutDetail | undefined;
   @Input() index: number | undefined;
+  @Input() detail: CalloutDetail | undefined;
 }

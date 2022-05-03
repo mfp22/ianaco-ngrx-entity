@@ -1,0 +1,17 @@
+@use "colorography" as color;
+$list-default-color: map-get(color.$breeze-palette, 500);
+
+.list {
+  &__horizontal {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__item {
+    cursor: pointer;
+  }
+
+  &__link {
+    color: $list-default-color;
+  }
+}

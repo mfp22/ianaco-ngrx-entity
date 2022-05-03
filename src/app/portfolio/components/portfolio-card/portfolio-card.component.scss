@@ -4,23 +4,23 @@
   height: 100%;
   text-align: center;
   background-color: map-get(color.$bark-palette, 500);
-  color: map-get(color.$cloud-palette, 500);
+  color: map-get(color.$breeze-palette, 500);
   padding: 3rem 2rem;
   min-width: 300px;
+  text-align: left;
 
   &__title {
     margin-bottom: 2rem;
-  }
-
-  &__subtitle {
-    color: map-get(color.$cloud-palette, 500);
+    font-weight: 400;
   }
 
   &__description {
     height: 2.813rem;
   }
+}
 
-  &__link {
-    border: 1px solid map-get(color.$cloud-palette, 500);
-  }
+.mat-card-actions {
+  margin: 1rem 0;
+  width: 100%;
+  text-align: right;
 }

@@ -6,9 +6,10 @@ import {
   OnInit,
   ElementRef,
 } from '@angular/core';
-import { RouterEvent } from '@angular/router';
+import { Router } from '@angular/router';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { AnimationEvent } from '@angular/animations';
+import { MatSidenav, MatSidenavContent } from '@angular/material/sidenav';
 import { DEFAULT_BREAKPOINTS } from '@angular/flex-layout';
 import { Observable, timer } from 'rxjs';
 import { map, tap, delay } from 'rxjs/operators';
@@ -17,10 +18,10 @@ import { Store, select } from '@ngrx/store';
 import * as fromRootStore from './store';
 import * as fromProfileStore from './profile/store';
 // models
-import { Nav, Personal } from './profile/models';
-import { MatSidenavContent } from '@angular/material/sidenav';
+import { Item } from './shared/models';
 // transitions
 import { pageTransitionAnimation } from './shared/animations';
+import { Personal } from './profile/models';
 
 @Component({
   selector: 'app-root',
@@ -29,29 +30,29 @@ import { pageTransitionAnimation } from './shared/animations';
   animations: [pageTransitionAnimation],
 })
 export class AppComponent implements OnInit, OnDestroy {
-  readonly SIDENAV_NG_FLEX_BREAKPOINT = 'lt-md';
+  readonly MOBILE_BREAKPOINT = 'lt-md';
   private _mobileQueryListener: () => void;
-  sideNavLeftMarginPx: string = '300px';
   mobileQuery: MediaQueryList | undefined;
   personal$: Observable<Personal> | null = null;
-  navs$: Observable<Nav[]> | null = null;
-  activeNav$: Observable<Nav> | null = null;
+  navs$: Observable<Item<string>[]> | null = null;
+  activeNav$: Observable<Item<string>> | null = null;
   transitionStatus$: Observable<boolean> | null = null;
   @ViewChild('overlay') overlayEl: ElementRef | null = null;
+  @ViewChild(MatSidenav) sidenav: MatSidenav | undefined;
   @ViewChild(MatSidenavContent)
   sidenavContent: MatSidenavContent | undefined;
 
   constructor(
     changeDetectorRef: ChangeDetectorRef,
     media: MediaMatcher,
+    private router: Router,
     private store: Store<
       fromProfileStore.ProfileState | fromRootStore.RootState
     >
   ) {
     const mediaQuery =
-      DEFAULT_BREAKPOINTS.find(
-        (br) => br.alias === this.SIDENAV_NG_FLEX_BREAKPOINT
-      )?.mediaQuery || 'screen and (max-width: 599.98px)';
+      DEFAULT_BREAKPOINTS.find((br) => br.alias === this.MOBILE_BREAKPOINT)
+        ?.mediaQuery || 'screen and (max-width: 599.98px)';
     this.mobileQuery = media.matchMedia(mediaQuery);
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addEventListener('change', this._mobileQueryListener);
@@ -74,11 +75,20 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   /**
+   * on nav click
+   */
+  onNavClick(event: Item<string>) {
+    this.router.navigateByUrl(event.value as string);
+    if (this.sidenav && this.sidenav.opened) {
+      this.sidenav.close();
+    }
+  }
+
+  /**
    * on transition done
    * @param event
    */
   onTransitionDone(event: AnimationEvent) {
-    console.log('transition');
     const { fromState, totalTime } = event;
     if (fromState) {
       // timer completes, since no second argument is supplied

@@ -1,0 +1,21 @@
+<mat-list
+  class="list"
+  [fxLayout]="horizontal ? 'row' : 'column'"
+  role="list"
+  *ngIf="items"
+>
+  <mat-list-item
+    class="list__item"
+    (click)="onClick(item)"
+    *ngFor="let item of items; index as i"
+  >
+    <a
+      class="list__link"
+      [ngClass]="{
+        'list__link--active': activeStatus
+      }"
+    >
+      {{ item.label }}
+    </a>
+  </mat-list-item>
+</mat-list>

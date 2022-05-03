@@ -98,7 +98,10 @@
     </div>
     <!-- <panel left end> -->
     <!-- <panel right begin> -->
-    <mat-divider [vertical]="true"></mat-divider>
+    <mat-divider
+      class="resume-document__divider"
+      [vertical]="true"
+    ></mat-divider>
     <div class="resume-document__panel resume-document__panel--right">
       <!-- [#contact] -->
       <section
@@ -106,7 +109,7 @@
         *ngIf="resume.contact as contact"
       >
         <h1 class="resume-document__title">{{ contact.title }}</h1>
-        <mat-divider class="resume-document__spacer"></mat-divider>
+        <mat-divider class="resume-document__divider"></mat-divider>
         <div class="resume-document__spacer" *ngFor="let item of contact.items">
           <div class="resume-document__label">{{ item.label }}</div>
           <div [innerHtml]="item.value"></div>
@@ -118,7 +121,7 @@
         *ngIf="resume.skills as skills"
       >
         <h1 class="resume-document__title">{{ skills.title }}</h1>
-        <mat-divider class="resume-document__spacer"></mat-divider>
+        <mat-divider class="resume-document__divider"></mat-divider>
         <div class="resume-document__spacer" *ngFor="let item of skills.items">
           <div>{{ item.label }}</div>
         </div>

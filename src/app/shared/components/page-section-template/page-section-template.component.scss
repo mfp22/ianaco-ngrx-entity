@@ -1,12 +1,12 @@
 @use "colorography" as color;
+@use "shared" as shared;
 
 :host {
   display: block;
-  background-color: map-get(color.$breeze-palette, 900);
 }
 
 .page-section-template {
-  padding: 4rem 2rem;
+  padding: 3rem 2rem;
 
   &__content-container {
     max-width: 60rem;
@@ -15,24 +15,12 @@
 
   &__header {
     margin-bottom: 3rem;
+    max-width: 31.25rem;
   }
 
   &__title {
-    font-size: 3.5rem;
-    line-height: 3.5rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: map-get(color.$bark-palette, 900);
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-
-  &__subtitle {
-    font-size: 1.5rem;
-    color: map-get(color.$bark-palette, 400);
-    font-weight: 500;
-    line-height: 2rem;
-    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    color: map-get(color.$breeze-palette, 500);
   }
 
   &__content {

@@ -1,7 +1,13 @@
-<div class="callout-detail" *ngIf="detail">
+<div
+  class="callout-detail"
+  [style.backgroundColor]="detail.backgroundColor"
+  fxLayout="column"
+  fxLayoutAlign="center start"
+  *ngIf="detail"
+>
   <div class="callout-detail__header">
     <span class="callout-detail__index" *ngIf="index !== undefined"
-      >0{{ index + 1 }}</span
+      >0{{ index + 1 }}/</span
     >
     <h1 class="callout-detail__title">{{ detail.title }}</h1>
   </div>

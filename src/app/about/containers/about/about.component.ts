@@ -21,26 +21,23 @@ export class AboutComponent implements OnInit {
       {
         title: 'Creative',
         content: `
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Looking at things in a different way to provide new and fresh ideas.
         `,
+        backgroundColor: Colorography.Bark500,
       },
       {
         title: 'Detailed',
         content: `
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Paying close attention to the small things which can have large impact.
         `,
+        backgroundColor: Colorography.Bark500,
       },
       {
-        title: 'Thinker',
+        title: 'Analytical',
         content: `
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Thinking through problems thoroughly to implement effective solutions.
         `,
+        backgroundColor: Colorography.Bark500,
       },
     ];
   }

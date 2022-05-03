@@ -1,26 +1,24 @@
 <app-page-template class="about">
   <div content class="content">
-    <app-page-section-template [backgroundColorHex]="color.Breeze900">
+    <app-page-section-template>
       <div class="layout-container">
         <section class="layout-section layout-section--1x">
           <app-about-card [personal]="personal$ | async"></app-about-card>
         </section>
-        <section class="layout-section layout-section--1x">
-          <div class="about__image-container">
-            <img
-              class="about__image"
-              src="assets/images/profile/profile-2-image.png"
-              alt="about-img"
-            />
-          </div>
+        <section
+          class="layout-section layout-section--1x"
+          fxLayoutAlign="start center"
+        >
+          <img
+            class="about__image"
+            src="assets/images/profile/profile-sketch-image.png"
+            alt="profile-img"
+          />
         </section>
       </div>
     </app-page-section-template>
-    <app-page-section-template
-      class="about__section-details"
-      [backgroundColorHex]="color.Cloud500"
-    >
-      <div fxLayout="row" fxLayout.lt-sm="column">
+    <app-page-section-template class="about__section-details">
+      <div class="layout-container">
         <app-callout-detail
           *ngFor="let detail of details; index as i"
           [index]="i"
@@ -31,7 +29,6 @@
     <app-page-section-template
       [title]="'Skill Set'"
       [headerTextAlign]="'center'"
-      [backgroundColorHex]="color.Breeze900"
     >
       <app-bubble-graph></app-bubble-graph>
     </app-page-section-template>

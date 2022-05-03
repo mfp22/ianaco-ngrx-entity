@@ -9,7 +9,7 @@ import { Colorography } from '../../models';
 })
 export class PageSectionTemplateComponent {
   @Input() headerTextAlign: string = 'left';
-  @Input() title: string | undefined;
-  @Input() subtitle: string | undefined;
-  @Input() backgroundColorHex: string = Colorography.Cloud500;
+  @Input() title: string | null = null;
+  @Input() subtitle: string | null = null;
+  @Input() backgroundColorHex: string = Colorography.Transparent;
 }

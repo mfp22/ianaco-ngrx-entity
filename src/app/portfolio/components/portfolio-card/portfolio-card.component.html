@@ -17,13 +17,12 @@
   </mat-card-content>
   <mat-card-actions class="portfolio-card__actions">
     <a
-      class="portfolio-card__link"
+      class="app-link"
       [href]="link.url"
-      mat-stroked-button
       target="_blank"
       rel="noopener noreferrer"
       *ngFor="let link of card.links"
-      >GitHub</a
+      >{{ link.label }}</a
     >
   </mat-card-actions>
 </mat-card>

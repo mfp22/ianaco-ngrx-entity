@@ -1,16 +1,12 @@
-<div class="about-card" *ngIf="personal">
+<div class="about-card text-align--right" *ngIf="personal">
   <div class="about-card__header spacer-bottom--large">
-    <div
-      class="font-size--large"
-      fxLayout="column"
-      fxLayoutAlign="center center"
-    >
-      <div>{{ personal.emailUsername }}</div>
-      <div>{{ personal.emailDomain }}</div>
+    <div fxLayout="column">
+      <div class="font-size--medium">{{ personal.emailUsername }}</div>
+      <div class="font-size--regular">{{ personal.emailDomain }}</div>
     </div>
   </div>
   <div class="about-card__body spacer-bottom--large">
-    <p class="paragraph--medium">
+    <p class="paragraph--regular">
       {{ personal.description }}
     </p>
   </div>
@@ -18,11 +14,11 @@
     <div
       class="about-card__action-container"
       fxLayout="row"
-      fxLayoutAlign="center center"
+      fxLayoutAlign="end center"
       fxLayoutGap="15px"
     >
-      <button mat-fab routerLink="/projects">Projects</button>
-      <button mat-fab routerLink="/resume">Resume</button>
+      <a class="app-link" routerLink="/projects">Projects</a>
+      <a class="app-link" routerLink="/resume">Resume</a>
     </div>
   </div>
 </div>

@@ -15,6 +15,7 @@ import { reducers } from './store';
 // my modules
 import { AppRoutingModule } from './app-routing.module';
 import { ProfileModule } from './profile/profile.module';
+import { SharedModule } from './shared/shared.module';
 // components
 import { AppComponent } from './app.component';
 import * as fromComponents from './components';
@@ -41,6 +42,7 @@ import { environment } from '../environments/environment';
       autoPause: true,
     }),
     ProfileModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

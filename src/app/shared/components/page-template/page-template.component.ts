@@ -1,6 +1,6 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
-import { timer } from 'rxjs';
-import { map, tap, delay } from 'rxjs/operators';
+// models
+import { Colorography } from '../../models';
 
 @Component({
   selector: 'app-page-template',
@@ -10,5 +10,5 @@ import { map, tap, delay } from 'rxjs/operators';
 })
 export class PageTemplateComponent {
   @Input() title: string | undefined;
-  @Input() backgroundColorHex: string = '#e8e8e8';
+  @Input() backgroundColorHex: string = Colorography.Transparent;
 }

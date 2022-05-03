@@ -1,10 +1,12 @@
 @use "colorography" as color;
+$default-resume-color: map-get(color.$bark-palette, 100);
 
 .resume-document {
   padding: 1rem;
   max-width: 55rem;
   margin: auto;
-  font-weight: 500;
+  font-weight: 400;
+  color: $default-resume-color;
 
   // general
   &__label {
@@ -28,6 +30,7 @@
 
   &__divider {
     margin-bottom: 1rem;
+    border-color: $default-resume-color !important;
   }
 
   &__section {
@@ -38,7 +41,7 @@
     margin: 0 0.5rem;
     padding: 0.125rem 0.25rem;
     border-radius: 0.25rem;
-    background-color: map-get(color.$breeze-palette, 500);
+    background-color: map-get(color.$bark-palette, 500);
     font-weight: 500;
   }
 
@@ -64,20 +67,20 @@
 
   // <panel left begin>
   &__timeline {
-    border-right: 1px solid map-get(color.$bark-palette, 900);
+    border-right: 1px solid $default-resume-color;
     margin-right: 1.5rem;
     position: relative;
 
     &::before {
       content: "";
-      border: 2px solid map-get(color.$bark-palette, 900);
+      border: 2px solid $default-resume-color;
       border-radius: 50%;
       width: 1rem;
       height: 1rem;
       position: absolute;
       top: 0;
       left: -0.6rem;
-      background-color: #e8e8e8;
+      background-color: map-get(color.$bark-palette, 900);
     }
   }
 

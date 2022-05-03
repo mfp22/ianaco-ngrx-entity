@@ -3,57 +3,19 @@
     <mat-sidenav
       #sidenav
       class="app__sidenav"
-      [mode]="mobileQuery?.matches ? 'over' : 'side'"
-      [opened]="!mobileQuery?.matches"
+      [mode]="'over'"
       fxLayout="column"
     >
-      <div class="app__sidenav-header">
-        <div class="app__sidenav-label" *ngIf="personal$ | async as personal">
-          {{ personal.email }}
-        </div>
-      </div>
-      <div
-        class="app__sidenav-body"
-        fxLayout="column"
-        fxLayoutAlign="center start"
-      >
-        <mat-divider></mat-divider>
-        <mat-list
-          class="app__sidenav-list"
-          role="list"
-          *ngIf="navs$ | async as navs"
-        >
-          <mat-list-item
-            class="app__sidenav-list-item"
-            *ngFor="let nav of navs; index as i"
-          >
-            <a
-              class="app__link"
-              [routerLink]="nav.link"
-              [ngClass]="{
-                'app__link--active': (activeNav$ | async) === nav
-              }"
-              (click)="mobileQuery?.matches ? sidenav.close() : null"
-            >
-              {{ nav.label }}
-            </a>
-          </mat-list-item>
-        </mat-list>
-        <mat-divider></mat-divider>
-      </div>
-      <div class="app__sidenav-footer">
-        <div class="app__sidenav-label">© 2022 Ianacodev</div>
-      </div>
+      <app-list
+        [items]="navs$ | async"
+        (handleClick)="onNavClick($event)"
+      ></app-list>
     </mat-sidenav>
-    <mat-sidenav-content
-      class="app__sidenav-content"
-      [style.marginLeft]="sidenav.mode === 'side' ? sideNavLeftMarginPx : 0"
-    >
+    <mat-sidenav-content class="app__sidenav-content">
       <div
         #overlay
         class="app__sidenav-content-overlay"
         *ngIf="transitionStatus$ | async"
-        [style.marginLeft]="sidenav.mode === 'side' ? sideNavLeftMarginPx : 0"
         @pageTransition
         (@pageTransition.done)="onTransitionDone($event)"
       >
@@ -61,27 +23,42 @@
           class="app__sidenav-content-overlay-label"
           *ngIf="activeNav$ | async as activeNav"
         >
-          <span class="app__text--lg">{{ activeNav.link }}</span>
+          <span class="app__text--lg">{{ activeNav.label }}</span>
         </div>
       </div>
-      <mat-toolbar>
-        <mat-toolbar-row fxLayout="row" fxLayoutAlign="end center">
-          <button
-            class="hamburger hamburger--collapse"
-            [ngClass]="{ 'is-active': sidenav.opened }"
-            type="button"
-            (click)="sidenav.toggle()"
-            *ngIf="mobileQuery?.matches"
-            tabindex="0"
-          >
-            <span class="hamburger-box">
-              <span class="hamburger-inner"></span>
-            </span>
-          </button>
-        </mat-toolbar-row>
-      </mat-toolbar>
+      <div class="app__header">
+        <mat-toolbar>
+          <mat-toolbar-row fxLayout="row" fxLayoutAlign="end center">
+            <button
+              class="hamburger hamburger--collapse"
+              [ngClass]="{ 'is-active': sidenav.opened }"
+              type="button"
+              (click)="sidenav.toggle()"
+              tabindex="0"
+              *ngIf="mobileQuery?.matches; else navList"
+            >
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+            <ng-template #navList>
+              <app-list
+                [items]="navs$ | async"
+                [horizontal]="true"
+                (handleClick)="onNavClick($event)"
+              ></app-list>
+            </ng-template>
+          </mat-toolbar-row>
+        </mat-toolbar>
+      </div>
       <div class="app__container">
         <router-outlet></router-outlet>
+      </div>
+      <div class="app__footer">
+        <div *ngIf="personal$ | async as personal">
+          <p class="font-size--regular">{{ personal.email }}</p>
+          <p>© 2022 ianacodev</p>
+        </div>
       </div>
     </mat-sidenav-content>
   </mat-sidenav-container>

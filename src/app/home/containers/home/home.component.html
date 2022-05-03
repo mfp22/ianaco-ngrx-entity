@@ -1,79 +1,34 @@
 <app-page-template class="home">
-  <div *ngIf="personal$ | async as personal">
-    <!-- section begin -->
-    <app-page-section-template [backgroundColorHex]="color.Breeze900">
-      <div class="layout-container">
-        <section
-          class="layout-section--2x"
-          fxLayout="column"
-          fxLayoutAlign="start start"
-        >
-          <h1 class="home__title">
-            <span class="home__title-text">{{ personal.occupationType }}</span>
-            <span class="home__title-text">{{ personal.occupation }} </span>
-          </h1>
-          <h2 class="home__subtitle">{{ personal.fullName }}</h2>
-          <div class="home__image-container home__image-container-profile">
-            <img
-              class="home__image-profile"
-              src="assets/images/profile/profile-1-image.png"
-              alt="profile-pic"
-            />
-          </div>
-        </section>
-        <section class="layout-section layout-section--1x">
-          <p class="paragraph--medium">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-        </section>
+  <app-page-section-template
+    [subtitle]="message$ | async"
+    [headerTextAlign]="'center'"
+  >
+    <section class="layout-container">
+      <div class="layout-section--1x">
+        <img
+          class="home__image"
+          src="assets/images/content/light-bulb-colorful-image.png"
+          alt="idea"
+        />
       </div>
-    </app-page-section-template>
-    <!-- section begin -->
-    <app-page-section-template [backgroundColorHex]="color.Cloud500">
-      <div class="layout-container-reverse">
-        <section class="layout-section layout-section--1x">
-          <p class="paragraph--medium">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-        </section>
-        <section class="layout-section layout-section--1x">
-          <div class="home__image-container">
-            <img
-              class="home__image"
-              src="assets/images/content/brainstorm-image.png"
-              alt="profile-pic"
-            />
-          </div>
-        </section>
+      <div class="layout-section--1x">
+        <div class="font-size--x-large">
+          <div class="home__text--loud">Creative</div>
+          <div class="home__text--quite">ideas</div>
+        </div>
+        <div class="font-size--x-large">
+          <div class="home__text--loud">Innovative</div>
+          <div class="home__text--quite">solutions</div>
+        </div>
+        <div>
+          <img
+            class="icon--small"
+            src="assets/icons/arrow-angled-down-right-icon.svg"
+            alt=">"
+          />
+          <a class="font-size--medium app-link" routerLink="/about">About</a>
+        </div>
       </div>
-    </app-page-section-template>
-    <!-- section begin -->
-    <app-page-section-template [backgroundColorHex]="color.Breeze900">
-      <div class="layout-container">
-        <section class="layout-section layout-section--1x">
-          <div class="home__image-container">
-            <img
-              class="home__image"
-              src="assets/images/content/laptop-image.png"
-              alt="profile-pic"
-            />
-          </div>
-        </section>
-        <section class="layout-section layout-section--1x">
-          <p class="paragraph--medium">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-        </section>
-      </div>
-    </app-page-section-template>
-  </div>
+    </section>
+  </app-page-section-template>
 </app-page-template>

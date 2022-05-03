@@ -1,99 +1,15 @@
 @use "colorography" as color;
 @import "burger-menu";
-
 $hamburger-types: (collapse) !default;
+
 .app {
   height: 100%;
-
-  &__text--sm {
-    font-size: 1rem;
-    color: map-get(color.$bark-palette, 300);
-    margin: 0.5rem;
-  }
-
-  &__link {
-    color: map-get(color.$bark-palette, 900);
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 2rem;
-    position: relative;
-    width: 100%;
-    font-weight: 500;
-    cursor: pointer;
-
-    &--active {
-      &::after {
-        content: "";
-        background-color: map-get(color.$bark-palette, 900);
-        border: 0.25rem solid map-get(color.$bark-palette, 900);
-        border-radius: 50%;
-        position: absolute;
-        top: 50%;
-        right: 0;
-        opacity: 1;
-        margin-top: -0.25rem;
-      }
-    }
-  }
-
-  &__sidenav {
-    background-color: map-get(color.$cloud-palette, 500);
-
-    &-item {
-      font-size: 0.875rem;
-      margin-bottom: 1rem;
-    }
-
-    &-label {
-      margin-bottom: 0.75rem;
-      text-transform: uppercase;
-      color: map-get(color.$bark-palette, 400);
-      font-weight: 600;
-    }
-
-    &-value {
-      font-weight: 500;
-      text-decoration: none;
-      color: map-get(color.$bark-palette, 900);
-    }
-
-    &-body {
-      color: color.$color-contrast;
-      font-size: 1rem;
-      flex-grow: 1;
-    }
-
-    &-footer {
-      font-weight: 500;
-      color: map-get(color.$bark-palette, 900);
-    }
-
-    &-list {
-      padding: 0;
-      margin: 1.5rem 0;
-      width: 100%;
-    }
-
-    &-list-item {
-      padding: 0;
-      margin: 0 0 1rem;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-  }
-
-  &__container {
-    box-sizing: border-box;
-    height: 100%;
-  }
 
   &__sidenav-content {
     position: relative;
 
     &-overlay {
-      background-color: map-get(color.$bark-palette, 900);
+      background-color: darken(map-get(color.$bark-palette, 900), 3);
       position: fixed;
       top: 0;
       bottom: 0;
@@ -105,7 +21,7 @@ $hamburger-types: (collapse) !default;
     }
 
     &-overlay-label {
-      color: map-get(color.$cloud-palette, 500);
+      color: map-get(color.$breeze-palette, 500);
       font-size: 3.5rem;
       text-transform: capitalize;
       position: relative;
@@ -115,21 +31,28 @@ $hamburger-types: (collapse) !default;
       text-align: center;
     }
   }
+
+  &__footer {
+    margin: 3rem 0;
+    padding: 1rem;
+    text-align: center;
+    color: map-get(color.$bark-palette, 400);
+    font-weight: 400;
+  }
 }
 
 .mat-sidenav-container {
-  background-color: map-get(color.$cloud-palette, 500);
+  background-color: map-get(color.$bark-palette, 900);
   height: 100vh;
   position: relative;
 }
 
-.mat-toolbar {
-  background: none;
-  position: absolute;
+.mat-sidenav {
+  background-color: inherit;
 }
 
-.mat-divider {
-  width: 100%;
+.mat-toolbar {
+  background: transparent;
 }
 
 .hamburger {
