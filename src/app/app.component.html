@@ -23,7 +23,7 @@
           class="app__sidenav-content-overlay-label"
           *ngIf="activeNav$ | async as activeNav"
         >
-          <span class="app__text--lg">{{ activeNav.label }}</span>
+          <span class="app__text--lg"></span>
         </div>
       </div>
       <div class="app__header">
@@ -45,6 +45,7 @@
               <app-list
                 [items]="navs$ | async"
                 [horizontal]="true"
+                [activeItem]="activeNav$ | async"
                 (handleClick)="onNavClick($event)"
               ></app-list>
             </ng-template>

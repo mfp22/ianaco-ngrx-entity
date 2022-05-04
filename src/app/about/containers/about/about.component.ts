@@ -23,21 +23,21 @@ export class AboutComponent implements OnInit {
         content: `
         Looking at things in a different way to provide new and fresh ideas.
         `,
-        backgroundColor: Colorography.Bark500,
+        backgroundColor: Colorography.Bark800,
       },
       {
         title: 'Detailed',
         content: `
         Paying close attention to the small things which can have large impact.
         `,
-        backgroundColor: Colorography.Bark500,
+        backgroundColor: Colorography.Bark800,
       },
       {
         title: 'Analytical',
         content: `
         Thinking through problems thoroughly to implement effective solutions.
         `,
-        backgroundColor: Colorography.Bark500,
+        backgroundColor: Colorography.Bark800,
       },
     ];
   }

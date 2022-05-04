@@ -13,5 +13,9 @@ $list-default-color: map-get(color.$breeze-palette, 500);
 
   &__link {
     color: $list-default-color;
+
+    &--active {
+      border-bottom: 0.063rem solid map-get(color.$bark-palette, 500);
+    }
   }
 }

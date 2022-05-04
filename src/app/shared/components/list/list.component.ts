@@ -9,7 +9,7 @@ import { Item } from '../../models';
 })
 export class ListComponent {
   @Input() items: Item<any>[] | null = null;
-  @Input() activeStatus: boolean = false;
+  @Input() activeItem: Item<any> | null = null;
   @Input() horizontal: boolean = false;
   @Output() handleClick = new EventEmitter<Item<string>>();
 

@@ -3,5 +3,6 @@
 .about {
   &__image {
     max-width: 14.375rem;
+    background-color: map-get(color.$bark-palette, 200);
   }
 }

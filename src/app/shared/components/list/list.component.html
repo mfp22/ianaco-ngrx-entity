@@ -12,7 +12,7 @@
     <a
       class="list__link"
       [ngClass]="{
-        'list__link--active': activeStatus
+        'list__link--active': activeItem?.label === item.label
       }"
     >
       {{ item.label }}

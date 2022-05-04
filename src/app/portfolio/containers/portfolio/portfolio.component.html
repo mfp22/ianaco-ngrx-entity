@@ -1,9 +1,7 @@
 <app-page-template class="portfolio">
   <div *ngIf="portfolioCards$ | async as cards">
     <app-page-section-template
-      [subtitle]="
-        'Collection of some personal projects publicly available on GitHub.'
-      "
+      [subtitle]="'Collection of personal projects.'"
       [headerTextAlign]="'center'"
     >
       <app-portfolio-grid [cards]="cards"></app-portfolio-grid>

@@ -1,33 +1,21 @@
 <app-page-template class="home">
-  <app-page-section-template
-    [subtitle]="message$ | async"
-    [headerTextAlign]="'center'"
-  >
+  <app-page-section-template>
     <section class="layout-container">
-      <div class="layout-section--1x" fxLayoutAlign="end">
+      <div fxLayoutAlign="end center" fxFlexAlign.lt-md="end">
+        <div class="text-align--right">
+          <div class="font-size--x-large spacer-bottom--medium">
+            <div class="home__text--loud">creative</div>
+            <div class="home__text--quite">engineer.</div>
+          </div>
+          <a class="font-size--regular app-link" routerLink="/about">next</a>
+        </div>
+      </div>
+      <div fxLayoutAlign="start">
         <img
           class="home__image"
           src="assets/images/content/light-bulb-colorful-image.png"
           alt="idea"
         />
-      </div>
-      <div class="layout-section--1x">
-        <div class="font-size--x-large">
-          <div class="home__text--loud">Creative</div>
-          <div class="home__text--quite">ideas</div>
-        </div>
-        <div class="font-size--x-large">
-          <div class="home__text--loud">Innovative</div>
-          <div class="home__text--quite">solutions</div>
-        </div>
-        <div>
-          <img
-            class="icon--small"
-            src="assets/icons/arrow-angled-down-right-icon.svg"
-            alt=">"
-          />
-          <a class="font-size--regular app-link" routerLink="/about">About</a>
-        </div>
       </div>
     </section>
   </app-page-section-template>
