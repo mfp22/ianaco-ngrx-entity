@@ -6,6 +6,8 @@ import * as fromProfileStore from '../../../profile/store';
 // models
 import { Personal } from '../../../profile/models';
 import { Colorography, CalloutDetail } from '../../../shared/models';
+// configs
+import { graphData } from '../../../bubble-graph/components/bubble-graph/graph-data';
 
 @Component({
   selector: 'app-about',
@@ -14,6 +16,7 @@ import { Colorography, CalloutDetail } from '../../../shared/models';
 })
 export class AboutComponent implements OnInit {
   color = Colorography;
+  skills = graphData.nodes;
   details: CalloutDetail[] = [];
   personal$: Observable<Personal> | null = null;
   personalTraits = ['/Creative', '/Detailed', '/Analytical'];

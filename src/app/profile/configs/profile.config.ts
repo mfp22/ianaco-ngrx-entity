@@ -17,7 +17,7 @@ export const profile: Profile = {
       return `${this.emailUsername}${this.emailDomain}`;
     },
     description: `
-    Motivated Engineer with experience building and maintaining 
+    Experience building and maintaining 
     responsive websites.
   `,
   },

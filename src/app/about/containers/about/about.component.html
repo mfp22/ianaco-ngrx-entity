@@ -12,12 +12,13 @@
     <app-page-section-template>
       <div class="layout-container">
         <section class="layout-section--1x" fxFlexAlign="start">
-          <app-about-card [personal]="personal$ | async"></app-about-card>
+          <p class="paragraph--medium">Lorem ipsum dolor sit amet</p>
         </section>
         <section
           class="layout-section--1x about__personal-container"
           fxFlexAlign="start"
         >
+          <app-about-card [personal]="personal$ | async"></app-about-card>
           <div class="about__image-container">
             <img
               class="about__image"
@@ -33,11 +34,18 @@
       </div>
       <div class="spacer-bottom--x-large"></div>
     </app-page-section-template>
-    <app-page-section-template
-      [title]="'Skill Set'"
-      [headerTextAlign]="'center'"
-    >
-      <app-bubble-graph></app-bubble-graph>
+    <app-page-section-template>
+      <div class="layout-container">
+        <section class="layout-section--1x" fxFlexAlign="start">
+          <p class="paragraph--medium">Lorem ipsum dolor sit amet</p>
+        </section>
+        <section class="layout-section--1x width-fill" fxFlexAlign="start">
+          <div class="about__skill" *ngFor="let skill of skills">
+            {{ skill.label }}
+          </div>
+        </section>
+      </div>
+      <div class="spacer-bottom--x-large"></div>
     </app-page-section-template>
   </div>
 </app-page-template>

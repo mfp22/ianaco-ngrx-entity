@@ -3,7 +3,12 @@
   <app-page-section-template>
     <section class="layout-container">
       <div class="layout-section--1x" fxFlexAlign="start">
-        <div class="home__heading" *ngIf="personal$ | async as personal">
+        <div
+          class="home__heading"
+          fxLayout="column"
+          fxLayoutAlign="start end"
+          *ngIf="personal$ | async as personal"
+        >
           <div class="home__subtitle font-size--large">
             {{ personal.occupationType }}
           </div>

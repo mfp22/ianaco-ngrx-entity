@@ -28,4 +28,11 @@
     text-align: right;
     max-width: 20.375rem;
   }
+
+  &__skill {
+    @extend .font-size--regular;
+    color: map-get(color.$bark-palette, 200);
+    border-bottom: 0.063rem solid map-get(color.$bark-palette, 800);
+    padding: 1rem 0;
+  }
 }
