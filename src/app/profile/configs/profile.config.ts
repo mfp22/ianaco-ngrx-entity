@@ -20,6 +20,41 @@ export const profile: Profile = {
     Experience building and maintaining 
     responsive websites.
   `,
+    skills: [
+      {
+        label: 'HTML',
+      },
+      {
+        label: 'CSS',
+      },
+      {
+        label: 'SCSS',
+      },
+      {
+        label: 'JavaScript',
+      },
+      {
+        label: 'TypeScript',
+      },
+      {
+        label: 'Angular',
+      },
+      {
+        label: 'Angular Material',
+      },
+      {
+        label: 'RxJS',
+      },
+      {
+        label: 'NgRx',
+      },
+      {
+        label: 'Jasmine',
+      },
+      {
+        label: 'Adobe XD',
+      },
+    ],
   },
   navs: [
     {

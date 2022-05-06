@@ -19,37 +19,37 @@ export class HomeComponent implements OnInit {
   color = Colorography;
   personal$: Observable<Personal> | null = null;
   aboutContentCard: ContentCard = {
-    title: `Providing value and focusing on critical areas.`,
+    title: `Providing value throughout the development process.`,
     linkLabel: 'More About Me',
     link: 'about',
-    image: 'assets/images/content/brainstorm-image.png',
+    image: 'assets/images/content/brainstorm-image.jpg',
   };
   resumeContentCard: ContentCard = {
-    title: `Extensive collaboration with teams to deliver results.`,
+    title: `Extensive collaboration with teams to deliver business results.`,
     linkLabel: 'Resume',
     link: 'resume',
-    image: 'assets/images/content/teamwork-image.png',
+    image: 'assets/images/content/teamwork-image.jpg',
   };
   calloutDetails: CalloutDetail[] = [
     {
       title: 'Creative',
       subtitle: 'ideas',
       content: `
-      Looking at things in a different way to offer up  new  and original ideas.
+      Looking at things in a different way to offer new and original ideas.
       `,
     },
     {
-      title: 'Critical',
-      subtitle: 'thinking',
+      title: 'Detailed',
+      subtitle: 'analysis',
       content: `
-      Thinking through issues thoroughly and in a detailed way.
+      Evaluating concepts and ideas thoroughly before implementation.
       `,
     },
     {
-      title: 'Innovative',
+      title: 'Effective',
       subtitle: 'solutions',
       content: `
-      Solving problems  effectively for optimal results.
+      Providing solutions that meet requirements and deliver results.
       `,
     },
   ];

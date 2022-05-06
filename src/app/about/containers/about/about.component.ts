@@ -5,10 +5,11 @@ import { Store, select } from '@ngrx/store';
 import * as fromProfileStore from '../../../profile/store';
 // models
 import { Personal } from '../../../profile/models';
-import { Colorography, CalloutDetail } from '../../../shared/models';
-// configs
-import { graphData } from '../../../bubble-graph/components/bubble-graph/graph-data';
-
+import {
+  Colorography,
+  CalloutDetail,
+  ContentCard,
+} from '../../../shared/models';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -16,10 +17,17 @@ import { graphData } from '../../../bubble-graph/components/bubble-graph/graph-d
 })
 export class AboutComponent implements OnInit {
   color = Colorography;
-  skills = graphData.nodes;
   details: CalloutDetail[] = [];
   personal$: Observable<Personal> | null = null;
-  personalTraits = ['/Creative', '/Detailed', '/Analytical'];
+  personalTraits = ['/Creative', '/Detailed', '/Effective'];
+  workContentCard: ContentCard = {
+    title: `Lorem ipsum dolor sit amet.`,
+    image: 'assets/images/content/workarea-image.jpg',
+  };
+  skillContentCard: ContentCard = {
+    title: `Lorem ipsum dolor sit amet.`,
+    image: 'assets/images/content/chess-move-image.jpg',
+  };
 
   constructor(private store: Store<fromProfileStore.ProfileState>) {}
 

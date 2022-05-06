@@ -65,7 +65,7 @@
 
 // [paragraph]
 .paragraph--medium {
-  margin: 0.5rem 0;
+  margin: 1.5rem 0;
   @extend .font-size--medium;
   color: map-get(color.$breeze-palette, 500);
   font-weight: 300;

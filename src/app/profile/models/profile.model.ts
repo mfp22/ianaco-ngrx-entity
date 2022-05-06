@@ -10,6 +10,7 @@ export interface Personal {
   emailDomain: string;
   email: string;
   description: string;
+  skills: Item<void>[];
 }
 
 export interface Profile {

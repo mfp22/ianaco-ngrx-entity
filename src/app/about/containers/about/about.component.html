@@ -1,6 +1,6 @@
 <app-page-template class="about">
   <div class="spacer-bottom--x-large"></div>
-  <div content class="content">
+  <div content class="content" *ngIf="personal$ | async as personal">
     <app-page-section-template>
       <div class="about__trait-container">
         <p class="about__trait" *ngFor="let trait of personalTraits">
@@ -12,21 +12,14 @@
     <app-page-section-template>
       <div class="layout-container">
         <section class="layout-section--1x" fxFlexAlign="start">
-          <p class="paragraph--medium">Lorem ipsum dolor sit amet</p>
+          <app-content-card [content]="workContentCard"></app-content-card>
         </section>
         <section
           class="layout-section--1x about__personal-container"
           fxFlexAlign="start"
         >
-          <app-about-card [personal]="personal$ | async"></app-about-card>
-          <div class="about__image-container">
-            <img
-              class="about__image"
-              src="assets/images/profile/profile-2-image.png"
-              alt="profile-img"
-            />
-          </div>
-          <div class="about__personal" *ngIf="personal$ | async as personal">
+          <app-about-card [personal]="personal"></app-about-card>
+          <div class="about__personal">
             <div class="font-size--large">{{ personal.emailUsername }}</div>
             <div class="font-size--regular">{{ personal.emailDomain }}</div>
           </div>
@@ -37,10 +30,15 @@
     <app-page-section-template>
       <div class="layout-container">
         <section class="layout-section--1x" fxFlexAlign="start">
-          <p class="paragraph--medium">Lorem ipsum dolor sit amet</p>
+          <app-content-card [content]="skillContentCard"></app-content-card>
+          <p class="paragraph--medium">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam
+          </p>
         </section>
         <section class="layout-section--1x width-fill" fxFlexAlign="start">
-          <div class="about__skill" *ngFor="let skill of skills">
+          <div class="about__skill" *ngFor="let skill of personal.skills">
             {{ skill.label }}
           </div>
         </section>

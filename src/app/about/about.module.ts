@@ -5,7 +5,6 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 // features
 import { AboutRoutingModule } from './about-routing.module';
-import { BubbleGraphModule } from '../bubble-graph/bubble-graph.module';
 import { SharedModule } from '../shared/shared.module';
 // containers
 import * as fromContainers from './containers';
@@ -20,7 +19,6 @@ import * as fromComponents from './components';
     MatDividerModule,
     MatButtonModule,
     AboutRoutingModule,
-    BubbleGraphModule,
     SharedModule,
   ],
 })
