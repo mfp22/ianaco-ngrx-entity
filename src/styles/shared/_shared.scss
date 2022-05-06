@@ -16,6 +16,12 @@
 }
 
 // [font]
+.font-size--xx-large {
+  font-size: 3.25rem;
+  line-height: 3.25rem;
+  font-weight: 300;
+}
+
 .font-size--x-large {
   font-size: 2.813rem;
   line-height: 2.813rem;
@@ -40,7 +46,7 @@
 
 .font-size--regular {
   font-size: 1rem;
-  line-height: 1rem;
+  line-height: 1.25rem;
 }
 
 .font-size--small {
@@ -69,6 +75,14 @@
 .paragraph--medium {
   margin: 0.5rem 0;
   @extend .font-size--medium;
+  color: map-get(color.$bark-palette, 200);
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.paragraph--regular {
+  margin: 0.5rem 0;
+  @extend .font-size--regular;
   color: map-get(color.$bark-palette, 400);
   font-weight: 400;
   line-height: 1.5;
@@ -78,6 +92,16 @@
 .icon--small {
   width: 2rem;
   display: inline-block;
+}
+
+.icon--medium {
+  width: 3.5rem;
+  display: inline-block;
+}
+
+// [images]
+.image--small {
+  max-width: 10rem;
 }
 
 // [link]
@@ -91,4 +115,9 @@
   cursor: pointer;
   text-transform: capitalize;
   display: inline-block;
+}
+
+// [sizing]
+.width-fill {
+  width: 100%;
 }

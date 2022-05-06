@@ -1,19 +1,32 @@
 @use "colorography" as color;
+@use "shared" as shared;
 
 .home {
-  &__text--loud {
+  &__heading {
+    text-align: right;
     color: map-get(color.$breeze-palette, 500);
   }
 
-  &__text--quite {
-    color: map-get(color.$bark-palette, 400);
+  &__image-container {
+    background: url(../../../../assets/images/backgrounds/test.png) no-repeat
+      center center;
+    background-size: cover;
+    max-width: 30.875rem;
   }
 
   &__image {
-    max-width: 21.875rem;
+    max-width: 11rem;
+    position: relative;
+    left: 8%;
+    top: 0.5rem;
+  }
+
+  &__description {
+    @extend .font-size--medium;
+    color: map-get(color.$bark-palette, 400);
   }
 }
 
 .paragraph--medium {
-  max-width: 31.25rem;
+  color: map-get(color.$breeze-palette, 500);
 }

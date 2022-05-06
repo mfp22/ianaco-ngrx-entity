@@ -4,12 +4,14 @@ import { PageSectionTemplateComponent } from './page-section-template/page-secti
 import { IframeComponent } from './iframe/iframe.component';
 import { CalloutDetailComponent } from './callout-detail/callout-detail.component';
 import { ListComponent } from './list/list.component';
+import { ContentCardComponent } from './content-card/content-card.component';
 // exports
 export * from './page-template/page-template.component';
 export * from './page-section-template/page-section-template.component';
 export * from './iframe/iframe.component';
 export * from './callout-detail/callout-detail.component';
 export * from './list/list.component';
+export * from './content-card/content-card.component';
 // exports group
 export const components = [
   PageTemplateComponent,
@@ -17,4 +19,5 @@ export const components = [
   IframeComponent,
   CalloutDetailComponent,
   ListComponent,
+  ContentCardComponent,
 ];

@@ -1,0 +1,23 @@
+@use "colorography" as color;
+@use "shared";
+
+.content-card {
+  &__header {
+    margin-bottom: 1rem;
+    max-width: 23.75rem;
+  }
+
+  &__title {
+    color: map-get(color.$bark-palette, 400);
+    @extend .font-size--medium;
+    margin-bottom: 0.5rem;
+  }
+
+  &__link {
+    color: map-get(color.$breeze-palette, 500);
+  }
+
+  &__image {
+    max-width: 20rem;
+  }
+}

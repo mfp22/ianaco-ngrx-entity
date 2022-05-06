@@ -1,21 +1,63 @@
 <app-page-template class="home">
   <app-page-section-template>
     <section class="layout-container">
-      <div fxLayoutAlign="end center" fxFlexAlign.lt-md="end">
-        <div class="text-align--right">
-          <div class="font-size--x-large spacer-bottom--medium">
-            <div class="home__text--loud">creative</div>
-            <div class="home__text--quite">engineer.</div>
+      <div class="layout-section--1x" fxFlexAlign="start">
+        <div class="home__heading" *ngIf="personal$ | async as personal">
+          <div class="home__subtitle font-size--large">
+            {{ personal.occupationType }}
           </div>
-          <a class="font-size--regular app-link" routerLink="/about">next</a>
+          <p class="home__title font-size--xx-large">
+            {{ personal.occupation }}
+          </p>
+          <p class="home__description">
+            {{ personal.description }}
+          </p>
         </div>
       </div>
-      <div fxLayoutAlign="start">
-        <img
-          class="home__image"
-          src="assets/images/content/light-bulb-colorful-image.png"
-          alt="idea"
-        />
+      <div class="layout-section--1x width-fill">
+        <div class="home__image-container">
+          <img
+            class="home__image"
+            src="assets/images/profile/profile-1-image.png"
+            alt="idea"
+          />
+        </div>
+      </div>
+    </section>
+  </app-page-section-template>
+  <app-page-section-template>
+    <img
+      class="icon--medium"
+      src="assets/icons/arrow-down-icon.svg"
+      alt="down"
+    />
+  </app-page-section-template>
+  <app-page-section-template>
+    <section class="layout-container">
+      <div class="layout-section--1x" fxFlexAlign="start">
+        <app-content-card [content]="aboutContentCard"></app-content-card>
+      </div>
+      <div class="layout-section--1x" fxFlexAlign="start">
+        <app-callout-detail
+          [index]="i"
+          [detail]="detail"
+          *ngFor="let detail of calloutDetails; index as i"
+        ></app-callout-detail>
+      </div>
+    </section>
+  </app-page-section-template>
+  <app-page-section-template>
+    <section class="layout-container">
+      <div class="layout-section--1x" fxFlexAlign="start">
+        <app-content-card [content]="resumeContentCard"></app-content-card>
+      </div>
+      <div class="layout-section--1x" fxFlexAlign="start center">
+        <p class="paragraph--medium">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
       </div>
     </section>
   </app-page-section-template>

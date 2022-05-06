@@ -1,0 +1,11 @@
+<div class="content-card" *ngIf="content">
+  <div class="content-card__header">
+    <p class="content-card__title">{{ content.title }}</p>
+    <a routerLink="{{ '/' + content.link }}" class="content-card__link">{{
+      content.linkLabel
+    }}</a>
+  </div>
+  <div class="content-card__body">
+    <img class="content-card__image" [src]="content.image" alt="content-img" />
+  </div>
+</div>

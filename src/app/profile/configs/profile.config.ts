@@ -9,7 +9,7 @@ export const profile: Profile = {
     get fullName() {
       return `${this.firstName} ${this.lastName}`;
     },
-    occupation: 'Engineer',
+    occupation: 'Software Engineer',
     occupationType: 'Front End',
     emailUsername: 'joshua.ianacone',
     emailDomain: '@gmail.com',
@@ -17,9 +17,8 @@ export const profile: Profile = {
       return `${this.emailUsername}${this.emailDomain}`;
     },
     description: `
-    Motivated Front End Engineer with experience building and maintaining 
-    responsive websites. Extensive collaboration with teams to produce 
-    sites that deliver business results. Strong interest in UI/UX.
+    Motivated Engineer with experience building and maintaining 
+    responsive websites.
   `,
   },
   navs: [

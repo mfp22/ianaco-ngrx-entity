@@ -16,31 +16,7 @@ export class AboutComponent implements OnInit {
   color = Colorography;
   details: CalloutDetail[] = [];
   personal$: Observable<Personal> | null = null;
-  constructor(private store: Store<fromProfileStore.ProfileState>) {
-    this.details = [
-      {
-        title: 'Creative',
-        content: `
-        Looking at things in a different way to provide new and fresh ideas.
-        `,
-        backgroundColor: Colorography.Bark800,
-      },
-      {
-        title: 'Detailed',
-        content: `
-        Paying close attention to the small things which can have large impact.
-        `,
-        backgroundColor: Colorography.Bark800,
-      },
-      {
-        title: 'Analytical',
-        content: `
-        Thinking through problems thoroughly to implement effective solutions.
-        `,
-        backgroundColor: Colorography.Bark800,
-      },
-    ];
-  }
+  constructor(private store: Store<fromProfileStore.ProfileState>) {}
 
   ngOnInit(): void {
     this.personal$ = this.store.pipe(

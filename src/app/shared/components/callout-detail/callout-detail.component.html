@@ -9,10 +9,11 @@
     <span class="callout-detail__index" *ngIf="index !== undefined"
       >0{{ index + 1 }}/</span
     >
-    <h1 class="callout-detail__title">{{ detail.title }}</h1>
+    <h1 class="callout-detail__title">{{ detail.title }}.</h1>
+    <h2 class="callout-detail__subtitle">{{ detail.subtitle }}</h2>
   </div>
   <div class="callout-detail__body">
-    <div class="callout-detail__content"></div>
+    <div class="callout-detail__content font-size--regular"></div>
     {{ detail.content }}
   </div>
 </div>
