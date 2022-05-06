@@ -19,8 +19,8 @@ export class HomeComponent implements OnInit {
   color = Colorography;
   personal$: Observable<Personal> | null = null;
   aboutContentCard: ContentCard = {
-    title: `Providing value to projects and focusing on critical areas.`,
-    linkLabel: 'About Me',
+    title: `Providing value and focusing on critical areas.`,
+    linkLabel: 'More About Me',
     link: 'about',
     image: 'assets/images/content/brainstorm-image.png',
   };
@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
     title: `Extensive collaboration with teams to deliver results.`,
     linkLabel: 'Resume',
     link: 'resume',
-    image: 'assets/images/content/team-deliver-image.png',
+    image: 'assets/images/content/teamwork-image.png',
   };
   calloutDetails: CalloutDetail[] = [
     {

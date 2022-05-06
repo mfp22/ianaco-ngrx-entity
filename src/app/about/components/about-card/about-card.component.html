@@ -1,24 +1,10 @@
 <div class="about-card text-align--right" *ngIf="personal">
-  <div class="about-card__header spacer-bottom--large">
-    <div fxLayout="column">
-      <div class="font-size--medium">{{ personal.emailUsername }}</div>
-      <div class="font-size--regular">{{ personal.emailDomain }}</div>
-    </div>
-  </div>
   <div class="about-card__body spacer-bottom--large">
-    <p class="paragraph--regular">
-      {{ personal.description }}
+    <p class="paragraph--medium">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam
     </p>
   </div>
-  <div class="about-card__footer">
-    <div
-      class="about-card__action-container"
-      fxLayout="row"
-      fxLayoutAlign="end center"
-      fxLayoutGap="15px"
-    >
-      <a class="app-link" routerLink="/projects">Projects</a>
-      <a class="app-link" routerLink="/resume">Resume</a>
-    </div>
-  </div>
+  <div class="about-card__footer"></div>
 </div>

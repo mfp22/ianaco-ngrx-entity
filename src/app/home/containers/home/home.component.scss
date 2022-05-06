@@ -8,8 +8,8 @@
   }
 
   &__image-container {
-    background: url(../../../../assets/images/backgrounds/test.png) no-repeat
-      center center;
+    background: url(../../../../assets/images/backgrounds/gray-texture-image.png)
+      no-repeat center center;
     background-size: cover;
     max-width: 30.875rem;
   }
@@ -25,8 +25,4 @@
     @extend .font-size--medium;
     color: map-get(color.$bark-palette, 400);
   }
-}
-
-.paragraph--medium {
-  color: map-get(color.$breeze-palette, 500);
 }

@@ -1,8 +1,31 @@
 @use "colorography" as color;
+@use "shared";
 
 .about {
+  &__trait {
+    @extend .font-size--x-large;
+    color: map-get(color.$bark-palette, 400);
+    font-weight: 300;
+    border-bottom: 0.063rem solid map-get(color.$bark-palette, 800);
+  }
+
+  &__image-container {
+    background: url(../../../../assets/images/backgrounds/gray-texture-image.png)
+      no-repeat center center;
+    background-size: cover;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
   &__image {
-    max-width: 14.375rem;
-    background-color: map-get(color.$bark-palette, 200);
+    max-width: 20.375rem;
+    position: relative;
+    top: 0.5rem;
+  }
+
+  &__personal {
+    color: map-get(color.$breeze-palette, 500);
+    text-align: right;
+    max-width: 20.375rem;
   }
 }

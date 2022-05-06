@@ -1,32 +1,37 @@
 <app-page-template class="about">
+  <div class="spacer-bottom--x-large"></div>
   <div content class="content">
     <app-page-section-template>
+      <div class="about__trait-container">
+        <p class="about__trait" *ngFor="let trait of personalTraits">
+          {{ trait }}
+        </p>
+      </div>
+      <div class="spacer-bottom--x-large"></div>
+    </app-page-section-template>
+    <app-page-section-template>
       <div class="layout-container">
-        <section class="layout-section layout-section--1x">
+        <section class="layout-section--1x" fxFlexAlign="start">
           <app-about-card [personal]="personal$ | async"></app-about-card>
         </section>
         <section
-          class="layout-section layout-section--1x"
-          fxLayoutAlign="start center"
+          class="layout-section--1x about__personal-container"
+          fxFlexAlign="start"
         >
-          <img
-            class="about__image"
-            src="assets/images/profile/profile-sketch-image.png"
-            alt="profile-img"
-          />
+          <div class="about__image-container">
+            <img
+              class="about__image"
+              src="assets/images/profile/profile-2-image.png"
+              alt="profile-img"
+            />
+          </div>
+          <div class="about__personal" *ngIf="personal$ | async as personal">
+            <div class="font-size--large">{{ personal.emailUsername }}</div>
+            <div class="font-size--regular">{{ personal.emailDomain }}</div>
+          </div>
         </section>
       </div>
-    </app-page-section-template>
-    <app-page-section-template class="about__section-details">
-      <div class="layout-container">
-        <!--
-        <app-callout-detail
-          *ngFor="let detail of details; index as i"
-          [index]="i"
-          [detail]="detail"
-        ></app-callout-detail>
-        -->
-      </div>
+      <div class="spacer-bottom--x-large"></div>
     </app-page-section-template>
     <app-page-section-template
       [title]="'Skill Set'"

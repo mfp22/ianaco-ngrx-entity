@@ -1,10 +1,6 @@
 @use "colorography" as color;
 
 .about-card {
-  color: map-get(color.$cloud-palette, 500);
+  color: map-get(color.$breeze-palette, 500);
   word-wrap: break-word;
-}
-
-.paragraph--regular {
-  max-width: 31.25rem;
 }

@@ -16,6 +16,8 @@ export class AboutComponent implements OnInit {
   color = Colorography;
   details: CalloutDetail[] = [];
   personal$: Observable<Personal> | null = null;
+  personalTraits = ['/Creative', '/Detailed', '/Analytical'];
+
   constructor(private store: Store<fromProfileStore.ProfileState>) {}
 
   ngOnInit(): void {
