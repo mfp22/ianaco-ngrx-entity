@@ -3,4 +3,5 @@ export interface CalloutDetail {
   subtitle?: string;
   content?: string;
   backgroundColor?: string;
+  links?: any;
 }

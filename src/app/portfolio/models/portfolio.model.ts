@@ -20,5 +20,5 @@ export interface PortfolioCardSets {
 }
 
 export interface Portfolio {
-  cards: PortfolioCard[];
+  cards: any[]; //PortfolioCard[];
 }

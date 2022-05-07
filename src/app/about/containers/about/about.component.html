@@ -2,6 +2,14 @@
   <div class="spacer-bottom--x-large"></div>
   <div content class="content" *ngIf="personal$ | async as personal">
     <app-page-section-template>
+      <div class="paragraph--medium text-align--right">
+        <div class="font-size--large">
+          {{ personal.emailUsername }}
+        </div>
+        <div class="font-size--regular">{{ personal.emailDomain }}</div>
+      </div>
+    </app-page-section-template>
+    <app-page-section-template>
       <div class="about__trait-container">
         <p
           class="about__trait"
@@ -19,13 +27,10 @@
         </section>
         <section class="layout-section--1x" fxFlexAlign="start">
           <div class="about__heading-container">
-            <div class="font-size--large">
-              {{ personal.emailUsername }}
-            </div>
-            <div class="font-size--regular">{{ personal.emailDomain }}</div>
+            <div class="font-size--large">About</div>
           </div>
           <p class="paragraph--medium">
-            I am front end developer with experience building and maintaining
+            I'm a front end developer with experience building and maintaining
             responsive websites. I also have an interest in design and enjoy
             being part of the creative process. I've worked closely with design
             and branding teams to implement intuitive, visually pleasing

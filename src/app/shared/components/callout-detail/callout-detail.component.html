@@ -16,4 +16,16 @@
     <div class="callout-detail__content font-size--regular"></div>
     {{ detail.content }}
   </div>
+  <div class="callout-detail__footer">
+    <ng-container *ngIf="detail.links">
+      <a
+        class="app-link"
+        [href]="link.url"
+        target="_blank"
+        rel="noopener noreferrer"
+        *ngFor="let link of detail.links"
+        >{{ link.label }}</a
+      >
+    </ng-container>
+  </div>
 </div>
