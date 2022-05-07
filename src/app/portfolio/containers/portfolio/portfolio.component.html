@@ -1,10 +1,20 @@
 <app-page-template class="portfolio">
-  <div *ngIf="portfolioCards$ | async as cards">
-    <app-page-section-template
-      [subtitle]="'Collection of personal projects.'"
-      [headerTextAlign]="'center'"
-    >
-      <app-portfolio-grid [cards]="cards"></app-portfolio-grid>
-    </app-page-section-template>
-  </div>
+  <div class="spacer-bottom--x-large"></div>
+  <app-page-section-template>
+    <section class="layout-container">
+      <div class="layout-section--1x" fxFlexAlign="start">
+        <p class="paragraph--medium">
+          Some of my personal projects I developed for demoing and implementing
+          different concepts and functionality. These are publicly available on
+          GitHub.
+        </p>
+      </div>
+      <div class="layout-section--2x" fxFlexAlign="start">
+        <app-portfolio-grid
+          [cards]="cards"
+          *ngIf="portfolioCards$ | async as cards"
+        ></app-portfolio-grid>
+      </div>
+    </section>
+  </app-page-section-template>
 </app-page-template>

@@ -7,6 +7,13 @@
     color: map-get(color.$breeze-palette, 500);
     font-weight: 300;
     border-bottom: 0.063rem solid map-get(color.$bark-palette, 800);
+
+    &-callout {
+      @extend .font-size--small;
+      margin: 0.5rem;
+      font-weight: 400;
+      color: map-get(color.$bark-palette, 400);
+    }
   }
 
   &__image-container {
@@ -23,15 +30,13 @@
     top: 0.5rem;
   }
 
-  &__personal {
-    color: map-get(color.$breeze-palette, 500);
-    text-align: right;
-    max-width: 20.375rem;
+  &__heading-container {
+    color: map-get(color.$bark-palette, 400);
+    border-bottom: 0.063rem solid map-get(color.$bark-palette, 800);
+    padding-bottom: 1rem;
   }
 
   &__skill {
-    @extend .font-size--regular;
-    color: map-get(color.$breeze-palette, 500);
     border-bottom: 0.063rem solid map-get(color.$bark-palette, 800);
     padding: 1rem 0;
   }

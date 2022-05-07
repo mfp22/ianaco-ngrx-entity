@@ -1,6 +1,6 @@
 export interface CalloutDetail {
   title: string;
-  subtitle: string;
-  content: string;
+  subtitle?: string;
+  content?: string;
   backgroundColor?: string;
 }

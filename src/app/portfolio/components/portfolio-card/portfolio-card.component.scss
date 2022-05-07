@@ -3,17 +3,15 @@
 .portfolio-card {
   height: 100%;
   text-align: center;
-  color: map-get(color.$breeze-palette, 500);
+  color: map-get(color.$bark-palette, 900);
   padding: 3rem 2rem;
   min-width: 300px;
   text-align: left;
-  background-color: map-get(color.$bark-palette, 800);
-  font-weight: 300;
+  background-color: map-get(color.$bark-palette, 400);
 
   &__title {
     margin-bottom: 2rem;
     font-size: 1.5rem;
-    font-weight: 300;
   }
 
   &__description {
@@ -28,5 +26,5 @@
 }
 
 .app-link {
-  color: map-get(color.$bark-palette, 300);
+  color: map-get(color.$bark-palette, 900);
 }

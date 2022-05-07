@@ -26,4 +26,9 @@
     color: map-get(color.$bark-palette, 400);
     max-width: 20.375rem;
   }
+
+  &__name {
+    @extend .font-size--medium;
+    font-weight: 300;
+  }
 }

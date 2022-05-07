@@ -12,7 +12,8 @@
 
   &__index {
     margin: 0.5rem;
-    font-weight: 300;
+    font-weight: 400;
+    color: map-get(color.$bark-palette, 400);
   }
 
   &__title {

@@ -19,13 +19,13 @@ export class AboutComponent implements OnInit {
   color = Colorography;
   details: CalloutDetail[] = [];
   personal$: Observable<Personal> | null = null;
-  personalTraits = ['/Creative', '/Detailed', '/Effective'];
+  personalTraits = ['Creative', 'Detailed', 'Effective'];
   workContentCard: ContentCard = {
-    title: `Lorem ipsum dolor sit amet.`,
+    title: `Providing quality through experience and learning.`,
     image: 'assets/images/content/workarea-image.jpg',
   };
   skillContentCard: ContentCard = {
-    title: `Lorem ipsum dolor sit amet.`,
+    title: `Honing skills to meet needs and expectations.`,
     image: 'assets/images/content/chess-move-image.jpg',
   };
 

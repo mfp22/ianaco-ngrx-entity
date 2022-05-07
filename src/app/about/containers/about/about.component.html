@@ -3,8 +3,11 @@
   <div content class="content" *ngIf="personal$ | async as personal">
     <app-page-section-template>
       <div class="about__trait-container">
-        <p class="about__trait" *ngFor="let trait of personalTraits">
-          {{ trait }}
+        <p
+          class="about__trait"
+          *ngFor="let trait of personalTraits; index as i"
+        >
+          <span class="about__trait-callout">0{{ i + 1 }}/</span>{{ trait }}
         </p>
       </div>
       <div class="spacer-bottom--x-large"></div>
@@ -14,15 +17,25 @@
         <section class="layout-section--1x" fxFlexAlign="start">
           <app-content-card [content]="workContentCard"></app-content-card>
         </section>
-        <section
-          class="layout-section--1x about__personal-container"
-          fxFlexAlign="start"
-        >
-          <app-about-card [personal]="personal"></app-about-card>
-          <div class="about__personal">
-            <div class="font-size--large">{{ personal.emailUsername }}</div>
+        <section class="layout-section--1x" fxFlexAlign="start">
+          <div class="about__heading-container">
+            <div class="font-size--large">
+              {{ personal.emailUsername }}
+            </div>
             <div class="font-size--regular">{{ personal.emailDomain }}</div>
           </div>
+          <p class="paragraph--medium">
+            I am front end developer with experience building and maintaining
+            responsive websites. I also have an interest in design and enjoy
+            being part of the creative process. I've worked closely with design
+            and branding teams to implement intuitive, visually pleasing
+            websites for optimal experience.
+          </p>
+          <p class="paragraph--medium">
+            Additionally I enjoy learning new things. I look to increase my
+            understanding and skills as I take on new projects. This allows me
+            to continually deliver an improving product.
+          </p>
         </section>
       </div>
       <div class="spacer-bottom--x-large"></div>
@@ -31,15 +44,15 @@
       <div class="layout-container">
         <section class="layout-section--1x" fxFlexAlign="start">
           <app-content-card [content]="skillContentCard"></app-content-card>
-          <p class="paragraph--medium">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam
-          </p>
         </section>
         <section class="layout-section--1x width-fill" fxFlexAlign="start">
-          <div class="about__skill" *ngFor="let skill of personal.skills">
-            {{ skill.label }}
+          <div class="about__heading-container">
+            <div class="font-size--large">Skill Set</div>
+          </div>
+          <div class="paragraph--medium">
+            <div class="about__skill" *ngFor="let skill of personal.skills">
+              {{ skill.label }}
+            </div>
           </div>
         </section>
       </div>

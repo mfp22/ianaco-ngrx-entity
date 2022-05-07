@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   color = Colorography;
   personal$: Observable<Personal> | null = null;
   aboutContentCard: ContentCard = {
-    title: `Providing value throughout the development process.`,
+    title: `Providing valuable and impactful contributions.`,
     linkLabel: 'More About Me',
     link: 'about',
     image: 'assets/images/content/brainstorm-image.jpg',
@@ -49,7 +49,7 @@ export class HomeComponent implements OnInit {
       title: 'Effective',
       subtitle: 'solutions',
       content: `
-      Providing solutions that meet requirements and deliver results.
+      Building solutions that meet requirements and deliver results.
       `,
     },
   ];

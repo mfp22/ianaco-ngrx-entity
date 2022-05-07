@@ -9,7 +9,7 @@ import { ArrowType, Colorography } from '../../models';
 })
 export class ArrowIconComponent {
   @Input() arrowType: string = 'down';
-  @Input() colorHex: string = Colorography.Breeze500;
+  @Input() colorHex: string = Colorography.Bark400;
   get arrow(): string {
     return (ArrowType as any)[this.arrowType];
   }
