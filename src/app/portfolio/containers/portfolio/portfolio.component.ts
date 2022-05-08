@@ -4,8 +4,7 @@ import { Observable } from 'rxjs';
 import { Store, select } from '@ngrx/store';
 import * as fromStore from '../../store';
 // models
-import { PortfolioCard } from '../../models';
-import { Colorography } from '../../../shared/models';
+import { Colorography, DetailItem } from '../../../shared/models';
 
 @Component({
   selector: 'app-portfolio',
@@ -14,13 +13,13 @@ import { Colorography } from '../../../shared/models';
 })
 export class PortfolioComponent implements OnInit {
   color = Colorography;
-  portfolioCards$: Observable<PortfolioCard[]> | null = null;
+  portfolioProjects$: Observable<DetailItem[]> | null = null;
 
   constructor(private store: Store<fromStore.PortfolioState>) {}
 
   ngOnInit() {
-    this.portfolioCards$ = this.store.pipe(
-      select(fromStore.selectPortfolioCards)
+    this.portfolioProjects$ = this.store.pipe(
+      select(fromStore.selectPortfolioProjects)
     );
   }
 }

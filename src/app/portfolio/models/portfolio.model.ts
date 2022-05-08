@@ -1,24 +1,6 @@
-export interface Link {
-  label: string;
-  url: string;
-}
-
-export interface PortfolioCard {
-  title: string;
-  name: string;
-  type: string;
-  description: string;
-  subtitle?: string;
-  image?: string;
-  links?: Link[];
-  featured?: boolean;
-}
-
-export interface PortfolioCardSets {
-  featured: PortfolioCard[];
-  general: PortfolioCard[];
-}
+// models
+import { DetailItem } from 'src/app/shared/models';
 
 export interface Portfolio {
-  cards: any[]; //PortfolioCard[];
+  projects: DetailItem[];
 }

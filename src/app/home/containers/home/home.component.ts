@@ -5,11 +5,7 @@ import { Store, select } from '@ngrx/store';
 import * as fromProfileStore from '../../../profile/store';
 // models
 import { Personal } from '../../../profile/models';
-import {
-  Colorography,
-  ContentCard,
-  CalloutDetail,
-} from 'src/app/shared/models';
+import { Colorography, ContentCard, DetailItem } from 'src/app/shared/models';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -30,23 +26,23 @@ export class HomeComponent implements OnInit {
     link: 'resume',
     image: 'assets/images/content/teamwork-image.jpg',
   };
-  calloutDetails: CalloutDetail[] = [
+  calloutDetails: DetailItem[] = [
     {
-      title: 'Creative',
+      title: 'Creative.',
       subtitle: 'ideas',
       content: `
       Looking at things in a different way to offer new and original ideas.
       `,
     },
     {
-      title: 'Detailed',
+      title: 'Detailed.',
       subtitle: 'analysis',
       content: `
       Evaluating concepts and ideas thoroughly before implementation.
       `,
     },
     {
-      title: 'Effective',
+      title: 'Effective.',
       subtitle: 'solutions',
       content: `
       Building solutions that meet requirements and deliver results.

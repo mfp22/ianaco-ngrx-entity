@@ -3,7 +3,8 @@ import { Resume } from '../models';
 
 export const resume: Resume = {
   fullName: 'Joshua Ianacone',
-  role: 'Front End Software Engineer',
+  roleType: 'Front End ',
+  role: 'Software Engineer',
   summary: `
     Motivated Front End Engineer with experience building and maintaining 
     responsive websites. Extensive collaboration with teams to produce 

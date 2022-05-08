@@ -5,11 +5,7 @@ import { Store, select } from '@ngrx/store';
 import * as fromProfileStore from '../../../profile/store';
 // models
 import { Personal } from '../../../profile/models';
-import {
-  Colorography,
-  CalloutDetail,
-  ContentCard,
-} from '../../../shared/models';
+import { Colorography, ContentCard, DetailItem } from '../../../shared/models';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -17,9 +13,18 @@ import {
 })
 export class AboutComponent implements OnInit {
   color = Colorography;
-  details: CalloutDetail[] = [];
   personal$: Observable<Personal> | null = null;
-  personalTraits = ['Creative', 'Detailed', 'Effective'];
+  calloutDetails: DetailItem[] = [
+    {
+      title: 'Creative',
+    },
+    {
+      title: 'Detailed',
+    },
+    {
+      title: 'effective',
+    },
+  ];
   workContentCard: ContentCard = {
     title: `Providing quality through experience and learning.`,
     image: 'assets/images/content/workarea-image.jpg',

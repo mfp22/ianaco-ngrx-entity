@@ -1,7 +1,12 @@
 <app-page-template class="about">
-  <div class="spacer-bottom--x-large"></div>
   <div content class="content" *ngIf="personal$ | async as personal">
     <app-page-section-template>
+      <app-detail-item
+        [index]="i"
+        [detail]="detail"
+        [compress]="true"
+        *ngFor="let detail of calloutDetails; index as i"
+      ></app-detail-item>
       <div class="paragraph--medium text-align--right">
         <div class="font-size--large">
           {{ personal.emailUsername }}
@@ -10,25 +15,11 @@
       </div>
     </app-page-section-template>
     <app-page-section-template>
-      <div class="about__trait-container">
-        <p
-          class="about__trait"
-          *ngFor="let trait of personalTraits; index as i"
-        >
-          <span class="about__trait-callout">0{{ i + 1 }}/</span>{{ trait }}
-        </p>
-      </div>
-      <div class="spacer-bottom--x-large"></div>
-    </app-page-section-template>
-    <app-page-section-template>
       <div class="layout-container">
         <section class="layout-section--1x" fxFlexAlign="start">
           <app-content-card [content]="workContentCard"></app-content-card>
         </section>
         <section class="layout-section--1x" fxFlexAlign="start">
-          <div class="about__heading-container">
-            <div class="font-size--large">About</div>
-          </div>
           <p class="paragraph--medium">
             I'm a front end developer with experience building and maintaining
             responsive websites. I also have an interest in design and enjoy
@@ -43,7 +34,6 @@
           </p>
         </section>
       </div>
-      <div class="spacer-bottom--x-large"></div>
     </app-page-section-template>
     <app-page-section-template>
       <div class="layout-container">
@@ -51,9 +41,6 @@
           <app-content-card [content]="skillContentCard"></app-content-card>
         </section>
         <section class="layout-section--1x width-fill" fxFlexAlign="start">
-          <div class="about__heading-container">
-            <div class="font-size--large">Skill Set</div>
-          </div>
           <div class="paragraph--medium">
             <div class="about__skill" *ngFor="let skill of personal.skills">
               {{ skill.label }}
@@ -61,7 +48,6 @@
           </div>
         </section>
       </div>
-      <div class="spacer-bottom--x-large"></div>
     </app-page-section-template>
   </div>
 </app-page-template>

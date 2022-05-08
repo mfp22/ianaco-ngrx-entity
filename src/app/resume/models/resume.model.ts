@@ -36,6 +36,7 @@ export interface CertificationItem {
 export interface Resume {
   fullName: string;
   role: string;
+  roleType: string;
   summary: string;
   contact: ResumeSection<Item<string>>;
   skills: ResumeSection<Item>;

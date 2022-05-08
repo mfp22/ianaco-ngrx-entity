@@ -10,12 +10,12 @@
         </p>
       </div>
       <div class="layout-section--2x" fxFlexAlign="start">
-        <div *ngIf="portfolioCards$ | async as cards">
-          <app-callout-detail
+        <div *ngIf="portfolioProjects$ | async as projects">
+          <app-detail-item
             [index]="i"
-            [detail]="card"
-            *ngFor="let card of cards; index as i"
-          ></app-callout-detail>
+            [detail]="detail"
+            *ngFor="let detail of projects; index as i"
+          ></app-detail-item>
         </div>
       </div>
     </section>

@@ -1,2 +1,2 @@
 // exports
-export * from './portfolio-cards.selectors';
+export * from './portfolio-projects.selectors';

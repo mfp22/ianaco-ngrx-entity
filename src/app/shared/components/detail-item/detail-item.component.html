@@ -1,0 +1,36 @@
+<div
+  class="detail-item"
+  fxLayout="column"
+  fxLayoutAlign="center start"
+  *ngIf="detail"
+>
+  <div class="detail-item__header">
+    <div
+      class="detail-item__index"
+      [style.display]="compress ? 'inline-block' : 'block'"
+      *ngIf="index !== undefined"
+    >
+      0{{ index + 1 }}/
+    </div>
+    <h1 class="detail-item__title" *ngIf="detail.title">{{ detail.title }}</h1>
+    <h2 class="detail-item__subtitle" *ngIf="detail.subtitle">
+      {{ detail.subtitle }}
+    </h2>
+  </div>
+  <div class="detail-item__body" *ngIf="detail.content">
+    <div class="detail-item__content font-size--regular"></div>
+    {{ detail.content }}
+  </div>
+  <div class="detail-item__footer">
+    <ng-container *ngIf="detail.links">
+      <a
+        class="app-link"
+        [href]="link.value"
+        target="_blank"
+        rel="noopener noreferrer"
+        *ngFor="let link of detail.links"
+        >{{ link.label }}</a
+      >
+    </ng-container>
+  </div>
+</div>

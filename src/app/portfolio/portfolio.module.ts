@@ -11,11 +11,9 @@ import { PortfolioRoutingModule } from './portfolio-routing.module';
 import { SharedModule } from '../shared/shared.module';
 // containers
 import * as fromContainers from './containers';
-// components
-import * as fromComponents from './components';
 
 @NgModule({
-  declarations: [...fromContainers.containers, ...fromComponents.components],
+  declarations: [...fromContainers.containers],
   imports: [
     CommonModule,
     PortfolioRoutingModule,

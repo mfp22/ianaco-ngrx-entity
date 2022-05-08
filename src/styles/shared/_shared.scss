@@ -50,19 +50,6 @@
   line-height: 0.875rem;
 }
 
-// [spacers]
-.spacer-bottom--x-large {
-  margin-bottom: 3.5rem;
-}
-
-.spacer-bottom--large {
-  margin-bottom: 2rem;
-}
-
-.spacer-bottom--medium {
-  margin-bottom: 1rem;
-}
-
 // [paragraph]
 .paragraph--medium {
   margin: 1.5rem 0;
@@ -112,4 +99,8 @@
 // [sizing]
 .width-fill {
   width: 100%;
+}
+
+.no-margin {
+  margin: 0;
 }

@@ -1,16 +1,16 @@
 // ngrx
 import { ActionReducerMap, createFeatureSelector } from '@ngrx/store';
-import * as fromPortfolioCardsReducer from './portfolio-cards.reducer';
+import * as fromPortfolioProjectsReducer from './portfolio-projects.reducer';
 
 export const featureKey = 'portfolio';
 
 export interface PortfolioState {
-  [fromPortfolioCardsReducer.portfolioCardsFeatureKey]: fromPortfolioCardsReducer.PortfolioCardsState;
+  [fromPortfolioProjectsReducer.portfolioProjectsFeatureKey]: fromPortfolioProjectsReducer.PortfolioProjectsState;
 }
 
 export const reducers: ActionReducerMap<PortfolioState> = {
-  [fromPortfolioCardsReducer.portfolioCardsFeatureKey]:
-    fromPortfolioCardsReducer.portfolioCardsReducer,
+  [fromPortfolioProjectsReducer.portfolioProjectsFeatureKey]:
+    fromPortfolioProjectsReducer.portfolioProjectsReducer,
 };
 
 // feature selector

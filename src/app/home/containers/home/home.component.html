@@ -1,5 +1,4 @@
 <app-page-template class="home">
-  <div class="spacer-bottom--x-large"></div>
   <app-page-section-template>
     <section class="layout-container">
       <div class="layout-section--1x" fxFlexAlign="start">
@@ -9,12 +8,12 @@
           fxLayoutAlign="start end"
           *ngIf="personal$ | async as personal"
         >
-          <div class="home__subtitle font-size--large">
+          <p class="home__subtitle font-size--large no-margin">
             {{ personal.occupationType }}
-          </div>
-          <p class="home__title font-size--xx-large">
-            {{ personal.occupation }}
           </p>
+          <h1 class="home__title font-size--xx-large">
+            {{ personal.occupation }}
+          </h1>
           <p class="home__description">
             {{ personal.description }}
           </p>
@@ -33,19 +32,16 @@
     </section>
   </app-page-section-template>
   <app-page-section-template>
-    <app-arrow-icon></app-arrow-icon>
-  </app-page-section-template>
-  <app-page-section-template>
     <section class="layout-container">
       <div class="layout-section--1x" fxFlexAlign="start">
         <app-content-card [content]="aboutContentCard"></app-content-card>
       </div>
       <div class="layout-section--1x" fxFlexAlign="start">
-        <app-callout-detail
+        <app-detail-item
           [index]="i"
           [detail]="detail"
           *ngFor="let detail of calloutDetails; index as i"
-        ></app-callout-detail>
+        ></app-detail-item>
       </div>
     </section>
   </app-page-section-template>

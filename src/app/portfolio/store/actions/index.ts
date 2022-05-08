@@ -1,2 +1,2 @@
 // exports
-export * from './portfolio-cards.actions';
+export * from './portfolio-projects.actions';

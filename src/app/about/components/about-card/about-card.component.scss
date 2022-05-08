@@ -1,6 +1,0 @@
-@use "colorography" as color;
-
-.about-card {
-  color: map-get(color.$breeze-palette, 500);
-  word-wrap: break-word;
-}

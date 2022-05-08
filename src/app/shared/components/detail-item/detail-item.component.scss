@@ -1,0 +1,38 @@
+@use "colorography" as color;
+@use "shared";
+
+.detail-item {
+  padding: 1rem 0;
+  color: map-get(color.$breeze-palette, 500);
+  border-bottom: 0.063rem solid map-get(color.$bark-palette, 800);
+
+  &__header {
+    margin-bottom: 0.25rem;
+  }
+
+  &__index {
+    margin-right: 0.5rem;
+    font-weight: 400;
+    color: map-get(color.$bark-palette, 400);
+  }
+
+  &__title {
+    display: inline-block;
+    margin: 0;
+    text-transform: capitalize;
+    @extend .font-size--x-large;
+  }
+
+  &__subtitle {
+    color: map-get(color.$bark-palette, 400);
+    display: inline-block;
+    margin: 0;
+    text-transform: lowercase;
+    @extend .font-size--x-large;
+  }
+
+  &__body {
+    color: map-get(color.$bark-palette, 200);
+    margin-bottom: 1.125rem;
+  }
+}
