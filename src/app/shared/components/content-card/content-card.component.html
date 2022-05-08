@@ -1,9 +1,16 @@
 <div class="content-card" *ngIf="content">
   <div class="content-card__header">
     <p class="content-card__title">{{ content.title }}</p>
-    <a routerLink="{{ '/' + content.link }}" class="content-card__link">{{
-      content.linkLabel
-    }}</a>
+    <div *ngIf="content.links as links">
+      <span *ngFor="let link of links; let last = last">
+        <a class="app-link" routerLink="{{ '/' + link.value }}">
+          {{ link.label }}
+        </a>
+        <span class="app-link-divider" *ngIf="links.length > 1 && !last"
+          >|</span
+        >
+      </span>
+    </div>
   </div>
   <div class="content-card__body">
     <img class="content-card__image" [src]="content.image" alt="content-img" />

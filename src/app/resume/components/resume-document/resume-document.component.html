@@ -1,19 +1,43 @@
 <div class="resume-document" *ngIf="resume">
   <!-- header begin -->
-  <div class="resume-document__header">
-    <div class="font-size--large">{{ resume.roleType }}</div>
-    <div class="font-size--x-large">{{ resume.role }}</div>
-    <div class="resume-document__text-quite">
-      <div class="font-size--large">{{ resume.fullName }}</div>
-    </div>
+  <div class="layout-container-reverse">
+    <section class="layout-section--1x" fxFlexAlign="start">
+      <!-- [#contact] -->
+      <div
+        class="resume-document__section resume-document__contact"
+        *ngIf="resume.contact as contact"
+      >
+        <div class="margin--medium" *ngFor="let item of contact.items">
+          <div class="resume-document__label text-fade">{{ item.label }}</div>
+          <div [innerHtml]="item.value"></div>
+        </div>
+      </div>
+    </section>
+    <section class="layout-section--1x" fxFlexAlign="start">
+      <div
+        class="resume-document__header resume-document__section text-align--right"
+      >
+        <div class="font-size--large">{{ resume.roleType }}</div>
+        <div class="font-size--xx-large">{{ resume.role }}</div>
+        <div class="resume-document__text-quite">
+          <div class="font-size--x-large">{{ resume.fullName }}</div>
+        </div>
+      </div>
+      <!--[#summary]-->
+      <section
+        fxLayout="column"
+        fxLayoutAlign="start end"
+        class="resume-document__summary resume-document__section paragraph--medium"
+      >
+        <p class="resume-document__summary-content text-align--right">
+          {{ resume.summary }}
+        </p>
+      </section>
+    </section>
   </div>
   <!-- header end -->
   <!-- body begin -->
   <div class="resume-document__body">
-    <!--[#summary]-->
-    <section class="resume-document__section paragraph--medium">
-      <p>{{ resume.summary }}</p>
-    </section>
     <!-- [#skills] -->
     <section
       class="resume-document__section resume-document__skills"
@@ -125,17 +149,5 @@
       </div>
     </section>
   </div>
-  <!-- [#contact] -->
-  <section
-    class="resume-document__section resume-document__contact"
-    *ngIf="resume.contact as contact"
-  >
-    <h1 class="resume-document__title">{{ contact.title }}</h1>
-    <mat-divider class="resume-document__divider"></mat-divider>
-    <div class="resume-document__spacer" *ngFor="let item of contact.items">
-      <div class="resume-document__label">{{ item.label }}</div>
-      <div [innerHtml]="item.value"></div>
-    </div>
-  </section>
   <!-- body end -->
 </div>

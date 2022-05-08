@@ -32,6 +32,10 @@ $hamburger-types: (collapse) !default;
     }
   }
 
+  &__container {
+    padding-top: 5rem;
+  }
+
   &__footer {
     margin: 3rem 0;
     padding: 1rem;
@@ -53,7 +57,7 @@ $hamburger-types: (collapse) !default;
 
 .mat-toolbar {
   background: transparent;
-  margin-bottom: 3rem;
+  color: map-get(color.$breeze-palette, 500);
 }
 
 .hamburger {
@@ -62,6 +66,7 @@ $hamburger-types: (collapse) !default;
   line-height: 0.625rem;
   border-radius: 50%;
   position: fixed;
+  right: 1rem;
   z-index: 1000;
 
   &-box {

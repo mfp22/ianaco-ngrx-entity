@@ -9,15 +9,15 @@ export const profile: Profile = {
     get fullName() {
       return `${this.firstName} ${this.lastName}`;
     },
-    occupation: 'Software Engineer',
-    occupationType: 'Front End',
+    occupation: ['Software', 'Engineer'],
+    occupationType: ['Front', 'End'],
     emailUsername: 'joshua.ianacone',
     emailDomain: '@gmail.com',
     get email() {
       return `${this.emailUsername}${this.emailDomain}`;
     },
     description: `
-    Experience building and maintaining 
+    Motivated Engineer with experience building and maintaining 
     responsive websites.
   `,
     skills: [

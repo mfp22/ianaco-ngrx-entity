@@ -18,7 +18,7 @@
 // [font]
 .font-size--xx-large {
   font-size: 3.25rem;
-  line-height: 3.5rem;
+  line-height: 3.75rem;
   font-weight: 300;
 }
 
@@ -30,13 +30,13 @@
 
 .font-size--large {
   font-size: 2rem;
-  line-height: 2.75rem;
+  line-height: 2.25rem;
   font-weight: 400;
 }
 
 .font-size--medium {
   font-size: 1.25rem;
-  line-height: 1.5rem;
+  line-height: 1.75rem;
   font-weight: 400;
 }
 
@@ -51,16 +51,26 @@
 }
 
 // [paragraph]
+.paragraph--x-large {
+  @extend .font-size--x-large;
+  color: map-get(color.$breeze-palette, 500);
+  margin-bottom: 0.5rem;
+}
+
+.paragraph--large {
+  @extend .font-size--large;
+  color: map-get(color.$breeze-palette, 500);
+  margin-bottom: 0.5rem;
+}
+
 .paragraph--medium {
-  margin: 1.5rem 0;
   @extend .font-size--medium;
   color: map-get(color.$breeze-palette, 500);
-  font-weight: 300;
-  line-height: 1.5;
+  margin-bottom: 0.5rem;
 }
 
 .paragraph--regular {
-  margin: 0.5rem 0;
+  margin-bottom: 0.5rem;
   @extend .font-size--regular;
   color: map-get(color.$breeze-palette, 500);
   font-weight: 400;
@@ -74,7 +84,7 @@
 }
 
 .icon--medium {
-  width: 3.5rem;
+  width: 2.5rem;
   display: inline-block;
 }
 
@@ -87,7 +97,6 @@
 .app-link {
   text-decoration: underline;
   position: relative;
-  bottom: 0.5rem;
   color: map-get(color.$breeze-palette, 500);
   margin: 0 0.25rem;
   font-weight: 400;
@@ -101,6 +110,23 @@
   width: 100%;
 }
 
-.no-margin {
+.margin--none {
   margin: 0;
+}
+
+.margin--small {
+  margin-bottom: 0.25rem;
+}
+
+.margin--medium {
+  margin-bottom: 0.5rem;
+}
+
+// color
+.text-fade {
+  color: map-get(color.$bark-palette, 400);
+}
+
+.text-standout {
+  color: map-get(color.$breeze-palette, 500);
 }

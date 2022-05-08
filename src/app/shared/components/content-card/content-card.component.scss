@@ -13,11 +13,12 @@
     margin-bottom: 0.5rem;
   }
 
-  &__link {
-    color: map-get(color.$breeze-palette, 500);
-  }
-
   &__image {
     max-width: 18rem;
   }
+}
+
+.app-link-divider {
+  color: map-get(color.$breeze-palette, 400);
+  display: inline-block;
 }

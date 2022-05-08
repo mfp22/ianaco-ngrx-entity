@@ -27,10 +27,14 @@ export class AboutComponent implements OnInit {
   ];
   workContentCard: ContentCard = {
     title: `Providing quality through experience and learning.`,
+    links: [
+      { label: 'Resume', value: 'resume' },
+      { label: 'Projects', value: 'projects' },
+    ],
     image: 'assets/images/content/workarea-image.jpg',
   };
   skillContentCard: ContentCard = {
-    title: `Honing skills to meet needs and expectations.`,
+    title: `Honing skills to meet needs and demands.`,
     image: 'assets/images/content/chess-move-image.jpg',
   };
 

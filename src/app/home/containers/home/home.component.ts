@@ -16,14 +16,12 @@ export class HomeComponent implements OnInit {
   personal$: Observable<Personal> | null = null;
   aboutContentCard: ContentCard = {
     title: `Providing valuable and impactful contributions.`,
-    linkLabel: 'More About Me',
-    link: 'about',
+    links: [{ label: 'About Me', value: 'about' }],
     image: 'assets/images/content/brainstorm-image.jpg',
   };
   resumeContentCard: ContentCard = {
     title: `Extensive collaboration with teams to deliver business results.`,
-    linkLabel: 'Resume',
-    link: 'resume',
+    links: [{ label: 'Resume', value: 'resume' }],
     image: 'assets/images/content/teamwork-image.jpg',
   };
   calloutDetails: DetailItem[] = [

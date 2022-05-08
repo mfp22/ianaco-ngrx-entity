@@ -5,6 +5,11 @@
   &__heading {
     text-align: right;
     color: map-get(color.$breeze-palette, 500);
+    margin-bottom: 1rem;
+  }
+
+  &__border--bottom {
+    border-bottom: 1px solid map-get(color.$bark-palette, 800);
   }
 
   &__image-container {
@@ -12,6 +17,7 @@
       no-repeat center center;
     background-size: cover;
     max-width: 30.875rem;
+    margin-bottom: 1rem;
   }
 
   &__image {
@@ -22,13 +28,9 @@
   }
 
   &__description {
-    @extend .font-size--medium;
+    font-size: 1.6rem;
+    line-height: 1.75rem;
     color: map-get(color.$bark-palette, 400);
-    max-width: 20.375rem;
-  }
-
-  &__name {
-    @extend .font-size--medium;
-    font-weight: 300;
+    max-width: 30.875rem;
   }
 }
