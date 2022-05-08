@@ -3,12 +3,12 @@
 
 .home {
   &__heading {
-    text-align: right;
     color: map-get(color.$breeze-palette, 500);
     margin-bottom: 1rem;
   }
 
   &__border--bottom {
+    padding-bottom: 0.5rem;
     border-bottom: 1px solid map-get(color.$bark-palette, 800);
   }
 
@@ -31,6 +31,6 @@
     font-size: 1.6rem;
     line-height: 1.75rem;
     color: map-get(color.$bark-palette, 400);
-    max-width: 30.875rem;
+    max-width: 35.875rem;
   }
 }

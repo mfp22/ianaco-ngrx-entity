@@ -1,19 +1,10 @@
 <app-page-template class="home">
   <app-page-section-template>
-    <div
-      class="home__heading"
-      fxLayout="column"
-      fxLayoutAlign="start end"
-      *ngIf="personal$ | async as personal"
-    >
+    <div class="home__heading" *ngIf="personal$ | async as personal">
       <p class="home__subtitle font-size--large margin--small">
-        <span
-          class="home__border--bottom"
-          *ngFor="let str of personal.occupationType"
-          >{{ str }}
-        </span>
+        <span *ngFor="let str of personal.occupationType">{{ str }} </span>
       </p>
-      <h1 class="home__title font-size--xx-large margin--small">
+      <h1 class="home__title font-size--xx-large">
         <span
           class="home__border--bottom"
           *ngFor="let str of personal.occupation"
@@ -21,8 +12,8 @@
         </span>
       </h1>
       <p class="text-fade font-size--x-large">
-        <span class="home__border--bottom">{{ personal.firstName }} </span>
-        <span class="home__border--bottom">{{ personal.lastName }}</span>
+        <span>{{ personal.firstName }} </span>
+        <span>{{ personal.lastName }}</span>
       </p>
     </div>
     <div class="home__image-container">
