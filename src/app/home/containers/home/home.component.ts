@@ -6,10 +6,13 @@ import * as fromProfileStore from '../../../profile/store';
 // models
 import { Personal } from '../../../profile/models';
 import { Colorography, ContentCard, DetailItem } from 'src/app/shared/models';
+// animations
+import { slideUpAppearAnimation } from 'src/app/shared/animations';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
+  animations: [slideUpAppearAnimation],
 })
 export class HomeComponent implements OnInit {
   color = Colorography;
@@ -54,5 +57,9 @@ export class HomeComponent implements OnInit {
     this.personal$ = this.store.pipe(
       select(fromProfileStore.selectProfilePersonal)
     );
+  }
+
+  onScroll() {
+    console.log('here i am');
   }
 }

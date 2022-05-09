@@ -1,0 +1,15 @@
+@use "colorography" as color;
+
+.animate-text {
+  &__char {
+    display: inline-block;
+    position: relative;
+    white-space: pre-wrap;
+    z-index: -1;
+  }
+
+  &__char-container {
+    overflow: hidden;
+    display: inline-block;
+  }
+}

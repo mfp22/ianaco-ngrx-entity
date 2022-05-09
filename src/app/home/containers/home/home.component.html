@@ -1,14 +1,14 @@
 <app-page-template class="home">
   <app-page-section-template>
     <div class="home__heading" *ngIf="personal$ | async as personal">
-      <p class="home__subtitle font-size--large margin--small">
-        {{ personal.occupationType }}
+      <p class="home__subtitle">
+        <app-animate-text [text]="personal.occupationType"></app-animate-text>
       </p>
-      <h1 class="home__title font-size--xx-large">
-        {{ personal.occupation }}
+      <h1 class="home__title margin--none">
+        <app-animate-text [text]="personal.occupation"></app-animate-text>
       </h1>
-      <p class="text-fade font-size--x-large">
-        {{ personal.fullName }}
+      <p class="home__subtitle text-fade">
+        <app-animate-text [text]="personal.fullName"></app-animate-text>
       </p>
     </div>
     <div class="home__image-container">
@@ -32,7 +32,11 @@
       <div class="layout-section--1x" fxFlexAlign="start">
         <app-content-card [content]="aboutContentCard"></app-content-card>
       </div>
-      <div class="layout-section--1x" fxFlexAlign="start">
+      <div
+        class="layout-section--1x"
+        fxFlexAlign="start"
+        (mousewheel)="onScroll()"
+      >
         <app-detail-item
           [index]="i"
           [detail]="detail"
