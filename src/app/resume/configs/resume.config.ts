@@ -1,5 +1,7 @@
 // models
 import { Resume } from '../models';
+// consts
+const imageBasePath = 'assets/images';
 
 export const resume: Resume = {
   fullName: 'Joshua Ianacone',
@@ -23,11 +25,11 @@ export const resume: Resume = {
       },
       {
         label: 'Personal Website',
-        value: `<a href="https://ianacodev.github.io" target="_blank" rel="noopener noreferrer">ianacodev.github.io</a>`,
+        value: `<a class="app-link" href="https://ianacodev.github.io" target="_blank" rel="noopener noreferrer">ianacodev.github.io</a>`,
       },
       {
         label: 'GitHub',
-        value: `<a href="https://github.com/ianacodev" target="_blank" rel="noopener noreferrer">github.com/ianacodev</a>`,
+        value: `<a class="app-link" href="https://github.com/ianacodev" target="_blank" rel="noopener noreferrer">github.com/ianacodev</a>`,
       },
     ],
   },
@@ -171,4 +173,38 @@ export const resume: Resume = {
       },
     ],
   },
+  certificationCerts: [
+    {
+      label: 'Ultimate Angular Angular Fundamentals',
+      value: `${imageBasePath}/certifications/angular-fundamentals-cert.jpg`,
+    },
+    {
+      label: 'Ultimate Angular Angular Pro',
+      value: `${imageBasePath}/certifications/angular-pro-cert.jpg`,
+    },
+    {
+      label: 'Ultimate Angular Ngrx',
+      value: `${imageBasePath}/certifications/ngrx-cert.jpg`,
+    },
+    {
+      label: 'Ultimate Angular Rxjs Basics',
+      value: `${imageBasePath}/certifications/rxjs-basics-cert.jpg`,
+    },
+    {
+      label: 'Ultimate Angular Rxjs Masterclass',
+      value: `${imageBasePath}/certifications/rxjs-masterclass-cert.jpg`,
+    },
+    {
+      label: 'Ultimate Angular Typescript Basics',
+      value: `${imageBasePath}/certifications/typescript-basics-cert.jpg`,
+    },
+    {
+      label: 'Ultimate Angular Typescript Masterclass',
+      value: `${imageBasePath}/certifications/typescript-masterclass-cert.jpg`,
+    },
+    {
+      label: 'Oracle Associate Programmer',
+      value: `${imageBasePath}/certifications/oracle-cert.jpg`,
+    },
+  ],
 };

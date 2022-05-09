@@ -4,8 +4,8 @@ export interface Personal {
   firstName: string;
   lastName: string;
   fullName: string;
-  occupation: string[];
-  occupationType: string[];
+  occupation: string;
+  occupationType: string;
   emailUsername: string;
   emailDomain: string;
   email: string;

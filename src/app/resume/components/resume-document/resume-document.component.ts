@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
+import { DragScrollComponent } from 'ngx-drag-scroll';
 // models
 import { Resume } from '../../models';
 @Component({
@@ -8,4 +9,14 @@ import { Resume } from '../../models';
 })
 export class ResumeDocumentComponent {
   @Input() resume: Resume | null = null;
+  @ViewChild('nav') ds: DragScrollComponent | undefined;
+
+  moveLeft() {
+    console.log('here', this.ds);
+    this.ds?.moveLeft();
+  }
+
+  moveRight() {
+    this.ds?.moveRight();
+  }
 }

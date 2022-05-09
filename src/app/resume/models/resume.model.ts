@@ -44,4 +44,5 @@ export interface Resume {
   projects: ResumeSection<ProjectItem>;
   education: ResumeSection<EducationItem>;
   certifications: ResumeSection<CertificationItem>;
+  certificationCerts: Item<string>[];
 }

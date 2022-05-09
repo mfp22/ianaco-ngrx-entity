@@ -1,18 +1,4 @@
 @use "colorography" as color;
-$mat-fab-color-accent: map-get(color.$bark-palette, 900);
-
-.mat-fab {
-  color: map-get(color.$cloud-palette, 500);
-  background-color: map-get(color.$bark-palette, 900);
-  height: 5.313rem;
-  width: 5.313rem;
-  font-size: 1rem;
-  font-weight: 400;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: capitalize;
-}
 
 // button
 button {
@@ -27,21 +13,5 @@ button {
       color: map-get(color.$cloud-palette, 500);
       background-color: map-get(color.$bark-palette, 900);
     }
-  }
-
-  &.mat-fab {
-    @extend .mat-fab;
-
-    &.mat-accent {
-      background-color: $mat-fab-color-accent;
-    }
-  }
-}
-
-// link button
-a.mat-fab {
-  @extend .mat-fab;
-  &.mat-accent {
-    background-color: $mat-fab-color-accent;
   }
 }

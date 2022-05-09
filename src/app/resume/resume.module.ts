@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatButtonModule } from '@angular/material/button';
+import { DragScrollModule } from 'ngx-drag-scroll';
 // ngrx
 import { StoreModule } from '@ngrx/store';
 import { resumeReducer, resumeFeatureKey } from './store/reducers';
@@ -19,9 +21,11 @@ import * as fromComponents from './components';
     CommonModule,
     FlexLayoutModule,
     MatDividerModule,
-    SharedModule,
+    MatButtonModule,
     ResumeRoutingModule,
     StoreModule.forFeature(resumeFeatureKey, resumeReducer),
+    DragScrollModule,
+    SharedModule,
   ],
 })
 export class ResumeModule {}

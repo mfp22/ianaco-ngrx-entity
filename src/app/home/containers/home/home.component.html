@@ -2,18 +2,13 @@
   <app-page-section-template>
     <div class="home__heading" *ngIf="personal$ | async as personal">
       <p class="home__subtitle font-size--large margin--small">
-        <span *ngFor="let str of personal.occupationType">{{ str }} </span>
+        {{ personal.occupationType }}
       </p>
       <h1 class="home__title font-size--xx-large">
-        <span
-          class="home__border--bottom"
-          *ngFor="let str of personal.occupation"
-          >{{ str }}
-        </span>
+        {{ personal.occupation }}
       </h1>
       <p class="text-fade font-size--x-large">
-        <span>{{ personal.firstName }} </span>
-        <span>{{ personal.lastName }}</span>
+        {{ personal.fullName }}
       </p>
     </div>
     <div class="home__image-container">

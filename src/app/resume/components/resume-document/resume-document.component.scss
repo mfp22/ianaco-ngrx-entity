@@ -85,4 +85,19 @@ $divider-color: map-get(color.$bark-palette, 800);
     justify-content: center;
     text-align: center;
   }
+
+  &__cert-image {
+    max-height: 12rem;
+    margin: 0.25rem;
+  }
+}
+
+drag-scroll {
+  height: 13rem;
+  width: 100%;
+}
+
+.mat-fab {
+  background-color: map-get(color.$bark-palette, 500);
+  color: white;
 }
