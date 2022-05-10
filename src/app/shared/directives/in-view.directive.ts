@@ -28,7 +28,7 @@ export class InViewDirective implements AfterViewInit {
           }
         });
       },
-      { threshold, rootMargin: '0px 0px -20% 0px' }
+      { threshold, rootMargin: '0px 0px -25% 0px' }
     );
     observer.observe(this.elRef.nativeElement);
   }

@@ -8,8 +8,10 @@
         *ngIf="resume.contact as contact"
       >
         <div class="margin--medium" *ngFor="let item of contact.items">
-          <div class="resume-document__label text-fade">{{ item.label }}</div>
-          <div [innerHtml]="item.value"></div>
+          <div class="font-size--base text--fade">
+            {{ item.label }}
+          </div>
+          <div class="font-size--medium" [innerHtml]="item.value"></div>
         </div>
       </div>
     </section>
