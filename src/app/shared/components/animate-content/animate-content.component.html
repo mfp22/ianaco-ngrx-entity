@@ -1,5 +1,27 @@
-<div class="animate-content" @slideUpAppear>
-  <div class="animate-content__content">
-    <ng-content></ng-content>
+<ng-container [ngSwitch]="animation">
+  <!--slide up-->
+  <div *ngSwitchCase="'slideUp'" class="animate-content" @slideUp>
+    <div class="animate-content__content">
+      <ng-container *ngTemplateOutlet="content"></ng-container>
+    </div>
   </div>
-</div>
+  <!--slide up appear-->
+  <div *ngSwitchCase="'slideUpAppear'" class="animate-content" @slideUpAppear>
+    <div class="animate-content__content">
+      <ng-container *ngTemplateOutlet="content"></ng-container>
+    </div>
+  </div>
+  <!--slide in left-->
+  <div *ngSwitchCase="'slideInLeft'" class="animate-content" @slideInLeft>
+    <div class="animate-content__content">
+      <ng-container *ngTemplateOutlet="content"></ng-container>
+    </div>
+  </div>
+  <!--slide in right-->
+  <div *ngSwitchCase="'slideInRight'" class="animate-content" @slideInRight>
+    <div class="animate-content__content">
+      <ng-container *ngTemplateOutlet="content"></ng-container>
+    </div>
+  </div>
+</ng-container>
+<ng-template #content><ng-content></ng-content></ng-template>

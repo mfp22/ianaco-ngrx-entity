@@ -6,17 +6,20 @@ import * as fromProfileStore from '../../../profile/store';
 // models
 import { Personal } from '../../../profile/models';
 import { Colorography, ContentCard, DetailItem } from 'src/app/shared/models';
-// animations
-import { slideUpAppearAnimation } from 'src/app/shared/animations';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  animations: [slideUpAppearAnimation],
 })
 export class HomeComponent implements OnInit {
   color = Colorography;
   personal$: Observable<Personal> | null = null;
+  animationMap: { [id: string]: boolean } = {
+    t1: false,
+    t2: false,
+    t3: false,
+    t4: false,
+  };
   aboutContentCard: ContentCard = {
     title: `Providing valuable and impactful contributions.`,
     links: [{ label: 'About Me', value: 'about' }],
@@ -59,7 +62,11 @@ export class HomeComponent implements OnInit {
     );
   }
 
-  onScroll() {
-    console.log('here i am');
+  /**
+   * on in view
+   */
+  onInView(event: string) {
+    this.animationMap[event] = true;
+    console.log('animationmap', this.animationMap);
   }
 }

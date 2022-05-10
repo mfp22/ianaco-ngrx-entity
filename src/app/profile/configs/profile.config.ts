@@ -9,8 +9,8 @@ export const profile: Profile = {
     get fullName() {
       return `${this.firstName} ${this.lastName}`;
     },
-    occupation: 'Software Engineer',
-    occupationType: 'Front End',
+    occupation: 'Engineer',
+    occupationType: 'Software',
     emailUsername: 'joshua.ianacone',
     emailDomain: '@gmail.com',
     get email() {

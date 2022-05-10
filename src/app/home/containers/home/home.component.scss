@@ -2,23 +2,22 @@
 @use "shared" as shared;
 
 .home {
-  &__heading {
-    color: map-get(color.$breeze-palette, 500);
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-  }
-
   &__title {
-    @extend .font-size--xx-large;
-    @media only screen and (max-width: 600px) {
-      font-size: 2rem;
-      line-height: 2.25rem;
-      font-weight: 400;
+    @extend .font-size--xxx-large;
+    color: map-get(color.$breeze-palette, 500);
+    text-transform: uppercase;
+    margin: 0;
+    @include shared.layout-bp(lt-md) {
+      font-size: 4rem;
+      line-height: 4.25rem;
+      font-weight: 300;
     }
   }
 
   &__subtitle {
-    @extend .font-size--x-large;
+    @extend .font-size--xx-large;
+    color: map-get(color.$breeze-palette, 500);
+    text-transform: uppercase;
     margin: 0;
     @media only screen and (max-width: 600px) {
       font-size: 2rem;
@@ -40,12 +39,5 @@
     position: relative;
     left: 8%;
     top: 0.5rem;
-  }
-
-  &__description {
-    font-size: 1.75rem;
-    line-height: 2rem;
-    color: map-get(color.$bark-palette, 400);
-    max-width: 35.875rem;
   }
 }

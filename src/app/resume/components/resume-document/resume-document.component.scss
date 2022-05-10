@@ -22,7 +22,7 @@ $divider-color: map-get(color.$bark-palette, 800);
 
     &-item {
       margin: 0.5rem 0;
-      @extend .font-size--regular;
+      @extend .font-size--base;
     }
   }
 

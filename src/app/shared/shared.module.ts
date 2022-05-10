@@ -7,10 +7,20 @@ import { MatListModule } from '@angular/material/list';
 import * as fromComponents from './components';
 // pipes
 import * as fromPipes from './pipes';
+// directives
+import * as fromDirectives from './directives';
 
 @NgModule({
-  declarations: [...fromComponents.components, ...fromPipes.pipes],
+  declarations: [
+    ...fromComponents.components,
+    ...fromPipes.pipes,
+    ...fromDirectives.directives,
+  ],
   imports: [CommonModule, RouterModule, FlexLayoutModule, MatListModule],
-  exports: [...fromComponents.components, ...fromPipes.pipes],
+  exports: [
+    ...fromComponents.components,
+    ...fromPipes.pipes,
+    ...fromDirectives.directives,
+  ],
 })
 export class SharedModule {}

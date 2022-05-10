@@ -1,6 +1,6 @@
 @use "colorography" as color;
 
-// [text]
+// #[text-align]
 .text-align {
   &--left {
     text-align: left;
@@ -15,10 +15,16 @@
   }
 }
 
-// [font]
+// #[font-sizes]
+.font-size--xxx-large {
+  font-size: 6rem;
+  line-height: 6.25rem;
+  font-weight: 300;
+}
+
 .font-size--xx-large {
-  font-size: 3.25rem;
-  line-height: 3.75rem;
+  font-size: 4rem;
+  line-height: 4.25rem;
   font-weight: 300;
 }
 
@@ -40,17 +46,19 @@
   font-weight: 400;
 }
 
-.font-size--regular {
+.font-size--base {
   font-size: 1rem;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 400;
 }
 
 .font-size--small {
   font-size: 0.875rem;
-  line-height: 0.875rem;
+  line-height: 1.275rem;
+  font-weight: 400;
 }
 
-// [paragraph]
+// #[paragraphs]
 .paragraph--x-large {
   @extend .font-size--x-large;
   color: map-get(color.$breeze-palette, 500);
@@ -69,22 +77,20 @@
   margin-bottom: 0.5rem;
 }
 
-.paragraph--regular {
-  margin-bottom: 0.5rem;
-  @extend .font-size--regular;
+.paragraph--base {
+  @extend .font-size--base;
   color: map-get(color.$breeze-palette, 500);
-  font-weight: 400;
-  line-height: 1.5;
+  margin-bottom: 0.5rem;
 }
 
-// [icons]
+// #[icons]
 .icon--x-small {
   width: 1rem;
   display: inline-block;
 }
 
 .icon--small {
-  width: 2rem;
+  width: 2.25rem;
   display: inline-block;
 }
 
@@ -110,7 +116,7 @@
   display: inline-block;
 }
 
-// [sizing]
+// #[sizing]
 .width-fill {
   width: 100%;
 }
@@ -127,11 +133,11 @@
   margin-bottom: 0.5rem;
 }
 
-// color
-.text-fade {
+// #[color]
+.text--fade {
   color: map-get(color.$bark-palette, 400);
 }
 
-.text-standout {
+.text--standout {
   color: map-get(color.$breeze-palette, 500);
 }

@@ -1,67 +1,106 @@
 <app-page-template class="home">
+  <!-- section -->
   <app-page-section-template>
-    <div class="home__heading" *ngIf="personal$ | async as personal">
+    <ng-container *ngIf="personal$ | async as personal">
       <p class="home__subtitle">
         <app-animate-text [text]="personal.occupationType"></app-animate-text>
       </p>
-      <h1 class="home__title margin--none">
+      <h1 class="home__title">
         <app-animate-text [text]="personal.occupation"></app-animate-text>
       </h1>
-      <p class="home__subtitle text-fade">
+      <app-animate-content [animation]="'slideUpAppear'">
+        <div class="home__image-container">
+          <img
+            class="home__image"
+            src="assets/images/profile/profile-1-image.png"
+            alt="idea"
+          />
+        </div>
+      </app-animate-content>
+      <p class="home__subtitle">
         <app-animate-text [text]="personal.fullName"></app-animate-text>
       </p>
-    </div>
-    <div class="home__image-container">
-      <img
-        class="home__image"
-        src="assets/images/profile/profile-1-image.png"
-        alt="idea"
-      />
-    </div>
-    <p *ngIf="personal$ | async as personal" class="home__description">
-      {{ personal.description }}
-    </p>
-    <app-divider [size]="'xlarge'"></app-divider>
+    </ng-container>
+    <app-divider [size]="'xxlarge'"></app-divider>
     <div fxLayout="row" fxLayoutAlign="end center">
       <app-arrow-icon [arrowType]="'angleDownLeft'"></app-arrow-icon>
-      <p class="paragraph--large">More</p>
+      <span class="font-size--large text--standout">More</span>
     </div>
   </app-page-section-template>
   <app-page-section-template>
     <section class="layout-container">
-      <div class="layout-section--1x" fxFlexAlign="start">
-        <app-content-card [content]="aboutContentCard"></app-content-card>
+      <div
+        class="layout-section--1x"
+        fxFlexAlign="start"
+        appInView
+        (inView)="onInView('t1')"
+      >
+        <app-animate-content
+          [animation]="'slideInLeft'"
+          *ngIf="animationMap['t1']"
+        >
+          <app-content-card [content]="aboutContentCard"></app-content-card>
+        </app-animate-content>
       </div>
       <div
         class="layout-section--1x"
         fxFlexAlign="start"
-        (mousewheel)="onScroll()"
+        appInView
+        (inView)="onInView('t2')"
       >
-        <app-detail-item
-          [index]="i"
-          [detail]="detail"
-          *ngFor="let detail of calloutDetails; index as i"
-        ></app-detail-item>
+        <ng-container *ngIf="animationMap['t2']">
+          <app-animate-content
+            [animation]="'slideInRight'"
+            *ngFor="let detail of calloutDetails; index as i"
+          >
+            <app-detail-item [index]="i" [detail]="detail"></app-detail-item>
+          </app-animate-content>
+        </ng-container>
       </div>
     </section>
+    <app-divider [size]="'xxlarge'"></app-divider>
+    <div fxLayout="row" fxLayoutAlign="start center">
+      <app-arrow-icon [arrowType]="'down'"></app-arrow-icon>
+      <span class="font-size--large text--standout">More</span>
+    </div>
   </app-page-section-template>
   <app-page-section-template>
     <section class="layout-container">
-      <div class="layout-section--1x" fxFlexAlign="start">
-        <app-content-card [content]="resumeContentCard"></app-content-card>
+      <div
+        class="layout-section--1x"
+        fxFlexAlign="start"
+        appInView
+        (inView)="onInView('t3')"
+      >
+        <app-animate-content
+          [animation]="'slideInLeft'"
+          *ngIf="animationMap['t3']"
+        >
+          <app-content-card [content]="resumeContentCard"></app-content-card>
+        </app-animate-content>
       </div>
-      <div class="layout-section--1x" fxFlexAlign="start center">
-        <p class="paragraph--medium">
-          Background of working and collaborating across departments and teams
-          to achieve goals.
-        </p>
-        <p class="paragraph--medium">
-          I have worked closely with design and branding teams for assessing
-          UI/UX for improvements and technical feasibility. Collaborated with
-          product team members to gather and determine project requirements.
-          Additionally worked with back end engineers for establishing API
-          contracts and integrations.
-        </p>
+      <div
+        class="layout-section--1x"
+        fxFlexAlign="start center"
+        appInView
+        (inView)="onInView('t4')"
+      >
+        <app-animate-content
+          [animation]="'slideInRight'"
+          *ngIf="animationMap['t4']"
+        >
+          <p class="paragraph--medium">
+            Background of working and collaborating across departments and teams
+            to achieve goals.
+          </p>
+          <p class="paragraph--medium">
+            I have worked closely with design and branding teams for assessing
+            UI/UX for improvements and technical feasibility. Collaborated with
+            product team members to gather and determine project requirements.
+            Additionally worked with back end engineers for establishing API
+            contracts and integrations.
+          </p>
+        </app-animate-content>
       </div>
     </section>
   </app-page-section-template>
