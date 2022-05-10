@@ -22,12 +22,24 @@
       </p>
     </ng-container>
     <app-divider [size]="'xxlarge'"></app-divider>
-    <div fxLayout="row" fxLayoutAlign="end center">
-      <app-arrow-icon [arrowType]="'angleDownLeft'"></app-arrow-icon>
-      <span class="font-size--large text--standout">More</span>
+    <div appInView (inView)="onInView('t6')">
+      <app-animate-content
+        [animation]="'slideInRight'"
+        *ngIf="animationMap['t6']"
+      >
+        <div fxLayout="row" fxLayoutAlign="end center">
+          <app-arrow-icon [arrowType]="'down'"></app-arrow-icon>
+          <span class="font-size--large text--standout">More</span>
+        </div>
+      </app-animate-content>
     </div>
   </app-page-section-template>
   <app-page-section-template>
+    <div appInView (inView)="onInView('t0')">
+      <h2 class="home__section-title" *ngIf="animationMap['t0']">
+        <app-animate-text [text]="'Providing Value'"></app-animate-text>
+      </h2>
+    </div>
     <section class="layout-container">
       <div
         class="layout-section--1x"
@@ -58,13 +70,14 @@
         </ng-container>
       </div>
     </section>
-    <app-divider [size]="'xxlarge'"></app-divider>
-    <div fxLayout="row" fxLayoutAlign="start center">
-      <app-arrow-icon [arrowType]="'down'"></app-arrow-icon>
-      <span class="font-size--large text--standout">More</span>
-    </div>
+    <app-divider [size]="'xlarge'"></app-divider>
   </app-page-section-template>
   <app-page-section-template>
+    <div appInView (inView)="onInView('t5')">
+      <h2 class="home__section-title" *ngIf="animationMap['t5']">
+        <app-animate-text [text]="'Experience'"></app-animate-text>
+      </h2>
+    </div>
     <section class="layout-container">
       <div
         class="layout-section--1x"

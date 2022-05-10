@@ -133,6 +133,18 @@
   margin-bottom: 0.5rem;
 }
 
+.margin--large {
+  margin-bottom: 1rem;
+}
+
+.margin--x-large {
+  margin-bottom: 2rem;
+}
+
+.margin--xx-large {
+  margin-bottom: 3rem;
+}
+
 // #[color]
 .text--fade {
   color: map-get(color.$bark-palette, 400);

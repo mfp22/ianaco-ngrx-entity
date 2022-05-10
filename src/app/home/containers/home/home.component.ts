@@ -15,10 +15,14 @@ export class HomeComponent implements OnInit {
   color = Colorography;
   personal$: Observable<Personal> | null = null;
   animationMap: { [id: string]: boolean } = {
+    t0: false,
     t1: false,
     t2: false,
     t3: false,
     t4: false,
+    t5: false,
+    t6: false,
+    t7: false,
   };
   aboutContentCard: ContentCard = {
     title: `Providing valuable and impactful contributions.`,
@@ -67,6 +71,5 @@ export class HomeComponent implements OnInit {
    */
   onInView(event: string) {
     this.animationMap[event] = true;
-    console.log('animationmap', this.animationMap);
   }
 }

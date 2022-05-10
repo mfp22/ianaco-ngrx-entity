@@ -10,10 +10,10 @@ import { textSlideUpAppearAnimation } from '../../animations';
 })
 export class AnimateTextComponent implements OnInit {
   textChars: string[] = [];
-  @Input() text: string = '';
+  @Input() text: string | undefined = '';
 
   ngOnInit(): void {
-    this.textChars = [...this.text];
+    this.textChars = this.text ? [...this.text] : [];
   }
 
   onTransitionDone(): void {

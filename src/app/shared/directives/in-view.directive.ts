@@ -22,14 +22,13 @@ export class InViewDirective implements AfterViewInit {
           if (entry.isIntersecting === false) {
             this.status = true;
           }
-
-          if (entry.isIntersecting && this.status) {
+          if (entry.isIntersecting) {
             this.inView.emit(entry.target.id);
             observer.disconnect();
           }
         });
       },
-      { threshold }
+      { threshold, rootMargin: '0px 0px -20% 0px' }
     );
     observer.observe(this.elRef.nativeElement);
   }

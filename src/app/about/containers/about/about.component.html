@@ -1,45 +1,94 @@
 <app-page-template class="about">
   <div content class="content" *ngIf="personal$ | async as personal">
     <app-page-section-template>
-      <app-detail-item
-        [index]="i"
-        [detail]="detail"
-        [compress]="true"
-        *ngFor="let detail of calloutDetails; index as i"
-      ></app-detail-item>
+      <div class="about__detail-container">
+        <div class="about__detail" *ngFor="let detail of calloutDetails">
+          <app-animate-text [text]="detail.title"></app-animate-text>
+        </div>
+      </div>
     </app-page-section-template>
     <app-page-section-template>
+      <div appInView (inView)="onInView('t0')">
+        <h2 class="about__section-title" *ngIf="animationMap['t0']">
+          <app-animate-text [text]="'Quality Product'"></app-animate-text>
+        </h2>
+      </div>
       <div class="layout-container">
-        <section class="layout-section--1x" fxFlexAlign="start">
-          <app-content-card [content]="workContentCard"></app-content-card>
+        <section
+          class="layout-section--1x"
+          fxFlexAlign="start"
+          appInView
+          (inView)="onInView('t1')"
+        >
+          <app-animate-content
+            [animation]="'slideInLeft'"
+            *ngIf="animationMap['t1']"
+          >
+            <app-content-card [content]="workContentCard"></app-content-card>
+          </app-animate-content>
         </section>
-        <section class="layout-section--1x" fxFlexAlign="start">
-          <p class="paragraph--medium">
-            I'm a front end developer with experience building and maintaining
-            responsive websites. I also have an interest in design and enjoy
-            being part of the creative process. I've worked closely with design
-            and branding teams to implement intuitive, visually pleasing
-            websites for optimal experience.
-          </p>
-          <p class="paragraph--medium">
-            Additionally I enjoy learning new things. I look to increase my
-            understanding and skills as I take on new projects. This allows me
-            to continually deliver an improving product.
-          </p>
+        <section
+          class="layout-section--1x"
+          fxFlexAlign="start"
+          appInView
+          (inView)="onInView('t2')"
+        >
+          <app-animate-content
+            [animation]="'slideInRight'"
+            *ngIf="animationMap['t2']"
+          >
+            <p class="paragraph--medium">
+              I'm a front end developer with experience building and maintaining
+              responsive websites. I also have an interest in design and enjoy
+              being part of the creative process. I've worked closely with
+              design and branding teams to implement intuitive, visually
+              pleasing websites for optimal experience.
+            </p>
+            <p class="paragraph--medium">
+              Additionally I enjoy learning new things. I look to increase my
+              understanding and skills as I take on new projects. This allows me
+              to continually deliver an improving product.
+            </p>
+          </app-animate-content>
         </section>
       </div>
     </app-page-section-template>
     <app-page-section-template>
+      <div appInView (inView)="onInView('t3')">
+        <h2 class="about__section-title" *ngIf="animationMap['t3']">
+          <app-animate-text [text]="'In Demand Skills'"></app-animate-text>
+        </h2>
+      </div>
       <div class="layout-container">
-        <section class="layout-section--1x" fxFlexAlign="start">
-          <app-content-card [content]="skillContentCard"></app-content-card>
+        <section
+          class="layout-section--1x"
+          fxFlexAlign="start"
+          appInView
+          (inView)="onInView('t4')"
+        >
+          <app-animate-content
+            [animation]="'slideInLeft'"
+            *ngIf="animationMap['t4']"
+          >
+            <app-content-card [content]="skillContentCard"></app-content-card>
+          </app-animate-content>
         </section>
-        <section class="layout-section--1x width-fill" fxFlexAlign="start">
-          <div class="paragraph--medium">
-            <div class="about__skill" *ngFor="let skill of personal.skills">
-              {{ skill.label }}
+        <section
+          class="layout-section--1x width-fill"
+          fxFlexAlign="start"
+          appInView
+          (inView)="onInView('t5')"
+        >
+          <app-animate-content
+            [animation]="'slideInRight'"
+            *ngIf="animationMap['t5']"
+          >
+            <div class="paragraph--medium">
+              <div class="about__skill" *ngFor="let skill of personal.skills">
+                {{ skill.label }}
+              </div>
             </div>
-          </div>
+          </app-animate-content>
         </section>
       </div>
     </app-page-section-template>
