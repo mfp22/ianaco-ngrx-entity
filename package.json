@@ -2,8 +2,11 @@
   "name": "about-me",
   "version": "0.0.0",
   "scripts": {
+    "deploy": "git add --all && git commit -m 'auto-update' && git push -u origin main",
     "bundle:analyze": "webpack-bundle-analyzer docs/stats.json",
-    "build:git": "ng build --output-path=docs --stats-json --configuration production",
+    "build:move": "move-cli ./temp/404.html ./docs/404.html && rmdir temp",
+    "build:copy": "cpy ./docs/index.html ./temp --flat --rename=404.html && npm run build:move",
+    "build:git": "ng build --output-path=docs --stats-json --configuration production && npm run build:copy",
     "ng": "ng",
     "start": "ng serve --host 192.168.1.56",
     "build": "ng build",
@@ -40,12 +43,14 @@
     "@types/d3": "^7.1.0",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
+    "cpy-cli": "^4.1.0",
     "jasmine-core": "~4.0.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.1.0",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "move-cli": "^2.0.0",
     "typescript": "~4.5.2",
     "webpack-bundle-analyzer": "^4.5.0"
   }
