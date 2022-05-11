@@ -1,22 +1,46 @@
 <app-page-template class="portfolio">
-  <div class="spacer-bottom--x-large"></div>
   <app-page-section-template>
+    <div appInView (inView)="onInView('t0')">
+      <h2 class="portfolio__section-title" *ngIf="animationMap['t0']">
+        <app-animate-text [text]="'Projects'"></app-animate-text>
+      </h2>
+    </div>
     <section class="layout-container">
-      <div class="layout-section--1x" fxFlexAlign="start">
-        <p class="paragraph--medium">
-          Some of my personal projects developed for demoing and implementing
-          different concepts and functionality. These are publicly available on
-          GitHub.
-        </p>
+      <div
+        class="layout-section--1x"
+        fxFlexAlign="start"
+        appInView
+        (inView)="onInView('t1')"
+      >
+        <app-animate-content
+          [animation]="'slideInLeft'"
+          *ngIf="animationMap['t1']"
+        >
+          <p class="paragraph--medium">
+            Some of my personal projects developed for demoing and implementing
+            different concepts and functionality. These are publicly available
+            on GitHub.
+          </p>
+        </app-animate-content>
       </div>
-      <div class="layout-section--2x" fxFlexAlign="start">
-        <div *ngIf="portfolioProjects$ | async as projects">
-          <app-detail-item
-            [index]="i"
-            [detail]="detail"
-            *ngFor="let detail of projects; index as i"
-          ></app-detail-item>
-        </div>
+      <div
+        class="layout-section--2x"
+        fxFlexAlign="start"
+        appInView
+        (inView)="onInView('t2')"
+      >
+        <app-animate-content
+          [animation]="'slideInRight'"
+          *ngIf="animationMap['t2']"
+        >
+          <ng-container *ngIf="portfolioProjects$ | async as projects">
+            <app-detail-item
+              [index]="i"
+              [detail]="detail"
+              *ngFor="let detail of projects; index as i"
+            ></app-detail-item>
+          </ng-container>
+        </app-animate-content>
       </div>
     </section>
   </app-page-section-template>

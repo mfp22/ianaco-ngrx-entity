@@ -14,6 +14,11 @@ import { Colorography, DetailItem } from '../../../shared/models';
 export class PortfolioComponent implements OnInit {
   color = Colorography;
   portfolioProjects$: Observable<DetailItem[]> | null = null;
+  animationMap: { [id: string]: boolean } = {
+    t0: false,
+    t1: false,
+    t3: false,
+  };
 
   constructor(private store: Store<fromStore.PortfolioState>) {}
 
@@ -21,5 +26,12 @@ export class PortfolioComponent implements OnInit {
     this.portfolioProjects$ = this.store.pipe(
       select(fromStore.selectPortfolioProjects)
     );
+  }
+
+  /**
+   * on in view
+   */
+  onInView(event: string) {
+    this.animationMap[event] = true;
   }
 }

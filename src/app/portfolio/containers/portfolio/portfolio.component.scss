@@ -1,1 +1,11 @@
+@use "colorography" as color;
+@use "shared";
 
+.portfolio {
+  &__section-title {
+    @extend .font-size--xx-large;
+    color: map-get(color.$bark-palette, 400);
+    text-transform: uppercase;
+    @extend .margin--xx-large;
+  }
+}

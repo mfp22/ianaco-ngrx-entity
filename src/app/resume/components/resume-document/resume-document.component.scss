@@ -95,9 +95,10 @@ $divider-color: map-get(color.$bark-palette, 800);
 drag-scroll {
   height: 13rem;
   width: 100%;
+  opacity: 0.7;
 }
 
 .mat-fab {
   background-color: map-get(color.$bark-palette, 500);
-  color: white;
+  color: map-get(color.$breeze-palette, 500);
 }

@@ -61,7 +61,7 @@ $hamburger-types: (collapse) !default;
 }
 
 .hamburger {
-  background-color: map-get(color.$bark-palette, 900);
+  background-color: rgba(0, 0, 0, 0.5);
   margin-top: 1rem;
   line-height: 0.625rem;
   border-radius: 50%;
