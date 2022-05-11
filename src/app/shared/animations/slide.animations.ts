@@ -34,6 +34,20 @@ export const slideUpAppearAnimation = trigger('slideUpAppear', [
 ]);
 
 /**
+ * slide down appear
+ */
+export const slideDownAppearAnimation = trigger('slideDownAppear', [
+  transition(':enter', [
+    query('.animate-content__content', [
+      style({
+        transform: 'translateY(-100%)',
+      }),
+      animate('500ms'),
+    ]),
+  ]),
+]);
+
+/**
  * slide in right
  */
 export const slideInRightAnimation = trigger('slideInRight', [

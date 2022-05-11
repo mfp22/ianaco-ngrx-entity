@@ -15,8 +15,4 @@ export class AnimateTextComponent implements OnInit {
   ngOnInit(): void {
     this.textChars = this.text ? [...this.text] : [];
   }
-
-  onTransitionDone(): void {
-    console.log('here');
-  }
 }

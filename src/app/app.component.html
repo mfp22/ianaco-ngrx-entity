@@ -27,7 +27,7 @@
         </div>
       </div>
       <div class="app__header">
-        <mat-toolbar>
+        <mat-toolbar appInView [disconnect]="false" (inView)="onInView($event)">
           <mat-toolbar-row fxLayout="row" fxLayoutAlign="end center">
             <button
               class="hamburger hamburger--collapse"
@@ -35,19 +35,21 @@
               type="button"
               (click)="sidenav.toggle()"
               tabindex="0"
-              *ngIf="mobileQuery?.matches; else navList"
+              *ngIf="mobileQuery?.matches || !navInViewStatus; else navList"
             >
               <span class="hamburger-box">
                 <span class="hamburger-inner"></span>
               </span>
             </button>
             <ng-template #navList>
-              <app-list
-                [items]="navs$ | async"
-                [horizontal]="true"
-                [activeItem]="activeNav$ | async"
-                (handleClick)="onNavClick($event)"
-              ></app-list>
+              <app-animate-content [animation]="'slideUpAppear'">
+                <app-list
+                  [items]="navs$ | async"
+                  [horizontal]="true"
+                  [activeItem]="activeNav$ | async"
+                  (handleClick)="onNavClick($event)"
+                ></app-list>
+              </app-animate-content>
             </ng-template>
           </mat-toolbar-row>
         </mat-toolbar>

@@ -4,14 +4,15 @@ import {
   ElementRef,
   Output,
   EventEmitter,
+  Input,
 } from '@angular/core';
 
 @Directive({
   selector: '[appInView]',
 })
 export class InViewDirective implements AfterViewInit {
-  status = false;
-  @Output() inView = new EventEmitter<string>();
+  @Input() disconnect = true;
+  @Output() inView = new EventEmitter<boolean>();
   constructor(private elRef: ElementRef) {}
 
   ngAfterViewInit(): void {
@@ -19,12 +20,15 @@ export class InViewDirective implements AfterViewInit {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting === false) {
-            this.status = true;
-          }
           if (entry.isIntersecting) {
-            this.inView.emit(entry.target.id);
-            observer.disconnect();
+            this.inView.emit(true);
+            if (this.disconnect) {
+              observer.disconnect();
+            }
+          } else {
+            if (!this.disconnect) {
+              this.inView.emit(false);
+            }
           }
         });
       },

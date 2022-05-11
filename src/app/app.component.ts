@@ -37,6 +37,7 @@ export class AppComponent implements OnInit, OnDestroy {
   navs$: Observable<Item<string>[]> | null = null;
   activeNav$: Observable<Item<string>> | null = null;
   transitionStatus$: Observable<boolean> | null = null;
+  navInViewStatus: boolean = true;
   @ViewChild('overlay') overlayEl: ElementRef | null = null;
   @ViewChild(MatSidenav) sidenav: MatSidenav | undefined;
   @ViewChild(MatSidenavContent)
@@ -103,5 +104,12 @@ export class AppComponent implements OnInit, OnDestroy {
           this.store.dispatch(fromRootStore.setTransition({ status: false }));
         });
     }
+  }
+
+  /**
+   * on in view
+   */
+  onInView(event: boolean) {
+    this.navInViewStatus = event;
   }
 }

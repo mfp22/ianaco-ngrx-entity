@@ -11,6 +11,16 @@
       <ng-container *ngTemplateOutlet="content"></ng-container>
     </div>
   </div>
+  <!--slide down appear-->
+  <div
+    *ngSwitchCase="'slideDownAppear'"
+    class="animate-content"
+    @slideDownAppear
+  >
+    <div class="animate-content__content">
+      <ng-container *ngTemplateOutlet="content"></ng-container>
+    </div>
+  </div>
   <!--slide in left-->
   <div *ngSwitchCase="'slideInLeft'" class="animate-content" @slideInLeft>
     <div class="animate-content__content">

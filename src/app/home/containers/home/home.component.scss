@@ -21,7 +21,7 @@
     margin: 0;
     @include shared.layout-bp(lt-md) {
       font-size: 2.813rem;
-      line-height: 3.063rem;
+      line-height: 2.5rem;
       font-weight: 300;
     }
   }
@@ -29,6 +29,7 @@
   &__section-title {
     @extend .font-size--xx-large;
     color: map-get(color.$bark-palette, 400);
+    text-transform: uppercase;
     @extend .margin--xx-large;
   }
 

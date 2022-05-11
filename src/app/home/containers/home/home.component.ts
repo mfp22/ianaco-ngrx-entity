@@ -70,6 +70,7 @@ export class HomeComponent implements OnInit {
    * on in view
    */
   onInView(event: string) {
+    console.log('event', event);
     this.animationMap[event] = true;
   }
 }

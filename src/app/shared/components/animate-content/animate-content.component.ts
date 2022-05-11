@@ -3,6 +3,7 @@ import { Component, Input } from '@angular/core';
 import {
   slideUpAnimation,
   slideUpAppearAnimation,
+  slideDownAppearAnimation,
   slideInLeftAnimation,
   slideInRightAnimation,
 } from '../../animations';
@@ -14,6 +15,7 @@ import {
   animations: [
     slideUpAnimation,
     slideUpAppearAnimation,
+    slideDownAppearAnimation,
     slideInLeftAnimation,
     slideInRightAnimation,
   ],
