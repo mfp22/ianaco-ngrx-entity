@@ -4,6 +4,7 @@
   "scripts": {
     "deploy": "git add --all && git commit -m 'auto-update' && git push -u origin main",
     "bundle:analyze": "webpack-bundle-analyzer docs/stats.json",
+    "postbuild:move": "npm run deploy",
     "build:move": "move-cli ./temp/404.html ./docs/404.html && rmdir temp",
     "build:copy": "cpy ./docs/index.html ./temp --flat --rename=404.html && npm run build:move",
     "build:git": "ng build --output-path=docs --stats-json --configuration production && npm run build:copy",
