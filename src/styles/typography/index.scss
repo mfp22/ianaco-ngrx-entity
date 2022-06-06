@@ -1,0 +1,86 @@
+@use "colorography" as color;
+
+$app-font-sizes: (
+  giant: 6rem,
+  xxx-large: 3.75rem,
+  xx-large: 3rem,
+  x-large: 2.125rem,
+  large: 1.5rem,
+  medium: 1.25rem,
+  base: 1rem,
+  small: 0.875rem,
+);
+
+// #[font-sizes]
+.app-font--giant {
+  font-size: map-get($app-font-sizes, giant);
+  line-height: 6.25rem;
+  font-weight: 300;
+}
+
+.app-font--xxx-large {
+  font-size: map-get($app-font-sizes, xxx-large);
+  line-height: 4rem;
+  font-weight: 300;
+}
+
+.app-font--xx-large {
+  font-size: map-get($app-font-sizes, xx-large);
+  line-height: 3.25rem;
+  font-weight: 300;
+}
+
+.app-font--x-large {
+  font-size: map-get($app-font-sizes, x-large);
+  line-height: 2.375rem;
+  font-weight: 300;
+}
+
+.app-font--large {
+  font-size: map-get($app-font-sizes, large);
+  line-height: 1.75rem;
+  font-weight: 400;
+}
+
+.app-font--medium {
+  font-size: map-get($app-font-sizes, medium);
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+.app-font--base {
+  font-size: map-get($app-font-sizes, base);
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+
+.app-font--small {
+  font-size: map-get($app-font-sizes, small);
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+
+// #[paragraphs]
+.app-paragraph--x-large {
+  @extend .app-font--x-large;
+  color: map-get(color.$breeze-palette, 500);
+  margin-bottom: 0.5rem;
+}
+
+.app-paragraph--large {
+  @extend .app-font--large;
+  color: map-get(color.$breeze-palette, 500);
+  margin-bottom: 0.5rem;
+}
+
+.app-paragraph--medium {
+  @extend .app-font--medium;
+  color: map-get(color.$breeze-palette, 500);
+  margin-bottom: 0.5rem;
+}
+
+.app-paragraph--base {
+  @extend .app-font--base;
+  color: map-get(color.$breeze-palette, 500);
+  margin-bottom: 0.5rem;
+}

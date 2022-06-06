@@ -9,6 +9,5 @@ import { Colorography } from '../../models';
   encapsulation: ViewEncapsulation.None,
 })
 export class PageTemplateComponent {
-  @Input() title: string | undefined;
   @Input() backgroundColorHex: string = Colorography.Transparent;
 }

@@ -2,37 +2,6 @@
 @use "shared" as shared;
 
 .home {
-  &__title {
-    @extend .font-size--xxx-large;
-    color: map-get(color.$breeze-palette, 500);
-    text-transform: uppercase;
-    margin: 0;
-    @include shared.layout-bp(lt-md) {
-      font-size: 4rem;
-      line-height: 4.25rem;
-      font-weight: 300;
-    }
-  }
-
-  &__subtitle {
-    @extend .font-size--xx-large;
-    color: map-get(color.$breeze-palette, 500);
-    text-transform: uppercase;
-    margin: 0;
-    @include shared.layout-bp(lt-md) {
-      font-size: 2.813rem;
-      line-height: 2.5rem;
-      font-weight: 300;
-    }
-  }
-
-  &__section-title {
-    @extend .font-size--xx-large;
-    color: map-get(color.$bark-palette, 400);
-    text-transform: uppercase;
-    @extend .margin--xx-large;
-  }
-
   &__image-container {
     background: url(../../../../assets/images/backgrounds/gray-texture-image.jpg)
       no-repeat center center;

@@ -1,5 +1,6 @@
 @use "colorography" as color;
 @use "shared";
+@use "typography" as type;
 
 .content-card {
   &__header {
@@ -9,7 +10,7 @@
 
   &__title {
     color: map-get(color.$bark-palette, 400);
-    @extend .font-size--medium;
+    @extend .app-font--medium;
     margin-bottom: 0.5rem;
   }
 

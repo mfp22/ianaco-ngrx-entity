@@ -11,6 +11,7 @@ import {
   selector: '[appInView]',
 })
 export class InViewDirective implements AfterViewInit {
+  @Input() id: string | undefined;
   @Input() disconnect = true;
   @Output() inView = new EventEmitter<boolean>();
   constructor(private elRef: ElementRef) {}

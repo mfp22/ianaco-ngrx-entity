@@ -1,5 +1,7 @@
 @use "colorography" as color;
 @use "shared" as shared;
+@use "typography" as type;
+@use "~node_modules/@angular/flex-layout/core/sass/_layout-bp.scss" as bp;
 
 :host {
   display: block;
@@ -19,8 +21,12 @@
   }
 
   &__title {
-    font-size: 1.25rem;
+    font-size: map-get(type.$app-font-sizes, xxx-large);
     color: map-get(color.$breeze-palette, 500);
+    @include bp.layout-bp(lt-md) {
+      font-size: map-get(type.$app-font-sizes, small);
+      line-height: 2.25rem;
+    }
   }
 
   &__content {

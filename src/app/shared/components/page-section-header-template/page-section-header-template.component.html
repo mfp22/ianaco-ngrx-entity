@@ -1,0 +1,42 @@
+<header class="page-section-header-template">
+  <div
+    class="page-section-header-template__supertitle"
+    *ngIf="supertitle as supertitle"
+  >
+    <ng-container
+      *ngTemplateOutlet="
+        animate ? animateText : defaultText;
+        context: { $implicit: supertitle }
+      "
+    ></ng-container>
+  </div>
+  <h2 class="page-section-header-template__title" *ngIf="title as title">
+    <ng-container
+      *ngTemplateOutlet="
+        animate ? animateText : defaultText;
+        context: { $implicit: title }
+      "
+    ></ng-container>
+  </h2>
+  <h3
+    class="page-section-header-template__subtitle"
+    *ngIf="subtitle as subtitle"
+  >
+    <ng-container
+      *ngTemplateOutlet="
+        animate ? animateText : defaultText;
+        context: { $implicit: subtitle }
+      "
+    ></ng-container>
+  </h3>
+</header>
+
+<!--default template-->
+<ng-template #defaultText let-text>
+  {{ text }}
+</ng-template>
+
+<!--animate template-->
+<ng-template #animateText let-text>
+  <app-animate-text [text]="text"></app-animate-text>
+</ng-template>

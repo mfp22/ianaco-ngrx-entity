@@ -1,0 +1,36 @@
+@use "colorography" as color;
+@use "typography" as type;
+@use "~node_modules/@angular/flex-layout/core/sass/_layout-bp.scss" as bp;
+
+.page-section-header-template {
+  color: map-get(color.$cloud-palette, 500);
+  text-align: left;
+
+  &__supertitle {
+    font-size: map-get(type.$app-font-sizes, medium);
+    line-height: 1.5rem;
+    @include bp.layout-bp(lt-md) {
+      font-size: map-get(type.$app-font-sizes, small);
+      line-height: 1.5rem;
+    }
+  }
+
+  &__title {
+    font-size: map-get(type.$app-font-sizes, xxx-large);
+    line-height: 4.5rem;
+    margin-bottom: 0.25rem;
+    @include bp.layout-bp(lt-md) {
+      font-size: map-get(type.$app-font-sizes, xx-large);
+      line-height: 2.25rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: map-get(type.$app-font-sizes, x-large);
+    line-height: 2.25rem;
+    @include bp.layout-bp(lt-md) {
+      font-size: map-get(type.$app-font-sizes, medium);
+      line-height: 1.5rem;
+    }
+  }
+}

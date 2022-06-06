@@ -2,12 +2,11 @@
   <!-- section -->
   <app-page-section-template>
     <ng-container *ngIf="personal$ | async as personal">
-      <p class="home__subtitle">
-        <app-animate-text [text]="personal.occupationType"></app-animate-text>
-      </p>
-      <h1 class="home__title">
-        <app-animate-text [text]="personal.occupation"></app-animate-text>
-      </h1>
+      <app-page-section-header-template
+        [supertitle]="personal.occupationType"
+        [title]="personal.occupation"
+        [animate]="true"
+      ></app-page-section-header-template>
       <app-animate-content [animation]="'slideUpAppear'">
         <div class="home__image-container">
           <img
@@ -17,45 +16,39 @@
           />
         </div>
       </app-animate-content>
-      <p
-        class="home__subtitle"
-        fxLayout="row"
-        fxLayout.lt-md="column"
-        fxLayoutGap="8px"
-      >
-        <app-animate-text [text]="personal.firstName"></app-animate-text>
-        <app-animate-text [text]="personal.lastName"></app-animate-text>
-      </p>
     </ng-container>
     <app-divider [size]="'medium'"></app-divider>
-    <div appInView (inView)="onInView('t6')">
+    <div appInView (inView)="onInView(0)">
       <app-animate-content
         [animation]="'slideDownAppear'"
-        *ngIf="animationMap['t6']"
+        *ngIf="animationMap[0]"
       >
         <div fxLayout="row" fxLayoutAlign="end center">
           <app-arrow-icon [arrowType]="'down'"></app-arrow-icon>
-          <span class="font-size--large text--standout">See More...</span>
+          <span class="app-font--large text--standout">See More...</span>
         </div>
       </app-animate-content>
     </div>
   </app-page-section-template>
+  <!-- section -->
   <app-page-section-template>
-    <div appInView (inView)="onInView('t0')">
-      <h2 class="home__section-title" *ngIf="animationMap['t0']">
-        <app-animate-text [text]="'Providing Value'"></app-animate-text>
-      </h2>
+    <div appInView (inView)="onInView(1)">
+      <app-page-section-header-template
+        [title]="'Providing Value'"
+        [animate]="true"
+        *ngIf="animationMap[1]"
+      ></app-page-section-header-template>
     </div>
     <section class="layout-container">
       <div
         class="layout-section--1x"
         fxFlexAlign="start"
         appInView
-        (inView)="onInView('t1')"
+        (inView)="onInView(2)"
       >
         <app-animate-content
           [animation]="'slideInLeft'"
-          *ngIf="animationMap['t1']"
+          *ngIf="animationMap[2]"
         >
           <app-content-card [content]="aboutContentCard"></app-content-card>
         </app-animate-content>
@@ -64,9 +57,9 @@
         class="layout-section--1x"
         fxFlexAlign="start"
         appInView
-        (inView)="onInView('t2')"
+        (inView)="onInView(3)"
       >
-        <ng-container *ngIf="animationMap['t2']">
+        <ng-container *ngIf="animationMap[3]">
           <app-animate-content
             [animation]="'slideInRight'"
             *ngFor="let detail of calloutDetails; index as i"
@@ -77,34 +70,37 @@
       </div>
     </section>
     <app-divider [size]="'xlarge'"></app-divider>
-    <div appInView (inView)="onInView('t7')">
+    <div appInView (inView)="onInView(4)">
       <app-animate-content
         [animation]="'slideDownAppear'"
-        *ngIf="animationMap['t7']"
+        *ngIf="animationMap[4]"
       >
         <div fxLayout="row" fxLayoutAlign="start center">
           <app-arrow-icon [arrowType]="'down'"></app-arrow-icon>
-          <span class="font-size--large text--standout">Keep Going...</span>
+          <span class="app-font--large text--standout">Keep Going...</span>
         </div>
       </app-animate-content>
     </div>
   </app-page-section-template>
+  <!-- section -->
   <app-page-section-template>
-    <div appInView (inView)="onInView('t5')">
-      <h2 class="home__section-title" *ngIf="animationMap['t5']">
-        <app-animate-text [text]="'Experience'"></app-animate-text>
-      </h2>
+    <div appInView (inView)="onInView(5)">
+      <app-page-section-header-template
+        [title]="'Experience'"
+        [animate]="true"
+        *ngIf="animationMap[5]"
+      ></app-page-section-header-template>
     </div>
     <section class="layout-container">
       <div
         class="layout-section--1x"
         fxFlexAlign="start"
         appInView
-        (inView)="onInView('t3')"
+        (inView)="onInView(6)"
       >
         <app-animate-content
           [animation]="'slideInLeft'"
-          *ngIf="animationMap['t3']"
+          *ngIf="animationMap[6]"
         >
           <app-content-card [content]="resumeContentCard"></app-content-card>
         </app-animate-content>
@@ -113,17 +109,17 @@
         class="layout-section--1x"
         fxFlexAlign="start center"
         appInView
-        (inView)="onInView('t4')"
+        (inView)="onInView(7)"
       >
         <app-animate-content
           [animation]="'slideInRight'"
-          *ngIf="animationMap['t4']"
+          *ngIf="animationMap[7]"
         >
-          <p class="paragraph--medium">
+          <p class="app-paragraph--medium">
             Background of working and collaborating across departments and teams
             to achieve goals.
           </p>
-          <p class="paragraph--medium">
+          <p class="app-paragraph--medium">
             I have worked closely with design and branding teams for assessing
             UI/UX for improvements and technical feasibility. Collaborated with
             product team members to gather and determine project requirements.

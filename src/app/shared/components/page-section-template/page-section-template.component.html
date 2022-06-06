@@ -6,23 +6,6 @@
   [style.backgroundColor]="backgroundColorHex"
 >
   <div class="page-section-template__content-container">
-    <div fxLayout="column" fxLayoutAlign="center center">
-      <div
-        class="page-section-template__header"
-        *ngIf="title || subtitle"
-        [style.textAlign]="headerTextAlign"
-      >
-        <h1 class="page-section-template__title" *ngIf="title">
-          {{ title }}
-        </h1>
-        <h2
-          class="page-section-template__subtitle paragraph--medium text-align--center"
-          *ngIf="subtitle"
-        >
-          {{ subtitle }}
-        </h2>
-      </div>
-    </div>
     <div class="page-section-template__content">
       <ng-content></ng-content>
     </div>

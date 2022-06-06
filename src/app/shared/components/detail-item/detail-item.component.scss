@@ -1,5 +1,6 @@
 @use "colorography" as color;
 @use "shared";
+@use "typography" as type;
 
 .detail-item {
   padding: 1rem 0;
@@ -20,7 +21,7 @@
     display: inline-block;
     margin: 0;
     text-transform: capitalize;
-    @extend .font-size--x-large;
+    @extend .app-font--x-large;
   }
 
   &__subtitle {
@@ -28,7 +29,7 @@
     display: inline-block;
     margin: 0;
     text-transform: lowercase;
-    @extend .font-size--x-large;
+    @extend .app-font--x-large;
   }
 
   &__body {

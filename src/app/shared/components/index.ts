@@ -1,7 +1,7 @@
 // imports
 import { PageTemplateComponent } from './page-template/page-template.component';
 import { PageSectionTemplateComponent } from './page-section-template/page-section-template.component';
-import { IframeComponent } from './iframe/iframe.component';
+import { PageSectionHeaderTemplateComponent } from './page-section-header-template/page-section-header-template.component';
 import { DetailItemComponent } from './detail-item/detail-item.component';
 import { ListComponent } from './list/list.component';
 import { ContentCardComponent } from './content-card/content-card.component';
@@ -12,7 +12,7 @@ import { AnimateContentComponent } from './animate-content/animate-content.compo
 // exports
 export * from './page-template/page-template.component';
 export * from './page-section-template/page-section-template.component';
-export * from './iframe/iframe.component';
+export * from './page-section-header-template/page-section-header-template.component';
 export * from './detail-item/detail-item.component';
 export * from './list/list.component';
 export * from './content-card/content-card.component';
@@ -24,7 +24,7 @@ export * from './animate-content/animate-content.component';
 export const components = [
   PageTemplateComponent,
   PageSectionTemplateComponent,
-  IframeComponent,
+  PageSectionHeaderTemplateComponent,
   DetailItemComponent,
   ListComponent,
   ContentCardComponent,

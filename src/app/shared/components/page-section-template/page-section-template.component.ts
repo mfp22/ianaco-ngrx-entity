@@ -8,8 +8,5 @@ import { Colorography } from '../../models';
   styleUrls: ['./page-section-template.component.scss'],
 })
 export class PageSectionTemplateComponent {
-  @Input() headerTextAlign: string = 'left';
-  @Input() title: string | null = null;
-  @Input() subtitle: string | null = null;
   @Input() backgroundColorHex: string = Colorography.Transparent;
 }
