@@ -24,14 +24,19 @@ const routes: Routes = [
           import('./about/about.module').then((m) => m.AboutModule),
       },
       {
-        path: 'resume',
-        loadChildren: () =>
-          import('./resume/resume.module').then((m) => m.ResumeModule),
-      },
-      {
         path: 'portfolio',
         loadChildren: () =>
           import('./portfolio/portfolio.module').then((m) => m.PortfolioModule),
+      },
+      {
+        path: 'projects',
+        loadChildren: () =>
+          import('./projects/projects.module').then((m) => m.ProjectsModule),
+      },
+      {
+        path: 'resume',
+        loadChildren: () =>
+          import('./resume/resume.module').then((m) => m.ResumeModule),
       },
     ],
   },

@@ -5,9 +5,6 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { DragScrollModule } from 'ngx-drag-scroll';
-// ngrx
-import { StoreModule } from '@ngrx/store';
-import { reducers, featureKey } from './store';
 // feature
 import { PortfolioRoutingModule } from './portfolio-routing.module';
 import { SharedModule } from '../shared/shared.module';
@@ -21,7 +18,6 @@ import * as fromComponents from './components';
   imports: [
     CommonModule,
     PortfolioRoutingModule,
-    StoreModule.forFeature(featureKey, reducers),
     FlexLayoutModule,
     MatCardModule,
     MatButtonModule,

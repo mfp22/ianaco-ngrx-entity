@@ -70,6 +70,10 @@ export const profile: Profile = {
       value: 'portfolio',
     },
     {
+      label: 'projects',
+      value: 'projects',
+    },
+    {
       label: 'resume',
       value: 'resume',
     },
