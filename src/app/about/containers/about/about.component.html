@@ -9,9 +9,11 @@
     </app-page-section-template>
     <app-page-section-template>
       <div appInView (inView)="onInView('t0')">
-        <h2 class="about__section-title" *ngIf="animationMap['t0']">
-          <app-animate-text [text]="'Quality Product'"></app-animate-text>
-        </h2>
+        <app-page-section-header-template
+          [title]="'Quality Product'"
+          [animate]="true"
+          *ngIf="animationMap['t0']"
+        ></app-page-section-header-template>
       </div>
       <div class="layout-container">
         <section
@@ -37,14 +39,14 @@
             [animation]="'slideInRight'"
             *ngIf="animationMap['t2']"
           >
-            <p class="paragraph--medium">
+            <p class="app-paragraph--medium">
               I'm a front end developer with experience building and maintaining
               responsive websites. I also have an interest in design and enjoy
               being part of the creative process. I've worked closely with
               design and branding teams to implement intuitive, visually
               pleasing websites for optimal experience.
             </p>
-            <p class="paragraph--medium">
+            <p class="app-paragraph--medium">
               Additionally I enjoy learning new things. I look to increase my
               understanding and skills as I take on new projects. This allows me
               to continually deliver an improving product.
@@ -55,9 +57,11 @@
     </app-page-section-template>
     <app-page-section-template>
       <div appInView (inView)="onInView('t3')">
-        <h2 class="about__section-title" *ngIf="animationMap['t3']">
-          <app-animate-text [text]="'In Demand Skills'"></app-animate-text>
-        </h2>
+        <app-page-section-header-template
+          [title]="'In Demand Skills'"
+          [animate]="true"
+          *ngIf="animationMap['t3']"
+        ></app-page-section-header-template>
       </div>
       <div class="layout-container">
         <section
@@ -83,7 +87,7 @@
             [animation]="'slideInRight'"
             *ngIf="animationMap['t5']"
           >
-            <div class="paragraph--medium">
+            <div class="app-paragraph--medium">
               <div class="about__skill" *ngFor="let skill of personal.skills">
                 {{ skill.label }}
               </div>

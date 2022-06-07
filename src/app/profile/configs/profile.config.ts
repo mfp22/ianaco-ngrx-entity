@@ -66,8 +66,8 @@ export const profile: Profile = {
       value: 'about',
     },
     {
-      label: 'projects',
-      value: 'projects',
+      label: 'portfolio',
+      value: 'portfolio',
     },
     {
       label: 'resume',

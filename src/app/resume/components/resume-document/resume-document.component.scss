@@ -1,5 +1,6 @@
 @use "colorography" as color;
 @use "shared";
+@use "typography" as type;
 $default-resume-color: map-get(color.$bark-palette, 100);
 $divider-color: map-get(color.$bark-palette, 800);
 
@@ -22,12 +23,12 @@ $divider-color: map-get(color.$bark-palette, 800);
 
     &-item {
       margin: 0.5rem 0;
-      @extend .font-size--base;
+      @extend .app-font--base;
     }
   }
 
   &__title {
-    @extend .font-size--large;
+    @extend .app-font--large;
   }
 
   &__divider {
@@ -40,7 +41,7 @@ $divider-color: map-get(color.$bark-palette, 800);
   }
 
   &__text-quite {
-    @extend .font-size--medium;
+    @extend .app-font--medium;
     color: map-get(color.$bark-palette, 400);
   }
 

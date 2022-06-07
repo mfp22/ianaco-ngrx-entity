@@ -1,0 +1,38 @@
+@use "colorography" as color;
+@use "typography" as type;
+
+.gallery {
+  position: relative;
+
+  &__name {
+    @extend .app-font--xx-large;
+  }
+
+  &__brand-color-image {
+    max-width: 250px;
+    border: 1px solid map-get(color.$cloud-palette, 500);
+  }
+
+  &__showcase-image-container {
+    max-width: 500px;
+    padding: 1rem 0;
+    border: solid map-get(color.$bark-palette, 500);
+    border-width: 1px 0 1px 0;
+  }
+
+  &__showcase-image {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &__preview-image-card {
+    max-width: 100px;
+    padding: 1rem;
+    border: 1px solid map-get(color.$bark-palette, 500);
+  }
+
+  &__preview-image {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}

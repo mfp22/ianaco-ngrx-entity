@@ -14,7 +14,7 @@ import { Colorography, ContentCard, DetailItem } from 'src/app/shared/models';
 export class HomeComponent implements OnInit {
   color = Colorography;
   personal$: Observable<Personal> | null = null;
-  animationMap: any = {};
+  animationMap: { [key: string]: boolean } = {};
   aboutContentCard: ContentCard = {
     title: `Providing valuable and impactful contributions.`,
     links: [{ label: 'About Me', value: 'about' }],
@@ -60,7 +60,7 @@ export class HomeComponent implements OnInit {
   /**
    * on in view
    */
-  onInView(event: number) {
+  onInView(event: string) {
     this.animationMap[event] = true;
   }
 }

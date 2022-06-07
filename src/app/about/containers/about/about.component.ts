@@ -14,16 +14,7 @@ import { Colorography, ContentCard, DetailItem } from '../../../shared/models';
 export class AboutComponent implements OnInit {
   color = Colorography;
   personal$: Observable<Personal> | null = null;
-  animationMap: { [id: string]: boolean } = {
-    t0: false,
-    t1: false,
-    t2: false,
-    t3: false,
-    t4: false,
-    t5: false,
-    t6: false,
-    t7: false,
-  };
+  animationMap: { [key: string]: boolean } = {};
   calloutDetails: DetailItem[] = [
     {
       title: 'Creative',
@@ -61,5 +52,6 @@ export class AboutComponent implements OnInit {
    */
   onInView(event: string) {
     this.animationMap[event] = true;
+    console.log(this.animationMap);
   }
 }

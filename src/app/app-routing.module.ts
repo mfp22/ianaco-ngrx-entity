@@ -29,7 +29,7 @@ const routes: Routes = [
           import('./resume/resume.module').then((m) => m.ResumeModule),
       },
       {
-        path: 'projects',
+        path: 'portfolio',
         loadChildren: () =>
           import('./portfolio/portfolio.module').then((m) => m.PortfolioModule),
       },

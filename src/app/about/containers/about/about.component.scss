@@ -1,27 +1,30 @@
 @use "colorography" as color;
 @use "shared" as shared;
+@use "typography" as type;
 
 .about {
   &__detail {
-    @extend .font-size--xxx-large;
+    @extend .app-font--xxx-large;
     color: map-get(color.$breeze-palette, 500);
     margin: 0;
     text-transform: uppercase;
     border-bottom: 1px solid map-get(color.$bark-palette, 800);
+    // cannot extend in media queries
     @include shared.layout-bp(lt-md) {
-      font-size: 4rem;
-      line-height: 4.25rem;
+      font-size: map-get(type.$app-font-sizes, xx-large);
+      line-height: 3.25rem;
       font-weight: 300;
     }
   }
 
   &__section-title {
-    @extend .font-size--xx-large;
+    @extend .app-font--xx-large;
     color: map-get(color.$bark-palette, 400);
     @extend .margin--xx-large;
+    // cannot extend in media queries
     @include shared.layout-bp(lt-md) {
-      font-size: 2.813rem;
-      line-height: 3.063rem;
+      font-size: map-get(type.$app-font-sizes, x-large);
+      line-height: 2.375rem;
       font-weight: 300;
     }
   }

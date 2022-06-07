@@ -4,6 +4,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
+import { DragScrollModule } from 'ngx-drag-scroll';
+// ngrx
 import { StoreModule } from '@ngrx/store';
 import { reducers, featureKey } from './store';
 // feature
@@ -11,9 +13,11 @@ import { PortfolioRoutingModule } from './portfolio-routing.module';
 import { SharedModule } from '../shared/shared.module';
 // containers
 import * as fromContainers from './containers';
+// components
+import * as fromComponents from './components';
 
 @NgModule({
-  declarations: [...fromContainers.containers],
+  declarations: [...fromContainers.containers, ...fromComponents.components],
   imports: [
     CommonModule,
     PortfolioRoutingModule,
@@ -22,6 +26,7 @@ import * as fromContainers from './containers';
     MatCardModule,
     MatButtonModule,
     MatDividerModule,
+    DragScrollModule,
     SharedModule,
   ],
 })

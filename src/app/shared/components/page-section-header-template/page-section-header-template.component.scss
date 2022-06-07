@@ -7,30 +7,31 @@
   text-align: left;
 
   &__supertitle {
-    font-size: map-get(type.$app-font-sizes, medium);
-    line-height: 1.5rem;
+    @extend .app-font--medium;
+    // not able to extend in media query
     @include bp.layout-bp(lt-md) {
       font-size: map-get(type.$app-font-sizes, small);
-      line-height: 1.5rem;
+      line-height: 1.125rem;
+      font-weight: 400;
     }
   }
 
   &__title {
-    font-size: map-get(type.$app-font-sizes, xxx-large);
-    line-height: 4.5rem;
+    @extend .app-font--xxx-large;
     margin-bottom: 0.25rem;
     @include bp.layout-bp(lt-md) {
       font-size: map-get(type.$app-font-sizes, xx-large);
-      line-height: 2.25rem;
+      line-height: 3.25rem;
+      font-weight: 300;
     }
   }
 
   &__subtitle {
-    font-size: map-get(type.$app-font-sizes, x-large);
-    line-height: 2.25rem;
+    @extend .app-font--x-large;
     @include bp.layout-bp(lt-md) {
       font-size: map-get(type.$app-font-sizes, medium);
       line-height: 1.5rem;
+      font-weight: 400;
     }
   }
 }

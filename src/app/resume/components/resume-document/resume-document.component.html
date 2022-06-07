@@ -8,17 +8,17 @@
         *ngIf="resume.contact as contact"
       >
         <div class="margin--medium" *ngFor="let item of contact.items">
-          <div class="font-size--base text--fade">
+          <div class="app-font--base text--fade">
             {{ item.label }}
           </div>
-          <div class="font-size--medium" [innerHtml]="item.value"></div>
+          <div class="app-font--medium" [innerHtml]="item.value"></div>
         </div>
       </div>
     </section>
     <section class="layout-section--1x" fxFlexAlign="start">
       <div class="resume-document__header resume-document__section">
-        <h1 class="font-size--xx-large margin--x-large">{{ resume.role }}</h1>
-        <h2 class="font-size--x-large text--fade">
+        <h1 class="app-font--xx-large margin--x-large">{{ resume.role }}</h1>
+        <h2 class="app-font--x-large text--fade">
           {{ resume.fullName }}
         </h2>
       </div>
@@ -26,7 +26,7 @@
       <section
         fxLayout="column"
         fxLayoutAlign="start end"
-        class="resume-document__summary resume-document__section paragraph--medium"
+        class="resume-document__summary resume-document__section app-paragraph--medium"
       >
         <p class="resume-document__summary-content">
           {{ resume.summary }}
@@ -65,30 +65,41 @@
         <div class="resume-document__timeline"></div>
         <div class="resume-document__experience-details">
           <h1 class="resume-document__experience-role">{{ item.role }}</h1>
-          <div>
-            <span class="resume-document__text-quite">{{ item.company }}</span>
+          <div class="margin--large" *ngIf="item.beginDate && item.endDate">
             <span class="resume-document__date-tag"
               >{{ item.beginDate }} - {{ item.endDate }}</span
             >
           </div>
-          <ul class="resume-document__list">
-            <li
-              class="resume-document__list-item"
-              *ngFor="let qualification of item.qualifications"
-            >
-              {{ qualification }}
-            </li>
-          </ul>
-          <div *ngIf="item.achievements as achievements">
-            <h4 class="resume-document__text-quite">Key Achievements</h4>
+          <div class="" *ngFor="let company of item.companies">
+            <div>
+              <span class="resume-document__text-quite">{{
+                company.name
+              }}</span>
+              <span
+                class="resume-document__date-tag"
+                *ngIf="company.beginDate && company.endDate"
+                >{{ company.beginDate }} - {{ company.endDate }}</span
+              >
+            </div>
             <ul class="resume-document__list">
               <li
                 class="resume-document__list-item"
-                *ngFor="let achievement of achievements"
+                *ngFor="let qualification of company.qualifications"
               >
-                {{ achievement }}
+                {{ qualification }}
               </li>
             </ul>
+            <div *ngIf="company.achievements as achievements">
+              <h4 class="resume-document__text-quite">Key Achievements</h4>
+              <ul class="resume-document__list">
+                <li
+                  class="resume-document__list-item"
+                  *ngFor="let achievement of achievements"
+                >
+                  {{ achievement }}
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

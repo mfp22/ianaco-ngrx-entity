@@ -6,13 +6,19 @@ export interface ResumeSection<T> {
   items: T[];
 }
 
-export interface ExperienceItem {
-  role: string;
-  company: string;
-  beginDate: string;
-  endDate: string;
+export interface Company {
+  name: string;
   qualifications: string[];
   achievements?: string[];
+  beginDate?: string;
+  endDate?: string;
+}
+
+export interface ExperienceItem {
+  role: string;
+  companies: Company[];
+  beginDate?: string;
+  endDate?: string;
 }
 
 export interface ProjectItem {

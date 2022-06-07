@@ -1,7 +1,32 @@
 @use "colorography" as color;
 @use "shared" as shared;
+@use "typography" as type;
+@use "~node_modules/@angular/flex-layout/core/sass/_layout-bp.scss" as bp;
 
 .home {
+  &__title {
+    text-transform: uppercase;
+    color: map-get(color.$cloud-palette, 500);
+    @extend .app-font--giant;
+    margin-bottom: 0.25rem;
+    @include bp.layout-bp(lt-md) {
+      font-size: map-get(type.$app-font-sizes, xx-large);
+      line-height: 3.25rem;
+      font-weight: 300;
+    }
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    color: map-get(color.$cloud-palette, 500);
+    @extend .app-font--xx-large;
+    @include bp.layout-bp(lt-md) {
+      font-size: map-get(type.$app-font-sizes, x-large);
+      line-height: 2.25rem;
+      font-weight: 300;
+    }
+  }
+
   &__image-container {
     background: url(../../../../assets/images/backgrounds/gray-texture-image.jpg)
       no-repeat center center;

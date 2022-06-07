@@ -1,0 +1,45 @@
+<div class="gallery" class="layout-container" *ngIf="gallery">
+  <div class="layout-section--1x" fxFlexAlign="start">
+    <p class="app-paragraph--medium">
+      {{ gallery.description }}
+    </p>
+    <app-divider></app-divider>
+    <p class="app-paragraph--base">Color Palette</p>
+    <img
+      class="gallery__brand-color-image"
+      [src]="gallery.brandColorImage"
+      alt="image"
+    />
+  </div>
+  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="15px">
+    <div class="gallery__showcase-image-container">
+      <img
+        class="gallery__showcase-image"
+        [src]="selectedImage"
+        alt="showcase-image"
+      />
+    </div>
+    <div class="layout-section--2x" fxFlexAlign="start">
+      <div
+        class="gallery__preview-image-container"
+        fxLayout="column"
+        fxLayout.lt-md="row"
+        fxLayoutGap="15px"
+        fxLayoutAlign="start start"
+        fxLayoutAlign.lt-md="space-between center"
+      >
+        <div
+          class="gallery__preview-image-card"
+          *ngFor="let image of gallery.images"
+        >
+          <img
+            class="gallery__preview-image"
+            [src]="image"
+            alt="image"
+            (click)="onSelectImage(image)"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
