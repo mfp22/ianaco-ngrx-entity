@@ -1,45 +1,96 @@
-<div class="gallery" class="layout-container" *ngIf="gallery">
-  <div class="layout-section--1x" fxFlexAlign="start">
-    <p class="app-paragraph--medium">
-      {{ gallery.description }}
-    </p>
-    <app-divider></app-divider>
-    <p class="app-paragraph--base">Color Palette</p>
-    <img
-      class="gallery__brand-color-image"
-      [src]="gallery.brandColorImage"
-      alt="image"
-    />
-  </div>
-  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="15px">
-    <div class="gallery__showcase-image-container">
-      <img
-        class="gallery__showcase-image"
-        [src]="selectedImage"
-        alt="showcase-image"
-      />
-    </div>
-    <div class="layout-section--2x" fxFlexAlign="start">
-      <div
-        class="gallery__preview-image-container"
-        fxLayout="column"
-        fxLayout.lt-md="row"
-        fxLayoutGap="15px"
-        fxLayoutAlign="start start"
-        fxLayoutAlign.lt-md="space-between center"
-      >
-        <div
-          class="gallery__preview-image-card"
-          *ngFor="let image of gallery.images"
-        >
-          <img
-            class="gallery__preview-image"
-            [src]="image"
-            alt="image"
-            (click)="onSelectImage(image)"
-          />
+<div class="gallery" *ngIf="gallery">
+  <!-- detail sections -->
+  <div class="gallery__section" appInView (inView)="onInView('t0')">
+    <app-animate-content [animation]="'slideInLeft'" *ngIf="animationMap['t0']">
+      <div class="gallery__item-container">
+        <div class="gallery__item">
+          <div class="gallery__label">{{ gallery.role }}</div>
+          <p class="app-paragraph--small">
+            {{ gallery.description }}
+          </p>
+        </div>
+        <div class="gallery__item">
+          <div class="gallery__label">Color Palette</div>
+          <app-color-palette
+            [colorPalette]="gallery.branding.colorPalette"
+          ></app-color-palette>
+        </div>
+        <div class="gallery__item">
+          <div class="gallery__label">Typography</div>
+          <div
+            class="app-font--xxx-large app-font--gray-light"
+            [style.fontFamily]="gallery.branding.typography"
+          >
+            <span
+              *ngFor="let weight of ['300', '400']"
+              [style.fontWeight]="weight"
+              >Aa
+            </span>
+          </div>
         </div>
       </div>
-    </div>
+    </app-animate-content>
+  </div>
+  `<!-- images section -->
+  <div appInView (inView)="onInView('t1')">
+    <app-animate-content
+      [animation]="'slideInRight'"
+      *ngIf="animationMap['t1']"
+    >
+      <!-- section item -->
+      <div
+        class="gallery__showcase-image-container app-margin--large gallery__section"
+      >
+        <img
+          class="gallery__showcase-image"
+          [src]="gallery.primaryImage"
+          alt="showcase-image"
+        />
+      </div>
+      <app-divider [size]="'large'"></app-divider>
+      <!-- section item -->
+      <div
+        fxLayout="row"
+        fxLayout.lt-md="column"
+        fxLayoutAlign="center center"
+        fxLayoutGap="30px"
+        class="gallery__section"
+      >
+        <div fxFlex="1 0 0">
+          <div>
+            <div class="app-font--x-large app-font--gray-light">
+              Responsive Design.
+            </div>
+            <div class="app-font--medium app-font--gray-med">
+              Mobile Thinking.
+            </div>
+          </div>
+        </div>
+        <div fxFlex="1 0 0">
+          <div
+            class="gallery__mobile-container"
+            fxLayout="row"
+            fxLayoutAlign="center center"
+            fxLayoutGap="30px"
+          >
+            <div
+              class="gallery__mobile-image-container"
+              *ngFor="let image of gallery.mobileImages"
+            >
+              <img class="gallery__mobile-image" [src]="image" alt="image" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <app-divider [size]="'large'"></app-divider>
+      <!-- section item -->
+      <div class="gallery__showcase-image-container app-margin--large">
+        <img
+          class="gallery__showcase-image"
+          [src]="gallery.secondaryImage"
+          alt="showcase-image"
+        />
+      </div>
+    </app-animate-content>
   </div>
 </div>

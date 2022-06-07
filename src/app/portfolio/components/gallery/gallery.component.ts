@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input } from '@angular/core';
 // models
 import { Gallery } from '../../models';
 
@@ -7,18 +7,11 @@ import { Gallery } from '../../models';
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.scss'],
 })
-export class GalleryComponent implements OnChanges {
-  selectedImage: string | undefined;
+export class GalleryComponent {
+  animationMap: { [key: string]: boolean } = {};
   @Input() gallery: Gallery | undefined;
 
-  ngOnChanges(changes: SimpleChanges): void {
-    if (changes['gallery']) {
-      this.selectedImage = this.gallery?.images[0];
-      console.log('get', this.selectedImage, this.gallery);
-    }
-  }
-
-  onSelectImage(image: string) {
-    this.selectedImage = image;
+  onInView(event: string) {
+    this.animationMap[event] = true;
   }
 }

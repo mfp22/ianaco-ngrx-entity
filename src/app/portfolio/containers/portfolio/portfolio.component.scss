@@ -7,6 +7,6 @@
     @extend .app-font--xx-large;
     color: map-get(color.$bark-palette, 400);
     text-transform: uppercase;
-    @extend .margin--xx-large;
+    @extend .app-margin--xx-large;
   }
 }

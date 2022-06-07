@@ -4,11 +4,11 @@
 
 .about {
   &__detail {
-    @extend .app-font--xxx-large;
+    @extend .app-font--giant;
     color: map-get(color.$breeze-palette, 500);
     margin: 0;
     text-transform: uppercase;
-    border-bottom: 1px solid map-get(color.$bark-palette, 800);
+    border-top: 1px solid map-get(color.$bark-palette, 800);
     // cannot extend in media queries
     @include shared.layout-bp(lt-md) {
       font-size: map-get(type.$app-font-sizes, xx-large);
@@ -20,7 +20,7 @@
   &__section-title {
     @extend .app-font--xx-large;
     color: map-get(color.$bark-palette, 400);
-    @extend .margin--xx-large;
+    @extend .app-margin--xx-large;
     // cannot extend in media queries
     @include shared.layout-bp(lt-md) {
       font-size: map-get(type.$app-font-sizes, x-large);

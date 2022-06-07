@@ -22,7 +22,10 @@ export class HomeComponent implements OnInit {
   };
   resumeContentCard: ContentCard = {
     title: `Extensive collaboration with teams to deliver business results.`,
-    links: [{ label: 'Resume', value: 'resume' }],
+    links: [
+      { label: 'Resume', value: 'resume' },
+      { label: 'Portfolio', value: 'portfolio' },
+    ],
     image: 'assets/images/content/teamwork-image.jpg',
   };
   calloutDetails: DetailItem[] = [

@@ -30,7 +30,7 @@ export class AboutComponent implements OnInit {
     title: `Providing quality through experience and learning.`,
     links: [
       { label: 'Resume', value: 'resume' },
-      { label: 'Projects', value: 'projects' },
+      { label: 'Portfolio', value: 'portfolio' },
     ],
     image: 'assets/images/content/workarea-image.jpg',
   };

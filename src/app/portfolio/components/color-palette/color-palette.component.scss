@@ -1,0 +1,6 @@
+@use "colorography" as color;
+
+.color-palette {
+  height: 3.125rem;
+  border: 0.063rem solid map-get(color.$cloud-palette, 500);
+}

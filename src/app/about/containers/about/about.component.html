@@ -1,11 +1,17 @@
 <app-page-template class="about">
   <div content class="content" *ngIf="personal$ | async as personal">
     <app-page-section-template>
-      <div class="about__detail-container">
+      <div class="about__detail-container app-margin--xx-large">
         <div class="about__detail" *ngFor="let detail of calloutDetails">
           <app-animate-text [text]="detail.title"></app-animate-text>
         </div>
       </div>
+      <app-animate-content [animation]="'slideDownAppear'">
+        <div fxLayout="row" fxLayoutAlign="end center">
+          <app-arrow-icon [arrowType]="'down'"></app-arrow-icon>
+          <span class="app-font--large text--standout">Learn More</span>
+        </div>
+      </app-animate-content>
     </app-page-section-template>
     <app-page-section-template>
       <div appInView (inView)="onInView('t0')">

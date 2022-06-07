@@ -20,8 +20,8 @@
     @extend .app-font--xxx-large;
     margin-bottom: 0.25rem;
     @include bp.layout-bp(lt-md) {
-      font-size: map-get(type.$app-font-sizes, xx-large);
-      line-height: 3.25rem;
+      font-size: map-get(type.$app-font-sizes, x-large);
+      line-height: 2.25rem;
       font-weight: 300;
     }
   }

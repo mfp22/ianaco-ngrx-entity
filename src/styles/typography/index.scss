@@ -84,3 +84,9 @@ $app-font-sizes: (
   color: map-get(color.$breeze-palette, 500);
   margin-bottom: 0.5rem;
 }
+
+.app-paragraph--small {
+  @extend .app-font--small;
+  color: map-get(color.$breeze-palette, 500);
+  margin-bottom: 0.5rem;
+}

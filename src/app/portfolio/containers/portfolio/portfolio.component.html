@@ -4,13 +4,12 @@
       <app-page-section-header-template
         [title]="'Recent Designs'"
         [animate]="true"
+        *ngIf="animationMap['t0']"
       >
       </app-page-section-header-template>
     </div>
     <app-divider></app-divider>
-    <section appInView (inView)="onInView('t2')">
-      <app-gallery [gallery]="gallery"></app-gallery>
-    </section>
+    <app-gallery [gallery]="gallery"></app-gallery>
   </app-page-section-template>
   <app-page-section-template>
     <div appInView (inView)="onInView('t1')">

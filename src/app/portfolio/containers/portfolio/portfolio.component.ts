@@ -18,14 +18,18 @@ export class PortfolioComponent implements OnInit {
   animationMap: { [id: string]: boolean } = {};
   gallery: Gallery = {
     name: 'sports app',
+    role: 'Designer & Developer',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco',
-    brandColorImage: 'assets/images/design/sports-app/brand-color.jpg',
-    images: [
-      'assets/images/design/sports-app/sports-app-1.jpg',
-      'assets/images/design/sports-app/sports-app-1.jpg',
-      'assets/images/design/sports-app/sports-app-1.jpg',
-      'assets/images/design/sports-app/sports-app-1.jpg',
+    branding: {
+      colorPalette: ['#121212', '#FFC928', '#707070', '#FBFBFD'],
+      typography: 'Roboto',
+    },
+    primaryImage: 'assets/images/design/sports-app/sports-app-1.jpg',
+    secondaryImage: 'assets/images/design/sports-app/sports-app-2.jpg',
+    mobileImages: [
+      'assets/images/design/sports-app/sports-app-mobile-1.png',
+      'assets/images/design/sports-app/sports-app-mobile-2.png',
     ],
   };
 

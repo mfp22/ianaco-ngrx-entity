@@ -53,27 +53,28 @@
   width: 100%;
 }
 
-.margin--none {
+// margin
+.app-margin--none {
   margin: 0;
 }
 
-.margin--small {
+.app-margin--small {
   margin-bottom: 0.25rem;
 }
 
-.margin--medium {
+.app-margin--medium {
   margin-bottom: 0.5rem;
 }
 
-.margin--large {
+.app-margin--large {
   margin-bottom: 1rem;
 }
 
-.margin--x-large {
+.app-margin--x-large {
   margin-bottom: 2rem;
 }
 
-.margin--xx-large {
+.app-margin--xx-large {
   margin-bottom: 3rem;
 }
 
@@ -89,4 +90,12 @@
 // #[transforms]
 .text--uppercase {
   text-transform: uppercase;
+}
+
+.app-font--gray-light {
+  color: map-get(color.$breeze-palette, 200);
+}
+
+.app-font--gray-med {
+  color: map-get(color.$bark-palette, 400);
 }

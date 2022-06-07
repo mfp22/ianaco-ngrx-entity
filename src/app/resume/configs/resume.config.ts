@@ -76,7 +76,7 @@ export const resume: Resume = {
     items: [
       {
         role: 'Front End Software Engineer (Freelance)',
-        beginDate: '2020-02',
+        beginDate: '2022-02',
         endDate: 'Present',
         companies: [
           {
