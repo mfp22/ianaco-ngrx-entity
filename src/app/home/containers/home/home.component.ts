@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit {
     links: [
       { label: 'Resume', value: 'resume' },
       { label: 'Portfolio', value: 'portfolio' },
+      { label: 'Projects', value: 'projects' },
     ],
     image: 'assets/images/content/teamwork-image.jpg',
   };

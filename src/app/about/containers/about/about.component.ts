@@ -31,6 +31,7 @@ export class AboutComponent implements OnInit {
     links: [
       { label: 'Resume', value: 'resume' },
       { label: 'Portfolio', value: 'portfolio' },
+      { label: 'Projects', value: 'projects' },
     ],
     image: 'assets/images/content/workarea-image.jpg',
   };
