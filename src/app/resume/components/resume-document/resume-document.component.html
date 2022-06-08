@@ -7,7 +7,7 @@
         class="resume-document__section resume-document__contact"
         *ngIf="resume.contact as contact"
       >
-        <div class="margin--medium" *ngFor="let item of contact.items">
+        <div class="app-margin--medium" *ngFor="let item of contact.items">
           <div class="app-font--base text--fade">
             {{ item.label }}
           </div>
@@ -65,7 +65,7 @@
         <div class="resume-document__timeline"></div>
         <div class="resume-document__experience-details">
           <h1 class="resume-document__experience-role">{{ item.role }}</h1>
-          <div class="margin--large" *ngIf="item.beginDate && item.endDate">
+          <div class="app-margin--large" *ngIf="item.beginDate && item.endDate">
             <span class="resume-document__date-tag"
               >{{ item.beginDate }} - {{ item.endDate }}</span
             >

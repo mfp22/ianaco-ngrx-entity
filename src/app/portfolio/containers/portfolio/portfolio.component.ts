@@ -15,13 +15,13 @@ export class PortfolioComponent {
     name: 'sports app',
     role: 'Designer & Developer',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco',
+      'Designer & developer for sports application landing pages promoting NFT (Non-fungible Token) digital assets.',
     branding: {
       colorPalette: ['#121212', '#FFC928', '#707070', '#FBFBFD'],
       typography: 'Roboto',
     },
     primaryImage: 'assets/images/design/sports-app/sports-app-1.jpg',
-    secondaryImage: 'assets/images/design/sports-app/sports-app-2.jpg',
+    secondaryImage: 'assets/images/design/sports-app/sports-app-2.png',
     mobileImages: [
       'assets/images/design/sports-app/sports-app-mobile-1.png',
       'assets/images/design/sports-app/sports-app-mobile-2.png',

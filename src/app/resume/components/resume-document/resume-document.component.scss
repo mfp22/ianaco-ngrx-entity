@@ -1,8 +1,8 @@
 @use "colorography" as color;
 @use "shared";
 @use "typography" as type;
-$default-resume-color: map-get(color.$bark-palette, 100);
-$divider-color: map-get(color.$bark-palette, 800);
+$default-resume-color: map-get(color.$gray-dark-palette, 100);
+$divider-color: map-get(color.$gray-dark-palette, 800);
 
 .resume-document {
   padding: 1rem;
@@ -42,14 +42,14 @@ $divider-color: map-get(color.$bark-palette, 800);
 
   &__text-quite {
     @extend .app-font--medium;
-    color: map-get(color.$bark-palette, 400);
+    color: map-get(color.$gray-dark-palette, 200);
   }
 
   &__date-tag {
     margin: 0 0.5rem;
-    padding: 0.125rem 0.25rem;
-    border-radius: 0.25rem;
-    background-color: map-get(color.$bark-palette, 500);
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    background-color: map-get(color.$gray-dark-palette, 800);
     font-weight: 500;
   }
 
@@ -69,7 +69,7 @@ $divider-color: map-get(color.$bark-palette, 800);
       position: absolute;
       top: 0;
       left: -0.6rem;
-      background-color: map-get(color.$bark-palette, 900);
+      background-color: map-get(color.$gray-dark-palette, 900);
     }
   }
 
@@ -77,7 +77,7 @@ $divider-color: map-get(color.$bark-palette, 800);
     width: 6.25rem;
     height: 3.25rem;
     padding: 0.25rem;
-    background-color: map-get(color.$bark-palette, 500);
+    background-color: map-get(color.$gray-dark-palette, 800);
     display: inline-block;
     border-radius: 2rem;
     margin: 0.5rem;
@@ -96,10 +96,9 @@ $divider-color: map-get(color.$bark-palette, 800);
 drag-scroll {
   height: 13rem;
   width: 100%;
-  opacity: 0.7;
 }
 
 .mat-fab {
-  background-color: map-get(color.$bark-palette, 500);
-  color: map-get(color.$breeze-palette, 500);
+  background-color: map-get(color.$gray-dark-palette, 500);
+  color: map-get(color.$gray-light-palette, 500);
 }

@@ -9,7 +9,7 @@ $hamburger-types: (collapse) !default;
     position: relative;
 
     &-overlay {
-      background-color: darken(map-get(color.$bark-palette, 900), 3);
+      background-color: darken(map-get(color.$gray-dark-palette, 900), 3);
       position: fixed;
       top: 0;
       bottom: 0;
@@ -21,7 +21,7 @@ $hamburger-types: (collapse) !default;
     }
 
     &-overlay-label {
-      color: map-get(color.$breeze-palette, 500);
+      color: map-get(color.$gray-light-palette, 500);
       font-size: 3.5rem;
       text-transform: capitalize;
       position: relative;
@@ -37,16 +37,16 @@ $hamburger-types: (collapse) !default;
   }
 
   &__footer {
-    margin: 3rem 0;
+    margin: 5rem 0;
     padding: 1rem;
     text-align: center;
-    color: map-get(color.$bark-palette, 400);
+    color: map-get(color.$gray-dark-palette, 200);
     font-weight: 400;
   }
 }
 
 .mat-sidenav-container {
-  background-color: map-get(color.$bark-palette, 900);
+  background-color: map-get(color.$gray-dark-palette, 900);
   height: 100vh;
   position: relative;
 }
@@ -57,7 +57,7 @@ $hamburger-types: (collapse) !default;
 
 .mat-toolbar {
   background: transparent;
-  color: map-get(color.$breeze-palette, 500);
+  color: map-get(color.$gray-light-palette, 500);
 }
 
 .hamburger {

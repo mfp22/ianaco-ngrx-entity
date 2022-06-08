@@ -46,9 +46,9 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: map-get(color.$bark-palette, 900);
+  background-color: map-get(color.$gray-dark-palette, 900);
 }
 
 a:visited {
-  color: map-get(color.$breeze-palette, 400);
+  color: map-get(color.$gray-light-palette, 400);
 }

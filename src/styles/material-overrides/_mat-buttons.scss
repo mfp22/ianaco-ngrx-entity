@@ -3,15 +3,15 @@
 // button
 button {
   &.mat-stroked-button {
-    color: map-get(color.$cloud-palette, 500);
-    border-color: map-get(color.$bark-palette, 900);
+    color: map-get(color.$white-palette, 500);
+    border-color: map-get(color.$gray-dark-palette, 900);
     padding: 1rem 2rem;
     border-radius: 2rem;
     font-size: 1rem;
 
     &:not(.mat-button-disabled) {
-      color: map-get(color.$cloud-palette, 500);
-      background-color: map-get(color.$bark-palette, 900);
+      color: map-get(color.$white-palette, 500);
+      background-color: map-get(color.$gray-dark-palette, 900);
     }
   }
 }

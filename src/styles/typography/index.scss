@@ -63,30 +63,30 @@ $app-font-sizes: (
 // #[paragraphs]
 .app-paragraph--x-large {
   @extend .app-font--x-large;
-  color: map-get(color.$breeze-palette, 500);
+  color: map-get(color.$gray-light-palette, 500);
   margin-bottom: 0.5rem;
 }
 
 .app-paragraph--large {
   @extend .app-font--large;
-  color: map-get(color.$breeze-palette, 500);
+  color: map-get(color.$gray-light-palette, 500);
   margin-bottom: 0.5rem;
 }
 
 .app-paragraph--medium {
   @extend .app-font--medium;
-  color: map-get(color.$breeze-palette, 500);
+  color: map-get(color.$gray-light-palette, 500);
   margin-bottom: 0.5rem;
 }
 
 .app-paragraph--base {
   @extend .app-font--base;
-  color: map-get(color.$breeze-palette, 500);
+  color: map-get(color.$gray-light-palette, 500);
   margin-bottom: 0.5rem;
 }
 
 .app-paragraph--small {
   @extend .app-font--small;
-  color: map-get(color.$breeze-palette, 500);
+  color: map-get(color.$gray-light-palette, 500);
   margin-bottom: 0.5rem;
 }

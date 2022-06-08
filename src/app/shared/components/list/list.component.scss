@@ -1,5 +1,5 @@
 @use "colorography" as color;
-$list-default-color: map-get(color.$breeze-palette, 500);
+$list-default-color: map-get(color.$gray-light-palette, 500);
 
 .list {
   &__horizontal {
@@ -15,7 +15,7 @@ $list-default-color: map-get(color.$breeze-palette, 500);
     color: $list-default-color;
 
     &--active {
-      border-bottom: 0.063rem solid map-get(color.$bark-palette, 500);
+      border-bottom: 0.063rem solid map-get(color.$gray-dark-palette, 500);
     }
   }
 }

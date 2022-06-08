@@ -12,7 +12,7 @@ export const projects: Projects = [
       {
         label: 'design',
         value:
-          'https://xd.adobe.com/view/13fab039-c1c2-4297-bd21-5488a9ebd219-46a9/grid/',
+          'https://xd.adobe.com/view/5061fc71-bf7c-432c-997e-c0c111648317-0532/grid',
       },
       {
         label: 'code',

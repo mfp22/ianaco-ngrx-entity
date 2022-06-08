@@ -9,7 +9,7 @@
   }
 
   &__title {
-    color: map-get(color.$bark-palette, 400);
+    color: map-get(color.$gray-dark-palette, 200);
     @extend .app-font--medium;
     margin-bottom: 0.5rem;
   }
@@ -20,6 +20,6 @@
 }
 
 .app-link-divider {
-  color: map-get(color.$breeze-palette, 400);
+  color: map-get(color.$gray-dark-palette, 200);
   display: inline-block;
 }

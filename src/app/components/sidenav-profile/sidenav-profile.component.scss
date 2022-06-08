@@ -8,7 +8,7 @@
     margin: auto;
     display: block;
     border-radius: 50%;
-    border: 8px solid map-get(color.$bark-palette, 500);
+    border: 8px solid map-get(color.$gray-dark-palette, 500);
     height: 7.5rem;
     width: 7.5rem;
     box-sizing: border-box;
@@ -19,10 +19,10 @@
   }
 
   &__title {
-    color: map-get(color.$cloud-palette, 500);
+    color: map-get(color.$white-palette, 500);
   }
 
   &__subtitle {
-    color: map-get(color.$bark-palette, 300);
+    color: map-get(color.$gray-dark-palette, 300);
   }
 }

@@ -4,7 +4,7 @@
     <app-animate-content [animation]="'slideInLeft'" *ngIf="animationMap['t0']">
       <div class="gallery__item-container">
         <div class="gallery__item">
-          <div class="gallery__label">{{ gallery.role }}</div>
+          <div class="gallery__label">Details</div>
           <p class="app-paragraph--small">
             {{ gallery.description }}
           </p>
@@ -31,6 +31,7 @@
       </div>
     </app-animate-content>
   </div>
+  <app-divider [size]="'medium'"></app-divider>
   `<!-- images section -->
   <div appInView (inView)="onInView('t1')">
     <app-animate-content
@@ -38,16 +39,14 @@
       *ngIf="animationMap['t1']"
     >
       <!-- section item -->
-      <div
-        class="gallery__showcase-image-container app-margin--large gallery__section"
-      >
+      <div class="gallery__showcase-image-container gallery__section">
         <img
           class="gallery__showcase-image"
           [src]="gallery.primaryImage"
           alt="showcase-image"
         />
       </div>
-      <app-divider [size]="'large'"></app-divider>
+      <app-divider [size]="'xlarge'"></app-divider>
       <!-- section item -->
       <div
         fxLayout="row"
@@ -57,7 +56,7 @@
         class="gallery__section"
       >
         <div fxFlex="1 0 0">
-          <div>
+          <div class="text-align--right">
             <div class="app-font--x-large app-font--gray-light">
               Responsive Design.
             </div>
@@ -66,7 +65,7 @@
             </div>
           </div>
         </div>
-        <div fxFlex="1 0 0">
+        <div fxFlex="2 0 0">
           <div
             class="gallery__mobile-container"
             fxLayout="row"
@@ -82,14 +81,41 @@
           </div>
         </div>
       </div>
-      <app-divider [size]="'large'"></app-divider>
+      <app-divider [size]="'xlarge'"></app-divider>
       <!-- section item -->
-      <div class="gallery__showcase-image-container app-margin--large">
-        <img
-          class="gallery__showcase-image"
-          [src]="gallery.secondaryImage"
-          alt="showcase-image"
-        />
+      <div
+        fxLayout="row"
+        fxLayout.lt-md="column-reverse"
+        fxLayoutAlign="center center"
+        fxLayoutGap="30px"
+        class="gallery__section"
+      >
+        <div fxFlex="2 0 0">
+          <div
+            class="gallery__mobile-container"
+            fxLayout="row"
+            fxLayoutAlign="center center"
+            fxLayoutGap="30px"
+          >
+            <div class="gallery__showcase-image-container app-margin--large">
+              <img
+                class="gallery__showcase-image"
+                [src]="gallery.secondaryImage"
+                alt="showcase-image"
+              />
+            </div>
+          </div>
+        </div>
+        <div fxFlex="1 0 0">
+          <div>
+            <div class="app-font--x-large app-font--gray-light">
+              Optimal Experience.
+            </div>
+            <div class="app-font--medium app-font--gray-med">
+              Engaging Users.
+            </div>
+          </div>
+        </div>
       </div>
     </app-animate-content>
   </div>

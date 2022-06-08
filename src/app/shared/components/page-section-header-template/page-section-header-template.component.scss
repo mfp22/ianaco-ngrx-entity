@@ -3,7 +3,7 @@
 @use "~node_modules/@angular/flex-layout/core/sass/_layout-bp.scss" as bp;
 
 .page-section-header-template {
-  color: map-get(color.$cloud-palette, 500);
+  color: map-get(color.$white-palette, 500);
   text-align: left;
 
   &__supertitle {

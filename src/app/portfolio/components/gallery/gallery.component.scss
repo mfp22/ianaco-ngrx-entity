@@ -11,16 +11,11 @@
     }
   }
 
-  &__section {
-    border-bottom: 1px solid map-get(color.$bark-palette, 500);
-    padding-bottom: 2rem;
-  }
-
   &__label {
     @extend .app-font--base;
     @extend .app-margin--large;
-    color: map-get(color.$windy-palette, 200);
-    border-bottom: 1px solid map-get(color.$bark-palette, 500);
+    color: map-get(color.$gray-dark-palette, 200);
+    border-bottom: 1px solid map-get(color.$gray-dark-palette, 500);
     padding-bottom: 0.25rem;
   }
 

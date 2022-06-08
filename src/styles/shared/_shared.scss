@@ -40,11 +40,10 @@
 .app-link {
   text-decoration: underline;
   position: relative;
-  color: map-get(color.$breeze-palette, 500);
+  color: map-get(color.$gray-light-palette, 500);
   margin: 0 0.25rem;
   font-weight: 400;
   cursor: pointer;
-  text-transform: capitalize;
   display: inline-block;
 }
 
@@ -80,11 +79,11 @@
 
 // #[color]
 .text--fade {
-  color: map-get(color.$bark-palette, 400);
+  color: map-get(color.$gray-dark-palette, 200);
 }
 
 .text--standout {
-  color: map-get(color.$breeze-palette, 500);
+  color: map-get(color.$gray-light-palette, 500);
 }
 
 // #[transforms]
@@ -93,9 +92,9 @@
 }
 
 .app-font--gray-light {
-  color: map-get(color.$breeze-palette, 200);
+  color: map-get(color.$gray-light-palette, 200);
 }
 
 .app-font--gray-med {
-  color: map-get(color.$bark-palette, 400);
+  color: map-get(color.$gray-dark-palette, 400);
 }

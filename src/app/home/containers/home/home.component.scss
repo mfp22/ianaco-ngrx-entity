@@ -6,7 +6,7 @@
 .home {
   &__title {
     text-transform: uppercase;
-    color: map-get(color.$cloud-palette, 500);
+    color: map-get(color.$white-palette, 500);
     @extend .app-font--giant;
     margin-bottom: 0.25rem;
     @include bp.layout-bp(lt-md) {
@@ -18,7 +18,7 @@
 
   &__subtitle {
     text-transform: uppercase;
-    color: map-get(color.$cloud-palette, 500);
+    color: map-get(color.$white-palette, 500);
     @extend .app-font--xx-large;
     @include bp.layout-bp(lt-md) {
       font-size: map-get(type.$app-font-sizes, x-large);

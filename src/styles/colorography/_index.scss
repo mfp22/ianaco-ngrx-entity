@@ -1,4 +1,4 @@
 @forward "palettes";
 
 @use "palettes" as palettes;
-$color-contrast: map-get(palettes.$windy-palette, 500);
+$color-contrast: map-get(palettes.$gray-dark-palette, 300);
