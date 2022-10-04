@@ -5,9 +5,9 @@ export const portfolio: Portfolio = {
   gallery: [
     {
       name: 'sports app',
-      role: 'Designer & Developer',
+      role: 'Designer & Front End Developer',
       description:
-        'Designer & developer for sports application landing pages promoting NFT (Non-fungible Token) digital assets.',
+        'Designer & Front End Developer for sports application landing page promoting NFT (Non-fungible Token) digital assets.',
       branding: {
         colorPalette: ['#121212', '#FFC928', '#707070', '#FBFBFD'],
         typography: 'Roboto',
@@ -21,10 +21,10 @@ export const portfolio: Portfolio = {
       ],
     },
     {
-      name: 'yorker sports',
-      role: 'Designer & Developer',
+      name: 'the yorker sports',
+      role: 'Co-Founder, Designer, & Front End Developer',
       description:
-        'Designer & developer for sports application landing pages promoting NFT (Non-fungible Token) digital assets.',
+        'Co-Founder, Designer, & Front End developer. Platform for providing sports news, fantasy tournaments and digital assets.',
       branding: {
         colorPalette: ['#061121', '#1099FA', '#707070', '#FBFBFD'],
         typography: 'Roboto',
@@ -40,9 +40,9 @@ export const portfolio: Portfolio = {
     },
     {
       name: 'investment app',
-      role: 'Designer & Developer',
+      role: 'Designer & Front End Developer',
       description:
-        'Designer & developer for my private investment application. Allows for strategy development for use with automated crypto trading.',
+        'Designer & Front End Developer for personal investment application. Provides automated crypto trading, crypto strategy back testing, and stock investment calculator. (This is a private application for personal use.)',
       branding: {
         colorPalette: ['#050505', '#061121', '#707070', '#ffffff'],
         typography: 'Roboto',
