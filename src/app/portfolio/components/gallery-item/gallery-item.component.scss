@@ -2,7 +2,7 @@
 @use "typography" as type;
 @use "shared";
 
-.gallery {
+.gallery-item {
   &__item {
     &-container {
       display: grid;

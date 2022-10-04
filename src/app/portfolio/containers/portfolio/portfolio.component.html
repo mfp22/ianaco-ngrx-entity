@@ -1,14 +1,27 @@
-<app-page-template class="portfolio">
+<app-page-template class="portfolio" *ngIf="portfolio">
+  <!--gallery preview-->
   <app-page-section-template>
     <div appInView (inView)="onInView('t0')">
       <app-page-section-header-template
-        [title]="'Recent Designs'"
+        [title]="'Design & Build'"
         [animate]="true"
         *ngIf="animationMap['t0']"
       >
       </app-page-section-header-template>
     </div>
     <app-divider></app-divider>
-    <app-gallery [gallery]="gallery"></app-gallery>
+    <app-animate-content [animation]="'slideInRight'">
+      <app-gallery-preview
+        [gallery]="portfolio.gallery"
+        (handleView)="onView($event)"
+      ></app-gallery-preview>
+    </app-animate-content>
+  </app-page-section-template>
+  <!--gallery-->
+  <app-page-section-template>
+    <app-gallery-item
+      [galleryItem]="galleryItem"
+      *ngIf="galleryItem"
+    ></app-gallery-item>
   </app-page-section-template>
 </app-page-template>

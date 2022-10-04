@@ -1,16 +1,9 @@
-// models
-import { DetailItem } from 'src/app/shared/models';
-
-export interface Portfolio {
-  projects: DetailItem[];
-}
-
 export interface Branding {
   colorPalette: string[];
   typography: string;
 }
 
-export type Gallery = {
+export type GalleryItem = {
   name: string;
   role: string;
   description: string;
@@ -19,3 +12,7 @@ export type Gallery = {
   secondaryImage: string;
   mobileImages: string[];
 };
+
+export interface Portfolio {
+  gallery: GalleryItem[];
+}

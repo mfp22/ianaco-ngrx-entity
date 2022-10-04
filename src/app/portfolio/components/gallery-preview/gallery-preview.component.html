@@ -1,0 +1,34 @@
+<div
+  class="gallery-preview"
+  *ngIf="gallery"
+  fxLayout="column"
+  fxLayoutAlign="end"
+>
+  <drag-scroll [scrollbar-hidden]="true" #nav>
+    <div
+      class="gallery-preview__card"
+      drag-scroll-item
+      [ngClass]="{ active: galleryItem === activeGalleryItem }"
+      *ngFor="let galleryItem of gallery"
+    >
+      <figure
+        class="gallery-preview__figure"
+        [ngStyle]="{
+          'background-image': 'url(' + galleryItem.primaryImage + ')'
+        }"
+      ></figure>
+      <figure class="gallery-preview__overlay">
+        <h4 class="gallery-preview__title">{{ galleryItem.name }}</h4>
+      </figure>
+    </div>
+  </drag-scroll>
+</div>
+<app-divider [size]="'large'"></app-divider>
+<div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="30px">
+  <button mat-fab (click)="moveLeft()">
+    <img class="icon--x-small" src="assets/icons/chevron-left.svg" />
+  </button>
+  <button mat-fab (click)="moveRight()">
+    <img class="icon--x-small" src="assets/icons/chevron-right.svg" />
+  </button>
+</div>
