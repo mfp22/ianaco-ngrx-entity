@@ -8,6 +8,7 @@ export type GalleryItem = {
   role: string;
   description: string;
   branding: Branding;
+  previewImage: string;
   primaryImage: string;
   secondaryImage: string;
   mobileImages: string[];

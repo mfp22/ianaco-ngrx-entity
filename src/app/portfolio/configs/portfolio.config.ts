@@ -12,6 +12,7 @@ export const portfolio: Portfolio = {
         colorPalette: ['#121212', '#FFC928', '#707070', '#FBFBFD'],
         typography: 'Roboto',
       },
+      previewImage: 'assets/images/design/sports-app/sports-app-preview.jpg',
       primaryImage: 'assets/images/design/sports-app/sports-app-1.jpg',
       secondaryImage: 'assets/images/design/sports-app/sports-app-2.png',
       mobileImages: [
@@ -20,7 +21,7 @@ export const portfolio: Portfolio = {
       ],
     },
     {
-      name: 'the yorker sports',
+      name: 'yorker sports',
       role: 'Designer & Developer',
       description:
         'Designer & developer for sports application landing pages promoting NFT (Non-fungible Token) digital assets.',
@@ -28,8 +29,10 @@ export const portfolio: Portfolio = {
         colorPalette: ['#061121', '#1099FA', '#707070', '#FBFBFD'],
         typography: 'Roboto',
       },
-      primaryImage: 'assets/images/design/sports-app/sports-app-1.jpg',
-      secondaryImage: 'assets/images/design/sports-app/sports-app-2.png',
+      previewImage: 'assets/images/design/yorker-app/yorker-app-preview.jpg',
+      primaryImage: 'assets/images/design/yorker-app/yorker-app-desktop-1.png',
+      secondaryImage:
+        'assets/images/design/yorker-app/yorker-app-desktop-2.png',
       mobileImages: [
         'assets/images/design/sports-app/sports-app-mobile-1.png',
         'assets/images/design/sports-app/sports-app-mobile-2.png',
@@ -39,16 +42,20 @@ export const portfolio: Portfolio = {
       name: 'investment app',
       role: 'Designer & Developer',
       description:
-        'Designer & developer for sports application landing pages promoting NFT (Non-fungible Token) digital assets.',
+        'Designer & developer for my private investment application. Allows for strategy development for use with automated crypto trading.',
       branding: {
-        colorPalette: ['#050505', '#e7e154', '#707070', '#ffffff'],
+        colorPalette: ['#050505', '#061121', '#707070', '#ffffff'],
         typography: 'Roboto',
       },
-      primaryImage: 'assets/images/design/sports-app/sports-app-1.jpg',
-      secondaryImage: 'assets/images/design/sports-app/sports-app-2.png',
+      previewImage:
+        'assets/images/design/investment-app/investment-app-preview.jpg',
+      primaryImage:
+        'assets/images/design/investment-app/investment-app-desktop-1.png',
+      secondaryImage:
+        'assets/images/design/investment-app/investment-app-desktop-2.png',
       mobileImages: [
-        'assets/images/design/sports-app/sports-app-mobile-1.png',
-        'assets/images/design/sports-app/sports-app-mobile-2.png',
+        'assets/images/design/investment-app/investment-app-mobile-1.png',
+        'assets/images/design/investment-app/investment-app-mobile-2.png',
       ],
     },
   ],
