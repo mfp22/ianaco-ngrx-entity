@@ -37,8 +37,8 @@ $hamburger-types: (collapse) !default;
 
 // Base Hamburger (We need this)
 // ==================================================
-@import "~hamburgers/_sass/hamburgers/base";
+@import "hamburgers/_sass/hamburgers/base";
 
 // Hamburger types
 // ==================================================
-@import "~hamburgers/_sass/hamburgers/types/collapse";
+@import "hamburgers/_sass/hamburgers/types/collapse";

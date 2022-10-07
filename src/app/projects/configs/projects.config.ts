@@ -23,7 +23,7 @@ export const projects: Projects = [
   },
   {
     title: 'About Me',
-    name: 'about-me',
+    name: 'personal-website',
     content: 'My personal website I designed and built using angular/ngrx.',
     links: [
       {

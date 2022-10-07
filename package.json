@@ -1,5 +1,5 @@
 {
-  "name": "about-me",
+  "name": "personal-website",
   "version": "0.0.0",
   "scripts": {
     "deploy": "git add --all && git commit -m 'auto-update' && git push -u origin main",
