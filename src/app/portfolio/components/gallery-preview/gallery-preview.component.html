@@ -9,7 +9,8 @@
       class="gallery-preview__card"
       drag-scroll-item
       [ngClass]="{ active: galleryItem === activeGalleryItem }"
-      *ngFor="let galleryItem of gallery"
+      (click)="onSelect(i)"
+      *ngFor="let galleryItem of gallery; index as i"
     >
       <figure
         class="gallery-preview__figure"

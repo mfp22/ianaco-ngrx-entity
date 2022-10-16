@@ -34,8 +34,8 @@ export const portfolio: Portfolio = {
       secondaryImage:
         'assets/images/design/yorker-app/yorker-app-desktop-2.png',
       mobileImages: [
-        'assets/images/design/sports-app/sports-app-mobile-1.png',
-        'assets/images/design/sports-app/sports-app-mobile-2.png',
+        'assets/images/design/yorker-app/yorker-app-mobile-1.png',
+        'assets/images/design/yorker-app/yorker-app-mobile-2.png',
       ],
     },
     {

@@ -26,6 +26,11 @@ export class GalleryPreviewComponent implements OnInit {
     this.setActiveGalleryItem();
   }
 
+  onSelect(index: number) {
+    this.activeIndex = index;
+    this.setActiveGalleryItem();
+  }
+
   moveLeft() {
     this.ds?.moveLeft();
     if (this.activeIndex > 0) {
