@@ -67,6 +67,9 @@ export const resume: Resume = {
         label: 'Jasmine',
       },
       {
+        label: 'Basic SEO',
+      },
+      {
         label: 'Adobe XD',
       },
     ],
@@ -191,8 +194,16 @@ export const resume: Resume = {
     title: 'Certifications',
     items: [
       {
+        date: '2022',
+        name: 'Google SEO Fundamentals (Coursea By UC Davis)',
+      },
+      {
         date: '2020',
-        name: 'Ultimate Angular Courses',
+        name: 'HTML5 (Coursea By University Michigan)',
+      },
+      {
+        date: '2020',
+        name: 'Ultimate Courses (Angular, RxJS, NGRX, Typescript)',
       },
       {
         date: '2014',
@@ -228,6 +239,18 @@ export const resume: Resume = {
     {
       label: 'Ultimate Angular Typescript Masterclass',
       value: `${imageBasePath}/certifications/typescript-masterclass-cert.jpg`,
+    },
+    {
+      label: 'HTML5 - Coursea By University Of Michigan',
+      value: `${imageBasePath}/certifications/google-seo-fundamentals-cert.jpg`,
+    },
+    {
+      label: 'Introduction To Google SEO - Coursea By UC Davis',
+      value: `${imageBasePath}/certifications/introduction-to-google-seo-cert.jpg`,
+    },
+    {
+      label: 'Google SEO Fundamentals - Coursea By UC Davis',
+      value: `${imageBasePath}/certifications/google-seo-fundamentals-cert.jpg`,
     },
     {
       label: 'Oracle Associate Programmer',
