@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatLegacyListModule as MatListModule } from '@angular/material/legacy-list';
+import { MatListModule } from '@angular/material/list';
 // components
 import * as fromComponents from './components';
 // pipes
@@ -16,7 +15,7 @@ import * as fromDirectives from './directives';
     ...fromPipes.pipes,
     ...fromDirectives.directives,
   ],
-  imports: [CommonModule, RouterModule, FlexLayoutModule, MatListModule],
+  imports: [CommonModule, RouterModule, MatListModule],
   exports: [
     ...fromComponents.components,
     ...fromPipes.pipes,

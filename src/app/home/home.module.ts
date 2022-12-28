@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatDividerModule } from '@angular/material/divider';
-import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
+import { MatButtonModule } from '@angular/material/button';
 // features
 import { HomeRoutingModule } from './home-routing.module';
 import { SharedModule } from '../shared/shared.module';
@@ -13,7 +12,6 @@ import * as fromContainers from './containers';
   declarations: [...fromContainers.containers],
   imports: [
     CommonModule,
-    FlexLayoutModule,
     MatDividerModule,
     MatButtonModule,
     HomeRoutingModule,

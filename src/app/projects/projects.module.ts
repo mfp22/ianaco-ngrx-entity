@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FlexLayoutModule } from '@angular/flex-layout';
 // ngrx
 import { StoreModule } from '@ngrx/store';
 import { reducers, featureKey } from './store';
@@ -15,7 +14,6 @@ import * as fromContainers from './containers';
   imports: [
     CommonModule,
     StoreModule.forFeature(featureKey, reducers),
-    FlexLayoutModule,
     ProjectsRoutingModule,
     SharedModule,
   ],

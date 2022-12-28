@@ -10,7 +10,6 @@ import { Router } from '@angular/router';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { AnimationEvent } from '@angular/animations';
 import { MatSidenav, MatSidenavContent } from '@angular/material/sidenav';
-import { DEFAULT_BREAKPOINTS } from '@angular/flex-layout';
 import { Observable, timer } from 'rxjs';
 import { map, tap, delay } from 'rxjs/operators';
 // ngrx
@@ -22,6 +21,9 @@ import { Item } from './shared/models';
 // transitions
 import { pageTransitionAnimation } from './shared/animations';
 import { Personal } from './profile/models';
+// configs
+// configs
+import { DEFAULT_BREAKPOINTS } from './configs';
 
 @Component({
   selector: 'app-root',

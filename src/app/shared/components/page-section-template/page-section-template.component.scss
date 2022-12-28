@@ -1,7 +1,7 @@
 @use "colorography" as color;
 @use "shared" as shared;
 @use "typography" as type;
-@use "node_modules/@angular/flex-layout/core/sass/_layout-bp.scss" as bp;
+@use "layout" as bp;
 
 :host {
   display: block;

@@ -1,6 +1,7 @@
 @use "colorography" as color;
-@use "shared" as shared;
+@use "layout" as layout;
 @use "typography" as type;
+@use "shared";
 
 .about {
   &__detail {
@@ -10,7 +11,7 @@
     text-transform: uppercase;
     border-top: 1px solid map-get(color.$gray-dark-palette, 800);
     // cannot extend in media queries
-    @include shared.layout-bp(lt-md) {
+    @include layout.layout-bp(lt-md) {
       font-size: map-get(type.$app-font-sizes, xx-large);
       line-height: 3.25rem;
       font-weight: 300;
@@ -22,7 +23,7 @@
     color: map-get(color.$gray-dark-palette, 400);
     @extend .app-margin--xx-large;
     // cannot extend in media queries
-    @include shared.layout-bp(lt-md) {
+    @include layout.layout-bp(lt-md) {
       font-size: map-get(type.$app-font-sizes, x-large);
       line-height: 2.375rem;
       font-weight: 300;

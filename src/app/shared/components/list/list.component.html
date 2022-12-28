@@ -1,9 +1,4 @@
-<mat-list
-  class="list"
-  [fxLayout]="horizontal ? 'row' : 'column'"
-  role="list"
-  *ngIf="items"
->
+<mat-list class="list" role="list" *ngIf="items">
   <mat-list-item
     class="list__item"
     (click)="onClick(item)"

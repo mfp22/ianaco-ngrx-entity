@@ -1,6 +1,6 @@
 @use "colorography" as color;
 @use "typography" as type;
-@use "node_modules/@angular/flex-layout/core/sass/_layout-bp.scss" as bp;
+@use "layout" as bp;
 
 .page-section-header-template {
   color: map-get(color.$white-palette, 500);

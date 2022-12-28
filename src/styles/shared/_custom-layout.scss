@@ -1,5 +1,4 @@
-@use "node_modules/@angular/flex-layout/core/sass/_layout-bp.scss" as bp;
-@forward "node_modules/@angular/flex-layout/core/sass/_layout-bp.scss";
+@use "layout" as bp;
 
 .layout {
   display: flex;
