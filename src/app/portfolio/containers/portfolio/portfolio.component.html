@@ -1,5 +1,5 @@
 <app-page-template class="portfolio" *ngIf="portfolio">
-  <!--gallery preview-->
+  <!--#gallery preview section-->
   <app-page-section-template>
     <div appInView (inView)="onInView('t0')">
       <app-page-section-header-template
@@ -17,7 +17,7 @@
       ></app-gallery-preview>
     </app-animate-content>
   </app-page-section-template>
-  <!--gallery-->
+  <!--# section-->
   <app-page-section-template>
     <app-gallery-item
       [galleryItem]="galleryItem"

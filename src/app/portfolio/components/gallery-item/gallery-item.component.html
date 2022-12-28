@@ -1,8 +1,9 @@
 <div class="gallery-item" *ngIf="galleryItem">
-  <!-- detail sections -->
+  <!--#details section -->
   <div class="gallery-item__section" appInView>
     <app-animate-content [animation]="'slideInLeft'">
-      <div class="gallery-item__item-container">
+      <!--#details container-->
+      <div class="gallery-item__details-container">
         <div class="gallery-item__item">
           <div class="gallery-item__label">Details</div>
           <p class="app-paragraph--small">
@@ -32,84 +33,58 @@
     </app-animate-content>
   </div>
   <app-divider [size]="'medium'"></app-divider>
-  `<!-- images section -->
+  <!--#content section -->
   <div appInView>
     <app-animate-content [animation]="'slideInRight'">
-      <!-- section item -->
-      <div class="gallery-item__showcase-image-container gallery-item__section">
+      <!--#showcase image item-->
+      <figure class="gallery-item__showcase-figure">
         <img
           class="gallery-item__showcase-image"
           [src]="galleryItem.primaryImage"
           alt="showcase-image"
         />
-      </div>
+      </figure>
       <app-divider [size]="'xlarge'"></app-divider>
-      <!-- section item -->
-      <div
-        fxLayout="row"
-        fxLayout.lt-md="column"
-        fxLayoutAlign="center center"
-        fxLayoutGap="30px"
-        class="gallery-item__section"
-      >
-        <div fxFlex="1 0 0">
-          <div class="text-align--right">
-            <div class="app-font--x-large app-font--gray-light">
-              Responsive Design.
-            </div>
-            <div class="app-font--medium app-font--gray-med">
-              Mobile Thinking.
+      <!--#mobile item-->
+      <div class="gallery-item__section--center">
+        <div class="layout-container">
+          <div class="layout-section--1x">
+            <div class="text-align--right">
+              <div class="app-font--x-large app-font--gray-light">
+                Responsive Design.
+              </div>
+              <div class="app-font--medium app-font--gray-med">
+                Mobile Thinking.
+              </div>
             </div>
           </div>
-        </div>
-        <div fxFlex="2 0 0">
-          <div
-            class="gallery-item__mobile-container"
-            fxLayout="row"
-            fxLayoutAlign="center center"
-            fxLayoutGap="30px"
-          >
-            <div
-              class="gallery-item__mobile-image-container"
-              *ngFor="let image of galleryItem.mobileImages"
-            >
-              <img
-                class="gallery-item__mobile-image"
-                [src]="image"
-                alt="image"
-              />
+          <div class="layout-section--2x">
+            <div class="gallery-item__mobile-container">
+              <div
+                class="gallery-item__mobile-image-container"
+                *ngFor="let image of galleryItem.mobileImages"
+              >
+                <img
+                  class="gallery-item__mobile-image"
+                  [src]="image"
+                  alt="image"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
       <app-divider [size]="'xlarge'"></app-divider>
-      <!-- section item -->
-      <div
-        fxLayout="row"
-        fxLayout.lt-md="column-reverse"
-        fxLayoutAlign="center center"
-        fxLayoutGap="30px"
-        class="gallery-item__section"
-      >
-        <div fxFlex="2 0 0">
-          <div
-            class="gallery-item__mobile-container"
-            fxLayout="row"
-            fxLayoutAlign="center center"
-            fxLayoutGap="30px"
-          >
-            <div
-              class="gallery-item__showcase-image-container app-margin--large"
-            >
-              <img
-                class="gallery-item__showcase-image"
-                [src]="galleryItem.secondaryImage"
-                alt="showcase-image"
-              />
-            </div>
-          </div>
+      <!--#desktop item -->
+      <div class="gallery-item__desktop-item">
+        <div class="layout-section--2x">
+          <img
+            class="gallery-item__showcase-image"
+            [src]="galleryItem.secondaryImage"
+            alt="showcase-image"
+          />
         </div>
-        <div fxFlex="1 0 0">
+        <div class="layout-section--1x">
           <div>
             <div class="app-font--x-large app-font--gray-light">
               Optimal Experience.

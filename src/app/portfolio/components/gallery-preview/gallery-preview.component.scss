@@ -1,6 +1,10 @@
 @use "colorography" as color;
 
 .gallery-preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
   &__card {
     width: 200px;
     height: 200px;
@@ -44,13 +48,21 @@
     margin: 0;
     transition: all 500ms ease-in-out;
   }
+
+  &__controls-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+  }
 }
 
 drag-scroll {
   max-height: 15rem;
 }
 
-.mat-fab {
+.mdc-fab {
   background-color: map-get(color.$gray-dark-palette, 500);
   color: map-get(color.$gray-light-palette, 500);
 }

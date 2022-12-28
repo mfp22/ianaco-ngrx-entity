@@ -1,9 +1,4 @@
-<div
-  class="gallery-preview"
-  *ngIf="gallery"
-  fxLayout="column"
-  fxLayoutAlign="end"
->
+<div class="gallery-preview" *ngIf="gallery">
   <drag-scroll [scrollbar-hidden]="true" #nav>
     <div
       class="gallery-preview__card"
@@ -25,11 +20,19 @@
   </drag-scroll>
 </div>
 <app-divider [size]="'large'"></app-divider>
-<div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="30px">
+<div class="gallery-preview__controls-container">
   <button mat-fab (click)="moveLeft()">
-    <img class="icon--x-small" src="assets/icons/chevron-left.svg" />
+    <img
+      class="icon--x-small"
+      src="assets/icons/chevron-left.svg"
+      alt="move carousel left"
+    />
   </button>
   <button mat-fab (click)="moveRight()">
-    <img class="icon--x-small" src="assets/icons/chevron-right.svg" />
+    <img
+      class="icon--x-small"
+      src="assets/icons/chevron-right.svg"
+      alt="move carousel right"
+    />
   </button>
 </div>

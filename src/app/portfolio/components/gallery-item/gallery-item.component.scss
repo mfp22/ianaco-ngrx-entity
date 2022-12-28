@@ -1,14 +1,13 @@
 @use "colorography" as color;
 @use "typography" as type;
 @use "shared";
+@use "layout" as layout;
 
 .gallery-item {
-  &__item {
-    &-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
+  &__details-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
   }
 
   &__label {
@@ -20,6 +19,10 @@
   }
 
   &__showcase {
+    &-figure {
+      margin: 0;
+    }
+
     &-image {
       max-width: 100%;
       max-height: 100%;
@@ -29,7 +32,7 @@
   &__mobile {
     &-image-container {
       width: 200px;
-      @include shared.layout-bp(lt-md) {
+      @include layout.layout-bp(lt-md) {
         width: 100px;
       }
     }
@@ -37,6 +40,25 @@
     &-image {
       max-width: 100%;
       max-height: 100%;
+    }
+  }
+
+  &__mobile-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__desktop-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    @include layout.layout-bp(lt-md) {
+      flex-direction: column-reverse;
     }
   }
 }
