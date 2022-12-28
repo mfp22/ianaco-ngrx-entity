@@ -1,4 +1,5 @@
 <app-page-template class="projects">
+  <!--#projects-->
   <app-page-section-template>
     <div appInView (inView)="onInView('t1')">
       <app-page-section-header-template
@@ -8,13 +9,9 @@
       >
       </app-page-section-header-template>
     </div>
+    <app-divider></app-divider>
     <section class="layout-container">
-      <div
-        class="layout-section--1x"
-        fxFlexAlign="start"
-        appInView
-        (inView)="onInView('t2')"
-      >
+      <div class="layout-section--1x" appInView (inView)="onInView('t2')">
         <app-animate-content
           [animation]="'slideInLeft'"
           *ngIf="animationMap['t2']"
@@ -26,12 +23,7 @@
           </p>
         </app-animate-content>
       </div>
-      <div
-        class="layout-section--2x"
-        fxFlexAlign="start"
-        appInView
-        (inView)="onInView('t3')"
-      >
+      <div class="layout-section--2x" appInView (inView)="onInView('t3')">
         <app-animate-content
           [animation]="'slideInRight'"
           *ngIf="animationMap['t3']"

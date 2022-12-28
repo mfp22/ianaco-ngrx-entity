@@ -98,3 +98,17 @@
 .app-font--gray-med {
   color: map-get(color.$gray-dark-palette, 400);
 }
+
+.app-scroll-indicator {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &--left {
+    justify-content: flex-start;
+  }
+
+  &--right {
+    justify-content: flex-end;
+  }
+}

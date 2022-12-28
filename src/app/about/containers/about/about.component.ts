@@ -53,6 +53,5 @@ export class AboutComponent implements OnInit {
    */
   onInView(event: string) {
     this.animationMap[event] = true;
-    console.log(this.animationMap);
   }
 }

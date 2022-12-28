@@ -1,18 +1,23 @@
 <app-page-template class="about">
   <div content class="content" *ngIf="personal$ | async as personal">
+    <!--#detail section-->
     <app-page-section-template>
       <div class="about__detail-container app-margin--xx-large">
         <div class="about__detail" *ngFor="let detail of calloutDetails">
           <app-animate-text [text]="detail.title"></app-animate-text>
         </div>
       </div>
+    </app-page-section-template>
+    <!--#scroll indicator section-->
+    <app-page-section-template [padding]="'0rem 1rem 1rem 1rem'">
       <app-animate-content [animation]="'slideDownAppear'">
-        <div fxLayout="row" fxLayoutAlign="end center">
+        <div class="app-scroll-indicator app-scroll-indicator--right">
           <app-arrow-icon [arrowType]="'down'"></app-arrow-icon>
           <span class="app-font--large text--standout">Learn More</span>
         </div>
       </app-animate-content>
     </app-page-section-template>
+    <!--#quality product section-->
     <app-page-section-template>
       <div appInView (inView)="onInView('t0')">
         <app-page-section-header-template
@@ -22,12 +27,7 @@
         ></app-page-section-header-template>
       </div>
       <div class="layout-container">
-        <section
-          class="layout-section--1x"
-          fxFlexAlign="start"
-          appInView
-          (inView)="onInView('t1')"
-        >
+        <section class="layout-section--1x" appInView (inView)="onInView('t1')">
           <app-animate-content
             [animation]="'slideInLeft'"
             *ngIf="animationMap['t1']"
@@ -35,12 +35,7 @@
             <app-content-card [content]="workContentCard"></app-content-card>
           </app-animate-content>
         </section>
-        <section
-          class="layout-section--1x"
-          fxFlexAlign="start"
-          appInView
-          (inView)="onInView('t2')"
-        >
+        <section class="layout-section--1x" appInView (inView)="onInView('t2')">
           <app-animate-content
             [animation]="'slideInRight'"
             *ngIf="animationMap['t2']"
@@ -61,6 +56,7 @@
         </section>
       </div>
     </app-page-section-template>
+    <!--#skills section-->
     <app-page-section-template>
       <div appInView (inView)="onInView('t3')">
         <app-page-section-header-template
@@ -70,12 +66,7 @@
         ></app-page-section-header-template>
       </div>
       <div class="layout-container">
-        <section
-          class="layout-section--1x"
-          fxFlexAlign="start"
-          appInView
-          (inView)="onInView('t4')"
-        >
+        <section class="layout-section--1x" appInView (inView)="onInView('t4')">
           <app-animate-content
             [animation]="'slideInLeft'"
             *ngIf="animationMap['t4']"
@@ -85,7 +76,6 @@
         </section>
         <section
           class="layout-section--1x width-fill"
-          fxFlexAlign="start"
           appInView
           (inView)="onInView('t5')"
         >

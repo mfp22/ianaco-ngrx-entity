@@ -7,6 +7,7 @@
           mat-list-item
           [routerLink]="navItem.value"
           *ngFor="let navItem of navs"
+          (click)="sidenav.toggle()"
           ><span class="app__nav-item-text">{{ navItem.label }}</span></a
         >
       </mat-nav-list>

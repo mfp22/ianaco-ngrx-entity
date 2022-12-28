@@ -44,18 +44,4 @@
     left: 8%;
     top: 0.5rem;
   }
-
-  &__scroll-indicator {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    &--left {
-      justify-content: flex-start;
-    }
-
-    &--right {
-      justify-content: flex-end;
-    }
-  }
 }
