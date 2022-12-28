@@ -9,4 +9,5 @@ import { Colorography } from '../../models';
 })
 export class PageSectionTemplateComponent {
   @Input() backgroundColorHex: string = Colorography.Transparent;
+  @Input() padding: string | undefined;
 }
