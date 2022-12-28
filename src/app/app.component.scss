@@ -5,6 +5,11 @@ $hamburger-types: (collapse) !default;
 .app {
   height: 100%;
 
+  &__sidenav {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__sidenav-content {
     position: relative;
 
@@ -32,7 +37,7 @@ $hamburger-types: (collapse) !default;
     }
   }
 
-  &__container {
+  &__main {
     padding-top: 3rem;
   }
 
@@ -43,6 +48,10 @@ $hamburger-types: (collapse) !default;
     color: map-get(color.$gray-dark-palette, 200);
     font-weight: 400;
   }
+
+  &__nav-item-text--light {
+    color: map-get(color.$gray-light-palette, 500);
+  }
 }
 
 .mat-sidenav-container {
@@ -51,13 +60,15 @@ $hamburger-types: (collapse) !default;
   position: relative;
 }
 
-.mat-sidenav {
-  background-color: inherit;
-}
-
 .mat-toolbar {
   background: transparent;
-  color: map-get(color.$gray-light-palette, 500);
+
+  &-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
 }
 
 .hamburger {

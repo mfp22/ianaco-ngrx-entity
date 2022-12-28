@@ -1,16 +1,17 @@
 <div class="app">
   <mat-sidenav-container>
-    <mat-sidenav
-      #sidenav
-      class="app__sidenav"
-      [mode]="'over'"
-      fxLayout="column"
-    >
-      <app-list
-        [items]="navs$ | async"
-        (handleClick)="onNavClick($event)"
-      ></app-list>
+    <!--#sidenav-->
+    <mat-sidenav #sidenav class="app__sidenav" [mode]="'over'">
+      <mat-nav-list class="app-nav-list" *ngIf="navs$ | async as navs">
+        <a
+          mat-list-item
+          [routerLink]="navItem.value"
+          *ngFor="let navItem of navs"
+          ><span class="app__nav-item-text">{{ navItem.label }}</span></a
+        >
+      </mat-nav-list>
     </mat-sidenav>
+    <!--#sidenav content-->
     <mat-sidenav-content class="app__sidenav-content">
       <div
         #overlay
@@ -26,9 +27,9 @@
           <span class="app__text--lg"></span>
         </div>
       </div>
-      <div class="app__header">
+      <header class="app__header">
         <mat-toolbar appInView [disconnect]="false" (inView)="onInView($event)">
-          <mat-toolbar-row fxLayout="row" fxLayoutAlign="end center">
+          <mat-toolbar-row>
             <button
               class="hamburger hamburger--collapse"
               [ngClass]="{ 'is-active': sidenav.opened }"
@@ -43,26 +44,33 @@
             </button>
             <ng-template #navList>
               <app-animate-content [animation]="'slideUpAppear'">
-                <app-list
-                  [items]="navs$ | async"
-                  [horizontal]="true"
-                  [activeItem]="activeNav$ | async"
-                  (handleClick)="onNavClick($event)"
-                ></app-list>
+                <mat-nav-list
+                  class="app-nav-list app-nav-list--row"
+                  *ngIf="navs$ | async as navs"
+                >
+                  <a
+                    mat-list-item
+                    [routerLink]="navItem.value"
+                    *ngFor="let navItem of navs"
+                    ><span class="app__nav-item-text--light">{{
+                      navItem.label
+                    }}</span></a
+                  >
+                </mat-nav-list>
               </app-animate-content>
             </ng-template>
           </mat-toolbar-row>
         </mat-toolbar>
-      </div>
-      <div class="app__container">
+      </header>
+      <main class="app__main">
         <router-outlet></router-outlet>
-      </div>
-      <div class="app__footer">
+      </main>
+      <footer class="app__footer">
         <div *ngIf="personal$ | async as personal">
           <p class="font-size--base">{{ personal.email }}</p>
           <p>© 2022 ianacodev</p>
         </div>
-      </div>
+      </footer>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>

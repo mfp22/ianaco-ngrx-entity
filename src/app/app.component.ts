@@ -22,7 +22,6 @@ import { Item } from './shared/models';
 import { pageTransitionAnimation } from './shared/animations';
 import { Personal } from './profile/models';
 // configs
-// configs
 import { DEFAULT_BREAKPOINTS } from './configs';
 
 @Component({

@@ -3,7 +3,6 @@ import { PageTemplateComponent } from './page-template/page-template.component';
 import { PageSectionTemplateComponent } from './page-section-template/page-section-template.component';
 import { PageSectionHeaderTemplateComponent } from './page-section-header-template/page-section-header-template.component';
 import { DetailItemComponent } from './detail-item/detail-item.component';
-import { ListComponent } from './list/list.component';
 import { ContentCardComponent } from './content-card/content-card.component';
 import { ArrowIconComponent } from './arrow-icon/arrow-icon.component';
 import { DividerComponent } from './divider/divider.component';
@@ -14,7 +13,6 @@ export * from './page-template/page-template.component';
 export * from './page-section-template/page-section-template.component';
 export * from './page-section-header-template/page-section-header-template.component';
 export * from './detail-item/detail-item.component';
-export * from './list/list.component';
 export * from './content-card/content-card.component';
 export * from './arrow-icon/arrow-icon.component';
 export * from './divider/divider.component';
@@ -26,7 +24,6 @@ export const components = [
   PageSectionTemplateComponent,
   PageSectionHeaderTemplateComponent,
   DetailItemComponent,
-  ListComponent,
   ContentCardComponent,
   ArrowIconComponent,
   DividerComponent,
