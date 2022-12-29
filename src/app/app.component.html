@@ -14,20 +14,6 @@
     </mat-sidenav>
     <!--#sidenav content-->
     <mat-sidenav-content class="app__sidenav-content">
-      <div
-        #overlay
-        class="app__sidenav-content-overlay"
-        *ngIf="transitionStatus$ | async"
-        @pageTransition
-        (@pageTransition.done)="onTransitionDone($event)"
-      >
-        <div
-          class="app__sidenav-content-overlay-label"
-          *ngIf="activeNav$ | async as activeNav"
-        >
-          <span class="app__text--lg"></span>
-        </div>
-      </div>
       <header class="app__header">
         <mat-toolbar appInView [disconnect]="false" (inView)="onInView($event)">
           <mat-toolbar-row>

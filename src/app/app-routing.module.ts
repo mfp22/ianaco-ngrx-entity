@@ -1,12 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-// guards
-import { TransitionGuard } from './guards';
 
 const routes: Routes = [
   {
     path: '',
-    canActivateChild: [TransitionGuard],
     children: [
       {
         path: '',
