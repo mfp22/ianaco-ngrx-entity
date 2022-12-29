@@ -1,7 +1,6 @@
 @use "colorography" as color;
 @use "layout" as layout;
 @use "typography" as type;
-@use "shared";
 
 .about {
   &__detail {
@@ -21,7 +20,6 @@
   &__section-title {
     @extend .app-font--xx-large;
     color: map-get(color.$gray-dark-palette, 400);
-    @extend .app-margin--xx-large;
     // cannot extend in media queries
     @include layout.layout-bp(lt-md) {
       font-size: map-get(type.$app-font-sizes, x-large);

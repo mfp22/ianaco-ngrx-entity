@@ -1,6 +1,5 @@
 @use "colorography" as color;
 @use "typography" as type;
-@use "shared";
 @use "layout" as layout;
 
 .gallery-item {
@@ -12,7 +11,7 @@
 
   &__label {
     @extend .app-font--base;
-    @extend .app-margin--large;
+    margin-bottom: 1rem;
     color: map-get(color.$gray-dark-palette, 200);
     border-bottom: 1px solid map-get(color.$gray-dark-palette, 500);
     padding-bottom: 0.25rem;

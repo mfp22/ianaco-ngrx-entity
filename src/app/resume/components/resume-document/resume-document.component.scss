@@ -1,5 +1,4 @@
 @use "colorography" as color;
-@use "shared";
 @use "typography" as type;
 $default-resume-color: map-get(color.$gray-dark-palette, 100);
 $divider-color: map-get(color.$gray-dark-palette, 800);
@@ -88,17 +87,17 @@ $divider-color: map-get(color.$gray-dark-palette, 800);
   }
 
   &__cert-image {
-    max-height: 12rem;
+    max-height: 20rem;
     margin: 0.25rem;
   }
 }
 
 drag-scroll {
-  height: 13rem;
+  height: 21rem;
   width: 100%;
 }
 
-.mat-fab {
+.mdc-fab {
   background-color: map-get(color.$gray-dark-palette, 500);
   color: map-get(color.$gray-light-palette, 500);
 }

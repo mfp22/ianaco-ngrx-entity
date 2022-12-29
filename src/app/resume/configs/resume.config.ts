@@ -10,7 +10,7 @@ export const resume: Resume = {
   summary: `
     Motivated Front End Engineer with experience building and maintaining 
     responsive websites. Extensive collaboration with teams to produce 
-    sites that deliver business results. Strong interest in UI/UX.
+    sites that deliver business results. Strong interest in UI/UX & SEO.
   `,
   contact: {
     title: 'Contact',
@@ -78,24 +78,17 @@ export const resume: Resume = {
     title: 'Experience',
     items: [
       {
-        role: 'Front End Software Engineer (Freelance)',
+        role: 'Front End Software Engineer (Contractor)',
         beginDate: '2022-02',
         endDate: 'Present',
         companies: [
           {
-            name: 'Game Seven Sports, PA',
+            name: 'The Yorker Sports, PA',
             qualifications: [
-              `Assisted in compiling branding guidelines.`,
-              `Designed low and high fidelity prototypes for company landing page and core application.`,
-              `Implemented company landing page.`,
-            ],
-          },
-          {
-            name: 'Tutor Me LLC, NJ',
-            qualifications: [
-              `Consulted on improvements to current site design.`,
-              `Developed future A/B test use cases.`,
-              `Custom code and styling updates to website.`,
+              `Built angular core components library for use across multiple front-end applications.`,
+              `Registration page for sign up/in working with back end engineers for aws cognito integration.`,
+              `Designed & Developed landing page for aggregated cricket sports content.`,
+              `Designed & Developed cricket tournament application for entering fantasy tournaments.`,
             ],
           },
         ],
