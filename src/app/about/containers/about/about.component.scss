@@ -53,4 +53,9 @@
     border-bottom: 0.063rem solid map-get(color.$gray-dark-palette, 800);
     padding: 1rem 0;
   }
+
+  &__flex-item--start {
+    align-items: start;
+    justify-content: start;
+  }
 }

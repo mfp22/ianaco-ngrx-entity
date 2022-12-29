@@ -52,6 +52,9 @@ export const profile: Profile = {
         label: 'Jasmine',
       },
       {
+        label: 'Basic SEO',
+      },
+      {
         label: 'Adobe XD',
       },
     ],
