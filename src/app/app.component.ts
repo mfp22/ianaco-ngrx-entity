@@ -15,6 +15,7 @@ import { map, tap, delay } from 'rxjs/operators';
 // ngrx
 import { Store, select } from '@ngrx/store';
 import * as fromRootStore from './store';
+import * as fromMetaStore from './meta/store';
 import * as fromProfileStore from './profile/store';
 // models
 import { Item } from './shared/models';
@@ -61,6 +62,9 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    // meta
+    this.store.dispatch(fromMetaStore.startMeta());
+    // personal
     this.personal$ = this.store.pipe(
       select(fromProfileStore.selectProfilePersonal)
     );

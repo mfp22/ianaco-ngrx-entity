@@ -33,6 +33,7 @@
           <mat-toolbar-row>
             <button
               class="hamburger hamburger--collapse"
+              aria-label="menu"
               [ngClass]="{ 'is-active': sidenav.opened }"
               type="button"
               (click)="sidenav.toggle()"
