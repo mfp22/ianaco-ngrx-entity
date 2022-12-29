@@ -29,7 +29,7 @@ export const resume: Resume = {
       },
       {
         label: 'Personal Website',
-        value: `<a class="app-link" href="https://ianacodev.github.io" target="_blank" rel="noopener noreferrer">ianacodev.github.io</a>`,
+        value: `<a class="app-link" href="https://ianacodev" target="_blank" rel="noopener noreferrer">ianacodev</a>`,
       },
     ],
   },
