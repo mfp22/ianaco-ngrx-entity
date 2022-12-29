@@ -56,6 +56,14 @@
       <footer class="app__footer">
         <div *ngIf="personal$ | async as personal">
           <p class="font-size--base">{{ personal.email }}</p>
+          <p>
+            <a
+              class="app__nav-item-text--light"
+              href="https://ianaco.web.app/sitemap.html"
+              aria-label="sitemap"
+              >Sitemap</a
+            >
+          </p>
           <p>© 2022 ianaco</p>
         </div>
       </footer>

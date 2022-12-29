@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://ianaco.web.app/</loc>
+    <lastmode>2022-12-22</lastmode>
+  </url>
+   <url>
+    <loc>https://ianaco.web.app/home</loc>
+    <lastmode>2022-12-22</lastmode>
+  </url>
+  <url>
+    <loc>https://ianaco.web.app/about</loc>
+    <lastmode>2022-12-22</lastmode>
+  </url>
+  <url>
+    <loc>https://ianaco.web.app/portfolio</loc>
+    <lastmode>2022-12-22</lastmode>
+  </url>
+   <url>
+    <loc>https://ianaco.web.app/projects</loc>
+    <lastmode>2022-12-22</lastmode>
+  </url>
+  <url>
+    <loc>https://ianaco.web.app/resume</loc>
+    <lastmode>2022-12-22</lastmode>
+  </url>
+</urlset>
