@@ -4,10 +4,28 @@ import { Portfolio } from '../models';
 export const portfolio: Portfolio = {
   gallery: [
     {
-      name: 'sports app',
+      name: 'the bonkers cricket',
       role: 'Designer & Front End Developer',
       description:
-        'Designer & Front End Developer for sports application landing page promoting NFT (Non-fungible Token) digital assets.',
+        'Designer & Front End developer. Platform for providing sports news and fantasy tournaments.',
+      branding: {
+        colorPalette: ['#fbfbfd', '#1099fa', '#f08a2c', '#595959'],
+        typography: 'Roboto',
+      },
+      previewImage: 'assets/images/design/yorker-app/yorker-app-preview.jpg',
+      primaryImage: 'assets/images/design/yorker-app/yorker-app-desktop-1.png',
+      secondaryImage:
+        'assets/images/design/yorker-app/yorker-app-desktop-2.png',
+      mobileImages: [
+        'assets/images/design/yorker-app/yorker-app-mobile-1.png',
+        'assets/images/design/yorker-app/yorker-app-mobile-2.png',
+      ],
+    },
+    {
+      name: 'sports app',
+      role: 'Designer',
+      description:
+        'Design for sports application landing page promoting NFT (Non-fungible Token) digital assets.',
       branding: {
         colorPalette: ['#121212', '#FFC928', '#707070', '#FBFBFD'],
         typography: 'Roboto',
@@ -18,24 +36,6 @@ export const portfolio: Portfolio = {
       mobileImages: [
         'assets/images/design/sports-app/sports-app-mobile-1.png',
         'assets/images/design/sports-app/sports-app-mobile-2.png',
-      ],
-    },
-    {
-      name: 'the yorker sports',
-      role: 'Co-Founder, Designer, & Front End Developer',
-      description:
-        'Co-Founder, Designer, & Front End developer. Platform for providing sports news, fantasy tournaments and digital assets.',
-      branding: {
-        colorPalette: ['#061121', '#1099FA', '#707070', '#FBFBFD'],
-        typography: 'Roboto',
-      },
-      previewImage: 'assets/images/design/yorker-app/yorker-app-preview.jpg',
-      primaryImage: 'assets/images/design/yorker-app/yorker-app-desktop-1.png',
-      secondaryImage:
-        'assets/images/design/yorker-app/yorker-app-desktop-2.png',
-      mobileImages: [
-        'assets/images/design/yorker-app/yorker-app-mobile-1.png',
-        'assets/images/design/yorker-app/yorker-app-mobile-2.png',
       ],
     },
     {
