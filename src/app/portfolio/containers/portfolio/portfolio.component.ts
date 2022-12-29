@@ -32,7 +32,6 @@ export class PortfolioComponent implements OnInit {
    * @param galleryItem
    */
   onView(galleryItem: GalleryItem) {
-    console.log(galleryItem);
     this.galleryItem = null;
     setTimeout(() => {
       this.galleryItem = galleryItem;

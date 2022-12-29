@@ -12,7 +12,6 @@ export class ResumeDocumentComponent {
   @ViewChild('nav') ds: DragScrollComponent | undefined;
 
   moveLeft() {
-    console.log('here', this.ds);
     this.ds?.moveLeft();
   }
 
