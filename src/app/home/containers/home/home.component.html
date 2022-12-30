@@ -2,11 +2,13 @@
   <app-page-section-template>
     <!--#personal section-->
     <section *ngIf="personal$ | async as personal">
-      <div class="home__subtitle">
-        <app-animate-text [text]="personal.occupationType"></app-animate-text>
-      </div>
-      <h1 class="home__title">
-        <app-animate-text [text]="personal.occupation"></app-animate-text>
+      <h1>
+        <span class="home__subtitle">
+          <app-animate-text [text]="personal.occupationType"></app-animate-text>
+        </span>
+        <span class="home__title">
+          <app-animate-text [text]="personal.occupation"></app-animate-text>
+        </span>
       </h1>
       <app-animate-content [animation]="'slideUpAppear'">
         <figure class="home__image-container">
@@ -26,25 +28,17 @@
           </picture>
         </figure>
       </app-animate-content>
-      <h2 class="home__subtitle">
+      <p class="home__subtitle app-margin--none">
         <app-animate-text [text]="personal.firstName"></app-animate-text>
         <app-animate-text [text]="personal.lastName"></app-animate-text>
-      </h2>
+      </p>
     </section>
-  </app-page-section-template>
-  <!--#scroll indicator section-->
-  <app-page-section-template [padding]="'0rem 1rem 1rem 1rem'">
-    <div appInView (inView)="onInView('t0')">
-      <app-animate-content
-        [animation]="'slideDownAppear'"
-        *ngIf="animationMap['t0']"
-      >
-        <div class="app-scroll-indicator app-scroll-indicator--right">
-          <app-arrow-icon [arrowType]="'down'"></app-arrow-icon>
-          <span class="app-font--large app-text-accent-color">See More</span>
-        </div>
-      </app-animate-content>
-    </div>
+    <app-animate-content [animation]="'slideDownAppear'">
+      <div class="app-scroll-indicator app-scroll-indicator--right">
+        <app-arrow-icon [arrowType]="'down'"></app-arrow-icon>
+        <span class="app-font--large">See More</span>
+      </div>
+    </app-animate-content>
   </app-page-section-template>
   <!--#providing value section-->
   <app-page-section-template>
@@ -55,7 +49,7 @@
         *ngIf="animationMap['t1']"
       ></app-page-section-header-template>
     </div>
-    <section class="app-layout-container layout-flex--start">
+    <section class="app-layout-container app-layout-flex--start">
       <div class="app-layout-section--1x" appInView (inView)="onInView('t2')">
         <app-animate-content
           [animation]="'slideInLeft'"
@@ -76,16 +70,16 @@
       </div>
     </section>
   </app-page-section-template>
-  <!--#scroll indicator section-->
-  <app-page-section-template [padding]="'0rem 1rem 1rem 1rem'">
-    <div appInView (inView)="onInView('t4')">
+  <!--#scroll indicator-->
+  <app-page-section-template>
+    <div appInView (inView)="onInView('t3')">
       <app-animate-content
         [animation]="'slideDownAppear'"
-        *ngIf="animationMap['t4']"
+        *ngIf="animationMap['t3']"
       >
         <div class="app-scroll-indicator app-scroll-indicator--left">
           <app-arrow-icon [arrowType]="'down'"></app-arrow-icon>
-          <span class="app-font--large app-text-accent-color">Keep Going</span>
+          <span class="app-font--large">Keep Going</span>
         </div>
       </app-animate-content>
     </div>
@@ -99,7 +93,7 @@
         *ngIf="animationMap['t5']"
       ></app-page-section-header-template>
     </div>
-    <section class="app-layout-container layout-flex--start">
+    <section class="app-layout-container app-layout-flex--start">
       <div class="app-layout-section--1x" appInView (inView)="onInView('t6')">
         <app-animate-content
           [animation]="'slideInLeft'"

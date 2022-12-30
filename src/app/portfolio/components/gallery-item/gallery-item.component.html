@@ -19,7 +19,7 @@
         <div class="gallery-item__item">
           <div class="gallery-item__label">Typography</div>
           <div
-            class="app-font--xxx-large app-font--gray-light"
+            class="app-font--xxx-large app-text-accent-color"
             [style.fontFamily]="galleryItem.branding.typography"
           >
             <span
@@ -32,69 +32,48 @@
       </div>
     </app-animate-content>
   </div>
-  <app-divider [size]="'medium'"></app-divider>
+  <app-divider [size]="'xlarge'"></app-divider>
   <!--#content section -->
   <div appInView>
     <app-animate-content [animation]="'slideInRight'">
-      <!--#showcase image item-->
-      <figure class="gallery-item__showcase-figure">
-        <img
-          class="gallery-item__showcase-image"
-          [src]="galleryItem.primaryImage"
-          alt="showcase-image"
-        />
-      </figure>
-      <app-divider [size]="'xlarge'"></app-divider>
       <!--#mobile item-->
       <div class="gallery-item__section--center">
-        <div class="app-layout-container">
-          <div class="app-layout-section--1x">
-            <div class="text-align--right">
-              <div class="app-font--x-large app-font--gray-light">
-                Responsive Design.
-              </div>
-              <div class="app-font--medium app-font--gray-med">
-                Mobile Thinking.
-              </div>
-            </div>
+        <div class="text-align--center">
+          <div class="app-font--x-large app-text-accent-color">
+            Responsive Design.
           </div>
-          <div class="app-layout-section--2x">
-            <div class="gallery-item__mobile-container">
-              <div
-                class="gallery-item__mobile-image-container"
-                *ngFor="let image of galleryItem.mobileImages"
-              >
-                <img
-                  class="gallery-item__mobile-image"
-                  [src]="image"
-                  alt="image"
-                />
-              </div>
-            </div>
+          <div class="app-font--medium app-text-contrast-color">
+            Mobile Thinking.
+          </div>
+        </div>
+        <app-divider></app-divider>
+        <div class="gallery-item__mobile-container">
+          <div
+            class="gallery-item__mobile-image-container"
+            *ngFor="let image of galleryItem.mobileImages"
+          >
+            <img class="gallery-item__mobile-image" [src]="image" alt="image" />
           </div>
         </div>
       </div>
       <app-divider [size]="'xlarge'"></app-divider>
       <!--#desktop item -->
       <div class="gallery-item__desktop-item">
-        <div class="app-layout-section--2x">
-          <img
-            class="gallery-item__showcase-image"
-            [src]="galleryItem.secondaryImage"
-            alt="showcase-image"
-          />
-        </div>
-        <div class="app-layout-section--1x">
-          <div>
-            <div class="app-font--x-large app-font--gray-light">
-              Optimal Experience.
-            </div>
-            <div class="app-font--medium app-font--gray-med">
-              Engaging Users.
-            </div>
+        <div class="text-align--center">
+          <div class="app-font--x-large app-text-accent-color">
+            Optimal Experience.
+          </div>
+          <div class="app-font--medium app-text-contrast-color">
+            Engaging Users.
           </div>
         </div>
       </div>
+      <app-divider></app-divider>
+      <img
+        class="gallery-item__showcase-image"
+        [src]="galleryItem.secondaryImage"
+        alt="showcase-image"
+      />
     </app-animate-content>
   </div>
 </div>

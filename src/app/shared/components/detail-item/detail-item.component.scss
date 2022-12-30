@@ -34,5 +34,6 @@
   &__body {
     color: map-get(color.$gray-dark-palette, 200);
     margin: 0.5rem 0;
+    font-weight: 300;
   }
 }

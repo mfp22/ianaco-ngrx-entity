@@ -45,48 +45,43 @@ $app-font-sizes: (
 .app-font--medium {
   font-size: map-get($app-font-sizes, medium);
   line-height: 1.75rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .app-font--base {
   font-size: map-get($app-font-sizes, base);
   line-height: 1.5rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .app-font--small {
   font-size: map-get($app-font-sizes, small);
   line-height: 1.375rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 // #[paragraphs]
 .app-paragraph--x-large {
   @extend .app-font--x-large;
   color: map-get(color.$gray-light-palette, 500);
-  margin-bottom: 0.5rem;
 }
 
 .app-paragraph--large {
   @extend .app-font--large;
   color: map-get(color.$gray-light-palette, 500);
-  margin-bottom: 0.5rem;
 }
 
 .app-paragraph--medium {
   @extend .app-font--medium;
   color: map-get(color.$gray-light-palette, 500);
-  margin-bottom: 0.5rem;
 }
 
 .app-paragraph--base {
   @extend .app-font--base;
   color: map-get(color.$gray-light-palette, 500);
-  margin-bottom: 0.5rem;
 }
 
 .app-paragraph--small {
   @extend .app-font--small;
   color: map-get(color.$gray-light-palette, 500);
-  margin-bottom: 0.5rem;
 }

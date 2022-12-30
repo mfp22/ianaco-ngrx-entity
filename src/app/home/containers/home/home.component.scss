@@ -30,9 +30,7 @@
   }
 
   &__image-container {
-    background: url(../../../../assets/images/backgrounds/gray-texture-image.jpg)
-      no-repeat center center;
-    background-size: cover;
+    background-color: map-get(color.$gray-dark-palette, 200);
     max-width: 30.875rem;
     margin: 0 0 1rem 0;
     height: 100%;
