@@ -55,7 +55,7 @@
         *ngIf="animationMap['t1']"
       ></app-page-section-header-template>
     </div>
-    <section class="layout-container">
+    <section class="layout-container layout-flex--start">
       <div class="layout-section--1x" appInView (inView)="onInView('t2')">
         <app-animate-content
           [animation]="'slideInLeft'"
@@ -99,7 +99,7 @@
         *ngIf="animationMap['t5']"
       ></app-page-section-header-template>
     </div>
-    <section class="layout-container">
+    <section class="layout-container layout-flex--start">
       <div class="layout-section--1x" appInView (inView)="onInView('t6')">
         <app-animate-content
           [animation]="'slideInLeft'"
