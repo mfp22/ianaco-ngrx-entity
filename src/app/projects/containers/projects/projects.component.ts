@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Store, select } from '@ngrx/store';
 import * as fromStore from '../../store';
 // models
-import { Colorography, DetailItem } from '../../../shared/models';
+import { color, DetailItem } from '../../../shared/models';
 
 @Component({
   selector: 'app-projects',

@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 // models
-import { ArrowType, Colorography } from '../../models';
+import { ArrowType, color } from '../../models';
 
 @Component({
   selector: 'app-arrow-icon',
@@ -9,7 +9,7 @@ import { ArrowType, Colorography } from '../../models';
 })
 export class ArrowIconComponent {
   @Input() arrowType: string = 'down';
-  @Input() colorHex: string = Colorography.Bark400;
+  @Input() colorHex: string = color.Bark400;
   get arrowIcon(): string {
     return (ArrowType as any)[this.arrowType];
   }

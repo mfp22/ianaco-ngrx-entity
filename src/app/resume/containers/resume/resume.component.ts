@@ -5,7 +5,7 @@ import { Store, select } from '@ngrx/store';
 import * as fromStore from '../../store';
 // models
 import { Resume } from './../../models';
-import { Colorography } from 'src/app/shared/models';
+import { color } from 'src/app/shared/models';
 
 @Component({
   selector: 'app-resume',
@@ -13,7 +13,7 @@ import { Colorography } from 'src/app/shared/models';
   styleUrls: ['./resume.component.scss'],
 })
 export class ResumeComponent implements OnInit {
-  color = Colorography;
+  color = color;
   resume$: Observable<Resume> | null = null;
 
   constructor(private store: Store<fromStore.ResumeState>) {}

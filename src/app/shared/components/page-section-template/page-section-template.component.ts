@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 // models
-import { Colorography } from '../../models';
+import { color } from '../../models';
 
 @Component({
   selector: 'app-page-section-template',
@@ -8,6 +8,6 @@ import { Colorography } from '../../models';
   styleUrls: ['./page-section-template.component.scss'],
 })
 export class PageSectionTemplateComponent {
-  @Input() backgroundColorHex: string = Colorography.Transparent;
+  @Input() backgroundColorHex: string = color.Transparent;
   @Input() padding: string | undefined;
 }

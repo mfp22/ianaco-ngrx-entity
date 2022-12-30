@@ -1,13 +1,16 @@
 <div class="resume-document" *ngIf="resume">
   <!-- header begin -->
-  <div class="layout-container-reverse">
-    <section class="layout-section--1x layout-section--align-items-start">
+  <div class="app-layout-container-reverse">
+    <section class="app-layout-section--1x layout-section--align-items-start">
       <!-- [#contact] -->
       <div
         class="resume-document__section resume-document__contact"
         *ngIf="resume.contact as contact"
       >
-        <div class="app-margin--medium" *ngFor="let item of contact.items">
+        <div
+          class="app-margin-bottom--medium"
+          *ngFor="let item of contact.items"
+        >
           <div class="app-font--base text--fade">
             {{ item.label }}
           </div>
@@ -15,7 +18,7 @@
         </div>
       </div>
     </section>
-    <section class="layout-section--1x layout-section--align-items-start">
+    <section class="app-layout-section--1x layout-section--align-items-start">
       <div class="resume-document__header resume-document__section">
         <h1 class="app-font--xx-large margin--x-large">{{ resume.role }}</h1>
         <h2 class="app-font--x-large text--fade">
@@ -64,7 +67,10 @@
         <div class="resume-document__timeline"></div>
         <div class="resume-document__experience-details">
           <h1 class="resume-document__experience-role">{{ item.role }}</h1>
-          <div class="app-margin--large" *ngIf="item.beginDate && item.endDate">
+          <div
+            class="app-margin-bottom--large"
+            *ngIf="item.beginDate && item.endDate"
+          >
             <span class="resume-document__date-tag"
               >{{ item.beginDate }} - {{ item.endDate }}</span
             >

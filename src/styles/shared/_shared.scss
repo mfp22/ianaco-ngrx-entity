@@ -1,6 +1,6 @@
-@use "colorography" as color;
+@use "color" as color;
 
-// #[text-align]
+// #text-align
 .text-align {
   &--left {
     text-align: left;
@@ -15,7 +15,7 @@
   }
 }
 
-// #[icons]
+// #icons
 .icon--x-small {
   width: 1rem;
   height: 100%;
@@ -34,12 +34,7 @@
   display: inline-block;
 }
 
-// [images]
-.image--small {
-  max-width: 10rem;
-}
-
-// [link]
+// #link
 .app-link {
   text-decoration: underline;
   position: relative;
@@ -50,58 +45,47 @@
   display: inline-block;
 }
 
-// #[sizing]
+// #sizing
 .width-fill {
   width: 100%;
 }
 
-// margin
+// #margin
 .app-margin--none {
   margin: 0;
 }
 
-.app-margin--small {
+.app-margin-bottom--small {
   margin-bottom: 0.25rem;
 }
 
-.app-margin--medium {
+.app-margin-bottom--medium {
   margin-bottom: 0.5rem;
 }
 
-.app-margin--large {
+.app-margin-bottom--large {
   margin-bottom: 1rem;
 }
 
-.app-margin--x-large {
+.app-margin-bottom--x-large {
   margin-bottom: 2rem;
 }
 
-.app-margin--xx-large {
+.app-margin-bottom--xx-large {
   margin-bottom: 3rem;
 }
 
-// #[color]
-.text--fade {
-  color: map-get(color.$gray-dark-palette, 200);
+// #text-color
+.app-text-accent-color {
+  color: var(--app-accent-color);
 }
 
-.text--standout {
-  color: map-get(color.$gray-light-palette, 500);
-}
-
-// #[transforms]
+// #transforms
 .text--uppercase {
   text-transform: uppercase;
 }
 
-.app-font--gray-light {
-  color: map-get(color.$gray-light-palette, 200);
-}
-
-.app-font--gray-med {
-  color: map-get(color.$gray-dark-palette, 400);
-}
-
+// #scroll indicator
 .app-scroll-indicator {
   display: flex;
   flex-direction: row;

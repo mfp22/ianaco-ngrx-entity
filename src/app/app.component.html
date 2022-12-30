@@ -2,15 +2,18 @@
   <mat-sidenav-container>
     <!--#sidenav-->
     <mat-sidenav #sidenav class="app__sidenav" [mode]="'over'">
-      <mat-nav-list class="app-nav-list" *ngIf="navs$ | async as navs">
-        <a
-          mat-list-item
-          [routerLink]="navItem.value"
-          *ngFor="let navItem of navs"
-          (click)="sidenav.toggle()"
-          ><span class="app__nav-item-text">{{ navItem.label }}</span></a
-        >
-      </mat-nav-list>
+      <!--#nav-->
+      <nav class="app__nav">
+        <mat-nav-list class="app-nav-list" *ngIf="navs$ | async as navs">
+          <a
+            mat-list-item
+            [routerLink]="navItem.value"
+            *ngFor="let navItem of navs"
+            (click)="sidenav.toggle()"
+            >{{ navItem.label }}</a
+          >
+        </mat-nav-list>
+      </nav>
     </mat-sidenav>
     <!--#sidenav content-->
     <mat-sidenav-content class="app__sidenav-content">
@@ -22,8 +25,8 @@
               aria-label="menu"
               [ngClass]="{ 'is-active': sidenav.opened }"
               type="button"
-              (click)="sidenav.toggle()"
               tabindex="0"
+              (click)="sidenav.toggle()"
               *ngIf="mobileQuery?.matches || !navInViewStatus; else navList"
             >
               <span class="hamburger-box">
@@ -32,19 +35,22 @@
             </button>
             <ng-template #navList>
               <app-animate-content [animation]="'slideUpAppear'">
-                <mat-nav-list
-                  class="app-nav-list app-nav-list--row"
-                  *ngIf="navs$ | async as navs"
-                >
-                  <a
-                    mat-list-item
-                    [routerLink]="navItem.value"
-                    *ngFor="let navItem of navs"
-                    ><span class="app__nav-item-text--light">{{
-                      navItem.label
-                    }}</span></a
+                <!--#nav-->
+                <nav class="app__nav">
+                  <mat-nav-list
+                    class="app-nav-list app-nav-list--row"
+                    *ngIf="navs$ | async as navs"
                   >
-                </mat-nav-list>
+                    <a
+                      mat-list-item
+                      [routerLink]="navItem.value"
+                      *ngFor="let navItem of navs"
+                      ><span class="app-text-accent-color">{{
+                        navItem.label
+                      }}</span></a
+                    >
+                  </mat-nav-list>
+                </nav>
               </app-animate-content>
             </ng-template>
           </mat-toolbar-row>

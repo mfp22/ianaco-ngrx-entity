@@ -1,6 +1,6 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
 // models
-import { Colorography } from '../../models';
+import { color } from '../../models';
 
 @Component({
   selector: 'app-page-template',
@@ -9,5 +9,5 @@ import { Colorography } from '../../models';
   encapsulation: ViewEncapsulation.None,
 })
 export class PageTemplateComponent {
-  @Input() backgroundColorHex: string = Colorography.Transparent;
+  @Input() backgroundColorHex: string = color.Transparent;
 }

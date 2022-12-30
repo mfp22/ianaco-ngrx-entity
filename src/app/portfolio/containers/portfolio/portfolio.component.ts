@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 // models
 import { GalleryItem } from '../../models';
-import { Colorography } from '../../../shared/models';
+import { color } from '../../../shared/models';
 // configs
 import { portfolio } from '../../configs';
 
@@ -11,7 +11,7 @@ import { portfolio } from '../../configs';
   styleUrls: ['./portfolio.component.scss'],
 })
 export class PortfolioComponent implements OnInit {
-  color = Colorography;
+  color = color;
   animationMap: { [id: string]: boolean } = {};
   portfolio = portfolio;
   galleryItem: GalleryItem | null = null;

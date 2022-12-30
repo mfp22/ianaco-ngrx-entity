@@ -2,7 +2,7 @@
   <div content class="content" *ngIf="personal$ | async as personal">
     <!--#detail section-->
     <app-page-section-template>
-      <div class="about__detail-container app-margin--xx-large">
+      <div class="about__detail-container app-margin-bottom--xx-large">
         <div class="about__detail" *ngFor="let detail of calloutDetails">
           <app-animate-text [text]="detail.title"></app-animate-text>
         </div>
@@ -26,8 +26,12 @@
           *ngIf="animationMap['t0']"
         ></app-page-section-header-template>
       </div>
-      <div class="layout-container">
-        <section class="layout-section--1x" appInView (inView)="onInView('t1')">
+      <div class="app-layout-container">
+        <section
+          class="app-layout-section--1x"
+          appInView
+          (inView)="onInView('t1')"
+        >
           <app-animate-content
             [animation]="'slideInLeft'"
             *ngIf="animationMap['t1']"
@@ -35,7 +39,11 @@
             <app-content-card [content]="workContentCard"></app-content-card>
           </app-animate-content>
         </section>
-        <section class="layout-section--1x" appInView (inView)="onInView('t2')">
+        <section
+          class="app-layout-section--1x"
+          appInView
+          (inView)="onInView('t2')"
+        >
           <app-animate-content
             [animation]="'slideInRight'"
             *ngIf="animationMap['t2']"
@@ -65,8 +73,12 @@
           *ngIf="animationMap['t3']"
         ></app-page-section-header-template>
       </div>
-      <div class="layout-container about__flex-item--start">
-        <section class="layout-section--1x" appInView (inView)="onInView('t4')">
+      <div class="app-layout-container about__flex-item--start">
+        <section
+          class="app-layout-section--1x"
+          appInView
+          (inView)="onInView('t4')"
+        >
           <app-animate-content
             [animation]="'slideInLeft'"
             *ngIf="animationMap['t4']"
@@ -75,7 +87,7 @@
           </app-animate-content>
         </section>
         <section
-          class="layout-section--1x width-fill"
+          class="app-layout-section--1x width-fill"
           appInView
           (inView)="onInView('t5')"
         >

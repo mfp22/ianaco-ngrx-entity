@@ -1,4 +1,4 @@
-@use "colorography" as color;
+@use "color" as color;
 @use "typography" as type;
 $default-resume-color: map-get(color.$gray-dark-palette, 100);
 $divider-color: map-get(color.$gray-dark-palette, 800);

@@ -2,11 +2,11 @@
 // For more information: https://material.angular.io/guide/theming
 @use "@angular/material" as mat;
 // Plus imports for other components in your app.
-@use "colorography" as color;
-@use "material-overrides" as mat-ovr;
+@use "color" as color;
 @use "shared" as shared;
 @use "typography" as type;
 @use "layout" as layout;
+@use "material-overrides" as mat-ovr;
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
@@ -25,25 +25,20 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$personal-website-primary: mat.define-palette(mat.$indigo-palette);
-$personal-website-accent: mat.define-palette(
-  mat.$pink-palette,
-  A200,
-  A100,
-  A400
-);
+$ianaco-primary: mat.define-palette(color.$gray-dark-palette, 900);
+$ianaco-accent: mat.define-palette(color.$gray-light-palette, 500);
 
 // The warn palette is optional (defaults to red).
-$personal-website-warn: mat.define-palette(mat.$red-palette);
+$ianaco-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$personal-website-theme: mat.define-light-theme(
+$ianaco-theme: mat.define-light-theme(
   (
     color: (
-      primary: $personal-website-primary,
-      accent: $personal-website-accent,
-      warn: $personal-website-warn,
+      primary: $ianaco-primary,
+      accent: $ianaco-accent,
+      warn: $ianaco-warn,
     ),
   )
 );
@@ -51,7 +46,7 @@ $personal-website-theme: mat.define-light-theme(
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include mat.all-component-themes($personal-website-theme);
+@include mat.all-component-themes($ianaco-theme);
 
 /* You can add global styles to this file, and also import other style files */
 html,
@@ -61,9 +56,14 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: map-get(color.$gray-dark-palette, 900);
+  background-color: var(--app-primary-color);
 }
 
 a:visited {
   color: map-get(color.$gray-light-palette, 400);
+}
+
+:root {
+  --app-primary-color: #{map-get($ianaco-primary, 900)};
+  --app-accent-color: #{map-get($ianaco-accent, 500)};
 }

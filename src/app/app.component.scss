@@ -1,40 +1,11 @@
-@use "colorography" as color;
+@use "color" as color;
 @import "burger-menu";
 $hamburger-types: (collapse) !default;
 
 .app {
-  height: 100%;
-
   &__sidenav {
     display: flex;
     flex-direction: column;
-  }
-
-  &__sidenav-content {
-    position: relative;
-
-    &-overlay {
-      background-color: darken(map-get(color.$gray-dark-palette, 900), 3);
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      transition: all 500ms;
-      display: block;
-      z-index: 2000;
-    }
-
-    &-overlay-label {
-      color: map-get(color.$gray-light-palette, 500);
-      font-size: 3.5rem;
-      text-transform: capitalize;
-      position: relative;
-      top: 18.75rem;
-      font-weight: 400;
-      text-transform: uppercase;
-      text-align: center;
-    }
   }
 
   &__main {
@@ -46,18 +17,11 @@ $hamburger-types: (collapse) !default;
     padding: 1rem;
     text-align: center;
     color: map-get(color.$gray-dark-palette, 200);
-    font-weight: 400;
-  }
-
-  &__nav-item-text--light {
-    color: map-get(color.$gray-light-palette, 500);
   }
 }
 
 .mat-sidenav-container {
-  background-color: map-get(color.$gray-dark-palette, 900);
-  height: 100vh;
-  position: relative;
+  background-color: var(--app-primary-color);
 }
 
 .mat-toolbar {
@@ -72,12 +36,12 @@ $hamburger-types: (collapse) !default;
 }
 
 .hamburger {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(159, 159, 160, 0.25);
   margin-top: 1rem;
   line-height: 0.625rem;
   border-radius: 50%;
   position: fixed;
-  right: 2rem;
+  right: 1rem;
   z-index: 1000;
   transition: all ease-in-out;
 

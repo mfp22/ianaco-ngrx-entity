@@ -41,7 +41,7 @@
       >
         <div class="app-scroll-indicator app-scroll-indicator--right">
           <app-arrow-icon [arrowType]="'down'"></app-arrow-icon>
-          <span class="app-font--large text--standout">See More</span>
+          <span class="app-font--large app-text-accent-color">See More</span>
         </div>
       </app-animate-content>
     </div>
@@ -55,8 +55,8 @@
         *ngIf="animationMap['t1']"
       ></app-page-section-header-template>
     </div>
-    <section class="layout-container layout-flex--start">
-      <div class="layout-section--1x" appInView (inView)="onInView('t2')">
+    <section class="app-layout-container layout-flex--start">
+      <div class="app-layout-section--1x" appInView (inView)="onInView('t2')">
         <app-animate-content
           [animation]="'slideInLeft'"
           *ngIf="animationMap['t2']"
@@ -64,7 +64,7 @@
           <app-content-card [content]="aboutContentCard"></app-content-card>
         </app-animate-content>
       </div>
-      <div class="layout-section--1x" appInView (inView)="onInView('t3')">
+      <div class="app-layout-section--1x" appInView (inView)="onInView('t3')">
         <ng-container *ngIf="animationMap['t3']">
           <app-animate-content
             [animation]="'slideInRight'"
@@ -85,7 +85,7 @@
       >
         <div class="app-scroll-indicator app-scroll-indicator--left">
           <app-arrow-icon [arrowType]="'down'"></app-arrow-icon>
-          <span class="app-font--large text--standout">Keep Going</span>
+          <span class="app-font--large app-text-accent-color">Keep Going</span>
         </div>
       </app-animate-content>
     </div>
@@ -99,8 +99,8 @@
         *ngIf="animationMap['t5']"
       ></app-page-section-header-template>
     </div>
-    <section class="layout-container layout-flex--start">
-      <div class="layout-section--1x" appInView (inView)="onInView('t6')">
+    <section class="app-layout-container layout-flex--start">
+      <div class="app-layout-section--1x" appInView (inView)="onInView('t6')">
         <app-animate-content
           [animation]="'slideInLeft'"
           *ngIf="animationMap['t6']"
@@ -108,7 +108,7 @@
           <app-content-card [content]="resumeContentCard"></app-content-card>
         </app-animate-content>
       </div>
-      <div class="layout-section--1x" appInView (inView)="onInView('t7')">
+      <div class="app-layout-section--1x" appInView (inView)="onInView('t7')">
         <app-animate-content
           [animation]="'slideInRight'"
           *ngIf="animationMap['t7']"

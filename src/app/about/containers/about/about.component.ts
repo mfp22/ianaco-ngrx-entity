@@ -5,14 +5,14 @@ import { Store, select } from '@ngrx/store';
 import * as fromProfileStore from '../../../profile/store';
 // models
 import { Personal } from '../../../profile/models';
-import { Colorography, ContentCard, DetailItem } from '../../../shared/models';
+import { color, ContentCard, DetailItem } from '../../../shared/models';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent implements OnInit {
-  color = Colorography;
+  color = color;
   personal$: Observable<Personal> | null = null;
   animationMap: { [key: string]: boolean } = {};
   calloutDetails: DetailItem[] = [

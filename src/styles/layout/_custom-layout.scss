@@ -1,6 +1,6 @@
-@use "layout" as bp;
+@use "layout-break-points" as layout;
 
-.layout {
+.app-layout {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -8,15 +8,15 @@
   gap: 1.875rem;
 
   &-container {
-    @extend .layout;
-    @include bp.layout-bp(lt-md) {
+    @extend .app-layout;
+    @include layout.layout-bp(lt-md) {
       flex-direction: column !important;
     }
   }
 
   &-container-reverse {
-    @extend .layout;
-    @include bp.layout-bp(lt-md) {
+    @extend .app-layout;
+    @include layout.layout-bp(lt-md) {
       flex-direction: column-reverse !important;
     }
   }
