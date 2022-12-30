@@ -25,11 +25,11 @@ export const resume: Resume = {
       },
       {
         label: 'GitHub',
-        value: `<a class="app-link" href="https://github.com/ianaco" target="_blank" rel="noopener noreferrer">github.com/ianaco</a>`,
+        value: `<a class="app-link" href="https://github.com/ianacodev" target="_blank" rel="noopener noreferrer">github.com/ianacodev</a>`,
       },
       {
         label: 'Personal Website',
-        value: `<a class="app-link" href="https://ianaco" target="_blank" rel="noopener noreferrer">ianaco</a>`,
+        value: `<a class="app-link" href="https://ianaco.web.app" target="_blank" rel="noopener noreferrer">ianaco</a>`,
       },
     ],
   },

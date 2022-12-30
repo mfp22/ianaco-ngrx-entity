@@ -79,16 +79,16 @@ a:visited {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: map-get(color.$gray-light-palette, 500);
+  background: map-get(color.$gray-dark-palette, 900);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: map-get($ianaco-primary, 500);
+  background: map-get(color.$gray-dark-palette, 800);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: map-get(color.$gray-light-palette, 500);
+  background: map-get(color.$gray-dark-palette, 800);
   cursor: pointer;
 }

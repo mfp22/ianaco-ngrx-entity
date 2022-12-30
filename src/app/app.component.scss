@@ -26,7 +26,6 @@ $hamburger-types: (collapse) !default;
 
 .mat-toolbar {
   background: transparent;
-
   &-row {
     display: flex;
     flex-direction: row;
@@ -36,13 +35,12 @@ $hamburger-types: (collapse) !default;
 }
 
 .hamburger {
-  background-color: rgba(159, 159, 160, 0.25);
+  background-color: rgb(75, 75, 75, 0.75);
   margin-top: 1rem;
   line-height: 0.625rem;
   border-radius: 50%;
   position: fixed;
   right: 1rem;
-  z-index: 1000;
   transition: all ease-in-out;
 
   &-box {

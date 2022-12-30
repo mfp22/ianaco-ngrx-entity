@@ -50,6 +50,7 @@ $divider-color: map-get(color.$gray-dark-palette, 800);
     border-radius: 2rem;
     background-color: map-get(color.$gray-dark-palette, 800);
     font-weight: 500;
+    white-space: nowrap;
   }
 
   // body begin

@@ -1,6 +1,6 @@
 <div class="resume-document" *ngIf="resume">
   <!-- header begin -->
-  <div class="app-layout-container-reverse">
+  <div class="app-layout-container-reverse app-layout-flex--start">
     <section class="app-layout-section--1x layout-section--align-items-start">
       <!-- [#contact] -->
       <div
@@ -11,10 +11,13 @@
           class="app-margin-bottom--medium"
           *ngFor="let item of contact.items"
         >
-          <div class="app-font--base text--fade">
+          <div class="app-font--base app-text-contrast-color">
             {{ item.label }}
           </div>
-          <div class="app-font--medium" [innerHtml]="item.value"></div>
+          <div
+            class="app-font--medium app-text-accent-color"
+            [innerHtml]="item.value"
+          ></div>
         </div>
       </div>
     </section>
@@ -202,7 +205,7 @@
           style="
             display: flex;
             flex-direction: row;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: center;
             gap: 2rem;
           "

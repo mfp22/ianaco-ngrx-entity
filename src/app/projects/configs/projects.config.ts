@@ -16,19 +16,19 @@ export const projects: Projects = [
       },
       {
         label: 'code',
-        value: 'https://github.com/ianaco/sample-demo-app',
+        value: 'https://github.com/ianacodev/sample-demo-app',
       },
-      { label: 'demo', value: 'https://ianaco/sample-demo-app' },
+      { label: 'demo', value: 'https://ianacodev/sample-demo-app' },
     ],
   },
   {
-    title: 'About Me',
+    title: 'Personal Website (Ianaco)',
     name: 'personal-website',
     content: 'My personal website I designed and built using angular/ngrx.',
     links: [
       {
         label: 'code',
-        value: 'https://github.com/ianaco/ianaco',
+        value: 'https://github.com/ianacodev/ianaco',
       },
     ],
   },
@@ -39,7 +39,7 @@ export const projects: Projects = [
     links: [
       {
         label: 'code',
-        value: 'https://github.com/ianaco/ngx-data-table-lib',
+        value: 'https://github.com/ianacodev/ngx-data-table-lib',
       },
     ],
   },
@@ -50,7 +50,7 @@ export const projects: Projects = [
     links: [
       {
         label: 'code',
-        value: 'https://github.com/ianaco/sample-redux-store',
+        value: 'https://github.com/ianacodev/sample-redux-store',
       },
     ],
   },
@@ -61,7 +61,7 @@ export const projects: Projects = [
     links: [
       {
         label: 'code',
-        value: 'https://github.com/ianaco/typescript_basics',
+        value: 'https://github.com/ianacodev/typescript_basics',
       },
     ],
   },
@@ -72,7 +72,7 @@ export const projects: Projects = [
     links: [
       {
         label: 'code',
-        value: 'https://github.com/ianaco/example_scripts',
+        value: 'https://github.com/ianacodev/example_scripts',
       },
     ],
   },
@@ -83,7 +83,7 @@ export const projects: Projects = [
     links: [
       {
         label: 'code',
-        value: 'https://github.com/ianaco/XHRExamples',
+        value: 'https://github.com/ianacodev/XHRExamples',
       },
     ],
   },
