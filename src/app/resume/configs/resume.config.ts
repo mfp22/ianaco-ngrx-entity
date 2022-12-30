@@ -79,11 +79,11 @@ export const resume: Resume = {
     items: [
       {
         role: 'Front End Software Engineer (Contractor)',
-        beginDate: '2022-02',
-        endDate: 'Present',
         companies: [
           {
             name: 'The Yorker Sports, PA',
+            beginDate: '2022-02',
+            endDate: 'Present',
             qualifications: [
               `Built angular core components library for use across multiple front-end applications.`,
               `Registration page for sign up/in working with back end engineers for aws cognito integration.`,

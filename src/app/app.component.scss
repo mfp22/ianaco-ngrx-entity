@@ -3,6 +3,8 @@
 $hamburger-types: (collapse) !default;
 
 .app {
+  height: 100%;
+
   &__sidenav {
     display: flex;
     flex-direction: column;

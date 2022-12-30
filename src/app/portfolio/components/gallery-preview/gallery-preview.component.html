@@ -21,14 +21,14 @@
 </div>
 <app-divider [size]="'large'"></app-divider>
 <div class="gallery-preview__controls-container">
-  <button mat-fab (click)="moveLeft()">
+  <button mat-fab (click)="moveLeft()" aria-label="move carousel left">
     <img
       class="icon--x-small"
       src="assets/icons/chevron-left.svg"
       alt="move carousel left"
     />
   </button>
-  <button mat-fab (click)="moveRight()">
+  <button mat-fab (click)="moveRight()" aria-label="move carousel right">
     <img
       class="icon--x-small"
       src="assets/icons/chevron-right.svg"
