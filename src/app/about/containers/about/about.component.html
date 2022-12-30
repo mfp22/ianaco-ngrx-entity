@@ -7,12 +7,18 @@
           <app-animate-text [text]="detail.title"></app-animate-text>
         </div>
       </div>
-      <app-animate-content [animation]="'slideDownAppear'">
-        <div class="app-scroll-indicator app-scroll-indicator--right">
-          <app-arrow-icon [arrowType]="'down'"></app-arrow-icon>
-          <span class="app-font--large text--standout">Learn More</span>
-        </div>
-      </app-animate-content>
+      <app-divider [size]="'large'"></app-divider>
+      <div appInView (inView)="onInView('t0-0')">
+        <app-animate-content
+          [animation]="'slideDownAppear'"
+          *ngIf="animationMap['t0-0']"
+        >
+          <div class="app-scroll-indicator app-scroll-indicator--right">
+            <app-arrow-icon [arrowType]="'down'"></app-arrow-icon>
+            <span class="app-font--large text--standout">Learn More</span>
+          </div>
+        </app-animate-content>
+      </div>
     </app-page-section-template>
     <!--#quality product section-->
     <app-page-section-template>
@@ -60,12 +66,11 @@
           </app-animate-content>
         </section>
       </div>
-    </app-page-section-template>
-    <app-page-section-template>
-      <div appInView (inView)="onInView('t2')">
+      <app-divider [size]="'large'"></app-divider>
+      <div appInView (inView)="onInView('t3')">
         <app-animate-content
           [animation]="'slideDownAppear'"
-          *ngIf="animationMap['t2']"
+          *ngIf="animationMap['t3']"
         >
           <div class="app-scroll-indicator app-scroll-indicator--left">
             <app-arrow-icon [arrowType]="'down'"></app-arrow-icon>
