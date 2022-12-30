@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 // features
@@ -12,6 +12,7 @@ import * as fromContainers from './containers';
   declarations: [...fromContainers.containers],
   imports: [
     CommonModule,
+    NgOptimizedImage,
     MatDividerModule,
     MatButtonModule,
     HomeRoutingModule,
