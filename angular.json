@@ -31,13 +31,16 @@
               "src/assets",
               "src/robots.txt",
               "src/sitemap.xml",
-              "src/sitemap.html"
+              "src/sitemap.html",
+              "src/manifest.webmanifest"
             ],
             "styles": ["src/styles/styles.scss"],
             "stylePreprocessorOptions": {
               "includePaths": ["src/styles"]
             },
-            "scripts": []
+            "scripts": [],
+            "serviceWorker": true,
+            "ngswConfigPath": "ngsw-config.json"
           },
           "configurations": {
             "production": {
@@ -103,7 +106,8 @@
               "src/assets",
               "src/robots.txt",
               "src/sitemap.xml",
-              "src/sitemap.html"
+              "src/sitemap.html",
+              "src/manifest.webmanifest"
             ],
             "styles": ["src/styles/styles.scss"],
             "stylePreprocessorOptions": {
