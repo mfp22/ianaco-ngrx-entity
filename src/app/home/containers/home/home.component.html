@@ -9,16 +9,22 @@
         <app-animate-text [text]="personal.occupation"></app-animate-text>
       </h1>
       <app-animate-content [animation]="'slideUpAppear'">
-        <div class="home__image-container">
-          <img
-            class="home__image"
-            ngSrc="assets/images/profile/profile-1-image.png"
-            alt="profile image"
-            width="160"
-            height="200"
-            loading="eager"
-          />
-        </div>
+        <figure class="home__image-container">
+          <picture>
+            <source
+              type="image/avif"
+              srcSet="assets/images/profile/profile-1-image.avif"
+            />
+            <img
+              class="home__image"
+              ngSrc="assets/images/profile/profile-1-image.png"
+              alt="profile image"
+              width="160"
+              height="200"
+              priority="true"
+            />
+          </picture>
+        </figure>
       </app-animate-content>
       <h2 class="home__subtitle">
         <app-animate-text [text]="personal.firstName"></app-animate-text>
