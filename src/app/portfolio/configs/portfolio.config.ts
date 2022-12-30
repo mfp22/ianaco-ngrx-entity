@@ -7,7 +7,7 @@ export const portfolio: Portfolio = {
       name: 'the bonkers cricket',
       role: 'Designer & Front End Developer',
       description:
-        'Designer & Front End developer. Platform for providing sports news and fantasy tournaments.',
+        'Designer & Front End developer. Platform for providing cricket sports news and fantasy tournaments.',
       branding: {
         colorPalette: ['#fbfbfd', '#1099fa', '#f08a2c', '#595959'],
         typography: 'Roboto',
@@ -25,7 +25,7 @@ export const portfolio: Portfolio = {
       name: 'sports app',
       role: 'Designer',
       description:
-        'Design for sports application landing page promoting NFT (Non-fungible Token) digital assets.',
+        'Designer for sports application landing page promoting NFT (Non-fungible Token) digital assets.',
       branding: {
         colorPalette: ['#121212', '#FFC928', '#707070', '#FBFBFD'],
         typography: 'Roboto',
@@ -42,7 +42,7 @@ export const portfolio: Portfolio = {
       name: 'investment app',
       role: 'Designer & Front End Developer',
       description:
-        'Designer & Front End Developer for personal investment application. Provides automated crypto trading, crypto strategy back testing, and stock investment calculator. (This is a private application for personal use.)',
+        'Personal Private Project: Designer & Front End Developer investment application. Provides automated crypto trading, crypto strategy back testing, and stock investment calculator.',
       branding: {
         colorPalette: ['#050505', '#061121', '#707070', '#ffffff'],
         typography: 'Roboto',

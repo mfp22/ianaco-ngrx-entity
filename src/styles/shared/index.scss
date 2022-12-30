@@ -1,1 +1,6 @@
 @forward "shared";
+
+.drag-scroll-content {
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+}

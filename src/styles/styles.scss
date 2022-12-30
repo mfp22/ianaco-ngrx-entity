@@ -67,3 +67,28 @@ a:visited {
   --app-primary-color: #{map-get($ianaco-primary, 900)};
   --app-accent-color: #{map-get($ianaco-accent, 500)};
 }
+
+// scrollbar
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: map-get(color.$gray-light-palette, 500);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: map-get($ianaco-primary, 500);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: map-get(color.$gray-light-palette, 500);
+  cursor: pointer;
+}
