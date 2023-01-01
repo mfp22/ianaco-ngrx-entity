@@ -18,7 +18,7 @@ export const projects: Projects = [
         label: 'code',
         value: 'https://github.com/ianacodev/sample-demo-app',
       },
-      { label: 'demo', value: 'https://ianacodev/sample-demo-app' },
+      { label: 'demo', value: 'https://ianacodev.github.io/sample-demo-app' },
     ],
   },
   {
