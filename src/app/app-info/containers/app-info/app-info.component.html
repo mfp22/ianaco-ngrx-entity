@@ -1,0 +1,37 @@
+<app-page-template class="app-info">
+  <!--#heading-->
+  <app-page-section-template>
+    <app-page-section-header-template
+      [title]="'Application Info'"
+      [animate]="true"
+    ></app-page-section-header-template>
+    <app-divider [size]="'large'"></app-divider>
+    <section class="app-layout-container app-layout-flex--start">
+      <div class="app-layout-section--1x" appInView (inView)="onInView('t0')">
+        <app-animate-content
+          [animation]="'slideInLeft'"
+          *ngIf="animationMap['t0']"
+        >
+          <div class="app-paragraph--large">Tech Stack</div>
+        </app-animate-content>
+      </div>
+      <div class="app-layout-section--1x" appInView (inView)="onInView('t1')">
+        <app-animate-content
+          [animation]="'slideInRight'"
+          *ngIf="animationMap['t1']"
+        >
+          <ul class="app-info__stack-list app-paragraph--medium">
+            <li class="app-info__stack-list-item">Angular</li>
+            <li>Angular Material</li>
+            <li>NgRx</li>
+            <li>RxJS</li>
+            <li>Typescript</li>
+            <li>SCSS</li>
+            <li>HTML</li>
+            <li>Firebase</li>
+          </ul>
+        </app-animate-content>
+      </div>
+    </section>
+  </app-page-section-template>
+</app-page-template>

@@ -35,6 +35,13 @@ const routes: Routes = [
         loadChildren: () =>
           import('./resume/resume.module').then((m) => m.ResumeModule),
       },
+      {
+        path: 'info',
+        loadComponent: () =>
+          import('./app-info/containers/app-info/app-info.component').then(
+            (c) => c.AppInfoComponent
+          ),
+      },
     ],
   },
 ];

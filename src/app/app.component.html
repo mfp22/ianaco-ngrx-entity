@@ -63,14 +63,17 @@
         <div *ngIf="personal$ | async as personal">
           <p class="font-size--base">{{ personal.email }}</p>
           <p>© 2023 ianaco</p>
-          <p>
+          <div class="app__link-container">
+            <a class="app-link" [routerLink]="'/info'" aria-label="app info"
+              >AppInfo</a
+            >
             <a
               class="app-link"
               href="https://ianaco.web.app/sitemap.html"
               aria-label="sitemap"
               >Sitemap</a
             >
-          </p>
+          </div>
         </div>
       </footer>
     </mat-sidenav-content>
