@@ -15,6 +15,7 @@ import { reducers } from './store';
 // feature modules
 import { AppRoutingModule } from './app-routing.module';
 import { MetaModule } from './meta/meta.module';
+import { HomeModule } from './home/home.module';
 import { ProfileModule } from './profile/profile.module';
 import { SharedModule } from './shared/shared.module';
 // components
@@ -44,6 +45,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     }),
     MetaModule,
     ProfileModule,
+    HomeModule,
     SharedModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),

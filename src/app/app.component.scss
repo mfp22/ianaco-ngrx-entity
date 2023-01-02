@@ -43,6 +43,7 @@ $hamburger-types: (collapse) !default;
   border-radius: 50%;
   position: fixed;
   right: 1rem;
+  top: 0.25rem;
   transition: all ease-in-out;
 
   &-box {
