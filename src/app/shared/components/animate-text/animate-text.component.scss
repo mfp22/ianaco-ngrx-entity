@@ -1,6 +1,7 @@
 @use "color" as color;
 
 .animate-text {
+  word-break: keep-all;
   &__char {
     display: inline-block;
     position: relative;
