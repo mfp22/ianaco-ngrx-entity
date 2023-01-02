@@ -85,10 +85,10 @@ export const resume: Resume = {
             beginDate: '2022-02',
             endDate: 'Present',
             qualifications: [
-              `Built angular core components library for use across multiple front-end applications.`,
-              `Registration page for sign up/in working with back end engineers for aws cognito integration.`,
-              `Designed & Developed landing page for aggregated cricket sports content.`,
-              `Designed & Developed cricket tournament application for entering fantasy tournaments.`,
+              `Implemented angular common component library for use across multiple front end applications.`,
+              `Worked with backend engineer for establishing API contracts and integration.`,
+              `Designed and developed primary application for displaying latest cricket sports news, scores, and stories.`,
+              `Worked on secondary application for hosting fantasy cricket sports tournaments.`,
             ],
           },
         ],
@@ -188,11 +188,11 @@ export const resume: Resume = {
     items: [
       {
         date: '2022',
-        name: 'Google SEO Fundamentals (Coursea By UC Davis)',
+        name: 'Google SEO Fundamentals (Coursea)',
       },
       {
         date: '2020',
-        name: 'HTML5 (Coursea By University Michigan)',
+        name: 'HTML5 (Coursea)',
       },
       {
         date: '2020',
@@ -238,11 +238,11 @@ export const resume: Resume = {
       value: `${imageBasePath}/certifications/google-seo-fundamentals-cert.jpg`,
     },
     {
-      label: 'Introduction To Google SEO - Coursea By UC Davis',
+      label: 'Introduction To Google SEO - (Coursea)',
       value: `${imageBasePath}/certifications/introduction-to-google-seo-cert.jpg`,
     },
     {
-      label: 'Google SEO Fundamentals - Coursea By UC Davis',
+      label: 'Google SEO Fundamentals (Coursea)',
       value: `${imageBasePath}/certifications/google-seo-fundamentals-cert.jpg`,
     },
     {
