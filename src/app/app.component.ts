@@ -37,6 +37,7 @@ export class AppComponent implements OnInit, OnDestroy {
   navs$: Observable<Item<string>[]> | null = null;
   activeNav$: Observable<Item<string>> | null = null;
   navInViewStatus: boolean = true;
+  footerInViewStatus: boolean = false;
   @ViewChild(MatSidenav) sidenav: MatSidenav | undefined;
   @ViewChild(MatSidenavContent)
   sidenavContent: MatSidenavContent | undefined;
@@ -87,5 +88,14 @@ export class AppComponent implements OnInit, OnDestroy {
    */
   onInView(event: boolean) {
     this.navInViewStatus = event;
+  }
+
+  /**
+   * on in view footer
+   * @param event
+   */
+  onInViewFooter(event: boolean) {
+    this.footerInViewStatus = event;
+    console.log('here', this.footerInViewStatus);
   }
 }

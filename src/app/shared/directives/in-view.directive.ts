@@ -12,6 +12,7 @@ import {
 })
 export class InViewDirective implements AfterViewInit {
   @Input() disconnect = true;
+  @Input() rootMargin = '0px 0px -30% 0px';
   @Output() inView = new EventEmitter<boolean>();
   constructor(private elRef: ElementRef) {}
 
@@ -19,6 +20,7 @@ export class InViewDirective implements AfterViewInit {
     const threshold = 1;
     const observer = new IntersectionObserver(
       (entries) => {
+        console.log('rootmarign', this.rootMargin);
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             this.inView.emit(true);
@@ -32,7 +34,7 @@ export class InViewDirective implements AfterViewInit {
           }
         });
       },
-      { threshold, rootMargin: '0px 0px -30% 0px' }
+      { threshold, rootMargin: this.rootMargin }
     );
     observer.observe(this.elRef.nativeElement);
   }
