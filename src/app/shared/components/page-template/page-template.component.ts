@@ -1,4 +1,9 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  Input,
+  ViewEncapsulation,
+  AfterViewInit,
+} from '@angular/core';
 // models
 import { color } from '../../models';
 
@@ -8,6 +13,13 @@ import { color } from '../../models';
   styleUrls: ['./page-template.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class PageTemplateComponent {
+export class PageTemplateComponent implements AfterViewInit {
   @Input() backgroundColorHex: string = color.Transparent;
+
+  ngAfterViewInit() {
+    const matSidenavContentRef = document.querySelector('.mat-sidenav-content');
+    if (matSidenavContentRef) {
+      matSidenavContentRef.scrollTop = 0;
+    }
+  }
 }
