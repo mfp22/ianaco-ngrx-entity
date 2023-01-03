@@ -90,6 +90,8 @@ $divider-color: map-get(color.$gray-dark-palette, 800);
   &__cert-image {
     max-height: 20rem;
     margin: 0.25rem;
+    height: 100%;
+    width: 100%;
   }
 }
 

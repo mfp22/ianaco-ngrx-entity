@@ -52,7 +52,11 @@
             class="gallery-item__mobile-image-container"
             *ngFor="let image of galleryItem.mobileImages"
           >
-            <img class="gallery-item__mobile-image" [src]="image" alt="image" />
+            <img
+              class="gallery-item__mobile-image"
+              [src]="image"
+              alt="mobile application image"
+            />
           </div>
         </div>
       </div>
@@ -70,9 +74,9 @@
       </div>
       <app-divider></app-divider>
       <img
-        class="gallery-item__showcase-image"
+        class="gallery-item__desktop-image"
         [src]="galleryItem.secondaryImage"
-        alt="showcase-image"
+        alt="desktop application image"
       />
     </app-animate-content>
   </div>
