@@ -12,7 +12,9 @@ export const portfolio: Portfolio = {
         colorPalette: ['#fbfbfd', '#1099fa', '#f08a2c', '#595959'],
         typography: 'Roboto',
       },
-      previewImage: 'assets/images/design/yorker-app/yorker-app-preview.jpg',
+      previewImage: 'assets/images/design/yorker-app/yorker-app-preview.avif',
+      previewImageFallback:
+        'assets/images/design/yorker-app/yorker-app-preview.jpg',
       primaryImage: 'assets/images/design/yorker-app/yorker-app-desktop-1.png',
       secondaryImage:
         'assets/images/design/yorker-app/yorker-app-desktop-2.png',
@@ -30,7 +32,9 @@ export const portfolio: Portfolio = {
         colorPalette: ['#121212', '#FFC928', '#707070', '#FBFBFD'],
         typography: 'Roboto',
       },
-      previewImage: 'assets/images/design/sports-app/sports-app-preview.jpg',
+      previewImage: 'assets/images/design/sports-app/sports-app-preview.avif',
+      previewImageFallback:
+        'assets/images/design/sports-app/sports-app-preview.jpg',
       primaryImage: 'assets/images/design/sports-app/sports-app-1.jpg',
       secondaryImage: 'assets/images/design/sports-app/sports-app-2.png',
       mobileImages: [
@@ -48,6 +52,8 @@ export const portfolio: Portfolio = {
         typography: 'Roboto',
       },
       previewImage:
+        'assets/images/design/investment-app/investment-app-preview.avif',
+      previewImageFallback:
         'assets/images/design/investment-app/investment-app-preview.jpg',
       primaryImage:
         'assets/images/design/investment-app/investment-app-desktop-1.png',

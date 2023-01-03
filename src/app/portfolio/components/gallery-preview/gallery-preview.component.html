@@ -7,12 +7,19 @@
       (click)="onSelect(i)"
       *ngFor="let galleryItem of gallery; index as i"
     >
-      <figure
-        class="gallery-preview__figure"
-        [ngStyle]="{
-          'background-image': 'url(' + galleryItem.previewImage + ')'
-        }"
-      ></figure>
+      <figure class="gallery-preview__figure">
+        <picture>
+          <source type="image/avif" [attr.srcSet]="galleryItem.previewImage" />
+          <img
+            class="home__image"
+            [ngSrc]="galleryItem.previewImageFallback"
+            alt="profile image"
+            width="200"
+            height="200"
+            priority="true"
+          />
+        </picture>
+      </figure>
       <figure class="gallery-preview__overlay">
         <div class="gallery-preview__title">{{ galleryItem.name }}</div>
       </figure>

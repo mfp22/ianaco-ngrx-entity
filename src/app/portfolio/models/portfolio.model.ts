@@ -9,6 +9,7 @@ export type GalleryItem = {
   description: string;
   branding: Branding;
   previewImage: string;
+  previewImageFallback: string;
   primaryImage: string;
   secondaryImage: string;
   mobileImages: string[];
