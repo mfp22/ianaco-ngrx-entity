@@ -20,7 +20,6 @@ export class InViewDirective implements AfterViewInit {
     const threshold = 1;
     const observer = new IntersectionObserver(
       (entries) => {
-        console.log('rootmarign', this.rootMargin);
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             this.inView.emit(true);
