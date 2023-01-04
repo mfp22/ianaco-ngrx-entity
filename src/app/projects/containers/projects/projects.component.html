@@ -1,14 +1,11 @@
 <app-page-template class="projects">
   <!--#projects-->
   <app-page-section-template>
-    <div appInView (inView)="onInView('t1')">
-      <app-page-section-header-template
-        [title]="'Coding Projects'"
-        [animate]="true"
-        *ngIf="animationMap['t1']"
-      >
-      </app-page-section-header-template>
-    </div>
+    <app-page-section-header-template
+      [title]="'Coding Projects'"
+      [animate]="true"
+    >
+    </app-page-section-header-template>
     <app-divider></app-divider>
     <section class="app-layout-container app-layout-flex--start">
       <div class="app-layout-section--1x" appInView (inView)="onInView('t2')">
