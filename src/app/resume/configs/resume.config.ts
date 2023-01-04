@@ -67,9 +67,6 @@ export const resume: Resume = {
         label: 'Jasmine',
       },
       {
-        label: 'Basic SEO',
-      },
-      {
         label: 'Adobe XD',
       },
     ],
@@ -196,7 +193,7 @@ export const resume: Resume = {
       },
       {
         date: '2020',
-        name: 'Ultimate Courses (Angular, RxJS, NGRX, Typescript)',
+        name: 'Ultimate Courses (Angular, RxJS, NgRx)',
       },
       {
         date: '2014',

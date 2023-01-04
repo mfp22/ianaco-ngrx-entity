@@ -34,21 +34,16 @@
       </p>
     </section>
     <app-divider [size]="'large'"></app-divider>
-    <div appInView (inView)="onInView('t0')">
-      <app-animate-content
-        [animation]="'slideDownAppear'"
-        *ngIf="animationMap['t0']"
-      >
-        <div class="app-scroll-indicator app-scroll-indicator--right">
-          <img
-            class="home__arrow-icon"
-            src="assets/icons/arrow-down-icon.svg"
-            alt="down arrow"
-          />
-          <span class="app-font--large">See More</span>
-        </div>
-      </app-animate-content>
-    </div>
+    <app-animate-content [animation]="'slideDownAppear'">
+      <div class="app-scroll-indicator app-scroll-indicator--right">
+        <img
+          class="home__arrow-icon"
+          src="assets/icons/arrow-down-icon.svg"
+          alt="down arrow"
+        />
+        <span class="app-font--large">See More</span>
+      </div>
+    </app-animate-content>
   </app-page-section-template>
   <!--#providing value section-->
   <app-page-section-template>
@@ -80,10 +75,10 @@
       </div>
     </section>
     <app-divider [size]="'large'"></app-divider>
-    <div appInView (inView)="onInView('t4')">
+    <div appInView (inView)="onInView('t3')">
       <app-animate-content
         [animation]="'slideDownAppear'"
-        *ngIf="animationMap['t4']"
+        *ngIf="animationMap['t3']"
       >
         <div class="app-scroll-indicator app-scroll-indicator--left">
           <img
