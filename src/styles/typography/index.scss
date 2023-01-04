@@ -61,11 +61,6 @@ $app-font-sizes: (
 }
 
 // #[paragraphs]
-.app-paragraph--x-large {
-  @extend .app-font--x-large;
-  color: map-get(color.$gray-light-palette, 500);
-}
-
 .app-paragraph--large {
   @extend .app-font--large;
   color: map-get(color.$gray-light-palette, 500);

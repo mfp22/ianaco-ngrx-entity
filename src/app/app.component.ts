@@ -4,14 +4,11 @@ import {
   OnDestroy,
   ViewChild,
   OnInit,
-  ElementRef,
 } from '@angular/core';
 import { Router } from '@angular/router';
 import { MediaMatcher } from '@angular/cdk/layout';
-import { AnimationEvent } from '@angular/animations';
 import { MatSidenav, MatSidenavContent } from '@angular/material/sidenav';
-import { Observable, timer } from 'rxjs';
-import { map, tap, delay } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 // ngrx
 import { Store, select } from '@ngrx/store';
 import * as fromRootStore from './store';

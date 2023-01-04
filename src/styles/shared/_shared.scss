@@ -15,25 +15,6 @@
   }
 }
 
-// #icons
-.icon--x-small {
-  width: 1rem;
-  height: 1rem;
-  display: inline-block;
-}
-
-.icon--small {
-  width: 2.25rem;
-  height: 100%;
-  display: inline-block;
-}
-
-.icon--medium {
-  width: 2.5rem;
-  height: 100%;
-  display: inline-block;
-}
-
 // #link
 .app-link {
   text-decoration: underline;
@@ -48,6 +29,13 @@
 // #sizing
 .width-fill {
   width: 100%;
+}
+
+// #icons
+.icon--x-small {
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
 }
 
 // #margin
@@ -82,11 +70,6 @@
 
 .app-text-contrast-color {
   color: map-get(color.$gray-dark-palette, 200);
-}
-
-// #transforms
-.text--uppercase {
-  text-transform: uppercase;
 }
 
 // #scroll indicator

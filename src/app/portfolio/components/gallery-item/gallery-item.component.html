@@ -5,19 +5,19 @@
       <!--#details container-->
       <div class="gallery-item__details-container app-margin-bottom--large">
         <div class="gallery-item__item">
-          <div class="gallery-item__label">Details</div>
+          <div class="gallery-item__label app-font--base">Details</div>
           <p class="app-paragraph--small">
             {{ galleryItem.description }}
           </p>
         </div>
         <div class="gallery-item__item">
-          <div class="gallery-item__label">Color Palette</div>
+          <div class="gallery-item__label app-font--base">Color Palette</div>
           <app-color-palette
             [colorPalette]="galleryItem.branding.colorPalette"
           ></app-color-palette>
         </div>
         <div class="gallery-item__item">
-          <div class="gallery-item__label">Typography</div>
+          <div class="gallery-item__label app-font--base">Typography</div>
           <div
             class="app-font--xxx-large app-text-accent-color"
             [style.fontFamily]="galleryItem.branding.typography"
