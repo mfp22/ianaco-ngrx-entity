@@ -11,8 +11,8 @@
         <picture>
           <source type="image/avif" [attr.srcSet]="galleryItem.previewImage" />
           <img
-            class="home__image"
-            [ngSrc]="galleryItem.previewImageFallback"
+            class="gallery-preview__image"
+            [ngSrc]="galleryItem.fallbackPreviewImage"
             alt="profile image"
             width="200"
             height="200"

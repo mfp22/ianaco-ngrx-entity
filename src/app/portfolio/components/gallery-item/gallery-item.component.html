@@ -50,13 +50,22 @@
         <div class="gallery-item__mobile-container">
           <div
             class="gallery-item__mobile-image-container"
-            *ngFor="let image of galleryItem.mobileImages"
+            *ngFor="let mobileImage of galleryItem.mobileImages"
           >
-            <img
-              class="gallery-item__mobile-image"
-              [src]="image"
-              alt="mobile application image"
-            />
+            <figure class="gallery-item__figure">
+              <picture>
+                <source type="image/avif" [attr.srcSet]="mobileImage.image" />
+                <img
+                  class="gallery-item__mobile-image"
+                  [ngSrc]="mobileImage.fallbackImage"
+                  alt="profile image"
+                  priority="true"
+                  fill
+                  style="position: relative"
+                  [alt]="mobileImage.desc"
+                />
+              </picture>
+            </figure>
           </div>
         </div>
       </div>
@@ -73,11 +82,20 @@
         </div>
       </div>
       <app-divider></app-divider>
-      <img
-        class="gallery-item__desktop-image"
-        [src]="galleryItem.secondaryImage"
-        alt="desktop application image"
-      />
+      <figure class="gallery-item__figure">
+        <picture>
+          <source type="image/avif" [attr.srcSet]="galleryItem.desktopImage" />
+          <img
+            class="gallery-item__mobile-image"
+            [ngSrc]="galleryItem.fallbackDesktopImage"
+            alt="profile image"
+            priority="true"
+            fill
+            style="position: relative"
+            alt="desktop application image"
+          />
+        </picture>
+      </figure>
     </app-animate-content>
   </div>
 </div>

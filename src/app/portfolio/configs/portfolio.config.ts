@@ -13,14 +13,25 @@ export const portfolio: Portfolio = {
         typography: 'Roboto',
       },
       previewImage: 'assets/images/design/yorker-app/yorker-app-preview.avif',
-      previewImageFallback:
+      fallbackPreviewImage:
         'assets/images/design/yorker-app/yorker-app-preview.jpg',
       primaryImage: 'assets/images/design/yorker-app/yorker-app-desktop-1.png',
-      secondaryImage:
+      desktopImage: 'assets/images/design/yorker-app/yorker-app-desktop-2.avif',
+      fallbackDesktopImage:
         'assets/images/design/yorker-app/yorker-app-desktop-2.png',
       mobileImages: [
-        'assets/images/design/yorker-app/yorker-app-mobile-1.png',
-        'assets/images/design/yorker-app/yorker-app-mobile-2.png',
+        {
+          image: 'assets/images/design/yorker-app/yorker-app-mobile-1.avif',
+          fallbackImage:
+            'assets/images/design/yorker-app/yorker-app-mobile-1.png',
+          desc: 'sample mobile image 1',
+        },
+        {
+          image: 'assets/images/design/yorker-app/yorker-app-mobile-2.avif',
+          fallbackImage:
+            'assets/images/design/yorker-app/yorker-app-mobile-2.png',
+          desc: 'sample mobile image 2',
+        },
       ],
     },
     {
@@ -33,13 +44,24 @@ export const portfolio: Portfolio = {
         typography: 'Roboto',
       },
       previewImage: 'assets/images/design/sports-app/sports-app-preview.avif',
-      previewImageFallback:
+      fallbackPreviewImage:
         'assets/images/design/sports-app/sports-app-preview.jpg',
       primaryImage: 'assets/images/design/sports-app/sports-app-1.jpg',
-      secondaryImage: 'assets/images/design/sports-app/sports-app-2.png',
+      desktopImage: 'assets/images/design/sports-app/sports-app-2.avif',
+      fallbackDesktopImage: 'assets/images/design/sports-app/sports-app-2.png',
       mobileImages: [
-        'assets/images/design/sports-app/sports-app-mobile-1.png',
-        'assets/images/design/sports-app/sports-app-mobile-2.png',
+        {
+          image: 'assets/images/design/sports-app/sports-app-mobile-1.avif',
+          fallbackImage:
+            'assets/images/design/sports-app/sports-app-mobile-1.png',
+          desc: 'sample mobile image 1',
+        },
+        {
+          image: 'assets/images/design/sports-app/sports-app-mobile-2.avif',
+          fallbackImage:
+            'assets/images/design/sports-app/sports-app-mobile-2.png',
+          desc: 'sample mobile image 2',
+        },
       ],
     },
     {
@@ -53,15 +75,29 @@ export const portfolio: Portfolio = {
       },
       previewImage:
         'assets/images/design/investment-app/investment-app-preview.avif',
-      previewImageFallback:
+      fallbackPreviewImage:
         'assets/images/design/investment-app/investment-app-preview.jpg',
       primaryImage:
         'assets/images/design/investment-app/investment-app-desktop-1.png',
-      secondaryImage:
+      desktopImage:
+        'assets/images/design/investment-app/investment-app-desktop-2.avif',
+      fallbackDesktopImage:
         'assets/images/design/investment-app/investment-app-desktop-2.png',
       mobileImages: [
-        'assets/images/design/investment-app/investment-app-mobile-1.png',
-        'assets/images/design/investment-app/investment-app-mobile-2.png',
+        {
+          image:
+            'assets/images/design/investment-app/investment-app-mobile-1.avif',
+          fallbackImage:
+            'assets/images/design/investment-app/investment-app-mobile-1.png',
+          desc: 'sample mobile image 1',
+        },
+        {
+          image:
+            'assets/images/design/investment-app/investment-app-mobile-2.avif',
+          fallbackImage:
+            'assets/images/design/investment-app/investment-app-mobile-2.png',
+          desc: 'sample mobile image 2',
+        },
       ],
     },
   ],

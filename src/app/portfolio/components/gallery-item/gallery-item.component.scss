@@ -17,6 +17,10 @@
     padding-bottom: 0.25rem;
   }
 
+  &__figure {
+    margin: 0;
+  }
+
   &__showcase {
     &-figure {
       margin: 0;
@@ -39,6 +43,7 @@
     &-image {
       width: 100%;
       height: 100%;
+      position: relative !important;
     }
   }
 
