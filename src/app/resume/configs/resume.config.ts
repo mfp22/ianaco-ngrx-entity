@@ -232,7 +232,7 @@ export const resume: Resume = {
     },
     {
       label: 'HTML5 - Coursea By University Of Michigan',
-      value: `${imageBasePath}/certifications/google-seo-fundamentals-cert`,
+      value: `${imageBasePath}/certifications/introduction-to-html5-cert`,
     },
     {
       label: 'Introduction To Google SEO - (Coursea)',
