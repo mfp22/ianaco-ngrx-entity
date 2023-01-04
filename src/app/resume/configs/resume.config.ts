@@ -204,47 +204,47 @@ export const resume: Resume = {
   certificationCerts: [
     {
       label: 'Ultimate Angular Angular Fundamentals',
-      value: `${imageBasePath}/certifications/angular-fundamentals-cert.jpg`,
+      value: `${imageBasePath}/certifications/angular-fundamentals-cert`,
     },
     {
       label: 'Ultimate Angular Angular Pro',
-      value: `${imageBasePath}/certifications/angular-pro-cert.jpg`,
+      value: `${imageBasePath}/certifications/angular-pro-cert`,
     },
     {
       label: 'Ultimate Angular Ngrx',
-      value: `${imageBasePath}/certifications/ngrx-cert.jpg`,
+      value: `${imageBasePath}/certifications/ngrx-cert`,
     },
     {
       label: 'Ultimate Angular Rxjs Basics',
-      value: `${imageBasePath}/certifications/rxjs-basics-cert.jpg`,
+      value: `${imageBasePath}/certifications/rxjs-basics-cert`,
     },
     {
       label: 'Ultimate Angular Rxjs Masterclass',
-      value: `${imageBasePath}/certifications/rxjs-masterclass-cert.jpg`,
+      value: `${imageBasePath}/certifications/rxjs-masterclass-cert`,
     },
     {
       label: 'Ultimate Angular Typescript Basics',
-      value: `${imageBasePath}/certifications/typescript-basics-cert.jpg`,
+      value: `${imageBasePath}/certifications/typescript-basics-cert`,
     },
     {
       label: 'Ultimate Angular Typescript Masterclass',
-      value: `${imageBasePath}/certifications/typescript-masterclass-cert.jpg`,
+      value: `${imageBasePath}/certifications/typescript-masterclass-cert`,
     },
     {
       label: 'HTML5 - Coursea By University Of Michigan',
-      value: `${imageBasePath}/certifications/google-seo-fundamentals-cert.jpg`,
+      value: `${imageBasePath}/certifications/google-seo-fundamentals-cert`,
     },
     {
       label: 'Introduction To Google SEO - (Coursea)',
-      value: `${imageBasePath}/certifications/introduction-to-google-seo-cert.jpg`,
+      value: `${imageBasePath}/certifications/introduction-to-google-seo-cert`,
     },
     {
       label: 'Google SEO Fundamentals (Coursea)',
-      value: `${imageBasePath}/certifications/google-seo-fundamentals-cert.jpg`,
+      value: `${imageBasePath}/certifications/google-seo-fundamentals-cert`,
     },
     {
       label: 'Oracle Associate Programmer',
-      value: `${imageBasePath}/certifications/oracle-cert.jpg`,
+      value: `${imageBasePath}/certifications/oracle-cert`,
     },
   ],
 };

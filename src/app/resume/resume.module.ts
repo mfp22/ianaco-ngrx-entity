@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { DragScrollModule } from 'ngx-drag-scroll';
@@ -18,6 +18,7 @@ import * as fromComponents from './components';
   declarations: [...fromContainers.containers, ...fromComponents.components],
   imports: [
     CommonModule,
+    NgOptimizedImage,
     MatDividerModule,
     MatButtonModule,
     ResumeRoutingModule,

@@ -194,13 +194,26 @@
         *ngIf="resume.certificationCerts as certs"
       >
         <drag-scroll [scrollbar-hidden]="true" #nav>
-          <img
-            class="resume-document__cert-image"
-            drag-scroll-item
-            [src]="cert.value"
-            alt="certification"
+          <figure
+            class="resume-document__figure"
             *ngFor="let cert of certs"
-          />
+            drag-scroll-item
+            [attr.alt]="cert.label"
+          >
+            <picture *ngIf="cert.value">
+              <source type="image/avif" [attr.srcSet]="cert.value + '.avif'" />
+              <img
+                class="resume-document__cert-image"
+                [ngSrc]="cert.value + '.jpg'"
+                alt="profile image"
+                priority="true"
+                fill
+                style="position: relative"
+                alt="desktop application image"
+                onerror="this.onerror = null;this.parentNode.children[0].srcset = this.src;"
+              />
+            </picture>
+          </figure>
         </drag-scroll>
         <app-divider [size]="'large'"></app-divider>
         <div
