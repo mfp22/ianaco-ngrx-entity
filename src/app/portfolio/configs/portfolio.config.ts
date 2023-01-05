@@ -10,7 +10,7 @@ export const portfolio: Portfolio = {
         'Designer & Front End developer. Platform for providing cricket sports news and fantasy tournaments.',
       branding: {
         colorPalette: ['#fbfbfd', '#1099fa', '#f08a2c', '#595959'],
-        typography: 'Helvetica Neue',
+        typography: 'sans-serif',
       },
       previewImage: 'assets/images/design/yorker-app/yorker-app-preview.avif',
       fallbackPreviewImage:
@@ -41,7 +41,7 @@ export const portfolio: Portfolio = {
         'Designer for sports application landing page promoting NFT (Non-fungible Token) digital assets.',
       branding: {
         colorPalette: ['#121212', '#FFC928', '#707070', '#FBFBFD'],
-        typography: 'Helvetica Neue',
+        typography: 'sans-serif',
       },
       previewImage: 'assets/images/design/sports-app/sports-app-preview.avif',
       fallbackPreviewImage:
@@ -71,7 +71,7 @@ export const portfolio: Portfolio = {
         'Personal Private Project: Designer & Front End Developer investment application. Provides automated crypto trading, crypto strategy back testing, and stock investment calculator.',
       branding: {
         colorPalette: ['#050505', '#061121', '#707070', '#ffffff'],
-        typography: 'Helvetica Neue',
+        typography: 'sans-serif',
       },
       previewImage:
         'assets/images/design/investment-app/investment-app-preview.avif',

@@ -20,13 +20,13 @@ $app-font-sizes: (
 
 .app-font--xxx-large {
   font-size: map-get($app-font-sizes, xxx-large);
-  line-height: 4.25rem;
+  line-height: 4.5rem;
   font-weight: 300;
 }
 
 .app-font--xx-large {
   font-size: map-get($app-font-sizes, xx-large);
-  line-height: 3.5rem;
+  line-height: 3.75rem;
   font-weight: 300;
 }
 
