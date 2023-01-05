@@ -21,7 +21,7 @@
     margin-bottom: 0.25rem;
     @include bp.layout-bp(lt-md) {
       font-size: map-get(type.$app-font-sizes, x-large);
-      line-height: 2.25rem;
+      line-height: 2.5rem;
       font-weight: 300;
     }
   }
