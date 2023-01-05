@@ -13,6 +13,20 @@
     </div>
   </div>
   <div class="content-card__body">
-    <img class="content-card__image" [src]="content.image" alt="content-img" />
+    <figure class="content-card__figure">
+      <picture>
+        <source type="image/avif" [attr.srcSet]="content.image" />
+        <img
+          class="content-card__image"
+          [ngSrc]="content.fallbackImage"
+          alt="profile image"
+          priority="true"
+          fill
+          style="position: relative"
+          [alt]="content.title"
+          onerror="this.onerror = null;this.parentNode.children[0].srcset = this.src;"
+        />
+      </picture>
+    </figure>
   </div>
 </div>

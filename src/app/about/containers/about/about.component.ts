@@ -33,11 +33,13 @@ export class AboutComponent implements OnInit {
       { label: 'Portfolio', value: 'portfolio' },
       { label: 'Projects', value: 'projects' },
     ],
-    image: 'assets/images/content/workarea-image.jpg',
+    image: 'assets/images/content/workarea-image.avif',
+    fallbackImage: 'assets/images/content/workarea-image.jpg',
   };
   skillContentCard: ContentCard = {
     title: `Honing skills to meet needs and demands.`,
-    image: 'assets/images/content/chess-move-image.jpg',
+    image: 'assets/images/content/chess-move-image.avif',
+    fallbackImage: 'assets/images/content/chess-move-image.jpg',
   };
 
   constructor(private store: Store<fromProfileStore.ProfileState>) {}

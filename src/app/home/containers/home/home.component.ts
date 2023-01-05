@@ -18,7 +18,8 @@ export class HomeComponent implements OnInit {
   aboutContentCard: ContentCard = {
     title: `Providing valuable and impactful contributions.`,
     links: [{ label: 'About Me', value: 'about' }],
-    image: 'assets/images/content/brainstorm-image.jpg',
+    image: 'assets/images/content/brainstorm-image.avif',
+    fallbackImage: 'assets/images/content/brainstorm-image.jpg',
   };
   resumeContentCard: ContentCard = {
     title: `Extensive collaboration with teams to deliver business results.`,
@@ -27,7 +28,8 @@ export class HomeComponent implements OnInit {
       { label: 'Portfolio', value: 'portfolio' },
       { label: 'Projects', value: 'projects' },
     ],
-    image: 'assets/images/content/teamwork-image.jpg',
+    image: 'assets/images/content/teamwork-image.avif',
+    fallbackImage: 'assets/images/content/teamwork-image.jpg',
   };
   calloutDetails: DetailItem[] = [
     {

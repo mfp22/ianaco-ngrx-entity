@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MatListModule } from '@angular/material/list';
 // components
@@ -15,7 +15,7 @@ import * as fromDirectives from './directives';
     ...fromPipes.pipes,
     ...fromDirectives.directives,
   ],
-  imports: [CommonModule, RouterModule, MatListModule],
+  imports: [CommonModule, RouterModule, NgOptimizedImage, MatListModule],
   exports: [
     ...fromComponents.components,
     ...fromPipes.pipes,
