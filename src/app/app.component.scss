@@ -45,6 +45,7 @@ $hamburger-types: (collapse) !default;
   right: 1rem;
   top: 0.25rem;
   transition: all ease-in-out;
+  z-index: 100;
 
   &-box {
     width: 1.5rem;
