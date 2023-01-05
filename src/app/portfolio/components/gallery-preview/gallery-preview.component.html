@@ -1,5 +1,5 @@
 <div class="gallery-preview" *ngIf="gallery">
-  <drag-scroll [scrollbar-hidden]="true" #nav>
+  <drag-scroll class="gallery-preview__drag-scroll" #nav>
     <div
       class="gallery-preview__card"
       drag-scroll-item
@@ -28,7 +28,7 @@
     </div>
   </drag-scroll>
 </div>
-<app-divider [size]="'large'"></app-divider>
+<app-divider [size]="'medium'"></app-divider>
 <div class="gallery-preview__controls-container">
   <button mat-fab (click)="moveLeft()" aria-label="move carousel left">
     <img
