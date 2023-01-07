@@ -21,6 +21,7 @@ import { AppComponent } from './app.component';
 // environment
 import { environment } from '../environments/environment';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { actionSanitizer, stateSanitizer } from '@state-adapt/core';
 
 @NgModule({
   declarations: [AppComponent],
@@ -38,6 +39,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
       maxAge: 25,
       logOnly: environment.production,
       autoPause: true,
+      actionSanitizer,
+      stateSanitizer,
     }),
     MetaModule,
     ProfileModule,
